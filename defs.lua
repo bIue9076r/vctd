@@ -1,12 +1,15 @@
+-- Char vars
+Varisa = 0x00
+
 -- Char to Sprite
 CtS = {
-	[0x00] = "Sprite_00",
+	[Varisa] = "Sprite_00",
 	[0x01] = "Sprite_01",
 }
 
 -- Names
 Names = {
-	[0x00] = "Name_00",
+	[Varisa] = "Varisa",
 	[0x01] = "Name_01",
 }
 

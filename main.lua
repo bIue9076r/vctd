@@ -8,41 +8,13 @@ require("/Modules/Range")
 require("/Modules/tile")
 require("/Modules/ticker")
 require("/Modules/spString")
-
--- load function for drawing sprites (and load most images)
+require("/Modules/images")
+--require("/Modules/audio")
 require("/Modules/drawSprites")
-
--- common variable definitions
 require("defs")
-
--- load the map of 'house'
 require("/maps/house")
-
--- load the map of 'outside'
-require("/maps/outside")
-
--- load the map of 'castle'
-require("/maps/castle")
-
--- load the map of 'coffee'
-require("/maps/coffee")
-
--- load the Intro game state
 require("/States/Intro")
-
--- load the Your House game state
 require("/States/Your_House")
-
--- load the Outside game state
-require("/States/Outside")
-
--- load the Castle game state
-require("/States/Castle")
-
--- load the Coffee game state
-require("/States/Coffee")
-
--- load the End game state
 require("/States/End")
 
 -- the sounds should get their own file lol
@@ -103,16 +75,13 @@ function wlog(str)
 	Log:write("["..os.date("%x|%X",os.time()).."]: "..str.."\n")
 end
 
--- multiplayer?
--- no.
-
 -- Player table
 Plr = {
 	x = 20,
 	y = 12,
 	tx = 20,
 	ty = 12,
-	c = 0x00,
+	c = Varisa, -- Varisa
 }
 
 -- trivial
@@ -147,9 +116,6 @@ STATE_KEYPRESSED = {
 	[Intro] = Intro_Keypressed,
 	[Load] = Load_Keypressed,
 	[Your_House] = Your_House_Keypressed,
-	[Outside] = Outside_Keypressed,
-	[Castle] = Castle_Keypressed,
-	[Coffee] = Coffee_Keypressed,
 	[END] = End_Keypressed,
 }
 
@@ -157,9 +123,6 @@ STATE_UPDATE = {
 	[Intro] = Intro_Update,
 	[Load] = Load_Update,
 	[Your_House] = Your_House_Update,
-	[Outside] = Outside_Update,
-	[Castle] = Castle_Update,
-	[Coffee] = Coffee_Update,
 	[END] = End_Update,
 }
 
@@ -167,9 +130,6 @@ STATE_DRAW = {
 	[Intro] = Intro_Draw,
 	[Load] = Load_Draw,
 	[Your_House] = Your_House_Draw,
-	[Outside] = Outside_Draw,
-	[Castle] = Castle_Draw,
-	[Coffee] = Coffee_Draw,
 	[END] = End_Draw,
 }
 
@@ -252,7 +212,7 @@ function checkCollision()
 				Plr.tx = Plr.x
 				Plr.ty = Plr.y
 				
-				rwall = Walls[v.i]
+				if v.t == 1 then v.e() end
 			end
 		end
 		
