@@ -1,16 +1,20 @@
 -- Char vars
-Varisa = 0x00
+Varisa = 0x00 --\
+Tracey = 0x01 -- |> Core Trio
+Rachel = 0x02 --/
 
 -- Char to Sprite
 CtS = {
-	[Varisa] = "Sprite_00",
-	[0x01] = "Sprite_01",
+	[Varisa] = "Char_00",
+	[Tracey] = "Char_01",
+	[Rachel] = "Char_02",
 }
 
 -- Names
 Names = {
 	[Varisa] = "Varisa",
-	[0x01] = "Name_01",
+	[Tracey] = "Tracey",
+	[Rachel] = "Rachel",
 }
 
 -- Character Range
@@ -19,12 +23,8 @@ Char_range = Range.parse("0~1")
 -- Locations
 Intro = 0
 Load = 1
-Character_Select = 2
-Your_House = 3
-Outside = 4
-Castle = 5
-Coffee = 6
-END = 7
+Your_House = 2
+END = 3
 
 -- tiles
 Grass_1 = 0

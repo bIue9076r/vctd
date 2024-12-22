@@ -1,5 +1,6 @@
 image.newImage("Char_00","/Assets/Varisa.png")
-image.newImage("Char_01","Assets/Princess.png")
+image.newImage("Char_01","Assets/Tracey.png")
+image.newImage("Char_02","Assets/Rachel.png")
 image.newImage(1,"Assets/OC.png")
 
 image.newImage("Grass_1","/Assets/grassblock_1.png")
