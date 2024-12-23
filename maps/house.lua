@@ -19,13 +19,14 @@ Map_Your_House_S_E[6][2] = Tile.new(Carpet)
 
 Walls_Your_House_S_E = {
 	Box.new(0,6,2,2),
-	Box.new(6,6,16,2)
+	Box.new(6,6,16,2),
+	Box.new(0,10,0.5,2,1,1,function()
+		print("trigger box")
+	end)
 }
 
-_YH_rn = Char_range[math.random(1,#Char_range)]
-
 Npcs_Your_House_S_E = {
-	{x=10,y=9,c=_YH_rn,i=1},
+	{x=10,y=9,c=Tracey,i=1},
 }
 
 Npc_Dbox_Your_House_S_E = {}

@@ -8,6 +8,7 @@ require("/Modules/Range")
 require("/Modules/tile")
 require("/Modules/ticker")
 require("/Modules/spString")
+require("/Modules/Dialoge")
 require("/Modules/images")
 --require("/Modules/audio")
 require("/Modules/drawSprites")
@@ -24,33 +25,7 @@ sound.new("Sunrise","/Assets/Sunrise_Hopes.mp3","stream")
 sound.new("Sunset","/Assets/Sunset_Dreams.mp3","stream")
 sound.new("Waltz","/Assets/The_Waltz.mp3","stream")
 
--- list of the songs for easy access
-EndSongList = {
-	"Bass_Song",
-	"Sunrise",
-	"Sunset",
-	"Waltz",
-}
-
--- esn: (E)nd (S)ong (N)umber
-esn = math.random(1,#EndSongList)
-
--- pesn: (P)revious (E)nd (S)ong (N)umber
-pesn = esn
-
--- lpesn: (L)ast (P)revious (E)nd (S)ong (N)umber
-lpesn = pesn
-
--- bs: (B)ackground (S)ound
 bs = sound.getSound("Chr")
-
--- pbs: (P)lay (B)ackground (S)ound
-pbs = true
-
--- pen: (P)lay (E)(N)ding
-pen = false
-
--- bool for if the game is muted
 muted = false
 -------------------------------------------
 
@@ -94,19 +69,14 @@ end
 
 Npcs = {}
 Npc_Dboxs = {}
-
 Map = {} -- 7x11
--- tile = {t=0,cx=0,cy=0,e=0,w=0,l=0,d=0,x=0,y=0}
-
-Map_x = 0 -- Map width
-Map_y = 0 -- Map height
-
 Walls = {}
 
 -- globals
 GameState = Intro;
 DialogeBuffer = 50
 Ending = 0	--	good ending
+Time = 0 -- 0 <-> 23
 
 -- debug variables
 DrawCoords = false
@@ -133,139 +103,7 @@ STATE_DRAW = {
 	[END] = End_Draw,
 }
 
-function drawBackgound()
-	-- calculation proportions for the screen
-	local Tx = (SCREEN_X/6)
-	local Ty = (SCREEN_Y/4)
-	
-	local backtile = image.getImage("backtile")
-	
-	for i = 1,4 do
-		for j = 1,6 do
-			love.graphics.draw(
-				backtile,
-				(j-1)*Tx,
-				(i-1)*Ty,
-				0,
-				Tx/backtile:getWidth(),
-				Ty/backtile:getHeight()
-			)
-		end
-	end
-end
-
-function npcCollide(Tx,Ty,Nx,Ny)
-	return (
-		(Tx + 1 >= Nx) and (Tx <= Nx + 1) and
-		(Ty + 1 >= Ny) and (Ty <= Ny + 1)
-	)
-end
-
-function wallCollide(Tx,Ty,Wx,Wy,Ww,Wh)
-	return (
-		(Tx + 1 >= Wx) and (Tx <= Wx + Ww) and
-		(Ty + 1 >= Wy) and (Ty <= Wy + Wh)
-	)
-end
-
-function checkNpcCollision(Tx,Ty)
-	for i,v in pairs(Npcs) do
-		if npcCollide(Tx,Ty,v.x,v.y) and not v.d then
-			Plr.tx = Plr.x
-			Plr.ty = Plr.y
-		end
-	end
-end
-
-function checkCollision()
-	local Tx = Plr.tx
-	local Ty = Plr.ty
-	
-	-- convert temporary player coords to tile coords
-	local Cx = math.ceil(Tx/2)
-	local Cy = math.ceil(Ty/2)
-	
-	if(Tx == 0) then Cx = 1 end
-	if(Ty == 0) then Cy = 1 end
-	if(Tx > 21) then Cx = -1 end
-	if(Ty > 13) then Cy = -1 end
-	
-	local tile, rtile, rwall, rnpc
-	
-	-- if the player is inside the map
-	if Map[Cy] and Map[Cy][Cx] then
-		tile = Map[Cy][Cx]
-		
-		-- tile.(e)ffect then set return tile
-		if(tile.e == 1) then
-			rtile = tile
-		end
-		
-		-- check collision with walls
-		for i, v in ipairs(Walls) do
-			local Wx = v.x
-			local Wy = v.y
-			local Ww = v.w
-			local Wh = v.h
-			
-			if wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
-				Plr.tx = Plr.x
-				Plr.ty = Plr.y
-				
-				if v.t == 1 then v.e() end
-			end
-		end
-		
-		-- check collision with npcs
-		checkNpcCollision(Tx,Ty)
-		
-		for i, v in pairs(Npc_Dboxs) do
-			if not Npcs[v.i].d then
-				local Wx = v.x
-				local Wy = v.y
-				local Ww = v.w
-				local Wh = v.h
-				
-				if wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
-					rnpc = Npcs[v.i]
-				end
-			end
-		end
-		
-		-- update player position
-		Plr.x = Plr.tx
-		Plr.y = Plr.ty
-	else
-		-- return to last position
-		Plr.tx = Plr.x
-		Plr.ty = Plr.y
-	end
-	
-	return {rtile,rnpc}
-end
-
--- trivial
-function movePlayer(dt,ms)
-	local tbl;
-	if love.keyboard.isDown("a") then
-		Plr.tx = Plr.x - ms*dt
-		tbl = checkCollision()
-	end
-	if love.keyboard.isDown("d") then
-		Plr.tx = Plr.x + ms*dt
-		tbl = checkCollision()
-	end
-	
-	if love.keyboard.isDown("w") then
-		Plr.ty = Plr.y - ms*dt
-		tbl = checkCollision()
-	end
-	if love.keyboard.isDown("s") then
-		Plr.ty = Plr.y + ms*dt
-		tbl = checkCollision()
-	end
-	return tbl
-end
+require("col")
 
 -- (K)eypressed Control Ops
 function kctrlOps(key)
@@ -375,15 +213,12 @@ function dctrlOps()
 	end
 end
 
--- error keypressed
 function kerror(key)
 	if key == "return" then
-		-- I do am error handling
 		GameState = Intro
 	end
 end
 
--- error draw
 function derror()
 	love.graphics.rectangle("fill",
 		(SCREEN_X/12),
@@ -401,28 +236,12 @@ function derror()
 	)
 end
 
--- draw audio
 function daudio()
 	-- if the game is not muted, play music
 	if not muted then
-		if pbs then
-			if not bs:isPlaying() then
-				bs:seek(0)
-				bs:play()
-			end
-		end
-		if pen then
-			if not bs:isPlaying() then
-				bs:seek(0)
-				repeat
-					esn = math.random(1,#EndSongList)
-				until not (esn == pesn) and not (esn == lpesn)
-				lpesn = pesn
-				pesn = esn
-				bs = sound.getSound(EndSongList[esn])
-				bs:seek(0)
-				bs:play()
-			end
+		if not bs:isPlaying() then
+			bs:seek(0)
+			bs:play()
 		end
 	end
 end
@@ -531,48 +350,28 @@ function love.load()
 end
 
 function love.resize()
-	-- update screen dimensions
 	SCREEN_X = love.graphics.getWidth()
 	SCREEN_Y = love.graphics.getHeight()
 	ASPECT = (SCREEN_X/SCREEN_Y) 
 end
 
 function love.update(dt)
-	-- Table look up the update function with game state
 	local f = STATE_UPDATE[GameState]
-	
-	-- if it exists, run function
 	if f then f(dt) end
-	
-	-- update the engine
 	files.update(dt)
 end
 
 function love.keypressed(key)
-	-- Table look up the keypressed function with game state
 	local f = STATE_KEYPRESSED[GameState] or kerror
-	
-	-- if it exists, run function
 	if f then f(key) end
-	
-	-- update control options
 	kctrlOps(key)
 end
 
 function love.draw()
-	-- handle audio
 	daudio()
-	
-	-- Table look up the update function with game state
 	local f = STATE_DRAW[GameState] or derror
-	
-	-- if it exists, run function
 	if f then f() end
-	
-	-- engine drawing
 	files.draw()
-	
-	-- draw control options
 	dctrlOps()
 end
 

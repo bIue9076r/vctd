@@ -8,13 +8,12 @@ house_drawt = nil
 house_talk = false
 
 -- npc 1
-_YH_npc_1 = 1
-_YH_npc_1_t = {
+_YH_npc_1 = Dialoge.new({
 	"The Princess is looking for a partner.",
 	"You should try asking her out.",
 	"What are you doing just standing around ?",
 	"What are you doing just standing around ?",
-}
+})
 
 function Your_House_Draw()
 	-- draw background and sprites
@@ -68,27 +67,12 @@ function Your_House_Update(dt)
 	if tbl then
 		house_tile = tbl[1]
 		house_npc = tbl[2]
-		
-		-- if effect tile
-		if(house_tile) then
-			
-			-- if tile where equals 1
-			if(house_tile.w == 1) then
-				GameState = Outside
-				Map = Map_Outside_S_E
-				Map_y = #Map
-				Map_x = #Map[1]
-				Npcs = Npcs_Outside_S_E
-				Walls = Walls_Outside_S_E
-				setPlr(20,11)
-			end
-		end
 	end
 end
 
 function Your_House_Keypressed(key)
 	-- if npc, not talking, and 'enter'
-	if house_npc and not house_talk and key == "return" then
+	if house_npc and not house_talk and key == "e" then
 		house_drawt = {
 			s="......",
 			n=house_npc.c,
@@ -97,14 +81,7 @@ function Your_House_Keypressed(key)
 		house_talk = true
 		
 		if house_npc.i == 1 then
-			-- gets the current string from the npc table
-			-- updates the npc table index as needed
-			--	> can loop back if desired
-			house_drawt.s=_YH_npc_1_t[_YH_npc_1]
-			_YH_npc_1 = _YH_npc_1 + 1
-			if _YH_npc_1 > #_YH_npc_1_t then
-				_YH_npc_1 = 1
-			end
+			house_drawt.s=_YH_npc_1:get()
 		elseif house_npc.i == 2 then
 			house_drawt.s="Good job!"
 		end

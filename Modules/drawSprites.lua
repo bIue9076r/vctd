@@ -3,23 +3,12 @@ function drawSprites()
 	local Cy = Plr.y
 	
 	-- choose sector of 7x11
-	
-	--local Sx = 0;print(math.floor((Cx/20)*Map_x))
-	--local Sy = 0;print(math.floor((Cy/20)*Map_y))
-	
-	-- cx = 10
-	-- sx = 0
-	-- map[(7*sy)+i][(11*sx)+j]
-	--print(Cx,Cy,Sx,Sy)
 	for i = 1,7 do
 		for j = 1,11 do
-			--print(Map[(7*Sy)+i])
-			--if Map[(7*Sy)+i] and Map[(7*Sy)+i][(11*Sx)+j] then
 			if Map[i] and Map[i][j] then
 				local img, psx, psy
 				local Tx = (SCREEN_X/12)
 				local Ty = (SCREEN_Y/8)
-				--img = image.getImage(TtS[Map[(7*Sy)+i][(11*Sx)+j].t])
 				img = image.getImage(TtS[Map[i][j].t])
 				psx = ((25 + (j-1)*50)/(600))
 				psy = ((25 + (i-1)*50)/(400))
@@ -71,4 +60,25 @@ function drawChars(Cx,Cy) --(Sx,Sy,Cx,Cy)
 		Tx/img:getWidth(),
 		Ty/img:getHeight()
 	)
+end
+
+function drawBackgound()
+	-- calculation proportions for the screen
+	local Tx = (SCREEN_X/6)
+	local Ty = (SCREEN_Y/4)
+	
+	local backtile = image.getImage("backtile")
+	
+	for i = 1,4 do
+		for j = 1,6 do
+			love.graphics.draw(
+				backtile,
+				(j-1)*Tx,
+				(i-1)*Ty,
+				0,
+				Tx/backtile:getWidth(),
+				Ty/backtile:getHeight()
+			)
+		end
+	end
 end

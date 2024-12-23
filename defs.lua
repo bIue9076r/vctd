@@ -18,7 +18,10 @@ Names = {
 }
 
 -- Character Range
-Char_range = Range.parse("0~1")
+Char_range = Range.parse("0~2")
+
+MAP_X = 7
+MAP_Y = 11
 
 -- Locations
 Intro = 0
@@ -68,3 +71,15 @@ TtS = {
 
 -- Background Colors
 --Color_outside = {love.math.colorFromBytes(52,68,76,255)}
+
+-- Time stuff
+Midnight = 0
+Noon = 12
+
+Sunrise = 6
+Sunset = 19
+
+Day = 10
+Afternoon = 14
+Evening = 18
+Night = 21
