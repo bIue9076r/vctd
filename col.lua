@@ -13,7 +13,7 @@ function wallCollide(Tx,Ty,Wx,Wy,Ww,Wh)
 end
 
 function checkNpcCollision(Tx,Ty)
-	for i,v in pairs(Npcs) do
+	for i,v in pairs(Map:getNpcs()) do
 		if npcCollide(Tx,Ty,v.x,v.y) and not v.d then
 			Plr.tx = Plr.x
 			Plr.ty = Plr.y
@@ -25,28 +25,13 @@ function checkCollision()
 	local Tx = Plr.tx
 	local Ty = Plr.ty
 	
-	-- convert temporary player coords to tile coords
-	local Cx = math.ceil(Tx/2)
-	local Cy = math.ceil(Ty/2)
-	
-	if(Tx == 0) then Cx = 1 end
-	if(Ty == 0) then Cy = 1 end
-	if(Tx > 21) then Cx = -1 end
-	if(Ty > 13) then Cy = -1 end
-	
-	local tile, rtile, rwall, rnpc
+	local rnpc
 	
 	-- if the player is inside the map
-	if Map[Cy] and Map[Cy][Cx] then
-		tile = Map[Cy][Cx]
-		
-		-- tile.(e)ffect then set return tile
-		if(tile.e == 1) then
-			rtile = tile
-		end
+	if (Tx >= 0 and Ty >= 0) and (((Tx + 1) <= 2*Map.X) and ((Ty + 1) <= 2*Map.Y)) then
 		
 		-- check collision with walls
-		for i, v in ipairs(Walls) do
+		for i,v in ipairs(Map:getWalls()) do
 			local Wx = v.x
 			local Wy = v.y
 			local Ww = v.w
@@ -65,15 +50,15 @@ function checkCollision()
 		-- check collision with npcs
 		checkNpcCollision(Tx,Ty)
 		
-		for i, v in pairs(Npc_Dboxs) do
-			if not Npcs[v.i].d then
+		for i,v in pairs(Map:getDboxs()) do
+			if not Map.npcs[v.i].v then
 				local Wx = v.x
 				local Wy = v.y
 				local Ww = v.w
 				local Wh = v.h
 				
 				if wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
-					rnpc = Npcs[v.i]
+					rnpc = Map.npcs[v.i]
 				end
 			end
 		end
@@ -87,7 +72,7 @@ function checkCollision()
 		Plr.ty = Plr.y
 	end
 	
-	return {rtile,rnpc}
+	return rnpc
 end
 
 function movePlayer(dt,ms)

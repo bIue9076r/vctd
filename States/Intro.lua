@@ -29,10 +29,7 @@ end
 function Intro_Keypressed(key)
 	if key == "return" then
 		GameState = Your_House
-		Map = Map_Your_House_S_E
-		Npcs = Npcs_Your_House_S_E
-		Npc_Dboxs = Npc_Dbox_Your_House_S_E
-		Walls = Walls_Your_House_S_E
+		Map = Map_Your_House
 		setPlr(0,0)
 	end
 end

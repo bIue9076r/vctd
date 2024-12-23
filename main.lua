@@ -5,10 +5,11 @@ require("/Engine/filesConfig")
 require("/Modules/Range")
 
 -- load the unified tile system
-require("/Modules/tile")
+require("/Modules/box")
 require("/Modules/ticker")
 require("/Modules/spString")
 require("/Modules/Dialoge")
+require("/Modules/MapObj")
 require("/Modules/images")
 --require("/Modules/audio")
 require("/Modules/drawSprites")
@@ -67,16 +68,18 @@ function setPlr(x,y)
 	Plr.ty = y
 end
 
-Npcs = {}
-Npc_Dboxs = {}
-Map = {} -- 7x11
-Walls = {}
+Map = MapObj.new()
+
+--Npcs = {}
+--Npc_Dboxs = {}
+--Map = {} -- 7x11
+--Walls = {}
 
 -- globals
 GameState = Intro;
 DialogeBuffer = 50
 Ending = 0	--	good ending
-Time = 0 -- 0 <-> 23
+Time = 6 -- 0 <-> 23
 
 -- debug variables
 DrawCoords = false
@@ -159,7 +162,7 @@ function dctrlOps()
 		end
 	end
 	if HitBoxes then
-		for i,v in ipairs(Npcs) do
+		for i,v in ipairs(Map.npcs) do
 			local psx = ((25 + (v.x)*25)/(600))
 			local psy = ((25 + (v.y)*25)/(400))
 			local psw = (25/600)
@@ -172,7 +175,7 @@ function dctrlOps()
 				SCREEN_Y*psh
 			)
 		end
-		for i,v in ipairs(Walls) do
+		for i,v in ipairs(Map.walls) do
 			local psx = (((v.x*25) + 25)/600)
 			local psy = (((v.y*25) + 25)/400)
 			local psw = ((v.w*25)/600)
@@ -185,7 +188,7 @@ function dctrlOps()
 				SCREEN_Y*psh
 			)
 		end
-		for i,v in pairs(Npc_Dboxs) do
+		for i,v in pairs(Map.dboxs) do
 			local psx = (((v.x*25) + 25)/600)
 			local psy = (((v.y*25) + 25)/400)
 			local psw = ((v.w*25)/600)

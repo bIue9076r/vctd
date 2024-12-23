@@ -9,10 +9,15 @@ house_talk = false
 
 -- npc 1
 _YH_npc_1 = Dialoge.new({
-	"The Princess is looking for a partner.",
-	"You should try asking her out.",
-	"What are you doing just standing around ?",
-	"What are you doing just standing around ?",
+	"Hey Var!",
+	"...",
+	"...",
+})
+
+_YH_npc_2 = Dialoge.new({
+	"Hey Tracey!",
+	"...",
+	"...",
 })
 
 function Your_House_Draw()
@@ -56,17 +61,16 @@ function Your_House_Draw()
 end
 
 function Your_House_Update(dt)
-	local tbl
+	local rnpc
 	
 	-- if not talking
 	if not house_talk then
-		tbl = movePlayer(dt,house_movespeed)
+		rnpc = movePlayer(dt,house_movespeed)
 	end
 	
 	-- if return table
-	if tbl then
-		house_tile = tbl[1]
-		house_npc = tbl[2]
+	if rnpc then
+		house_npc = rnpc
 	end
 end
 
@@ -82,8 +86,11 @@ function Your_House_Keypressed(key)
 		
 		if house_npc.i == 1 then
 			house_drawt.s=_YH_npc_1:get()
+			house_npc.i = 2
 		elseif house_npc.i == 2 then
-			house_drawt.s="Good job!"
+			house_drawt.s=_YH_npc_2:get()
+			house_drawt.n= Varisa
+			house_npc.i = 1
 		end
 	end
 end
