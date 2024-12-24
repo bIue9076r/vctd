@@ -26,8 +26,9 @@ MAP_Y = 7
 -- Locations
 Intro = 0
 Load = 1
-Your_House = 2
-END = 3
+World = 2
+Cutscene = 3
+END = 4
 
 -- tiles
 Grass_1 = 0

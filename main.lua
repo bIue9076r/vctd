@@ -3,12 +3,12 @@ jit.off()
 love.graphics.setDefaultFilter("nearest", "nearest")
 require("/Engine/filesConfig")
 require("/Modules/Range")
-
--- load the unified tile system
+require("/Modules/time")
 require("/Modules/box")
 require("/Modules/ticker")
 require("/Modules/spString")
 require("/Modules/Dialoge")
+require("/Modules/npc")
 require("/Modules/MapObj")
 require("/Modules/images")
 --require("/Modules/audio")
@@ -30,20 +30,14 @@ bs = sound.getSound("Chr")
 muted = false
 -------------------------------------------
 
--- Screen width for calculations
 SCREEN_X = love.graphics.getWidth()
-
--- Screen height for calculations
 SCREEN_Y = love.graphics.getHeight()
-
--- Screen aspect ratio
 ASPECT = (SCREEN_X/SCREEN_Y)
 
 image.newImage("backtile","/Assets/backtile.png")
 files.assets.Fonts.newFont("comic","/Assets/ComicSansMS3.ttf",20)
 love.graphics.setFont(files.assets.Fonts.getFont("comic"))
 
--- Set up a log file
 Log = love.filesystem.newFile("Log.txt")
 Log:open("w")
 
@@ -60,7 +54,6 @@ Plr = {
 	c = Varisa, -- Varisa
 }
 
--- trivial
 function setPlr(x,y)
 	Plr.x = x
 	Plr.y = y
@@ -70,16 +63,11 @@ end
 
 Map = MapObj.new()
 
---Npcs = {}
---Npc_Dboxs = {}
---Map = {} -- 7x11
---Walls = {}
-
 -- globals
 GameState = Intro;
 DialogeBuffer = 50
 Ending = 0	--	good ending
-Time = 6 -- 0 <-> 23
+IsTalking = false
 
 -- debug variables
 DrawCoords = false
@@ -88,25 +76,34 @@ HitBoxes = false
 STATE_KEYPRESSED = {
 	[Intro] = Intro_Keypressed,
 	[Load] = Load_Keypressed,
-	[Your_House] = Your_House_Keypressed,
+	[World] = Your_House_Keypressed,
+	[Cutscene] = Cutscene_Keypressed,
 	[END] = End_Keypressed,
 }
 
 STATE_UPDATE = {
 	[Intro] = Intro_Update,
 	[Load] = Load_Update,
-	[Your_House] = Your_House_Update,
+	[World] = Your_House_Update,
+	[Cutscene] = Cutscene_Update,
 	[END] = End_Update,
 }
 
 STATE_DRAW = {
 	[Intro] = Intro_Draw,
 	[Load] = Load_Draw,
-	[Your_House] = Your_House_Draw,
+	[World] = Your_House_Draw,
+	[Cutscene] = Cutscene_Draw,
 	[END] = End_Draw,
 }
 
 require("col")
+
+function Time.changed()
+	for i,v in pairs(Map:getNpcs()) do
+		v:onTimeChange()
+	end
+end
 
 -- (K)eypressed Control Ops
 function kctrlOps(key)

@@ -1,9 +1,29 @@
+function lerp(a,b,t)
+	return b*t - a*(t - 1)
+end
+
+function skyTint()
+	local h1 = Time.getHour()
+	local h2 = h1 + 1
+	local tm = (Time.getMin() / 60)
+	if h2 >= 24 then h2 = 0 end
+	local r1 = Sky[h1][1]
+	local g1 = Sky[h1][2]
+	local b1 = Sky[h1][3]
+	local r2 = Sky[h2][1]
+	local g2 = Sky[h2][2]
+	local b2 = Sky[h2][3]
+	
+	love.graphics.setColor(
+		lerp(r1,r2,tm),
+		lerp(g1,g2,tm),
+		lerp(b1,b2,tm)
+	)
+end
+
 function drawSprites()
 	-- Time stuff --
-	local r = Sky[Time][1]
-	local g = Sky[Time][2]
-	local b = Sky[Time][3]
-	love.graphics.setColor(r,g,b)
+	skyTint()
 	--
 	
 	local Cx = Plr.x
@@ -41,18 +61,7 @@ function drawChars(Cx,Cy)
 	
 	-- draw npcs
 	for i,v in pairs(Map.npcs) do
-		local img, psx, psy
-		img = image.getImage(CtS[v.c])
-		psx = (((v.x*25) + 25)/(600))
-		psy = (((v.y*25) + 25)/(400))
-		love.graphics.draw(
-			img,
-			SCREEN_X*psx,
-			SCREEN_Y*psy,
-			0,
-			Tx/img:getWidth(),
-			Ty/img:getHeight()
-		)
+		v()
 	end
 	
 	-- draw players
@@ -87,6 +96,42 @@ function drawBackgound()
 				Tx/backtile:getWidth(),
 				Ty/backtile:getHeight()
 			)
+		end
+	end
+end
+
+function drawDialoge()
+	if IsTalking then
+		love.graphics.rectangle("fill",
+			(SCREEN_X/12),
+			(SCREEN_Y/8),
+			((SCREEN_X*5)/6),
+			(SCREEN_Y/4),
+		25)
+		
+		love.graphics.print(
+			{{0,0,0},Names[World.dtbl.n]..":"},
+			(SCREEN_X/8),
+			((SCREEN_Y*3)/20),
+			0,
+			SCREEN_X/600,SCREEN_Y/400
+		)
+		
+		love.graphics.print(
+			{{0,0,0},spString(World.dtbl.s,1,World.dticker)},
+			(SCREEN_X/8),
+			((SCREEN_Y*9)/40),
+			0,
+			SCREEN_X/600,SCREEN_Y/400
+		)
+		
+		if World.dticker:get() < (#World.dtbl.s + DialogeBuffer) then
+			World.dticker()
+		else
+			-- stop talking
+			World.dtbl = nil
+			IsTalking = false
+			World.dticker:reset()
 		end
 	end
 end

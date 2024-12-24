@@ -28,7 +28,7 @@ end
 
 function Intro_Keypressed(key)
 	if key == "return" then
-		GameState = Your_House
+		GameState = World
 		Map = Map_Your_House
 		setPlr(0,0)
 	end

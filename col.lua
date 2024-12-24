@@ -14,7 +14,7 @@ end
 
 function checkNpcCollision(Tx,Ty)
 	for i,v in pairs(Map:getNpcs()) do
-		if npcCollide(Tx,Ty,v.x,v.y) and not v.d then
+		if npcCollide(Tx,Ty,v.x,v.y) and (not (v.g == 1)) then
 			Plr.tx = Plr.x
 			Plr.ty = Plr.y
 		end
@@ -25,7 +25,7 @@ function checkCollision()
 	local Tx = Plr.tx
 	local Ty = Plr.ty
 	
-	local rnpc
+	local rnpc, rdbox
 	
 	-- if the player is inside the map
 	if (Tx >= 0 and Ty >= 0) and (((Tx + 1) <= 2*Map.X) and ((Ty + 1) <= 2*Map.Y)) then
@@ -51,7 +51,7 @@ function checkCollision()
 		checkNpcCollision(Tx,Ty)
 		
 		for i,v in pairs(Map:getDboxs()) do
-			if not Map.npcs[v.i].v then
+			if not (Map.npcs[v.i].g == 1) then
 				local Wx = v.x
 				local Wy = v.y
 				local Ww = v.w
@@ -59,6 +59,7 @@ function checkCollision()
 				
 				if wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
 					rnpc = Map.npcs[v.i]
+					rdbox = Map.dboxs[i]
 				end
 			end
 		end
@@ -72,27 +73,27 @@ function checkCollision()
 		Plr.ty = Plr.y
 	end
 	
-	return rnpc
+	return rnpc, rdbox
 end
 
 function movePlayer(dt,ms)
-	local tbl;
+	local npc, dbox;
 	if love.keyboard.isDown("a") then
 		Plr.tx = Plr.x - ms*dt
-		tbl = checkCollision()
+		npc, dbox = checkCollision()
 	end
 	if love.keyboard.isDown("d") then
 		Plr.tx = Plr.x + ms*dt
-		tbl = checkCollision()
+		npc, dbox = checkCollision()
 	end
 	
 	if love.keyboard.isDown("w") then
 		Plr.ty = Plr.y - ms*dt
-		tbl = checkCollision()
+		npc, dbox = checkCollision()
 	end
 	if love.keyboard.isDown("s") then
 		Plr.ty = Plr.y + ms*dt
-		tbl = checkCollision()
+		npc, dbox = checkCollision()
 	end
-	return tbl
+	return npc, dbox
 end

@@ -8,15 +8,21 @@ Map_Your_House:addWall(Box.new(0,6,2,2))
 Map_Your_House:addWall(Box.new(6,6,16,2))
 Map_Your_House:addWall(Box.new(0,10,0.5,2,1,1,function()
 	h_wb_trigger = h_wb_trigger or ticker.new()
-	if h_wb_trigger:get() >= 50 then
-		Time = Time + 1
-		if Time >= 24 then
-			Time = 0
-		end
-		print(Time)
+	if h_wb_trigger:get() >= 0 then
+		Time.tick()
+		Time.print()
 		h_wb_trigger:reset()
 	end
 	h_wb_trigger()
 end))
 
-Map_Your_House:addNpc({x=10,y=9,c=Tracey,i=1})
+Map_Your_House:addNpc(Npc.new(10,9,Tracey,1,0,function(self)
+	local t = Time.getHour()
+	if t >= Sunrise and t <= Sunset then
+		self.g = 0
+		self.i = 1
+	else
+		self.g = 1
+		self.i = -1 -- Tracey doesn't want to talk at night
+	end
+end))
