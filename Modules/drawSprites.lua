@@ -21,22 +21,15 @@ function skyTint()
 	)
 end
 
-function drawSprites()
-	-- Time stuff --
-	skyTint()
-	--
-	
-	local Cx = Plr.x
-	local Cy = Plr.y
-	
-	-- choose sector of 7x11
+function drawBackTiles()
 	for i = 1, Map.Y do
 		for j = 1, Map.X do
-			if Map:getTile(j,i) then
+			local t = Map:getTile(j,i)
+			if t and t.f == 0 then
 				local img, psx, psy
 				local Tx = (SCREEN_X/12)
 				local Ty = (SCREEN_Y/8)
-				img = image.getImage(TtS[Map:getTile(j,i)])
+				img = image.getImage(TtS[t.t])
 				psx = ((25 + (j-1)*50)/(600))
 				psy = ((25 + (i-1)*50)/(400))
 				love.graphics.draw(
@@ -50,8 +43,43 @@ function drawSprites()
 			end
 		end
 	end
+end
+
+function drawForeTiles()
+	for i = 1, Map.Y do
+		for j = 1, Map.X do
+			local t = Map:getTile(j,i)
+			if t and t.f == 1 then
+				local img, psx, psy
+				local Tx = (SCREEN_X/12)
+				local Ty = (SCREEN_Y/8)
+				img = image.getImage(TtS[t.t])
+				psx = ((25 + (j-1)*50)/(600))
+				psy = ((25 + (i-1)*50)/(400))
+				love.graphics.draw(
+					img,
+					SCREEN_X*psx,
+					SCREEN_Y*psy,
+					0,
+					Tx/img:getWidth(),
+					Ty/img:getHeight()
+				)
+			end
+		end
+	end
+end
+
+function drawSprites()
+	-- Time stuff --
+	skyTint()
+	--
 	
+	local Cx = Plr.x
+	local Cy = Plr.y
+	
+	drawBackTiles()
 	drawChars(Cx,Cy)
+	drawForeTiles()
 	love.graphics.setColor(1,1,1)
 end
 

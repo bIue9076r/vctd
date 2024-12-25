@@ -126,7 +126,7 @@ function kctrlOps(key)
 			muted = not(muted)
 			bs:stop()
 		elseif key == "p" then
-			wlog(
+			print(
 				"Player = {\n\t"..
 					"x = "..Plr.x..",\n\t"..
 					"y = "..Plr.y..",\n\t"..

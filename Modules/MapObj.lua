@@ -1,3 +1,20 @@
+Tile = {}
+Tile.t = Grass_1
+Tile.f = 0
+
+function Tile.new(t,f)
+	local tbl = {
+		t = t or Grass_1,
+		f = f or 0
+	}
+	
+	local mt = {
+		__index = Tile,
+	}
+	
+	return setmetatable(tbl,mt)
+end
+
 MapObj = {}
 MapObj.X = 11
 MapObj.Y = 7
@@ -18,7 +35,7 @@ function MapObj.new(bt,wtbl,ntbl)
 		tbl.sector[i] = tbl.sector[i] or {}
 		for j = 1, MapObj.X do
 			table.insert(tbl.sector[i],
-				bt or Grass_1
+				Tile.new(bt or Grass_1, 0)
 			)
 		end
 	end
@@ -44,21 +61,23 @@ function MapObj:setBaseTile(bt)
 		self.sector[i] = self.sector[i] or {}
 		for j = 1, MapObj.X do
 			table.insert(self.sector[i],
-				bt or Grass_1
+				Tile.new(bt or Grass_1, 0)
 			)
 		end
 	end
 end
 
-function MapObj:setTile(x,y,t)
+function MapObj:setTile(x,y,t,f)
 	x = x or 1
 	y = y or 1
 	t = t or Grass_1
+	f = f or 0
 	if x <= 0 then x = 1 end
 	if y <= 0 then y = 1 end
 	if x > MapObj.X then x = MapObj.X end
 	if y > MapObj.Y then y = MapObj.Y end
-	self.sector[y][x] = t
+	self.sector[y][x].t = t
+	self.sector[y][x].f = f
 end
 
 function MapObj:getTile(x,y)
@@ -71,25 +90,29 @@ function MapObj:getTile(x,y)
 	return self.sector[y][x]
 end
 
-function MapObj:setLineH(x,y,x2,t)
+function MapObj:setLineH(x,y,x2,t,f)
 	x = x or 1
 	y = y or 1
 	x2 = x2 or x
 	t = t or Grass_1
+	f = f or 0
 	
 	for j = x, x2 do
-		self.sector[y][j] = t
+		self.sector[y][j].t = t
+		self.sector[y][j].f = f
 	end
 end
 
-function MapObj:setLineV(x,y,y2,t)
+function MapObj:setLineV(x,y,y2,t,f)
 	x = x or 1
 	y = y or 1
 	y2 = y2 or y
 	t = t or Grass_1
+	f = f or 0
 	
 	for i = y, y2 do
-		self.sector[i][x] = t
+		self.sector[i][x].t = t
+		self.sector[i][x].f = f
 	end
 end
 

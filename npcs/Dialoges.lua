@@ -1,3 +1,6 @@
 World.Dialoge[1] = Dialoge.new({
-	Text.new("Heyy",Varisa),
+	Text.new("Hey",Varisa),
+	Text.new("Hey Var!",Tracey),
+	Text.new("Does your mom still have any cookies?",Varisa),
+	Text.new("Should be some inside",Tracey),
 })
