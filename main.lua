@@ -14,9 +14,8 @@ require("/Modules/images")
 --require("/Modules/audio")
 require("/Modules/drawSprites")
 require("defs")
-require("/maps/house")
 require("/States/Intro")
-require("/States/Your_House")
+require("/States/World")
 require("/States/End")
 
 -- the sounds should get their own file lol
@@ -76,7 +75,7 @@ HitBoxes = false
 STATE_KEYPRESSED = {
 	[Intro] = Intro_Keypressed,
 	[Load] = Load_Keypressed,
-	[World] = Your_House_Keypressed,
+	[WORLD] = World.Keypressed,
 	[Cutscene] = Cutscene_Keypressed,
 	[END] = End_Keypressed,
 }
@@ -84,7 +83,7 @@ STATE_KEYPRESSED = {
 STATE_UPDATE = {
 	[Intro] = Intro_Update,
 	[Load] = Load_Update,
-	[World] = Your_House_Update,
+	[WORLD] = World.Update,
 	[Cutscene] = Cutscene_Update,
 	[END] = End_Update,
 }
@@ -92,7 +91,7 @@ STATE_UPDATE = {
 STATE_DRAW = {
 	[Intro] = Intro_Draw,
 	[Load] = Load_Draw,
-	[World] = Your_House_Draw,
+	[WORLD] = World.Draw,
 	[Cutscene] = Cutscene_Draw,
 	[END] = End_Draw,
 }

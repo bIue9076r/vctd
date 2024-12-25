@@ -1,4 +1,4 @@
-World = {} -- Will be useful later
+World = {}
 World.movespeed = 7
 World.snpc = nil
 World.sdbox = nil
@@ -26,19 +26,14 @@ function World.doTalk(key)
 	)
 end
 
+World.Map = {}
+require("maps/Maps")
 World.Dialoge = {}
-World.Dialoge[1] = Dialoge.new({
-	Text.new("Hey Var!",Tracey),
-	Text.new("Hey Tracey!",Varisa),
-	Text.new("...",Tracey),
-	Text.new("...",Varisa),
-	Text.new("...",Tracey),
-	Text.new("...",Varisa,function()
-		World.snpc.i = 2
-	end),
-})
+-- Include Dialoge File
+require("npcs/Dialoges")
+--
 
-function Your_House_Draw()
+function World.Draw()
 	-- draw background and sprites
 	drawBackgound()
 	drawSprites()
@@ -47,7 +42,7 @@ function Your_House_Draw()
 	drawDialoge()
 end
 
-function Your_House_Update(dt)
+function World.Update(dt)
 	if not IsTalking then
 		local rnpc, rdbox = movePlayer(dt,World.movespeed)
 		World.setNpc(rnpc)
@@ -70,7 +65,7 @@ function Your_House_Update(dt)
 	end
 end
 
-function Your_House_Keypressed(key)
+function World.Keypressed(key)
 	-- if npc, not talking, and 'enter'
 	if World.doTalk(key) then
 		IsTalking = true

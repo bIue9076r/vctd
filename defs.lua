@@ -26,7 +26,7 @@ MAP_Y = 7
 -- Locations
 Intro = 0
 Load = 1
-World = 2
+WORLD = 2
 Cutscene = 3
 END = 4
 
