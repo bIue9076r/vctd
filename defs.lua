@@ -48,6 +48,20 @@ Planks = 13
 Carpet = 14
 CarpetEnd = 15
 Table = 16
+Concrete = 17
+Asphalt = 18
+Road_T = 19
+Road_B = 20
+Road_R = 21
+Road_L = 22
+Road_N_T = 23
+Road_N_B = 24
+Road_N_R = 25
+Road_N_L = 26
+Road_C_TR = 27
+Road_C_TL = 28
+Road_C_BR = 29
+Road_C_BL = 30
 
 -- tiles to sprite
 TtS = {
@@ -68,6 +82,20 @@ TtS = {
 	[Carpet] = "Carpet",
 	[CarpetEnd] = "CarpetEnd",
 	[Table] = "Table",
+	[Concrete] = "Concrete",
+	[Asphalt] = "Asphalt",
+	[Road_T] = "Road_T",
+	[Road_B] = "Road_B",
+	[Road_R] = "Road_R",
+	[Road_L] = "Road_L",
+	[Road_N_T] = "Road_N_T",
+	[Road_N_B] = "Road_N_B",
+	[Road_N_R] = "Road_N_R",
+	[Road_N_L] = "Road_N_L",
+	[Road_C_TR] = "Road_C_TR",
+	[Road_C_TL] = "Road_C_TL",
+	[Road_C_BR] = "Road_C_BR",
+	[Road_C_BL] = "Road_C_BL",
 }
 
 -- Background Colors

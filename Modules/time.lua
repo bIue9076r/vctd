@@ -1,5 +1,5 @@
 Time = {}
-Time.hour = 18--6 -- 0 <-> 23
+Time.hour = 8 -- 0 <-> 23
 Time.minute = 0 -- 0 <-> 59
 --Time.second = 0 -- 0 <-> 59
 
