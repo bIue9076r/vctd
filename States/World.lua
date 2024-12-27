@@ -27,11 +27,21 @@ function World.doTalk(key)
 end
 
 World.Map = {}
+World.NextMap = {}
+World.ChangeMap = false
+World.AfterEffect = function()
+	
+end
 require("maps/Maps")
 World.Dialoge = {}
 -- Include Dialoge File
 require("npcs/Dialoges")
 --
+
+function World.nextMap(map)
+	World.NextMap = map
+	World.ChangeMap = true
+end
 
 function World.Draw()
 	-- draw background and sprites

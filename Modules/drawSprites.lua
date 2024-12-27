@@ -160,6 +160,15 @@ function drawDialoge()
 			World.dtbl = nil
 			IsTalking = false
 			World.dticker:reset()
+			if World.ChangeMap then
+				Map = World.NextMap
+				Time.changed()
+				World.NextMap = nil
+				World.ChangeMap = false
+			end
+			if World.AfterEffect then
+				World.AfterEffect()
+			end
 		end
 	end
 end

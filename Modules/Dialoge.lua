@@ -63,8 +63,8 @@ function Dialoge:get()
 			self.index = 1
 		else
 			self.index = self.index - 1
-			self.effect()
 		end
+		self.effect()
 	end
 	return {s=rs, n=rc}
 end

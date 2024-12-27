@@ -29,10 +29,10 @@ World.Map[1]:setLineV(3,5,7,Asphalt)
 World.Map[1]:setLineV(4,5,7,Asphalt)
 World.Map[1]:setLineV(5,5,7,Asphalt)
 
-World.Map[1]:addWall(Box.new(12,0,8,10.1))
+World.Map[1]:addWall(Box.new(12,0,10,8.1))
 World.Map[1]:addWall(Box.new(0,8,2,0.1))
 World.Map[1]:addWall(Box.new(10,8,2,0.1))
 
 World.Map[1]:addNpc(Npc.new(7.6,4.7,Tracey,1,0,function()
-	-- Lets go inside
+	
 end))
