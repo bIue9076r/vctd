@@ -62,6 +62,7 @@ Road_C_TR = 27
 Road_C_TL = 28
 Road_C_BR = 29
 Road_C_BL = 30
+Carpet_V = 31
 
 -- tiles to sprite
 TtS = {
@@ -96,6 +97,7 @@ TtS = {
 	[Road_C_TL] = "Road_C_TL",
 	[Road_C_BR] = "Road_C_BR",
 	[Road_C_BL] = "Road_C_BL",
+	[Carpet_V] = "Carpet_V",
 }
 
 -- Background Colors
