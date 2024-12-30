@@ -29,7 +29,7 @@ end
 function Intro_Keypressed(key)
 	if key == "return" then
 		GameState = WORLD
-		Map = World.Map[2]
+		Map = World.Map[1]
 		setPlr(19,12)
 	end
 end

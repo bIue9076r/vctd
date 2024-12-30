@@ -6,4 +6,7 @@ World.Dialoge[1] = Dialoge.new({
 	Text.new("Sweet!",Varisa),
 },0,function()
 	World.nextMap(World.Map[2])
+	World.AfterEffect = function()
+		setPlr(10.5,12.5)
+	end
 end)

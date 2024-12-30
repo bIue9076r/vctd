@@ -9,6 +9,7 @@ World.Map[2]:setLineH(1,7,3,Wall)
 
 World.Map[2]:setTile(4,3,Planks)
 World.Map[2]:setTile(8,6,Planks)
+
 World.Map[2]:setLineH(9,4,11,Wall)
 World.Map[2]:setLineH(9,3,11,Wall)
 World.Map[2]:setLineH(9,2,11,Wall)
@@ -21,6 +22,12 @@ World.Map[2]:addWall(Box.new(14,0,8,8))
 World.Map[2]:addWall(Box.new(14,8,2,2))
 World.Map[2]:addWall(Box.new(14,12,2,2))
 
-World.Map[2]:addNpc(Npc.new(7.6,4.7,Tracey,2,0,function()
-	
+World.Map[2]:addWall(Box.new(9.9,0,2.2,0.1,1,1,function()
+	print("Enter Living Room")
+end))
+
+World.Map[2]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
+	print("Exit House")
+	Map = World.Map[1]
+	setPlr(19,12)
 end))

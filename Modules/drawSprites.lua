@@ -168,6 +168,9 @@ function drawDialoge()
 			end
 			if World.AfterEffect then
 				World.AfterEffect()
+				World.AfterEffect = function()
+					
+				end
 			end
 		end
 	end

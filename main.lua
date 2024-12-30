@@ -11,23 +11,12 @@ require("/Modules/Dialoge")
 require("/Modules/npc")
 require("/Modules/MapObj")
 require("/Modules/images")
---require("/Modules/audio")
+require("/Modules/audio")
 require("/Modules/drawSprites")
 require("defs")
 require("/States/Intro")
 require("/States/World")
 require("/States/End")
-
--- the sounds should get their own file lol
-sound.new("Chr","/Assets/chr.mp3","stream")
-sound.new("Bass_Song","/Assets/Bass_Love_Song.mp3","stream")
-sound.new("Sunrise","/Assets/Sunrise_Hopes.mp3","stream")
-sound.new("Sunset","/Assets/Sunset_Dreams.mp3","stream")
-sound.new("Waltz","/Assets/The_Waltz.mp3","stream")
-
-bs = sound.getSound("Chr")
-muted = false
--------------------------------------------
 
 SCREEN_X = love.graphics.getWidth()
 SCREEN_Y = love.graphics.getHeight()
