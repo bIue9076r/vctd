@@ -150,3 +150,13 @@ Sky = {
 	[22] = {0.4,0.4,0.4},
 	[23] = {0.4,0.4,0.4},
 }
+
+-- Mood stuff
+print(-2*math.cos((math.pi*(Time.hour + (Time.minute/60)))/(12)))
+Mood.set(-2*math.cos((math.pi*(Time.hour + (Time.minute/60)))/(12)))
+
+SongList = {
+	Song.new("Roof",-2,0),
+	Song.new("Main",0,5),
+	Song.new("Ground",-1,1),
+}

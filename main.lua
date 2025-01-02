@@ -11,6 +11,8 @@ require("/Modules/Dialoge")
 require("/Modules/npc")
 require("/Modules/MapObj")
 require("/Modules/images")
+require("/Modules/mood")
+require("/Modules/song")
 require("/Modules/audio")
 require("/Modules/drawSprites")
 require("defs")
@@ -88,6 +90,8 @@ STATE_DRAW = {
 require("col")
 
 function Time.changed()
+	Mood.set(-2*math.sin((math.pi*(Time.hour + (Time.minute/60)))/(12)))
+	
 	for i,v in pairs(Map:getNpcs()) do
 		v:onTimeChange()
 	end
@@ -225,11 +229,22 @@ function derror()
 end
 
 function daudio()
-	-- if the game is not muted, play music
 	if not muted then
-		if not bs:isPlaying() then
-			bs:seek(0)
-			bs:play()
+		if bs then
+			if not bs:isPlaying() then
+				bs = sound.getSound(SongListSelect(SongList))
+				if bs then
+					bs:seek(0)
+					bs:play()
+				end
+			end
+		else
+			if soundTick:get() <= 1000 then
+				soundTick() -- Silence
+			else
+				soundTick:reset()
+				bs = sound.getSound(SongListSelect(SongList))
+			end
 		end
 	end
 end
@@ -364,9 +379,6 @@ function love.draw()
 end
 
 function love.quit()
-	-- close the open log file
 	Log:close()
-	
-	-- return 0 and quit
 	return false
 end
