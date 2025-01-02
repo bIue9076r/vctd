@@ -2,12 +2,22 @@
 Varisa = 0x00 --\
 Tracey = 0x01 -- |> Core Trio
 Rachel = 0x02 --/
+B_Guitar_L = 0x03
+B_Guitar_R = 0x04
+R_Guitar_L = 0x05
+R_Guitar_R = 0x06
+Mic = 0x07
 
 -- Char to Sprite
 CtS = {
 	[Varisa] = "Char_00",
 	[Tracey] = "Char_01",
 	[Rachel] = "Char_02",
+	[B_Guitar_L] = "Guitar_L",
+	[B_Guitar_R] = "Guitar_R",
+	[R_Guitar_L] = "Red_Guitar_L",
+	[R_Guitar_R] = "Red_Guitar_R",
+	[Mic] = "Mic",
 }
 
 -- Names
@@ -15,6 +25,11 @@ Names = {
 	[Varisa] = "Varisa",
 	[Tracey] = "Tracey",
 	[Rachel] = "Rachel",
+	[B_Guitar_L] = "Black Guitar",
+	[B_Guitar_R] = "Black Guitar",
+	[R_Guitar_L] = "Red Guitar",
+	[R_Guitar_R] = "Red Guitar",
+	[Mic] = "Mic",
 }
 
 -- Character Range

@@ -24,7 +24,7 @@ SCREEN_X = love.graphics.getWidth()
 SCREEN_Y = love.graphics.getHeight()
 ASPECT = (SCREEN_X/SCREEN_Y)
 
-image.newImage("backtile","/Assets/backtile.png")
+image.newImage("backtile","/Assets/huh.png")
 files.assets.Fonts.newFont("comic","/Assets/ComicSansMS3.ttf",20)
 love.graphics.setFont(files.assets.Fonts.getFont("comic"))
 
