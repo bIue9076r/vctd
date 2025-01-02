@@ -38,6 +38,24 @@ World.Map[1]:addWall(Box.new(20,0,2,8.1))
 World.Map[1]:addWall(Box.new(0,8,2,0.1))
 World.Map[1]:addWall(Box.new(10,8,2,0.1))
 
+World.Map[1]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
+	print("Enter House")
+	Map = World.Map[2]
+	setPlr(10.5,12.5)
+end))
+
+World.Map[1]:addWall(Box.new(0,8,0.1,6,1,1,function()
+	print("To Your House")
+end))
+
+World.Map[1]:addWall(Box.new(21.9,8,0.1,6,1,1,function()
+	print("To The Roundabout")
+end))
+
+World.Map[1]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
+	print("To House Down")
+end))
+
 World.Map[1]:addNpc(Npc.new(7.6,4.7,Tracey,1,0,function()
 	
 end))

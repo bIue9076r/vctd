@@ -3,6 +3,7 @@ image.newImage("Char_01","Assets/Tracey.png")
 image.newImage("Char_02","Assets/Rachel.png")
 image.newImage(1,"Assets/OC.png")
 
+image.newImage("Void","/Assets/void.png")
 image.newImage("Grass_1","/Assets/grassblock_1.png")
 image.newImage("Grass_2","/Assets/grassblock_2.png")
 image.newImage("Grass_3","/Assets/grassblock_3.png")

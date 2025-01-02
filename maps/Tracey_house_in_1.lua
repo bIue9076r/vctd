@@ -24,10 +24,12 @@ World.Map[2]:addWall(Box.new(14,12,2,2))
 
 World.Map[2]:addWall(Box.new(9.9,0,2.2,0.1,1,1,function()
 	print("Enter Living Room")
+	Map = World.Map[3]
+	setPlr(10.5,12.5)
 end))
 
 World.Map[2]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 	print("Exit House")
 	Map = World.Map[1]
-	setPlr(19,12)
+	setPlr(18.5,8)
 end))
