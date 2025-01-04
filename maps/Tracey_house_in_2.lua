@@ -10,6 +10,7 @@ World.Map[3]:setLineH(1,6,4,Wall)
 World.Map[3]:setLineH(1,7,4,Wall)
 
 World.Map[3]:setTile(7,1,Brick_D)
+World.Map[3]:setTile(6,7,Carpet_V)
 
 World.Map[3]:addWall(Box.new(0,0,8,14))
 World.Map[3]:addWall(Box.new(8,0,4,2))

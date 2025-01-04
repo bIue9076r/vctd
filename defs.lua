@@ -83,6 +83,11 @@ Carpet_V = tileTicker:get(); tileTicker()
 Grass_S = tileTicker:get(); tileTicker()
 Brick = tileTicker:get(); tileTicker()
 Brick_D = tileTicker:get(); tileTicker()
+Counter_B_V = tileTicker:get(); tileTicker()
+Sink_B_V_E = tileTicker:get(); tileTicker()
+Stove_B_V_A = tileTicker:get(); tileTicker()
+Stove_B_V_I = tileTicker:get(); tileTicker()
+Fridge = tileTicker:get(); tileTicker()
 
 -- tiles to sprite
 TtS = {
@@ -122,6 +127,11 @@ TtS = {
 	[Grass_S] = "Grass_S",
 	[Brick] = "Brick",
 	[Brick_D] = "Brick_D",
+	[Counter_B_V] = "Counter_B_V",
+	[Sink_B_V_E] = "Sink_B_V_E",
+	[Stove_B_V_A] = "Stove_B_V_A",
+	[Stove_B_V_I] = "Stove_B_V_I",
+	[Fridge] = "Fridge",
 }
 
 -- Background Colors
@@ -167,7 +177,6 @@ Sky = {
 }
 
 -- Mood stuff
-print(-2*math.cos((math.pi*(Time.hour + (Time.minute/60)))/(12)))
 Mood.set(-2*math.cos((math.pi*(Time.hour + (Time.minute/60)))/(12)))
 
 SongList = {

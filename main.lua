@@ -117,7 +117,18 @@ function kctrlOps(key)
 			HitBoxes = not(HitBoxes)
 		elseif key == "m" then
 			muted = not(muted)
-			bs:stop()
+			if bs then
+				bs:stop()
+			end
+		elseif key == "z" then
+			love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
+			love.resize()
+		elseif key == "x" then
+			love.window.setMode(1200, 800, {resizable = true, minwidth = 600, minheight = 400})
+			love.resize()
+		elseif key == "c" then
+			love.window.setMode(1800, 1200, {resizable = true, minwidth = 600, minheight = 400})
+			love.resize()
 		elseif key == "p" then
 			print(
 				"Player = {\n\t"..
@@ -230,20 +241,31 @@ end
 
 function daudio()
 	if not muted then
-		if bs then
-			if not bs:isPlaying() then
-				bs = sound.getSound(SongListSelect(SongList))
-				if bs then
-					bs:seek(0)
-					bs:play()
+		if not song_silence then
+			if bs then
+				if not bs:isPlaying() then
+					plyed = not plyed
+					if not plyed then
+						song_silence = true
+						bs = nil
+					else
+						bs = sound.getSound(SongListSelect(SongList))
+						if bs then
+							bs:seek(0)
+							bs:play()
+						end
+					end
 				end
+			else
+				song_silence = true
 			end
 		else
-			if soundTick:get() <= 1000 then
+			if soundTick:get() <= 4000 then
 				soundTick() -- Silence
 			else
 				soundTick:reset()
 				bs = sound.getSound(SongListSelect(SongList))
+				song_silence = false
 			end
 		end
 	end
@@ -251,6 +273,7 @@ end
 
 function love.load()
 	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
+	love.window.setTitle("Episode 1: Mystic Mystery")
 	
 	-- TODO: add a save feature
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")
