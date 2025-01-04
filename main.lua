@@ -90,7 +90,7 @@ STATE_DRAW = {
 require("col")
 
 function Time.changed()
-	Mood.set(-2*math.sin((math.pi*(Time.hour + (Time.minute/60)))/(12)))
+	Mood.change(-2*math.cos((math.pi*(Time.hour + (Time.minute/60)))/(12)) + 2)
 	
 	for i,v in pairs(Map:getNpcs()) do
 		v:onTimeChange()

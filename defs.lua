@@ -177,7 +177,7 @@ Sky = {
 }
 
 -- Mood stuff
-Mood.set(-2*math.cos((math.pi*(Time.hour + (Time.minute/60)))/(12)))
+Mood.set(0)
 
 SongList = {
 	Song.new("Roof",-2,0),
