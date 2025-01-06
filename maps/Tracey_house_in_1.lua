@@ -13,18 +13,26 @@ World.Map[2]:setTile(2,1,Fridge)
 World.Map[2]:setTile(4,3,Planks)
 World.Map[2]:setTile(8,6,Planks)
 
+World.Map[2]:setTile(9,3,Bookshelf)
+World.Map[2]:setTile(10,3,Bookshelf)
+World.Map[2]:setTile(11,3,Bookshelf)
+
+World.Map[2]:setTile(11,6,BigTable_B)
+World.Map[2]:setTile(11,5,BigTable_T)
+
 World.Map[2]:setLineH(9,2,11,Wall)
 World.Map[2]:setLineH(9,1,11,Wall)
 
 World.Map[2]:addWall(Box.new(0,0,1,10))
-
 World.Map[2]:addWall(Box.new(0,10,8,4))
 World.Map[2]:addWall(Box.new(2.75,0,0.5,1))
 World.Map[2]:addWall(Box.new(6,6,2,4))
 World.Map[2]:addWall(Box.new(6,0,2,4))
 World.Map[2]:addWall(Box.new(14,0,8,4))
+World.Map[2]:addWall(Box.new(16,4,6,0.5))
 World.Map[2]:addWall(Box.new(14,4,2,6))
 World.Map[2]:addWall(Box.new(14,12,2,2))
+World.Map[2]:addWall(Box.new(20.4,8.88,1.6,2))
 
 World.Map[2]:addWall(Box.new(9.9,0,2.2,0.1,1,1,function()
 	print("Enter Living Room")

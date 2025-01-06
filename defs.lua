@@ -7,17 +7,23 @@ B_Guitar_R = 0x04
 R_Guitar_L = 0x05
 R_Guitar_R = 0x06
 Mic = 0x07
+Karly = 0x08
+Zoey = 0x09
+Lassie = 0x0A
 
 -- Char to Sprite
 CtS = {
-	[Varisa] = "Char_00",
-	[Tracey] = "Char_01",
-	[Rachel] = "Char_02",
+	[Varisa] = "Varisa",
+	[Tracey] = "Tracey",
+	[Rachel] = "Rachel",
 	[B_Guitar_L] = "Guitar_L",
 	[B_Guitar_R] = "Guitar_R",
 	[R_Guitar_L] = "Red_Guitar_L",
 	[R_Guitar_R] = "Red_Guitar_R",
 	[Mic] = "Mic",
+	[Karly] = "Karly",
+	[Zoey] = "Zoey",
+	[Lassie] = "Lassie",
 }
 
 -- Names
@@ -30,6 +36,9 @@ Names = {
 	[R_Guitar_L] = "Red Guitar",
 	[R_Guitar_R] = "Red Guitar",
 	[Mic] = "Mic",
+	[Karly] = "Karly",
+	[Zoey] = "Zoey",
+	[Lassie] = "Lassie",
 }
 
 -- Character Range
@@ -88,6 +97,9 @@ Sink_B_V_E = tileTicker:get(); tileTicker()
 Stove_B_V_A = tileTicker:get(); tileTicker()
 Stove_B_V_I = tileTicker:get(); tileTicker()
 Fridge = tileTicker:get(); tileTicker()
+Bookshelf = tileTicker:get(); tileTicker()
+BigTable_B = tileTicker:get(); tileTicker()
+BigTable_T = tileTicker:get(); tileTicker()
 
 -- tiles to sprite
 TtS = {
@@ -132,6 +144,9 @@ TtS = {
 	[Stove_B_V_A] = "Stove_B_V_A",
 	[Stove_B_V_I] = "Stove_B_V_I",
 	[Fridge] = "Fridge",
+	[Bookshelf] = "Bookshelf",
+	[BigTable_B] = "BigTable_B",
+	[BigTable_T] = "BigTable_T",
 }
 
 -- Background Colors

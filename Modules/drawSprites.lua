@@ -79,6 +79,7 @@ function drawSprites()
 	
 	drawBackTiles()
 	drawChars(Cx,Cy)
+	--drawProps()
 	drawForeTiles()
 	love.graphics.setColor(1,1,1)
 end
@@ -105,7 +106,15 @@ function drawChars(Cx,Cy)
 		Tx/img:getWidth(),
 		Ty/img:getHeight()
 	)
+	
+	-- TODO: draw player items here
 end
+
+--[[function drawProps()
+	for i,v in pairs(Map.props) do
+		v()
+	end
+end]]
 
 function drawBackgound()
 	-- calculation proportions for the screen
