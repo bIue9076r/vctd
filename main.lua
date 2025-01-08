@@ -15,9 +15,11 @@ require("/Modules/mood")
 require("/Modules/song")
 require("/Modules/audio")
 require("/Modules/drawSprites")
+require("/Modules/Animate")
 require("defs")
 require("/States/Intro")
 require("/States/World")
+require("/States/Play")
 require("/States/End")
 
 SCREEN_X = love.graphics.getWidth()
@@ -54,7 +56,8 @@ end
 Map = MapObj.new()
 
 -- globals
-GameState = Intro;
+GameState = Cutscene --GameState = Intro;
+muted = true -- We control the music now
 DialogeBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
@@ -67,7 +70,7 @@ STATE_KEYPRESSED = {
 	[Intro] = Intro_Keypressed,
 	[Load] = Load_Keypressed,
 	[WORLD] = World.Keypressed,
-	[Cutscene] = Cutscene_Keypressed,
+	[Cutscene] = Play.Keypressed,
 	[END] = End_Keypressed,
 }
 
@@ -75,7 +78,7 @@ STATE_UPDATE = {
 	[Intro] = Intro_Update,
 	[Load] = Load_Update,
 	[WORLD] = World.Update,
-	[Cutscene] = Cutscene_Update,
+	[Cutscene] = Play.Update,
 	[END] = End_Update,
 }
 
@@ -83,7 +86,7 @@ STATE_DRAW = {
 	[Intro] = Intro_Draw,
 	[Load] = Load_Draw,
 	[WORLD] = World.Draw,
-	[Cutscene] = Cutscene_Draw,
+	[Cutscene] = Play.Draw,
 	[END] = End_Draw,
 }
 

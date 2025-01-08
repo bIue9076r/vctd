@@ -1,5 +1,7 @@
 Actor = {}
 Actor.c = Varisa
+Actor.x = 0
+Actor.y = 0
 
 function Actor.new(c,x,y)
 	local tbl = {
@@ -38,7 +40,7 @@ Backround.map = {} -- map
 
 function Backround.new(m)
 	local tbl = {
-		m = m or {},
+		map = m or {},
 	}
 	
 	local mt = {
@@ -58,6 +60,7 @@ Scene.dtbl = {
 	n = Varisa,
 }
 Scene.tickGoal = 0
+Scene.Next = 1 -- Map location
 
 function Scene.new(m,g,t)
 	local tbl = {
@@ -87,9 +90,9 @@ function Scene.lerp(a,b,t)
 end
 
 function Scene:skyTint()
-	local h1 = self.Hour()
+	local h1 = self.Hour
 	local h2 = h1 + 1
-	local tm = (self.Min() / 60)
+	local tm = (self.Min / 60)
 	if h2 >= 24 then h2 = 0 end
 	local r1 = Sky[h1][1]
 	local g1 = Sky[h1][2]
@@ -99,16 +102,16 @@ function Scene:skyTint()
 	local b2 = Sky[h2][3]
 	
 	love.graphics.setColor(
-		lerp(r1,r2,tm),
-		lerp(g1,g2,tm),
-		lerp(b1,b2,tm)
+		Scene.lerp(r1,r2,tm),
+		Scene.lerp(g1,g2,tm),
+		Scene.lerp(b1,b2,tm)
 	)
 end
 
 function Scene:drawBackTiles()
-	for i = 1, Backround.map.Y do
-		for j = 1, Backround.map.X do
-			local t = Backround.map:getTile(j,i)
+	for i = 1, MAP_Y do
+		for j = 1, MAP_X do
+			local t = self.Backround.map:getTile(j,i)
 			if t and t.f == 0 then
 				local img, psx, psy
 				local Tx = (SCREEN_X/12)
@@ -130,9 +133,9 @@ function Scene:drawBackTiles()
 end
 
 function Scene:drawForeTiles()
-	for i = 1, Backround.map.Y do
-		for j = 1, Backround.map.X do
-			local t = Backround.map:getTile(j,i)
+	for i = 1, MAP_Y do
+		for j = 1, MAP_X do
+			local t = self.Backround.map:getTile(j,i)
 			if t and t.f == 1 then
 				local img, psx, psy
 				local Tx = (SCREEN_X/12)
@@ -155,12 +158,12 @@ end
 
 function Scene:draw()
 	-- Time stuff --
-	skyTint()
+	self:skyTint()
 	--
 	
-	self.drawBackTiles()
-	self.drawActors()
-	self.drawForeTiles()
+	self:drawBackTiles()
+	self:drawActors()
+	self:drawForeTiles()
 	love.graphics.setColor(1,1,1)
 end
 
@@ -206,6 +209,6 @@ function Scene:drawDialoge()
 	end
 end
 
-function Scene:transition(t)
+function Scene:transition(self,t)
 	GameState = "What? Broken Animation?"
 end

@@ -22,8 +22,8 @@ function skyTint()
 end
 
 function drawBackTiles()
-	for i = 1, Map.Y do
-		for j = 1, Map.X do
+	for i = 1, MAP_Y do
+		for j = 1, MAP_X do
 			local t = Map:getTile(j,i)
 			if t and t.f == 0 then
 				local img, psx, psy
@@ -46,8 +46,8 @@ function drawBackTiles()
 end
 
 function drawForeTiles()
-	for i = 1, Map.Y do
-		for j = 1, Map.X do
+	for i = 1, MAP_Y do
+		for j = 1, MAP_X do
 			local t = Map:getTile(j,i)
 			if t and t.f == 1 then
 				local img, psx, psy
