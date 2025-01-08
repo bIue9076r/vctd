@@ -59,6 +59,7 @@ Scene.dtbl = {
 	s = "......",
 	n = Varisa,
 }
+Scene.dticker = ticker.new()
 Scene.tickGoal = 0
 Scene.Next = 1 -- Map location
 

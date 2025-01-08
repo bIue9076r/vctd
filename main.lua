@@ -57,7 +57,7 @@ Map = MapObj.new()
 
 -- globals
 GameState = Cutscene --GameState = Intro;
-muted = true -- We control the music now
+Play.scene = Play.Scenes[1]
 DialogeBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
@@ -118,7 +118,7 @@ function kctrlOps(key)
 			DrawCoords = not(DrawCoords)
 		elseif key == "h" then
 			HitBoxes = not(HitBoxes)
-		elseif key == "m" then
+		elseif key == "m" and not (GameState == Cutscene) then
 			muted = not(muted)
 			if bs then
 				bs:stop()

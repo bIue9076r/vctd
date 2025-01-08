@@ -1,21 +1,8 @@
 Play = {}
-Play.scene = Scene.new(World.Map[1])
-Play.scene.tickGoal = 400
-Play.scene.transition = function(self,t)
-	if(t < 200) then
-		Play.scene.Hour = Scene.lerp(0,7.5,t/200)
-		Play.scene.Min = math.floor(60 * (Play.scene.Hour - math.floor(Play.scene.Hour)))
-		Play.scene.Hour = math.floor(Play.scene.Hour)
-	elseif(t < 400) then
-		
-	else
-		if Play.unmuteAfter then
-			muted = false
-			GameState = Intro
-		end
-	end
-end
+Play.Scenes = {}
+require("/scenes/Scenes")
 
+Play.scene = Scene.new()
 Play.unmuteAfter = true
 Play.ticker = ticker.new()
 
