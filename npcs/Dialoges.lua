@@ -10,3 +10,14 @@ World.Dialoge[1] = Dialoge.new({
 		setPlr(10.5,12.5)
 	end
 end)
+
+World.Dialoge[2] = Dialoge.new({
+	Text.new("Hey Ms. Drew",Varisa),
+	Text.new("Hey Varisa",Zoey),
+	Text.new("Is your mom still around?",Zoey),
+	Text.new("Nope, haven't seen her",Varisa),
+	Text.new("That's so unlike her",Zoey),
+	Text.new("I hope she's okay",Zoey),
+	Text.new("yeah...",Varisa),
+	Text.new("....",Zoey),
+},1)

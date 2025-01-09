@@ -28,3 +28,7 @@ World.Map[3]:addWall(Box.new(11.9,1,2.2,0.1,1,1,function()
 	Map = World.Map[5]
 	setPlr(12.5,12.5)
 end))
+
+World.Map[3]:addNpc(Npc.new(7.6,4.7,Zoey,2,0,function()
+	
+end))
