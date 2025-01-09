@@ -56,8 +56,7 @@ end
 Map = MapObj.new()
 
 -- globals
-GameState = Cutscene --GameState = Intro;
-Play.scene = Play.Scenes[1]
+GameState = Cutscene
 DialogeBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
@@ -280,6 +279,9 @@ function love.load()
 	
 	-- TODO: add a save feature
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")
+	
+	muted = true
+	Play.scene = Play.Scenes[1]
 	
 	local mods = love.filesystem.getInfo("/mods/")
 	if mods then
