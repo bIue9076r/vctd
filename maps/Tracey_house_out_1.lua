@@ -51,7 +51,9 @@ World.Map[1]:addWall(Box.new(0,8.5,0.1,5.5,1,1,function()
 end))
 
 World.Map[1]:addWall(Box.new(21.9,8.5,0.1,5.5,1,1,function()
-	print("To The Roundabout")
+	print("To The Roundabout Up")
+	Map = World.Map[6]
+	setPlr(0.5,Plr.y)
 end))
 
 World.Map[1]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
