@@ -100,6 +100,7 @@ Fridge = tileTicker:get(); tileTicker()
 Bookshelf = tileTicker:get(); tileTicker()
 BigTable_B = tileTicker:get(); tileTicker()
 BigTable_T = tileTicker:get(); tileTicker()
+Garage = tileTicker:get(); tileTicker()
 
 -- tiles to sprite
 TtS = {
@@ -147,6 +148,7 @@ TtS = {
 	[Bookshelf] = "Bookshelf",
 	[BigTable_B] = "BigTable_B",
 	[BigTable_T] = "BigTable_T",
+	[Garage] = "Garage",
 }
 
 -- Background Colors

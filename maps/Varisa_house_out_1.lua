@@ -1,7 +1,7 @@
-World.Map[7] = MapObj.new(Planks)
+World.Map[7] = MapObj.new(Garage)
 
-World.Map[7]:setLineV(1,1,7,Brick,1)
-World.Map[7]:setLineV(6,1,7,Brick,1)
+World.Map[7]:setLineV(1,1,7,Brick)
+World.Map[7]:setLineV(6,1,7,Brick)
 World.Map[7]:setLineV(7,1,7,Brick)
 World.Map[7]:setLineV(8,1,7,Brick)
 World.Map[7]:setLineV(9,1,7,Brick)
@@ -32,11 +32,9 @@ World.Map[7]:setLineV(3,5,7,Asphalt)
 World.Map[7]:setLineV(4,5,7,Asphalt)
 World.Map[7]:setLineV(5,5,7,Asphalt)
 
-World.Map[7]:addWall(Box.new(12,0,6,8.1))
+World.Map[7]:addWall(Box.new(0,0,18,8))
 World.Map[7]:addWall(Box.new(18,0,2,7))
-World.Map[7]:addWall(Box.new(20,0,2,8.1))
-World.Map[7]:addWall(Box.new(0,8,2,0.1))
-World.Map[7]:addWall(Box.new(10,8,2,0.1))
+World.Map[7]:addWall(Box.new(20,0,2,8))
 
 World.Map[7]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
 	print("Enter House")
@@ -44,11 +42,11 @@ World.Map[7]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
 	setPlr(10.5,12.5)
 end))
 
-World.Map[7]:addWall(Box.new(0,8,0.1,6,1,1,function()
+World.Map[7]:addWall(Box.new(0,8.5,0.1,5.5,1,1,function()
 	print("To Next House")
 end))
 
-World.Map[7]:addWall(Box.new(21.9,8,0.1,6,1,1,function()
+World.Map[7]:addWall(Box.new(21.9,8.5,0.1,5.5,1,1,function()
 	print("To Tracey's House")
 	Map = World.Map[1]
 	setPlr(0.5,Plr.y)
