@@ -46,7 +46,7 @@ end))
 
 World.Map[1]:addWall(Box.new(0,8.5,0.1,5.5,1,1,function()
 	print("To Your House")
-	Map = World.Map[7]
+	Map = World.Map[8]
 	setPlr(20.5,Plr.y)
 end))
 
