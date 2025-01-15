@@ -9,6 +9,7 @@ require("/Modules/ticker")
 require("/Modules/spString")
 require("/Modules/Dialoge")
 require("/Modules/npc")
+require("/Modules/prop")
 require("/Modules/MapObj")
 require("/Modules/images")
 require("/Modules/mood")
@@ -165,6 +166,19 @@ function dctrlOps()
 	end
 	if HitBoxes then
 		for i,v in ipairs(Map.npcs) do
+			local psx = ((25 + (v.x)*25)/(600))
+			local psy = ((25 + (v.y)*25)/(400))
+			local psw = (25/600)
+			local psh = (25/400)
+			
+			love.graphics.rectangle("line",
+				SCREEN_X*psx,
+				SCREEN_Y*psy,
+				SCREEN_X*psw,
+				SCREEN_Y*psh
+			)
+		end
+		for i,v in ipairs(Map.props) do
 			local psx = ((25 + (v.x)*25)/(600))
 			local psy = ((25 + (v.y)*25)/(400))
 			local psw = (25/600)

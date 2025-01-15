@@ -20,14 +20,16 @@ MapObj.X = 11
 MapObj.Y = 7
 MapObj.sector = {}
 MapObj.walls = {}
-MapObj.npcs = {} -- Todo NPC objects
+MapObj.npcs = {}
+MapObj.props = {} -- Todo NPC items?
 MapObj.dboxs = {}
 
-function MapObj.new(bt,wtbl,ntbl)
+function MapObj.new(bt,wtbl,ntbl,ptbl)
 	local tbl = {
 		sector = {},
 		walls = wtbl or {},
 		npcs = ntbl or {},
+		props = ptbl or {},
 		dboxs = {},
 	}
 	
@@ -140,6 +142,16 @@ end
 
 function MapObj:getNpcs()
 	return self.npcs
+end
+
+function MapObj:addProp(prop)
+	if prop then
+		table.insert(self.props, prop)
+	end
+end
+
+function MapObj:getProps()
+	return self.props
 end
 
 function MapObj:getDboxs()

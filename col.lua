@@ -21,6 +21,15 @@ function checkNpcCollision(Tx,Ty)
 	end
 end
 
+function checkPropCollision(Tx,Ty)
+	for i,v in pairs(Map:getProps()) do
+		if npcCollide(Tx,Ty,v.x,v.y) then
+			Plr.tx = Plr.x
+			Plr.ty = Plr.y
+		end
+	end
+end
+
 function checkCollision()
 	local Tx = Plr.tx
 	local Ty = Plr.ty
@@ -49,6 +58,7 @@ function checkCollision()
 		
 		-- check collision with npcs
 		checkNpcCollision(Tx,Ty)
+		checkPropCollision(Tx,Ty)
 		
 		for i,v in pairs(Map:getDboxs()) do
 			if not (Map.npcs[v.i].g == 1) then
@@ -64,6 +74,8 @@ function checkCollision()
 			end
 		end
 		
+		
+		-- TODO: Move Player to closest valid position
 		-- update player position
 		Plr.x = Plr.tx
 		Plr.y = Plr.ty

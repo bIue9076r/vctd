@@ -12,6 +12,9 @@ World.Map[3]:setLineH(1,7,4,Wall)
 World.Map[3]:setTile(7,1,Brick_D)
 World.Map[3]:setTile(6,7,Carpet_V)
 
+World.Map[3]:setTile(10,5,BigTable_B)
+World.Map[3]:setTile(10,4,BigTable_T)
+
 World.Map[3]:addWall(Box.new(0,0,8,14))
 World.Map[3]:addWall(Box.new(8,0,4,2))
 World.Map[3]:addWall(Box.new(12,0,2,1))
@@ -29,6 +32,6 @@ World.Map[3]:addWall(Box.new(11.9,1,2.2,0.1,1,1,function()
 	setPlr(12.5,12.5)
 end))
 
-World.Map[3]:addNpc(Npc.new(7.6,4.7,Zoey,2,0,function()
+World.Map[3]:addNpc(Npc.new(8,4.7,Zoey,2,0,function()
 	
 end))

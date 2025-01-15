@@ -1,16 +1,13 @@
-Npc = {}
-Npc.x = 0
-Npc.y = 0
-Npc.c = -1
-Npc.i = 0
-Npc.g = 0
+Prop = {}
+Prop.x = 0
+Prop.y = 0
+Prop.g = 0
 
-function Npc.new(x,y,c,i,g,o)
+function Prop.new(x,y,c,g,o)
 	local tbl = {
 		x = x or 0,
 		y = y or 0,
 		c = c or -1,
-		i = i or 0,
 		g = g or 0,
 		onTimeChange = o or function()
 			
@@ -18,14 +15,14 @@ function Npc.new(x,y,c,i,g,o)
 	}
 	
 	local mt = {
-		__index = Npc,
-		__call = Npc.draw,
+		__index = Prop,
+		__call = Prop.draw,
 	}
 	
 	return setmetatable(tbl,mt)
 end
 
-function Npc:draw()
+function Prop:draw()
 	if not (self.g == 1) then
 		local Tx = (SCREEN_X/24)
 		local Ty = (SCREEN_Y/16)
@@ -44,18 +41,14 @@ function Npc:draw()
 	end
 end
 
-function Npc:index(i)
-	self.i = i or 0
-end
-
-function Npc:Ghost()
+function Prop:Ghost()
 	self.g = 1
 end
 
-function Npc:noGhost()
+function Prop:noGhost()
 	self.g = 0
 end
 
-function Npc:onTimeChange() -- Hourly thing
+function Prop:onTimeChange() -- Hourly thing
 	
 end
