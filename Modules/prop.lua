@@ -1,13 +1,16 @@
 Prop = {}
 Prop.x = 0
 Prop.y = 0
+Prop.c = -1
+Prop.p = 0
 Prop.g = 0
 
-function Prop.new(x,y,c,g,o)
+function Prop.new(x,y,c,p,g,o)
 	local tbl = {
 		x = x or 0,
 		y = y or 0,
 		c = c or -1,
+		p = p or 0,
 		g = g or 0,
 		onTimeChange = o or function()
 			

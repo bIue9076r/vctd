@@ -23,7 +23,7 @@ end
 
 function checkPropCollision(Tx,Ty)
 	for i,v in pairs(Map:getProps()) do
-		if npcCollide(Tx,Ty,v.x,v.y) then
+		if npcCollide(Tx,Ty,v.x,v.y) and (not (v.g == 1)) and (not (v.p == 1)) then
 			Plr.tx = Plr.x
 			Plr.ty = Plr.y
 		end
