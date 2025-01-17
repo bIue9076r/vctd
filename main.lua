@@ -61,6 +61,7 @@ GameState = Cutscene
 DialogeBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
+Language = French
 
 -- debug variables
 DrawCoords = false
@@ -290,6 +291,7 @@ end
 function love.load()
 	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
 	love.window.setTitle("Episode 1: Mystic Mystery")
+	love.window.setTitle("Episode 1: Mystere Mystique")
 	
 	-- TODO: add a save feature
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")
