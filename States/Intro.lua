@@ -10,9 +10,9 @@ introSt2 = "Cliquez enter pour continuer"
 introSt3 = "Episode 1: Mystere Mystique"
 
 -- TODO: String Object for localization
---introSt1 = "Varisa Carmel: Teenage Detective"
---introSt2 = "Press enter to continue"
---introSt3 = "Episode 1: Mystic Mystery"
+introSt1 = "Varisa Carmel: Teenage Detective"
+introSt2 = "Press enter to continue"
+introSt3 = "Episode 1: Mystic Mystery"
 
 function Intro_Draw()
 	-- draw the intro background
