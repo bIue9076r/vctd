@@ -1,12 +1,16 @@
 math.randomseed(os.time())
 jit.off()
 love.graphics.setDefaultFilter("nearest", "nearest")
+utf8 = require("utf8")
 require("/Engine/filesConfig")
 require("/Modules/Range")
 require("/Modules/time")
 require("/Modules/box")
 require("/Modules/ticker")
+require("/Modules/string")
 require("/Modules/spString")
+require("/Locales/English")
+require("/Locales/French")
 require("/Modules/Dialoge")
 require("/Modules/npc")
 require("/Modules/prop")
@@ -62,6 +66,7 @@ DialogeBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
 Language = French
+String.NewLocale(Language)
 
 -- debug variables
 DrawCoords = false
@@ -101,6 +106,11 @@ function Time.changed()
 	end
 end
 
+function LocaleChange()
+	String.NewLocale(Language)
+	love.window.setTitle(String.get(3))
+end
+
 -- (K)eypressed Control Ops
 function kctrlOps(key)
 	if key == "lctrl" then
@@ -117,6 +127,12 @@ function kctrlOps(key)
 			DialogeBuffer = 100
 		elseif key == "l" then
 			DrawCoords = not(DrawCoords)
+		elseif key == "y" then
+			Language = Language + 1
+			if Language > French then
+				Language = English
+			end
+			LocaleChange()
 		elseif key == "h" then
 			HitBoxes = not(HitBoxes)
 		elseif key == "m" and not (GameState == Cutscene) then
@@ -290,8 +306,7 @@ end
 
 function love.load()
 	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
-	love.window.setTitle("Episode 1: Mystic Mystery")
-	--love.window.setTitle("Episode 1: Mystere Mystique")
+	love.window.setTitle(String.get(3))
 	
 	-- TODO: add a save feature
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")

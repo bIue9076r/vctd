@@ -4,21 +4,15 @@ introback = image.getImage("introback")
 -- ticker for stagger printing
 introTick = ticker.new()
 
--- strings for stagger printing
-introSt1 = "Varisa Carmel: Detective Teenage"
-introSt2 = "Cliquez enter pour continuer"
-introSt3 = "Episode 1: Mystere Mystique"
-
--- TODO: String Object for localization
-introSt1 = "Varisa Carmel: Teenage Detective"
-introSt2 = "Press enter to continue"
-introSt3 = "Episode 1: Mystic Mystery"
-
 function Intro_Draw()
 	-- draw the intro background
 	local sx = SCREEN_X/introback:getWidth()
 	local sy = SCREEN_Y/introback:getHeight()
 	love.graphics.draw(introback,0,0,0,sx,sy)
+	
+	introSt1 = String.get(1)
+	introSt2 = String.get(2)	
+	introSt3 = String.get(3)
 	
 	-- stagger print text
 	love.graphics.print({{1,1,1},spString(introSt1,1,introTick)},(SCREEN_X/12),(SCREEN_Y/8),0,SCREEN_X/600,SCREEN_Y/400)
@@ -28,7 +22,7 @@ end
 
 function Intro_Update(dt)
 	-- stop ticking when string is complete
-	if introTick:get() < math.max(#introSt1,#introSt2,#introSt3) then
+	if introTick:get() < math.max(utf8.len(introSt1),utf8.len(introSt2),utf8.len(introSt3)) then
 		introTick()
 	end
 end

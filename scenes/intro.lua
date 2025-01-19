@@ -6,7 +6,7 @@ Play.Scenes[1].transition = function(self,t)
 		if t == 1 then
 			self.IsTalking = true
 			self.dtbl = {
-				s = "God, I hate my daughter.",
+				s = String.get(4),
 				n = Karly,
 			}
 		end

@@ -1,8 +1,3 @@
--- Localization
-English = 1
-French = 2
--- Spanish = 3 (Pardon, my Spanish isn't that good)
-
 -- Char vars
 Varisa = 0x00 --\
 Tracey = 0x01 -- |> Core Trio
