@@ -36,6 +36,7 @@ require("maps/Maps")
 World.Dialoge = {}
 -- Include Dialoge File
 require("npcs/Dialoges")
+require("npcs/French/Dialoges")
 --
 
 function World.nextMap(map)
@@ -89,6 +90,8 @@ function World.Keypressed(key)
 		if not wd then wd = World.Dialoge[English][World.snpc.i] end
 		if wd then
 			World.dtbl = wd:get()
+			World.Dialoge[English][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+			World.Dialoge[French][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
 		end
 	end
 end
