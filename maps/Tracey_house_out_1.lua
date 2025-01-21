@@ -1,14 +1,14 @@
 World.Map[1] = MapObj.new(Planks)
 
-World.Map[1]:setLineV(1,1,7,Brick,1)
-World.Map[1]:setLineV(6,1,7,Brick,1)
+World.Map[1]:setLineV(1,1,7,Planks,Brick)
+World.Map[1]:setLineV(6,1,7,Planks,Brick)
 World.Map[1]:setLineV(7,1,7,Brick)
 World.Map[1]:setLineV(8,1,7,Brick)
 World.Map[1]:setLineV(9,1,7,Brick)
 World.Map[1]:setLineV(10,1,7,Brick)
 World.Map[1]:setLineV(11,1,7,Brick)
 
-World.Map[1]:setLineH(2,1,5,Brick,1)
+World.Map[1]:setLineH(2,1,5,Planks,Brick)
 World.Map[1]:setLineH(1,6,11,Concrete)
 World.Map[1]:setLineH(1,5,11,Grass_1)
 

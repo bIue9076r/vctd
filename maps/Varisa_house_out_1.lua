@@ -8,7 +8,7 @@ World.Map[8]:setLineV(9,1,7,Brick)
 World.Map[8]:setLineV(10,1,7,Brick)
 World.Map[8]:setLineV(11,1,7,Brick)
 
-World.Map[8]:setLineH(2,1,5,Brick,1)
+World.Map[8]:setLineH(2,1,5,Brick)
 World.Map[8]:setLineH(1,6,11,Concrete)
 World.Map[8]:setLineH(1,5,11,Grass_1)
 

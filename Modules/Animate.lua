@@ -113,11 +113,11 @@ function Scene:drawBackTiles()
 	for i = 1, MAP_Y do
 		for j = 1, MAP_X do
 			local t = self.Backround.map:getTile(j,i)
-			if t and t.f == 0 then
+			if t then
 				local img, psx, psy
 				local Tx = (SCREEN_X/12)
 				local Ty = (SCREEN_Y/8)
-				img = image.getImage(TtS[t.t])
+				img = image.getImage(TtS[t.bt])
 				psx = ((25 + (j-1)*50)/(600))
 				psy = ((25 + (i-1)*50)/(400))
 				love.graphics.draw(
@@ -137,11 +137,11 @@ function Scene:drawForeTiles()
 	for i = 1, MAP_Y do
 		for j = 1, MAP_X do
 			local t = self.Backround.map:getTile(j,i)
-			if t and t.f == 1 then
+			if t and t.ft then
 				local img, psx, psy
 				local Tx = (SCREEN_X/12)
 				local Ty = (SCREEN_Y/8)
-				img = image.getImage(TtS[t.t])
+				img = image.getImage(TtS[t.ft])
 				psx = ((25 + (j-1)*50)/(600))
 				psy = ((25 + (i-1)*50)/(400))
 				love.graphics.draw(

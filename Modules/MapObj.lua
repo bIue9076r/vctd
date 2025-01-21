@@ -1,11 +1,11 @@
 Tile = {}
-Tile.t = Grass_1
-Tile.f = 0
+Tile.bt = Grass_1
+Tile.ft = nil
 
-function Tile.new(t,f)
+function Tile.new(bt,ft)
 	local tbl = {
-		t = t or Grass_1,
-		f = f or 0
+		bt = bt or Grass_1,
+		ft = ft or nil,
 	}
 	
 	local mt = {
@@ -37,7 +37,7 @@ function MapObj.new(bt,wtbl,ntbl,ptbl)
 		tbl.sector[i] = tbl.sector[i] or {}
 		for j = 1, MapObj.X do
 			table.insert(tbl.sector[i],
-				Tile.new(bt or Grass_1, 0)
+				Tile.new(bt or Grass_1, nil)
 			)
 		end
 	end
@@ -63,23 +63,23 @@ function MapObj:setBaseTile(bt)
 		self.sector[i] = self.sector[i] or {}
 		for j = 1, MapObj.X do
 			table.insert(self.sector[i],
-				Tile.new(bt or Grass_1, 0)
+				Tile.new(bt or Grass_1, nil)
 			)
 		end
 	end
 end
 
-function MapObj:setTile(x,y,t,f)
+function MapObj:setTile(x,y,bt,ft)
 	x = x or 1
 	y = y or 1
-	t = t or Grass_1
-	f = f or 0
+	bt = bt or Grass_1
+	ft = ft or nil
 	if x <= 0 then x = 1 end
 	if y <= 0 then y = 1 end
 	if x > MapObj.X then x = MapObj.X end
 	if y > MapObj.Y then y = MapObj.Y end
-	self.sector[y][x].t = t
-	self.sector[y][x].f = f
+	self.sector[y][x].bt = bt
+	self.sector[y][x].ft = ft
 end
 
 function MapObj:getTile(x,y)
@@ -92,29 +92,29 @@ function MapObj:getTile(x,y)
 	return self.sector[y][x]
 end
 
-function MapObj:setLineH(x,y,x2,t,f)
+function MapObj:setLineH(x,y,x2,bt,ft)
 	x = x or 1
 	y = y or 1
 	x2 = x2 or x
-	t = t or Grass_1
-	f = f or 0
+	bt = bt or Grass_1
+	ft = ft or nil
 	
 	for j = x, x2 do
-		self.sector[y][j].t = t
-		self.sector[y][j].f = f
+		self.sector[y][j].bt = bt
+		self.sector[y][j].ft = ft
 	end
 end
 
-function MapObj:setLineV(x,y,y2,t,f)
+function MapObj:setLineV(x,y,y2,bt,ft)
 	x = x or 1
 	y = y or 1
 	y2 = y2 or y
-	t = t or Grass_1
-	f = f or 0
+	bt = bt or Grass_1
+	ft = ft or nil
 	
 	for i = y, y2 do
-		self.sector[i][x].t = t
-		self.sector[i][x].f = f
+		self.sector[i][x].bt = bt
+		self.sector[i][x].ft = ft
 	end
 end
 
