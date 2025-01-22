@@ -49,6 +49,8 @@ Plr = {
 	tx = 20,
 	ty = 12,
 	c = Varisa, -- Varisa
+	i = nil,
+	inv = {},
 }
 
 function setPlr(x,y)
