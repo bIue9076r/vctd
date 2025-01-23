@@ -9,6 +9,8 @@ image.newImage("Guitar_R","Assets/guitar_black.png")
 image.newImage("Red_Guitar_L","Assets/guitar_red_f.png")
 image.newImage("Red_Guitar_R","Assets/guitar_red.png")
 image.newImage("Mic","Assets/mic.png")
+image.newImage("TV_B","Assets/tv_b.png")
+image.newImage("TV_T","Assets/tv_t.png")
 image.newImage(1,"Assets/OC.png")
 
 image.newImage("Void","/Assets/void.png")

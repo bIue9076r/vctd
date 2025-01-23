@@ -15,6 +15,12 @@ World.Map[3]:setTile(6,7,Carpet_V)
 World.Map[3]:setTile(10,5,BigTable_B)
 World.Map[3]:setTile(10,4,BigTable_T)
 
+World.Map[3]:addProp(Prop.new(18.75,7,TV_T))
+
+World.Map[3]:addNpc(Npc.new(18.75,8,TV_B,3,0,function()
+	
+end))
+
 World.Map[3]:addWall(Box.new(0,0,8,14))
 World.Map[3]:addWall(Box.new(8,0,4,2))
 World.Map[3]:addWall(Box.new(12,0,2,1))

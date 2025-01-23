@@ -10,6 +10,11 @@ Mic = 0x07
 Karly = 0x08
 Zoey = 0x09
 Lassie = 0x0A
+HOLDER_1 = 0x0B
+HOLDER_2 = 0x0C
+HOLDER_3 = 0x0D
+TV_B = 0x0E
+TV_T = 0x0F
 
 -- Char to Sprite
 CtS = {
@@ -24,6 +29,8 @@ CtS = {
 	[Karly] = "Karly",
 	[Zoey] = "Zoey",
 	[Lassie] = "Lassie",
+	[TV_B] = "TV_B",
+	[TV_T] = "TV_T",
 }
 
 -- Names
@@ -39,10 +46,12 @@ Names = {
 	[Karly] = "Karly",
 	[Zoey] = "Zoey",
 	[Lassie] = "Lassie",
+	[TV_B] = "News Anchor",
+	[TV_T] = "TV_T",
 }
 
 -- Character Range
-Char_range = Range.parse("0~2")
+Char_range = Range.parse("0~2,8~14")
 
 MAP_X = 11
 MAP_Y = 7

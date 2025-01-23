@@ -90,8 +90,15 @@ function World.Keypressed(key)
 		if not wd then wd = World.Dialoge[English][World.snpc.i] end
 		if wd then
 			World.dtbl = wd:get()
-			World.Dialoge[English][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
-			World.Dialoge[French][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+			
+			if World.Dialoge[Language][World.snpc.i] then
+				if World.Dialoge[English][World.snpc.i] then
+					World.Dialoge[English][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+				end
+				if World.Dialoge[French][World.snpc.i] then
+					World.Dialoge[French][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+				end
+			end
 		end
 	end
 end
