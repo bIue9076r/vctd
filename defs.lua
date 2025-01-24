@@ -110,6 +110,8 @@ Bookshelf = tileTicker:get(); tileTicker()
 BigTable_B = tileTicker:get(); tileTicker()
 BigTable_T = tileTicker:get(); tileTicker()
 Garage = tileTicker:get(); tileTicker()
+GrassPath = tileTicker:get(); tileTicker()
+RoofTop = tileTicker:get(); tileTicker()
 
 -- tiles to sprite
 TtS = {
@@ -158,6 +160,8 @@ TtS = {
 	[BigTable_B] = "BigTable_B",
 	[BigTable_T] = "BigTable_T",
 	[Garage] = "Garage",
+	[GrassPath] = "GrassPath",
+	[RoofTop] = "RoofTop",
 }
 
 -- Background Colors
