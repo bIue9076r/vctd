@@ -32,6 +32,11 @@ World.Map[3]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 	setPlr(10.5,0.5)
 end))
 
+World.Map[3]:addWall(Box.new(7.9,2,2.2,0.1,1,1,function()
+	print("raise")
+	Map = World.Map[4]
+end))
+
 World.Map[3]:addWall(Box.new(11.9,1,2.2,0.1,1,1,function()
 	print("Enter Backyard")
 	Map = World.Map[5]
