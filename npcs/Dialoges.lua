@@ -32,7 +32,7 @@ World.Dialoge[English][3] = Dialoge.new({
 	Text.new("*Random Gibberish*",TV_B),
 },1)
 
-World.Dialoge[English][3] = Dialoge.new({
+World.Dialoge[English][4] = Dialoge.new({
 	Text.new("Folks....",TV_B),
 	Text.new("Nothing out of the ordinary just happened.",TV_B),
 	Text.new("*Random Gibberish*",TV_B),
