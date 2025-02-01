@@ -69,7 +69,7 @@ function World.Update(dt)
 		local Wh = World.sdbox.h
 		
 		-- if not colliding with dbox
-		if not wallCollide(Tx,Ty,Wx,Wy,Wx,Wx) then
+		if not wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
 			World.snpc = nil
 			World.sdbox = nil
 		end

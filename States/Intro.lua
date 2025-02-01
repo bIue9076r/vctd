@@ -3,6 +3,9 @@ introback = image.getImage("introback")
 
 -- ticker for stagger printing
 introTick = ticker.new()
+introSt1 = ""
+introSt2 = ""
+introSt3 = ""
 
 function Intro_Draw()
 	-- draw the intro background
@@ -11,7 +14,7 @@ function Intro_Draw()
 	love.graphics.draw(introback,0,0,0,sx,sy)
 	
 	introSt1 = String.get(1)
-	introSt2 = String.get(2)	
+	introSt2 = String.get(2)
 	introSt3 = String.get(3)
 	
 	-- stagger print text
