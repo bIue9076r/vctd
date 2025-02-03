@@ -54,5 +54,3 @@ end
 function Time.str()
 	return Time.hour..":"..Time.minute
 end
-
-Time.__call = Time.tick
