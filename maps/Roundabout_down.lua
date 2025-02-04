@@ -16,7 +16,6 @@ World.Map[7]:addWall(Box.new(0,0,0.1,6,1,1,function()
 end))
 
 World.Map[7]:addWall(Box.new(0,0,22,0.1,1,1,function()
-	print("To Roundabout Down")
 	Map = World.Map[6]
 	setPlr(Plr.x,12.5)
 end))

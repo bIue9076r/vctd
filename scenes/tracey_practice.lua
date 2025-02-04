@@ -1,4 +1,4 @@
-Play.Scenes[2] = Scene.new(World.Map[1])
+Play.Scenes[2] = Scene.new(World.Map[5])
 Play.Scenes[2].tickGoal = 800
 Play.Scenes[2].Hour = Noon
 Play.Scenes[2].Min = 0

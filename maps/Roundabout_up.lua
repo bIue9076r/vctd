@@ -12,13 +12,11 @@ World.Map[6]:setLineH(1,6,8,Concrete)
 World.Map[6]:setTile(8,7,Concrete)
 
 World.Map[6]:addWall(Box.new(0,8,0.1,6,1,1,function()
-	print("To Tracey's House")
 	Map = World.Map[1]
 	setPlr(20.5,Plr.y)
 end))
 
 World.Map[6]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
-	print("To Roundabout Down")
 	Map = World.Map[7]
 	setPlr(Plr.x,0.5)
 end))

@@ -37,7 +37,6 @@ World.Map[8]:addWall(Box.new(18,0,2,7))
 World.Map[8]:addWall(Box.new(20,0,2,8))
 
 World.Map[8]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
-	print("Enter House")
 	Map = World.Map[2]
 	setPlr(10.5,12.5)
 end))
@@ -47,7 +46,6 @@ World.Map[8]:addWall(Box.new(0,8.5,0.1,5.5,1,1,function()
 end))
 
 World.Map[8]:addWall(Box.new(21.9,8.5,0.1,5.5,1,1,function()
-	print("To Tracey's House")
 	Map = World.Map[1]
 	setPlr(0.5,Plr.y)
 end))

@@ -39,19 +39,16 @@ World.Map[1]:addWall(Box.new(0,8,2,0.1))
 World.Map[1]:addWall(Box.new(10,8,2,0.1))
 
 World.Map[1]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
-	print("Enter House")
 	Map = World.Map[2]
 	setPlr(10.5,12.5)
 end))
 
 World.Map[1]:addWall(Box.new(0,8.5,0.1,5.5,1,1,function()
-	print("To Your House")
 	Map = World.Map[8]
 	setPlr(20.5,Plr.y)
 end))
 
 World.Map[1]:addWall(Box.new(21.9,8.5,0.1,5.5,1,1,function()
-	print("To The Roundabout Up")
 	Map = World.Map[6]
 	setPlr(0.5,Plr.y)
 end))
