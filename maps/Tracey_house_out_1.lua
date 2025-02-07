@@ -63,3 +63,5 @@ end))
 
 World.Map[1]:addProp(Prop.new(7.6,4.7,R_Guitar_L))
 World.Map[1]:addProp(Prop.new(6,3,Mic,1))
+World.Map[1]:addProp(Prop.new(5,2,Amp))
+World.Map[1]:addProp(Prop.new(8.6,3.7,Amp))

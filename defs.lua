@@ -15,6 +15,7 @@ HOLDER_2 = 0x0C
 HOLDER_3 = 0x0D
 TV_B = 0x0E
 TV_T = 0x0F
+Amp = 0x10
 
 -- Char to Sprite
 CtS = {
@@ -31,6 +32,7 @@ CtS = {
 	[Lassie] = "Lassie",
 	[TV_B] = "TV_B",
 	[TV_T] = "TV_T",
+	[Amp] = "Amp",
 }
 
 -- Names
@@ -48,6 +50,7 @@ Names = {
 	[Lassie] = "Lassie",
 	[TV_B] = "News Anchor",
 	[TV_T] = "TV_T",
+	[Amp] = "Amplifyer",
 }
 
 -- Character Range

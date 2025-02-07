@@ -4,6 +4,7 @@ Play.Scenes[2].Hour = Noon
 Play.Scenes[2].Min = 0
 Play.Scenes[2].Actors[1] = Actor.new(Tracey,7.6,4.7)
 Play.Scenes[2].Actors[2] = Actor.new(R_Guitar_L,7.6,4.7)
+Play.Scenes[2].Actors[3] = Actor.new(Amp,6.6,3.7)
 Play.Scenes[2].transition = function(self,t)
 	if(t < 2) then
 		bs = sound.getSound("EpT1_B")
