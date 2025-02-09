@@ -1,14 +1,13 @@
 Mood = {}
 Mood.mood = 0 -- -5 <-> 5
+Mood.timeMood = 0
 
 Mood.moodChanged = nil
 
 function Mood.change(m)
 	Mood.mood = Mood.mood + (m or 0)
-	
-	if Mood.mood > 5 then Mood.mood = 5 end
-	if Mood.mood < -5 then Mood.mood = -5 end
-	
+	Mood.mood = math.max(math.min(5,Mood.mood),-5)
+
 	if Mood.moodChanged then
 		Mood.moodChanged()
 	end
@@ -16,9 +15,15 @@ end
 
 function Mood.set(m)
 	Mood.mood = m or 0
+	Mood.mood = math.max(math.min(5,Mood.mood),-5)
 	
-	if Mood.mood > 5 then Mood.mood = 5 end
-	if Mood.mood < -5 then Mood.mood = -5 end
+	if Mood.moodChanged then
+		Mood.moodChanged()
+	end
+end
+
+function Mood.timeSet(tm)
+	Mood.timeMood = tm or 0
 	
 	if Mood.moodChanged then
 		Mood.moodChanged()
@@ -26,15 +31,13 @@ function Mood.set(m)
 end
 
 function Mood.get()
-	return Mood.mood
+	return math.max(math.min(5,Mood.mood + Mood.timeMood),-5)
 end
 
 function Mood.print()
-	print(Mood.mood)
+	print(math.max(math.min(5,Mood.mood + Mood.timeMood),-5))
 end
 
 function Mood.str()
-	return tostring(Mood.mood)
+	return tostring(math.max(math.min(5,Mood.mood + Mood.timeMood),-5))
 end
-
-Mood.__call = Mood.get
