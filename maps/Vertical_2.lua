@@ -42,9 +42,14 @@ World.Map[19]:addWall(Box.new(21.9,3,0.1,5,1,1,function()
 end))
 
 World.Map[19]:addWall(Box.new(21.9,8,0.1,6,1,1,function()
-	print("To House 3 Down")
+	print("To House ? Down")
+end))
+
+World.Map[19]:addWall(Box.new(0,0,22,0.1,1,1,function()
+	Map = World.Map[18]
+	setPlr(Plr.x,10.5)
 end))
 
 World.Map[19]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
-	print("To Vertical 2 (Down)")
+	print("To Vertical 3 (Down)")
 end))
