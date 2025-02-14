@@ -1,2 +1,2 @@
 require("scenes/intro")
-require("scenes/tracey_practice")
+require("scenes/band_practice")
