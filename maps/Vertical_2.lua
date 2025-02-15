@@ -20,7 +20,7 @@ World.Map[19]:setTile(6,7,Road_L)
 
 World.Map[19]:addWall(Box.new(0,0,22,0.1,1,1,function()
 	Map = World.Map[18]
-	setPlr(Plr.x,10.5)
+	setPlr(Plr.x,12.5)
 end))
 
 World.Map[19]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
