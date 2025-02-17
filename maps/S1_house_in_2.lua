@@ -10,8 +10,8 @@ World.Map[15]:setLineH(1,6,4,Wall)
 World.Map[15]:setLineH(1,7,4,Wall)
 
 World.Map[15]:setTile(5,2,Planks,AntiVoid)
-World.Map[15]:setTile(5,3,Stairs,AntiVoid)
-World.Map[15]:setLineV(5,4,5,Stairs)
+World.Map[15]:setLineV(5,3,5,Stairs)
+World.Map[15]:setLineV(6,3,5,Planks,Bar_L)
 
 World.Map[15]:setTile(7,1,Brick_D)
 World.Map[15]:setTile(6,7,Carpet_V)

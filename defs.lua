@@ -117,6 +117,14 @@ BigTable_T = tileTicker:get(); tileTicker()
 Garage = tileTicker:get(); tileTicker()
 GrassPath = tileTicker:get(); tileTicker()
 RoofTop = tileTicker:get(); tileTicker()
+Bar_L = tileTicker:get(); tileTicker()
+Bar_R = tileTicker:get(); tileTicker()
+Bar_T = tileTicker:get(); tileTicker()
+Bar_B = tileTicker:get(); tileTicker()
+Bar_TL = tileTicker:get(); tileTicker()
+Bar_TR = tileTicker:get(); tileTicker()
+Bar_BL = tileTicker:get(); tileTicker()
+Bar_BR = tileTicker:get(); tileTicker()
 
 -- tiles to sprite
 TtS = {
@@ -169,6 +177,14 @@ TtS = {
 	[Garage] = "Garage",
 	[GrassPath] = "GrassPath",
 	[RoofTop] = "RoofTop",
+	[Bar_L] = "Bar_L",
+	[Bar_R] = "Bar_R",
+	[Bar_T] = "Bar_T",
+	[Bar_B] = "Bar_B",
+	[Bar_TL] = "Bar_TL",
+	[Bar_TR] = "Bar_TR",
+	[Bar_BL] = "Bar_BL",
+	[Bar_BR] = "Bar_BR",
 }
 
 -- Background Colors
