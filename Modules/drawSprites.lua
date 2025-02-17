@@ -139,6 +139,8 @@ end
 
 function drawDialoge()
 	if IsTalking then
+		local dt = World.dticker:get()
+		local sl = utf8.len(World.dtbl.s)
 		love.graphics.rectangle("fill",
 			(SCREEN_X/12),
 			(SCREEN_Y/8),
@@ -162,10 +164,18 @@ function drawDialoge()
 			SCREEN_X/600,SCREEN_Y/400
 		)
 		
-		if World.dticker:get() < (#World.dtbl.s + DialogeBuffer) then
+		Voices[World.dtbl.v]:play()
+		if dt > sl then
+			Voices[World.dtbl.v]:pause()
+			Voices[World.dtbl.v]:seek(0)
+		end
+		
+		if dt < (sl + DialogeBuffer) then
 			World.dticker()
 		else
 			-- stop talking
+			Voices[World.dtbl.v]:pause()
+			Voices[World.dtbl.v]:seek(0)
 			World.dtbl = nil
 			IsTalking = false
 			World.dticker:reset()

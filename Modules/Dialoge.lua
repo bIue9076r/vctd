@@ -1,11 +1,13 @@
 Text = {}
 Text.s = "......"
 Text.c = -1
+Text.v = "Normal"
 
-function Text.new(s,c,e)
+function Text.new(s,c,v,e)
 	local tbl = {
 		s = s or "......",
 		c = c or -1,
+		v = v or "Normal",
 		e = e or function()
 			
 		end,
@@ -22,8 +24,9 @@ end
 function Text:get()
 	local rs = self.s
 	local rc = self.c
+	local rv = self.v
 	self.e()
-	return rs, rc
+	return rs, rc, rv
 end
 
 Dialoge = {}
@@ -34,6 +37,7 @@ Dialoge.cycle = 0
 --{
 --	s="......",
 --	n=house_npc.c,
+--	v="Normal"
 --	t=ticker.new()
 --}
 
@@ -56,7 +60,7 @@ function Dialoge.new(ttbl,c,e)
 end
 
 function Dialoge:get()
-	local rs, rc = self.text[self.index]()
+	local rs, rc, rv = self.text[self.index]()
 	self.index = self.index + 1
 	if self.index > #self.text then
 		if self.cycle == 0 then
@@ -66,5 +70,5 @@ function Dialoge:get()
 		end
 		self.effect()
 	end
-	return {s=rs, n=rc}
+	return {s=rs, n=rc, v=rv}
 end

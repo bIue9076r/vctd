@@ -8,6 +8,7 @@ Play.Scenes[1].transition = function(self,t)
 			self.dtbl = {
 				s = String.get(4),
 				n = Karly,
+				v = "Normal",
 			}
 		end
 		self.Actors[1].x = Scene.lerp(0,21,t/200)

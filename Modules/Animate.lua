@@ -58,6 +58,7 @@ Scene.Min = 0
 Scene.dtbl = {
 	s = "......",
 	n = Varisa,
+	v = "Normal",
 }
 Scene.dticker = ticker.new()
 Scene.tickGoal = 0
@@ -72,6 +73,7 @@ function Scene.new(m,g,t)
 		dtbl = {
 			s = "......",
 			n = Varisa,
+			v = "Normal",
 		},
 		tickGoal = g or 0,
 		transition = t or function(self,t)
@@ -176,6 +178,8 @@ end
 
 function Scene:drawDialoge()
 	if self.IsTalking then
+		local dt = self.dticker:get()
+		local sl = utf8.len(self.dtbl.s)
 		love.graphics.rectangle("fill",
 			(SCREEN_X/12),
 			(SCREEN_Y/8),
@@ -199,10 +203,18 @@ function Scene:drawDialoge()
 			SCREEN_X/600,SCREEN_Y/400
 		)
 		
-		if self.dticker:get() < (#self.dtbl.s + DialogeBuffer) then
+		Voices[self.dtbl.v]:play()
+		if dt > sl then
+			Voices[self.dtbl.v]:pause()
+			Voices[self.dtbl.v]:seek(0)
+		end
+		
+		if dt < (sl + DialogeBuffer) then
 			self.dticker()
 		else
 			-- stop talking
+			Voices[self.dtbl.v]:pause()
+			Voices[self.dtbl.v]:seek(0)
 			self.dtbl = nil
 			self.IsTalking = false
 			self.dticker:reset()

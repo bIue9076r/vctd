@@ -221,3 +221,11 @@ SongList = {
 	Song.new("Main",0,5),
 	Song.new("Ground",-1,1),
 }
+
+
+-- Dialoge Voices
+Voices = {
+	["Normal"] = sound.getSound("Talk_1"),
+	["Slow"] = sound.getSound("Talk_2"),
+	["Fast"] = sound.getSound("Talk_3"),
+}
