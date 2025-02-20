@@ -12,7 +12,8 @@ World.Map[7]:setLineH(1,2,8,Concrete)
 World.Map[7]:setTile(8,1,Concrete)
 
 World.Map[7]:addWall(Box.new(0,0,0.1,5,1,1,function()
-	print("To House Down")
+	Map = World.Map[21]
+	setPlr(20.5,Plr.y)
 end))
 
 World.Map[7]:addWall(Box.new(0,0,22,0.1,1,1,function()

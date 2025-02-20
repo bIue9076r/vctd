@@ -54,7 +54,8 @@ World.Map[1]:addWall(Box.new(21.9,9,0.1,5,1,1,function()
 end))
 
 World.Map[1]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
-	print("To House Down")
+	Map = World.Map[21]
+	setPlr(Plr.x,0.5)
 end))
 
 World.Map[1]:addNpc(Npc.new(7.6,4.7,Tracey,1,0,function()
