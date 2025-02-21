@@ -39,7 +39,7 @@ World.Map[21]:addWall(Box.new(20,6.5,2,7.5))
 
 World.Map[21]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
 	Map = World.Map[22]
-	setPlr(10.5,12.5)
+	setPlr(10.5,0.5)
 end))
 
 World.Map[21]:addWall(Box.new(0,0,0.1,5,1,1,function()
