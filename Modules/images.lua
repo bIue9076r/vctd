@@ -1,4 +1,4 @@
-image.newImage("Varisa","/Assets/Varisa.png")
+image.newImage("Varisa","/Assets/Varisa_F_0.png")
 image.newImage("Tracey","Assets/Tracey.png")
 image.newImage("Rachel","Assets/Rachel.png")
 image.newImage("Karly","/Assets/Karly.png")
