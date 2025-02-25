@@ -190,6 +190,12 @@ TtS = {
 -- Background Colors
 --Color_outside = {love.math.colorFromBytes(52,68,76,255)}
 
+-- Directions
+UP = 0
+DOWN = 1
+RIGHT = 0
+LEFT = 1
+
 -- Time stuff
 Midnight = 0
 Noon = 12
