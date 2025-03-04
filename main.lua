@@ -59,13 +59,6 @@ function setPlr(x,y)
 	Plr.ty = y
 end
 
-Traits = {""}
-
-House = {}
-House[1] = {
-	Traits[1]
-}
-
 Map = MapObj.new()
 
 -- globals
