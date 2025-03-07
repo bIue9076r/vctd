@@ -20,42 +20,55 @@ function Traits.newTrait()
 		repeat
 			t = math.random(1,4)
 		until not (t == Traits.lastGiven)
+		if t == 1 then
+			Traits.killerGiven = true
+		end
 	end
 	
-	return t
+	return Traits[t]
 end
 
 House = {}
 House[1] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 
 House[2] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 House[3] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 House[4] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 
 House[5] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 House[6] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 House[7] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 
 House[8] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 House[9] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
 House[10] = {
-	Traits[1]
+	Traits.newTrait(),
+	Traits.newTrait(),
 }
