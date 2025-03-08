@@ -3,7 +3,6 @@ Traits = {
 	[2] = "Neat",
 	[3] = "Messy",
 	[4] = "Fliped",
-	
 }
 
 Traits.killerGiven = false
@@ -16,10 +15,12 @@ function Traits.newTrait()
 		repeat
 			t = math.random(2,4)
 		until not (t == Traits.lastGiven)
+		Traits.lastGiven = t
 	else
 		repeat
 			t = math.random(1,4)
 		until not (t == Traits.lastGiven)
+		Traits.lastGiven = t
 		if t == 1 then
 			Traits.killerGiven = true
 		end

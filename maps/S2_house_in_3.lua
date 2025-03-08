@@ -15,7 +15,7 @@ World.Map[25]:setTile(7,2,Planks,Bar_B)
 
 World.Map[25]:addWall(Box.new(14,0,8,14))
 World.Map[25]:addWall(Box.new(0,0,14,2))
-World.Map[25]:addWall(Box.new(12,4,0.1,6))
+World.Map[25]:addWall(Box.new(11.7,4,0.1,6))
 World.Map[25]:addWall(Box.new(12,4,2,0.1))
 
 World.Map[25]:addWall(Box.new(12.2,6.5,1.8,0.1,1,1,function()

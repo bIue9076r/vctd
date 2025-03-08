@@ -43,3 +43,6 @@ World.Map[14]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 	Map = World.Map[13]
 	setPlr(18.5,8)
 end))
+
+print(House[1][1])
+print(House[1][2])
