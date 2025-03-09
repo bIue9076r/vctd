@@ -23,3 +23,17 @@ World.Dialoge[French][2] = Dialoge.new({
 	Text.new("ouais...",Varisa),
 	Text.new("....",Zoey),
 },1)
+
+World.Dialoge[French][3] = Dialoge.new({
+	Text.new("Attention!",TV_B),
+	Text.new("5 morts en relation à tueur",TV_B),
+	Text.new("Les officials demander...",TV_B),
+	Text.new("Sont-ils un sataniste?",TV_B),
+	Text.new("*Charabia Random*",TV_B),
+},1)
+
+World.Dialoge[French][4] = Dialoge.new({
+	Text.new("Tout le monde....",TV_B),
+	Text.new("Rien des tout a en train.",TV_B),
+	Text.new("*Charabia Random*",TV_B),
+},1)
