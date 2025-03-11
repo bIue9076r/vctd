@@ -2,7 +2,7 @@ Traits = {
 	[1] = "Killer",
 	[2] = "Neat",
 	[3] = "Messy",
-	[4] = "Fliped",
+	[4] = "Fanatic",
 }
 
 Traits.killerGiven = false
