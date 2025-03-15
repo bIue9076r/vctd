@@ -16,6 +16,10 @@ HOLDER_3 = 0x0D
 TV_B = 0x0E
 TV_T = 0x0F
 Amp = 0x10
+Vase = 0x11
+Vase_E = 0x12
+Vase_C = 0x13
+Flowers = 0x14
 
 -- Char to Sprite
 CtS = {
@@ -33,6 +37,10 @@ CtS = {
 	[TV_B] = "TV_B",
 	[TV_T] = "TV_T",
 	[Amp] = "Amp",
+	[Vase] = "Vase",
+	[Vase_E] = "Vase_E",
+	[Vase_C] = "Vase_C",
+	[Flowers] = "Flowers",
 }
 
 -- Names
@@ -51,6 +59,10 @@ Names = {
 	[TV_B] = "News Anchor",
 	[TV_T] = "TV_T",
 	[Amp] = "Amplifyer",
+	[Vase] = "Vase",
+	[Vase_E] = "Empty Vase",
+	[Vase_C] = "Cracked Vase",
+	[Flowers] = "Flowers",
 }
 
 -- Character Range

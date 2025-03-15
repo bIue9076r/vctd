@@ -43,3 +43,13 @@ World.Map[9]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 	Map = World.Map[8]
 	setPlr(18.5,8)
 end))
+
+World.Map[9]:addProp(Prop.new(8,12.5,Vase))
+World.Map[9]:addProp(Prop.new(13,12.5,Vase))
+World.Map[9]:addProp(Prop.new(8,11.5,Flowers,1))
+World.Map[9]:addProp(Prop.new(13,11.5,Flowers,1))
+
+World.Map[9]:addProp(Prop.new(8,1.5,Vase))
+World.Map[9]:addProp(Prop.new(13,1.5,Vase))
+World.Map[9]:addProp(Prop.new(8,0.5,Flowers,1))
+World.Map[9]:addProp(Prop.new(13,0.5,Flowers,1))
