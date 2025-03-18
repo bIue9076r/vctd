@@ -19,9 +19,9 @@ World.Map[23]:setTile(5,7,Carpet_V)
 World.Map[23]:setTile(2,4,BigTable_B)
 World.Map[23]:setTile(2,3,BigTable_T)
 
-World.Map[23]:addProp(Prop.new(2.75,5,TV_T))
+World.Map[23]:addProp(Prop.new(2.75,5,TV_T_F))
 
-World.Map[23]:addNpc(Npc.new(2.75,6,TV_B,3,0,function()
+World.Map[23]:addNpc(Npc.new(2.75,6,TV_B_F,3,0,function()
 	
 end))
 

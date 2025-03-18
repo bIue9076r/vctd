@@ -20,6 +20,8 @@ Vase = 0x11
 Vase_E = 0x12
 Vase_C = 0x13
 Flowers = 0x14
+TV_B_F = 0x15
+TV_T_F = 0x16
 
 -- Char to Sprite
 CtS = {
@@ -41,6 +43,8 @@ CtS = {
 	[Vase_E] = "Vase_E",
 	[Vase_C] = "Vase_C",
 	[Flowers] = "Flowers",
+	[TV_B_F] = "TV_B_F",
+	[TV_T_F] = "TV_T_F",
 }
 
 -- Names
@@ -63,6 +67,8 @@ Names = {
 	[Vase_E] = "Empty Vase",
 	[Vase_C] = "Cracked Vase",
 	[Flowers] = "Flowers",
+	[TV_B_F] = "News Anchor",
+	[TV_T_F] = "TV_T_F",
 }
 
 -- Character Range
