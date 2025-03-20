@@ -47,7 +47,7 @@ end))
 print(House[1][1])
 print(House[1][2])
 
-if House[1][1] == "Neat" or House[1][2] == "Neat" then
+if House[1][1] == "Neat" then
 	World.Map[14]:addProp(Prop.new(8,12.5,Vase))
 	World.Map[14]:addProp(Prop.new(13,12.5,Vase))
 	World.Map[14]:addProp(Prop.new(8,11.5,Flowers,1))
@@ -57,4 +57,12 @@ if House[1][1] == "Neat" or House[1][2] == "Neat" then
 	World.Map[14]:addProp(Prop.new(13,1.5,Vase))
 	World.Map[14]:addProp(Prop.new(8,0.5,Flowers,1))
 	World.Map[14]:addProp(Prop.new(13,0.5,Flowers,1))
+end
+
+if House[1][1] == "Messy" then
+	World.Map[14]:addProp(Prop.new(8,12.5,Trash_P))
+	World.Map[14]:addProp(Prop.new(13,12.5,Trash_P))
+	
+	World.Map[14]:addProp(Prop.new(8,1.5,Trash_P))
+	World.Map[14]:addProp(Prop.new(13,1.5,Trash_P))
 end
