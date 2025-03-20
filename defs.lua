@@ -22,6 +22,7 @@ Vase_C = 0x13
 Flowers = 0x14
 TV_B_F = 0x15
 TV_T_F = 0x16
+Trash_P = 0x17
 
 -- Char to Sprite
 CtS = {
@@ -45,6 +46,7 @@ CtS = {
 	[Flowers] = "Flowers",
 	[TV_B_F] = "TV_B_F",
 	[TV_T_F] = "TV_T_F",
+	[Trash_P] = "Trash_P"
 }
 
 -- Names
@@ -69,6 +71,7 @@ Names = {
 	[Flowers] = "Flowers",
 	[TV_B_F] = "News Anchor",
 	[TV_T_F] = "TV_T_F",
+	[Trash_P] = "Paper Trash"
 }
 
 -- Character Range

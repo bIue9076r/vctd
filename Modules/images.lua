@@ -18,6 +18,7 @@ image.newImage("Vase","Assets/vase_flowers.png")
 image.newImage("Vase_E","Assets/vase_empty.png")
 image.newImage("Vase_C","Assets/vase_cracked.png")
 image.newImage("Flowers","Assets/flowers_vasetop.png")
+image.newImage("Trash_P","Assets/trash.png")
 image.newImage(1,"Assets/OC.png")
 
 image.newImage("Void","/Assets/void.png")
