@@ -60,10 +60,20 @@ if House[1][1] == "Neat" or ((House[1][1] == "Killer") and (House[1][2] == "Neat
 end
 
 if House[1][1] == "Messy" or ((House[1][1] == "Killer") and (House[1][2] == "Messy")) then
-	World.Map[14]:addProp(Prop.new(5,9,Trash_P))
-	World.Map[14]:addProp(Prop.new(4.5,9,Trash_P))
-	World.Map[14]:addProp(Prop.new(5,8.5,Trash_P))
-	World.Map[14]:addProp(Prop.new(4.5,8.5,Trash_P))
+	World.Map[14]:addProp(Prop.new(4.8,8.8,Trash_P))
+	World.Map[14]:addProp(Prop.new(4.3,8.8,Trash_P))
+	World.Map[14]:addProp(Prop.new(4.8,8.3,Trash_P))
+	World.Map[14]:addProp(Prop.new(4.3,8.3,Trash_P))
+	
+	World.Map[14]:addProp(Prop.new(1.1,8.8,Trash_P))
+	World.Map[14]:addProp(Prop.new(1.6,8.8,Trash_P))
+	World.Map[14]:addProp(Prop.new(1.1,8.3,Trash_P))
+	World.Map[14]:addProp(Prop.new(1.6,8.3,Trash_P))
+	
+	World.Map[14]:addProp(Prop.new(3.7,0.6,Trash_P))
+	World.Map[14]:addProp(Prop.new(4.2,0.6,Trash_P))
+	World.Map[14]:addProp(Prop.new(3.7,0.1,Trash_P))
+	World.Map[14]:addProp(Prop.new(4.2,0.1,Trash_P))
 	
 	World.Map[14]:addProp(Prop.new(8,8.5,Trash_P))
 	World.Map[14]:addProp(Prop.new(8.5,8.5,Trash_P))
@@ -74,4 +84,14 @@ if House[1][1] == "Messy" or ((House[1][1] == "Killer") and (House[1][2] == "Mes
 	World.Map[14]:addProp(Prop.new(16.5,5.3,Trash_P))
 	World.Map[14]:addProp(Prop.new(16,5.8,Trash_P))
 	World.Map[14]:addProp(Prop.new(16.5,5.8,Trash_P))
+	
+	World.Map[14]:addProp(Prop.new(19.4,5.7,Trash_P))
+	World.Map[14]:addProp(Prop.new(19.9,5.7,Trash_P))
+	World.Map[14]:addProp(Prop.new(19.4,6.2,Trash_P))
+	World.Map[14]:addProp(Prop.new(19.9,6.2,Trash_P))
+	
+	World.Map[14]:addProp(Prop.new(19.7,12.2,Trash_P))
+	World.Map[14]:addProp(Prop.new(20.2,12.2,Trash_P))
+	World.Map[14]:addProp(Prop.new(19.7,12.7,Trash_P))
+	World.Map[14]:addProp(Prop.new(20.2,12.7,Trash_P))
 end
