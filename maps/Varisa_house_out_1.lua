@@ -1,19 +1,19 @@
 World.Map[8] = MapObj.new(Garage)
 
-World.Map[8]:setLineV(1,1,7,Brick)
-World.Map[8]:setLineV(6,1,7,Brick)
-World.Map[8]:setLineV(7,1,7,Brick)
-World.Map[8]:setLineV(8,1,7,Brick)
-World.Map[8]:setLineV(9,1,7,Brick)
-World.Map[8]:setLineV(10,1,7,Brick)
-World.Map[8]:setLineV(11,1,7,Brick)
+World.Map[8]:setLineV(1,1,7,Wall)
+World.Map[8]:setLineV(6,1,7,Wall)
+World.Map[8]:setLineV(7,1,7,Wall)
+World.Map[8]:setLineV(8,1,7,Wall)
+World.Map[8]:setLineV(9,1,7,Wall)
+World.Map[8]:setLineV(10,1,7,Wall)
+World.Map[8]:setLineV(11,1,7,Wall)
 
-World.Map[8]:setLineH(2,1,5,Brick)
+World.Map[8]:setLineH(2,1,5,Wall)
 World.Map[8]:setLineH(1,6,11,Concrete)
 World.Map[8]:setLineH(1,5,11,Grass_1)
 
 World.Map[8]:setTile(10,5,Grass_S)
-World.Map[8]:setTile(10,4,Brick_D)
+World.Map[8]:setTile(10,4,Wall_D)
 
 World.Map[8]:setTile(1,7,Road_N_T)
 World.Map[8]:setTile(2,7,Road_T)
