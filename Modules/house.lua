@@ -78,43 +78,18 @@ function House.new()
 end
 
 House[1] = House.new()
-House[1][1] = Traits.newTrait()
-House[1][2] = Traits.newTrait()
-
 House[2] = House.new()
-House[2][1] = Traits.newTrait()
-House[2][2] = Traits.newTrait()
-
 House[3] = House.new()
-House[3][1] = Traits.newTrait()
-House[3][2] = Traits.newTrait()
-
 House[4] = House.new()
-House[4][1] = Traits.newTrait()
-House[4][2] = Traits.newTrait()
-
 
 House[5] = House.new()
-House[5][1] = Traits.newTrait()
-House[5][2] = Traits.newTrait()
-
 House[6] = House.new()
-House[6][1] = Traits.newTrait()
-House[6][2] = Traits.newTrait()
-
 House[7] = House.new()
-House[7][1] = Traits.newTrait()
-House[7][2] = Traits.newTrait()
-
 
 House[8] = House.new()
-House[8][1] = Traits.newTrait()
-House[8][2] = Traits.newTrait()
-
 House[9] = House.new()
-House[9][1] = Traits.newTrait()
-House[9][2] = Traits.newTrait()
-
 House[10] = House.new()
-House[10][1] = Traits.newTrait()
-House[10][2] = Traits.newTrait()
+
+for i = 1,10 do
+	print(i..":",House[i].HouseTrait)
+end
