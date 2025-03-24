@@ -93,4 +93,14 @@ if House[1].HouseTrait == "Messy" then
 	World.Map[14]:addProp(Prop.new(20.2,12.2,Trash_P))
 	World.Map[14]:addProp(Prop.new(19.7,12.7,Trash_P))
 	World.Map[14]:addProp(Prop.new(20.2,12.7,Trash_P))
+	
+	World.Map[14]:addProp(Prop.new(12.0,1.5,Trash_P))
+	World.Map[14]:addProp(Prop.new(12.5,1.5,Trash_P))
+	World.Map[14]:addProp(Prop.new(12.0,2.0,Trash_P))
+	World.Map[14]:addProp(Prop.new(12.5,2.0,Trash_P))
+	
+	World.Map[14]:addProp(Prop.new(12.5,5.5,Trash_P))
+	World.Map[14]:addProp(Prop.new(13.0,5.5,Trash_P))
+	World.Map[14]:addProp(Prop.new(12.5,6.0,Trash_P))
+	World.Map[14]:addProp(Prop.new(13.0,6.0,Trash_P))
 end
