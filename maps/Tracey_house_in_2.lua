@@ -25,6 +25,13 @@ World.Map[3]:addNpc(Npc.new(18.75,8,TV_B,3,0,function()
 	
 end))
 
+World.Map[3]:addProp(Prop.new(20.5,12.5,Vase))
+World.Map[3]:addProp(Prop.new(20.5,11.5,Flowers,1))
+World.Map[3]:addProp(Prop.new(10.5,3,Vase))
+World.Map[3]:addProp(Prop.new(10.5,2,Flowers,1))
+World.Map[3]:addProp(Prop.new(20.5,3,Vase))
+World.Map[3]:addProp(Prop.new(20.5,2,Flowers,1))
+
 World.Map[3]:addWall(Box.new(0,0,8,14))
 World.Map[3]:addWall(Box.new(8,0,4,2))
 World.Map[3]:addWall(Box.new(12,0,2,1))
