@@ -15,6 +15,7 @@ require("/Locales/French")
 require("/Modules/Dialoge")
 require("/Modules/npc")
 require("/Modules/prop")
+require("/Modules/item")
 require("/Modules/MapObj")
 require("/Modules/images")
 require("/Modules/mood")
@@ -50,7 +51,7 @@ Plr = {
 	tx = 20,
 	ty = 12,
 	c = Varisa, -- Varisa
-	inv = {},
+	inv = ItemBag.new(),
 }
 
 function setPlr(x,y)

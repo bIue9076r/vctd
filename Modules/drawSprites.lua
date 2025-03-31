@@ -107,6 +107,10 @@ function drawChars(Cx,Cy)
 		Ty/img:getHeight()
 	)
 	
+	if Plr.inv.equiped then
+		--Plr.inv.equiped:draw(Cx,Cy)
+	end
+	
 	-- TODO: draw player items here
 end
 
