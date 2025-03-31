@@ -58,3 +58,7 @@ end
 if House[1].HouseTrait == "Messy" then
 	
 end
+
+if House[1].HouseTrait == "Fanatic" then
+	
+end

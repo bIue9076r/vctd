@@ -108,3 +108,7 @@ if House[1].HouseTrait == "Messy" then
 	World.Map[14]:addProp(Prop.new(13,12.5,Vase_C))
 	World.Map[14]:addProp(Prop.new(8,1.5,Vase_C))
 end
+
+if House[1].HouseTrait == "Fanatic" then
+	
+end
