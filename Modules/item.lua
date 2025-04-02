@@ -50,3 +50,11 @@ function ItemBag.new()
 	
 	return setmetatable(tbl,mt)
 end
+
+function ItemBag:clear(itm)
+	self.items = {}
+end
+
+function ItemBag:add(itm)
+	table.insert(self.items,itm)
+end
