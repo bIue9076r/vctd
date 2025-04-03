@@ -19,7 +19,9 @@ image.newImage("Vase_E","Assets/vase_empty.png")
 image.newImage("Vase_C","Assets/vase_cracked.png")
 image.newImage("Flowers","Assets/flowers_vasetop.png")
 image.newImage("Trash_P","Assets/trash.png")
-image.newImage(1,"Assets/OC.png")
+
+image.newImage("ERROBJ","Assets/error_obj.png")
+image.newImage(1,"Assets/error_obj.png")
 
 image.newImage("Void","/Assets/void.png")
 image.newImage("AntiVoid","/Assets/AntiVoid.png")

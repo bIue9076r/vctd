@@ -24,6 +24,8 @@ TV_B_F = 0x15
 TV_T_F = 0x16
 Trash_P = 0x17
 
+ERROBJ = 0xFF
+
 -- Char to Sprite
 CtS = {
 	[Varisa] = "Varisa",
@@ -46,7 +48,9 @@ CtS = {
 	[Flowers] = "Flowers",
 	[TV_B_F] = "TV_B_F",
 	[TV_T_F] = "TV_T_F",
-	[Trash_P] = "Trash_P"
+	[Trash_P] = "Trash_P",
+	
+	[ERROBJ] = "ERROBJ",
 }
 
 -- Names
@@ -71,7 +75,9 @@ Names = {
 	[Flowers] = "Flowers",
 	[TV_B_F] = "News Anchor",
 	[TV_T_F] = "TV_T_F",
-	[Trash_P] = "Paper Trash"
+	[Trash_P] = "Paper Trash",
+	
+	[ERROBJ] = "ERROBJ",
 }
 
 -- Character Range
