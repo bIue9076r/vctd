@@ -20,3 +20,7 @@ World.Map[7]:addWall(Box.new(0,0,22,0.1,1,1,function()
 	Map = World.Map[6]
 	setPlr(Plr.x,12.5)
 end))
+
+World.Map[7]:addProp(Prop.new(17.1,0,ERROBJ))
+World.Map[7]:addProp(Prop.new(17.1,0+1,ERROBJ))
+World.Map[7]:addProp(Prop.new(17.1,0+2,ERROBJ))
