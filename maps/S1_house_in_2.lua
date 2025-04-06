@@ -60,6 +60,20 @@ if House[1].HouseTrait == "Messy" then
 	World.Map[15]:addProp(Prop.new(19.3,10.3,Trash_P))
 	World.Map[15]:addProp(Prop.new(19.8,9.8,Trash_P))
 	World.Map[15]:addProp(Prop.new(19.3,9.8,Trash_P))
+	
+	World.Map[15]:addProp(Prop.new(11.0,7.5,Trash_P))
+	World.Map[15]:addProp(Prop.new(10.5,7.5,Trash_P))
+	World.Map[15]:addProp(Prop.new(11.0,7.0,Trash_P))
+	World.Map[15]:addProp(Prop.new(10.5,7.0,Trash_P))
+	
+	World.Map[15]:addProp(Prop.new(19.5,3.0,Trash_P))
+	World.Map[15]:addProp(Prop.new(19.0,3.0,Trash_P))
+	World.Map[15]:addProp(Prop.new(19.5,2.5,Trash_P))
+	World.Map[15]:addProp(Prop.new(19.0,2.5,Trash_P))
+	
+	World.Map[15]:addProp(Prop.new(20.5,12.5,Vase_C))
+	World.Map[15]:addProp(Prop.new(10.5,3,Vase_C))
+	World.Map[15]:addProp(Prop.new(20.5,3,Vase_C))
 end
 
 if House[1].HouseTrait == "Fanatic" then
