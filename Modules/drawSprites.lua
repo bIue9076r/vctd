@@ -78,8 +78,9 @@ function drawSprites()
 	local Cy = Plr.y
 	
 	drawBackTiles()
+	drawBackProps()
 	drawChars(Cx,Cy)
-	drawProps()
+	drawForeProps()
 	drawForeTiles()
 	love.graphics.setColor(1,1,1)
 end
@@ -114,9 +115,19 @@ function drawChars(Cx,Cy)
 	-- TODO: draw player items here
 end
 
-function drawProps()
+function drawForeProps()
 	for i,v in pairs(Map.props) do
-		v()
+		if v.b == 0 then
+			v()
+		end
+	end
+end
+
+function drawBackProps()
+	for i,v in pairs(Map.props) do
+		if v.b == 1 then
+			v()
+		end
 	end
 end
 

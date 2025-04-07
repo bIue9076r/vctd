@@ -9,9 +9,9 @@ function Npc.new(x,y,c,i,g,o)
 	local tbl = {
 		x = x or 0,
 		y = y or 0,
-		c = c or -1,
-		i = i or 0,
-		g = g or 0,
+		c = c or -1,	-- Char
+		i = i or 0,		-- Index
+		g = g or 0,		-- Ghost
 		onTimeChange = o or function()
 			
 		end,

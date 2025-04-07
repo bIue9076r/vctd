@@ -5,10 +5,10 @@ Text.v = "Normal"
 
 function Text.new(s,c,v,e)
 	local tbl = {
-		s = s or "......",
-		c = c or -1,
-		v = v or "Normal",
-		e = e or function()
+		s = s or "......",	-- String
+		c = c or -1,		-- Char
+		v = v or "Normal",	-- Voice
+		e = e or function()	-- Effect
 			
 		end,
 	}

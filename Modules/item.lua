@@ -3,7 +3,7 @@ Item.i = -1
 
 function Item.new(i)
 	local tbl = {
-		i = i or -1,
+		i = i or -1, -- index (Char)
 	}
 	
 	local mt = {

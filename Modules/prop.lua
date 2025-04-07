@@ -3,15 +3,17 @@ Prop.x = 0
 Prop.y = 0
 Prop.c = -1
 Prop.p = 0
+Prop.b = 0
 Prop.g = 0
 
-function Prop.new(x,y,c,p,g,o)
+function Prop.new(x,y,c,p,b,g,o)
 	local tbl = {
 		x = x or 0,
 		y = y or 0,
-		c = c or -1,
-		p = p or 0,
-		g = g or 0,
+		c = c or -1,	-- Char
+		p = p or 0,		-- Pass Through
+		b = b or 0,		-- Background
+		g = g or 0,		-- Ghost
 		onTimeChange = o or function()
 			
 		end,

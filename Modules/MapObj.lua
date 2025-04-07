@@ -4,8 +4,8 @@ Tile.ft = nil
 
 function Tile.new(bt,ft)
 	local tbl = {
-		bt = bt or Grass_1,
-		ft = ft or nil,
+		bt = bt or Grass_1,	-- Back Tile
+		ft = ft or nil,		-- Fore Tile
 	}
 	
 	local mt = {
