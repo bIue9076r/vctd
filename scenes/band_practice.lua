@@ -14,10 +14,11 @@ Play.Scenes[2].Actors[8] = Actor.new(Rachel,7.6,4.7)
 local sbs_1, sbs_2, sbs_3, sbs_4
 Play.Scenes[2].transition = function(self,t)
 	if(t < 2) then
-		sbs_1 = sound.getSound("EpT1_B")
-		sbs_2 = sound.getSound("EpT1_L")
-		sbs_3 = sound.getSound("EpT1_G")
-		sbs_4 = sound.getSound("EpT1_D")
+		local n = tostring(math.random(1,4))
+		sbs_1 = sound.getSound("EpT"..(n).."_B")
+		sbs_2 = sound.getSound("EpT"..(n).."_L")
+		sbs_3 = sound.getSound("EpT"..(n).."_G")
+		sbs_4 = sound.getSound("EpT"..(n).."_D")
 		if Play.unmuteAfter then
 			sbs_1:seek(15)
 			sbs_2:seek(15)
