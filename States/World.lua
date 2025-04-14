@@ -77,7 +77,7 @@ function World.Update(dt)
 end
 
 function World.Keypressed(key)
-	-- if npc, not talking, and 'enter'
+	-- if npc, not talking, and 'e'
 	if World.doTalk(key) then
 		IsTalking = true
 		
@@ -101,4 +101,5 @@ function World.Keypressed(key)
 			end
 		end
 	end
+	-- Item.Keypressed(key)
 end
