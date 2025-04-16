@@ -61,6 +61,7 @@ function ItemBag:add(itm)
 end
 
 function ItemBag:Keypressed(key)
+	print(key)
 	if self.index then
 		self.items:act(key)
 	end
