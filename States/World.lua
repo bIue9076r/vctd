@@ -101,5 +101,5 @@ function World.Keypressed(key)
 			end
 		end
 	end
-	-- Item.Keypressed(key)
+	Plr.inv.Keypressed(key)
 end

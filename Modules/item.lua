@@ -31,13 +31,14 @@ function Item:draw(x,y)
 	)
 end
 
-function Item:act()
+function Item:act(key)
 	-- Varies
 end
 
 
 ItemBag = {}
 ItemBag.items = {}
+ItemBag.index = nil
 
 function ItemBag.new()
 	local tbl = {
@@ -57,4 +58,10 @@ end
 
 function ItemBag:add(itm)
 	table.insert(self.items,itm)
+end
+
+function ItemBag:Keypressed(key)
+	if self.index then
+		self.items:act(key)
+	end
 end
