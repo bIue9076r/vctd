@@ -39,6 +39,7 @@ end
 ItemBag = {}
 ItemBag.items = {}
 ItemBag.index = nil
+ItemBag.draw = false
 
 function ItemBag.new()
 	local tbl = {
@@ -58,6 +59,13 @@ end
 
 function ItemBag:add(itm)
 	table.insert(self.items,itm)
+end
+
+function ItemBag:drawInv()
+	if self.draw then
+		-- draw inventory
+		-- pause game to be safe
+	end
 end
 
 function ItemBag:Keypressed(key)

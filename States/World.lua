@@ -21,7 +21,6 @@ function World.doTalk(key)
 	return (
 		(World.snpc)
 		and (not (World.snpc.g == 1))
-		and (not IsTalking)
 		and (key == "e")
 	)
 end
@@ -78,28 +77,30 @@ end
 
 function World.Keypressed(key)
 	-- if npc, not talking, and 'e'
-	if World.doTalk(key) then
-		IsTalking = true
-		
-		World.dtbl = {
-			s = "......",
-			n = World.snpc.c,
-		}
-		
-		local wd = World.Dialoge[Language][World.snpc.i]
-		if not wd then wd = World.Dialoge[English][World.snpc.i] end
-		if wd then
-			World.dtbl = wd:get()
+	if not IsTalking then
+		if World.doTalk(key) then
+			IsTalking = true
 			
-			if World.Dialoge[Language][World.snpc.i] then
-				if World.Dialoge[English][World.snpc.i] then
-					World.Dialoge[English][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
-				end
-				if World.Dialoge[French][World.snpc.i] then
-					World.Dialoge[French][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+			World.dtbl = {
+				s = "......",
+				n = World.snpc.c,
+			}
+			
+			local wd = World.Dialoge[Language][World.snpc.i]
+			if not wd then wd = World.Dialoge[English][World.snpc.i] end
+			if wd then
+				World.dtbl = wd:get()
+				
+				if World.Dialoge[Language][World.snpc.i] then
+					if World.Dialoge[English][World.snpc.i] then
+						World.Dialoge[English][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+					end
+					if World.Dialoge[French][World.snpc.i] then
+						World.Dialoge[French][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+					end
 				end
 			end
 		end
+		Plr.inv:Keypressed(key)
 	end
-	Plr.inv.Keypressed(key)
 end
