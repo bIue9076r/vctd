@@ -47,6 +47,7 @@ function World.Draw()
 	-- draw background and sprites
 	drawBackgound()
 	drawSprites()
+	Plr.inv:drawInv()
 	
 	-- if talking
 	drawDialoge()
