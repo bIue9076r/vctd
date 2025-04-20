@@ -61,16 +61,23 @@ function ItemBag:add(itm)
 	table.insert(self.items,itm)
 end
 
+function ItemBag:draw()
+	if self.index then
+		self.items[self.index]:draw()
+	end
+end
+
 function ItemBag:drawInv()
 	if self.draw then
 		-- draw inventory
 		-- pause game to be safe
+		love.graphics.rectangle("fill",0,0,50,50)
 	end
 end
 
 function ItemBag:Keypressed(key)
 	print(key)
 	if self.index then
-		self.items:act(key)
+		self.items[self.index]:act(key)
 	end
 end
