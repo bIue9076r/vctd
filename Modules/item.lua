@@ -71,7 +71,7 @@ function ItemBag:drawInv()
 	if self.draw then
 		-- draw inventory
 		-- pause game to be safe
-		love.graphics.rectangle("fill",0,0,50,50)
+		love.graphics.rectangle("fill",50,50,500,300)
 	end
 end
 
