@@ -68,10 +68,18 @@ function ItemBag:draw()
 end
 
 function ItemBag:drawInv()
+	print(tostring(self.draw))
 	if self.draw then
 		-- draw inventory
 		-- pause game to be safe
 		love.graphics.rectangle("fill",50,50,500,300)
+		love.graphics.print({{0,0,0},"Inventory:"},60,60)
+		for i,v in pairs(self.items) do
+			
+			if self.index and i == self.index then
+				
+			end
+		end
 	end
 end
 
