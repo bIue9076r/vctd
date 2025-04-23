@@ -39,7 +39,7 @@ end
 ItemBag = {}
 ItemBag.items = {}
 ItemBag.index = nil
-ItemBag.draw = false
+ItemBag.visible = false
 
 function ItemBag.new()
 	local tbl = {
@@ -68,8 +68,7 @@ function ItemBag:draw()
 end
 
 function ItemBag:drawInv()
-	print(tostring(self.draw))
-	if self.draw then
+	if self.visible then
 		-- draw inventory
 		-- pause game to be safe
 		love.graphics.rectangle("fill",50,50,500,300)
