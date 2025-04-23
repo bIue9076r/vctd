@@ -84,6 +84,9 @@ end
 
 function ItemBag:Keypressed(key)
 	print(key)
+	if key == "i" then
+		self.visible = not self.visible
+	end
 	if self.index then
 		self.items[self.index]:act(key)
 	end
