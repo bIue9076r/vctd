@@ -73,12 +73,16 @@ function ItemBag:drawInv()
 		-- pause game to be safe
 		love.graphics.rectangle("fill",50,50,500,300)
 		love.graphics.print({{0,0,0},"Inventory:"},60,60)
-		for i,v in pairs(self.items) do
+		
+		--local lo = 1 + ((page-1) * page_size)
+		--local hi = page_size + ((page-1) * page_size)
+		
+		--[[for i,v in pairs(self.items) do
 			
 			if self.index and i == self.index then
 				
 			end
-		end
+		end]]
 	end
 end
 
@@ -86,6 +90,7 @@ function ItemBag:Keypressed(key)
 	print(key)
 	if key == "i" then
 		self.visible = not self.visible
+		return
 	end
 	if self.index then
 		self.items[self.index]:act(key)
