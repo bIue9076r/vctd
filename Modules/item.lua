@@ -40,6 +40,8 @@ ItemBag = {}
 ItemBag.items = {}
 ItemBag.index = nil
 ItemBag.visible = false
+ItemBag.page = 1
+ItemBag.page_size = 8
 
 function ItemBag.new()
 	local tbl = {
@@ -74,8 +76,8 @@ function ItemBag:drawInv()
 		love.graphics.rectangle("fill",50,50,500,300)
 		love.graphics.print({{0,0,0},"Inventory:"},60,60)
 		
-		--local lo = 1 + ((page-1) * page_size)
-		--local hi = page_size + ((page-1) * page_size)
+		local lo = 1 + ((self.page-1) * self.page_size)
+		local hi = self.page_size + ((self.page-1) * self.page_size)
 		
 		--[[for i,v in pairs(self.items) do
 			
