@@ -74,7 +74,11 @@ function ItemBag:drawInv()
 		-- draw inventory
 		-- pause game to be safe
 		love.graphics.rectangle("fill",50,50,500,300)
-		love.graphics.print({{0,0,0},"Inventory:"},60,60)
+		love.graphics.print({{0,0,0},"Inventory - Page "..self.page},60,60)
+		
+		love.graphics.setColor(1,0,1)
+		love.graphics.rectangle("fill",55,100,490,240)
+		love.graphics.setColor(1,1,1)
 		
 		local lo = 1 + ((self.page-1) * self.page_size)
 		local hi = self.page_size + ((self.page-1) * self.page_size)
