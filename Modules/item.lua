@@ -78,6 +78,18 @@ function ItemBag:drawInv()
 		
 		love.graphics.setColor(1,0,1)
 		love.graphics.rectangle("fill",55,100,490,240)
+		love.graphics.setColor(0,1,1)
+		love.graphics.rectangle("fill",55,100,240,50)
+		love.graphics.rectangle("fill",55+250,100,240,50)
+		
+		love.graphics.rectangle("fill",55,100+60,240,50)
+		love.graphics.rectangle("fill",55+250,100+60,240,50)
+		
+		love.graphics.rectangle("fill",55,100+60+60,240,50)
+		love.graphics.rectangle("fill",55+250,100+60+60,240,50)
+		
+		love.graphics.rectangle("fill",55,100+60+60+60,240,50)
+		love.graphics.rectangle("fill",55+250,100+60+60+60,240,50)
 		love.graphics.setColor(1,1,1)
 		
 		local lo = 1 + ((self.page-1) * self.page_size)
