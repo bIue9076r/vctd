@@ -95,6 +95,11 @@ function ItemBag:drawInv()
 		local lo = 1 + ((self.page-1) * self.page_size)
 		local hi = self.page_size + ((self.page-1) * self.page_size)
 		
+		local tbl = {}
+		for i = lo,hi do
+			table.insert(tbl,self.items[i])
+		end
+		
 		--[[for i,v in pairs(self.items) do
 			
 			if self.index and i == self.index then
