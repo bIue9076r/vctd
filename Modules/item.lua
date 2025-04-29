@@ -69,6 +69,12 @@ function ItemBag:draw()
 	end
 end
 
+function ItemBag:update(dt)
+	if self.visible then
+		print(dt)
+	end
+end
+
 function ItemBag:drawInv()
 	if self.visible then
 		-- draw inventory

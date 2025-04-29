@@ -58,6 +58,8 @@ function World.Update(dt)
 		local rnpc, rdbox = movePlayer(dt,World.movespeed)
 		World.setNpc(rnpc)
 		World.setDbox(rdbox)
+		
+		Plr.inv:update(dt)
 	end
 	
 	if World.sdbox then
