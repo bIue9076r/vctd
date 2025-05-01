@@ -71,7 +71,16 @@ end
 
 function ItemBag:update(dt)
 	if self.visible then
-		print(dt)
+		local x,y = love.mouse.getPosition()
+		if not(self.ly == y) and not(self.lx == x) then
+			print(dt)
+			-- if x lower bound and x upper bound then
+				-- if y lower bound and y upper bound then
+					
+				-- end
+			-- end
+		end
+		self.lx, self.ly = x, y
 	end
 end
 
@@ -86,16 +95,16 @@ function ItemBag:drawInv()
 		love.graphics.rectangle("fill",55,100,490,240)
 		love.graphics.setColor(0,1,1)
 		love.graphics.rectangle("fill",60,105,235,50)
-		love.graphics.rectangle("fill",60+245,105,235,50)
+		love.graphics.rectangle("fill",305,105,235,50)
 		
-		love.graphics.rectangle("fill",60,105+60,235,50)
-		love.graphics.rectangle("fill",60+245,105+60,235,50)
+		love.graphics.rectangle("fill",60,165,235,50)
+		love.graphics.rectangle("fill",305,165,235,50)
 		
-		love.graphics.rectangle("fill",60,105+60+60,235,50)
-		love.graphics.rectangle("fill",60+245,105+60+60,235,50)
+		love.graphics.rectangle("fill",60,225,235,50)
+		love.graphics.rectangle("fill",305,225,235,50)
 		
-		love.graphics.rectangle("fill",60,105+60+60+60,235,50)
-		love.graphics.rectangle("fill",60+245,105+60+60+60,235,50)
+		love.graphics.rectangle("fill",60,285,235,50)
+		love.graphics.rectangle("fill",305,285,235,50)
 		love.graphics.setColor(1,1,1)
 		
 		local lo = 1 + ((self.page-1) * self.page_size)
