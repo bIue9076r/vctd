@@ -74,11 +74,11 @@ function ItemBag:update(dt)
 		local x,y = love.mouse.getPosition()
 		if not(self.ly == y) and not(self.lx == x) then
 			print(dt)
-			-- if x lower bound and x upper bound then
+			if x >= 55 and x <= (490 + 55) then
 				-- if y lower bound and y upper bound then
 					
 				-- end
-			-- end
+			end
 		end
 		self.lx, self.ly = x, y
 	end
