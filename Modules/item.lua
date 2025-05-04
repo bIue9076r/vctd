@@ -73,11 +73,11 @@ function ItemBag:update(dt)
 	if self.visible then
 		local x,y = love.mouse.getPosition()
 		if not(self.ly == y) and not(self.lx == x) then
-			print(dt)
 			if x >= 55 and x <= (490 + 55) then
-				-- if y lower bound and y upper bound then
-					
-				-- end
+				if y >= 100 and y <= (100 + 240) then
+					self.sx = min(max(1,math.floor((x - 55) / 245) + 1),2)
+					self.sy = min(max(1,math.floor((y - 100) / 60) + 1),4)
+				end
 			end
 		end
 		self.lx, self.ly = x, y
@@ -105,6 +105,12 @@ function ItemBag:drawInv()
 		
 		love.graphics.rectangle("fill",60,285,235,50)
 		love.graphics.rectangle("fill",305,285,235,50)
+		love.graphics.setColor(1,1,1)
+		
+		love.graphics.setColor(1,0,0)
+		love.graphics.setLineWidth(5)
+		love.graphics.rectangle("line",60 + (245 * ((self.sx or 1) - 1)),105 + (60 * ((self.sy or 1) - 1)),235,50)
+		love.graphics.setLineWidth(1)
 		love.graphics.setColor(1,1,1)
 		
 		local lo = 1 + ((self.page-1) * self.page_size)
