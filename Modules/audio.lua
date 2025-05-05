@@ -26,6 +26,12 @@ sound.new("EpT4_G","/Assets/Ep4T_Guitar.mp3","stream")
 sound.new("EpT4_B","/Assets/Ep4T_Bass.mp3","stream")
 sound.new("EpT4_D","/Assets/Ep4T_Drums.mp3","stream")
 
+--sound.new("EpT5","/Assets/episode_5_theme.mp3","stream")
+--sound.new("EpT5_L","/Assets/Ep5T_Lyrics.mp3","stream")
+--sound.new("EpT5_G","/Assets/Ep5T_Guitar.mp3","stream")
+--sound.new("EpT5_B","/Assets/Ep5T_Bass.mp3","stream")
+--sound.new("EpT5_D","/Assets/Ep5T_Drums.mp3","stream")
+
 sound.new("Talk_1","/Assets/talk_1_normal.mp3","static")
 sound.new("Talk_2","/Assets/talk_1_slow.mp3","static")
 sound.new("Talk_3","/Assets/talk_1_fast.mp3","static")
