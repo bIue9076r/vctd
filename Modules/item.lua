@@ -121,12 +121,12 @@ function ItemBag:drawInv()
 			table.insert(tbl,self.items[i])
 		end
 		
-		--[[for i,v in pairs(self.items) do
-			
-			if self.index and i == self.index then
-				
+		for x = 1,2 do
+			for y = 1,4 do
+				local i = y+(x-1)*(self.page_size/2)
+				love.graphics.print({{0,0,0},"Item#"..x.."-"..y},60+(245 * (x-1)),105+(60 * (y-1)))
 			end
-		end]]
+		end
 	end
 end
 
