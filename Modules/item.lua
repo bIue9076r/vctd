@@ -125,7 +125,9 @@ function ItemBag:drawInv()
 		for x = 1,2 do
 			for y = 1,4 do
 				local i = y+(x-1)*(self.page_size/2)
-				love.graphics.print({{0,0,0},"Item#"..x.."-"..y},60+(245 * (x-1)),105+(60 * (y-1)))
+				if self.items[i] then
+					love.graphics.print({{0,0,0},"Item#"..x.."-"..y},60+(245 * (x-1)),105+(60 * (y-1)))
+				end
 			end
 		end
 	end
