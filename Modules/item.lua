@@ -64,7 +64,7 @@ function ItemBag:add(itm)
 end
 
 function ItemBag:draw()
-	if self.index then
+	if self.index and self.items[self.index] then
 		self.items[self.index]:draw()
 	end
 end
@@ -77,6 +77,7 @@ function ItemBag:update(dt)
 				if y >= 100 and y <= (100 + 240) then
 					self.sx = min(max(1,math.floor((x - 55) / 245) + 1),2)
 					self.sy = min(max(1,math.floor((y - 100) / 60) + 1),4)
+					self.index = self.sy+(self.sx-1)*(self.page_size/2)
 				end
 			end
 		end
@@ -136,7 +137,9 @@ function ItemBag:Keypressed(key)
 		self.visible = not self.visible
 		return
 	end
-	if self.index then
-		self.items[self.index]:act(key)
+	if key == "return" then
+		if self.index and self.items[self.index] then
+			self.items[self.index]:act(key)
+		end
 	end
 end
