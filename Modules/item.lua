@@ -134,7 +134,6 @@ function ItemBag:drawInv()
 end
 
 function ItemBag:Keypressed(key)
-	print(key)
 	if key == "i" then
 		self.visible = not self.visible
 		return
