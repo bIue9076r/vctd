@@ -15,6 +15,8 @@ function Item.new(i)
 end
 
 function Item:draw(x,y)
+	local x = x or Plr.x
+	local y = y or Plr.y
 	local Tx = (SCREEN_X/24)
 	local Ty = (SCREEN_Y/16)
 	local img, psx, psy

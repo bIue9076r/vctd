@@ -54,6 +54,9 @@ Plr = {
 	inv = ItemBag.new(),
 }
 
+Plr.inv:add(Item.new(B_Guitar_L))
+
+
 function setPlr(x,y)
 	Plr.x = x
 	Plr.y = y
