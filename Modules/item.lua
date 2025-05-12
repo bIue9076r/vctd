@@ -140,9 +140,7 @@ function ItemBag:Keypressed(key)
 		self.visible = not self.visible
 		return
 	end
-	if key == "return" then
-		if self.index and self.items[self.index] then
-			self.items[self.index]:act(key)
-		end
+	if self.index and self.items[self.index] then
+		self.items[self.index]:act(key)
 	end
 end

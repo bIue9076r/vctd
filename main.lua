@@ -54,7 +54,57 @@ Plr = {
 	inv = ItemBag.new(),
 }
 
-Plr.inv:add(Item.new(B_Guitar_L))
+local guitar = Item.new(B_Guitar_L)
+guitar._sound = sound.getSound("noodle_1")
+
+function guitar:act(key)
+	if self._sound and (not muted) then
+		if key == "1" then
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_1")
+			self._sound:seek(0)
+			self._sound:play()
+		elseif key == "2" then
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_2")
+			self._sound:seek(0)
+			self._sound:play()
+		elseif key == "3" then
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_3")
+			self._sound:seek(0)
+			self._sound:play()
+		elseif key == "4" then
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_4")
+			self._sound:seek(0)
+			self._sound:play()
+		elseif key == "5" then
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_5")
+			self._sound:seek(0)
+			self._sound:play()
+		elseif key == "6" then
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_6")
+			self._sound:seek(0)
+			self._sound:play()
+		elseif key == "7" then
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_7")
+			self._sound:seek(0)
+			self._sound:play()
+		elseif key == "return" then
+			local n = math.random(1,7)
+			self._sound:stop()
+			self._sound = sound.getSound("noodle_"..n)
+			self._sound:seek(0)
+			self._sound:play()
+		end
+	end
+end
+
+Plr.inv:add(guitar)
 
 
 function setPlr(x,y)

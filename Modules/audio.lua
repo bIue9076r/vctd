@@ -36,6 +36,14 @@ sound.new("Talk_1","/Assets/talk_1_normal.mp3","static")
 sound.new("Talk_2","/Assets/talk_1_slow.mp3","static")
 sound.new("Talk_3","/Assets/talk_1_fast.mp3","static")
 
+sound.new("noodle_1","/Assets/noodle_1.mp3","static")
+sound.new("noodle_2","/Assets/noodle_2.mp3","static")
+sound.new("noodle_3","/Assets/noodle_3.mp3","static")
+sound.new("noodle_4","/Assets/noodle_4.mp3","static")
+sound.new("noodle_5","/Assets/noodle_5.mp3","static")
+sound.new("noodle_6","/Assets/noodle_6.mp3","static")
+sound.new("noodle_7","/Assets/noodle_7.mp3","static")
+
 bs = sound.getSound("Main")
 soundTick = ticker.new()
 muted = false
