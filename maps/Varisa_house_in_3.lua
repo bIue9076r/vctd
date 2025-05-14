@@ -22,6 +22,15 @@ World.Map[12]:addProp(Prop.new(21,3,ERROBJ))
 World.Map[12]:addProp(Prop.new(20,4,ERROBJ))
 World.Map[12]:addProp(Prop.new(21,4,ERROBJ))
 
+World.Map[12]:addProp(Prop.new(20.5,12.5,ERROBJ))
+
+World.Map[12]:addProp(Prop.new(13,12,ERROBJ))
+World.Map[12]:addProp(Prop.new(14,12,ERROBJ))
+World.Map[12]:addProp(Prop.new(15,12,ERROBJ))
+
+World.Map[12]:addProp(Prop.new(20.5,5,Amp))
+World.Map[12]:addProp(Prop.new(20,5,B_Guitar_R))
+
 World.Map[12]:addWall(Box.new(0,0,8,14))
 World.Map[12]:addWall(Box.new(8,0,14,2))
 World.Map[12]:addWall(Box.new(10,4,0.1,6))
