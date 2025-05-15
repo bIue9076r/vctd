@@ -71,6 +71,7 @@ function House.new()
 	local tbl = {
 		isKiller = kl,
 		HouseTrait = tr1,
+		isOpen = false,
 		HouseHold = pop(HouseHolds),
 	}
 	

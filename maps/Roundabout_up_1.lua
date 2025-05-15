@@ -61,7 +61,7 @@ World.Map[6]:addProp(Prop.new(10.8+4,2.9+3,ERROBJ,1))
 World.Map[6]:addProp(Prop.new(10.8+5,2.9+3,ERROBJ,1))
 World.Map[6]:addProp(Prop.new(10.8+6,2.9+3,ERROBJ,1))
 
-World.Map[6]:addProp(Prop.new(4.5,4.0,ERROBJ))
+World.Map[6]:addProp(Prop.new(4.5,4.0,Trash_Can))
 
 World.Map[6]:addProp(Prop.new(17.1,11,ERROBJ))
 World.Map[6]:addProp(Prop.new(17.1,11+1,ERROBJ))

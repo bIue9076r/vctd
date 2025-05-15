@@ -23,6 +23,17 @@ Flowers = 0x14
 TV_B_F = 0x15
 TV_T_F = 0x16
 Trash_P = 0x17
+-- Trash = 0x18
+-- Trash = 0x19
+Trash_Can = 0x20
+Poster_Bu = 0x21
+-- Poster_Gr = 0x22
+-- Poster_Or = 0x23
+-- Poster_Ye = 0x24
+-- Poster_Bl = 0x25
+-- Poster_Wh = 0x26
+Poster_Pu = 0x27
+Flag = 0x28
 
 ERROBJ = 0xFF
 
@@ -49,6 +60,10 @@ CtS = {
 	[TV_B_F] = "TV_B_F",
 	[TV_T_F] = "TV_T_F",
 	[Trash_P] = "Trash_P",
+	[Trash_Can] = "Trash_Can",
+	[Poster_Bu] = "Poster_Bu",
+	[Poster_Pu] = "Poster_Pu",
+	[Flag] = "Flag",
 	
 	[ERROBJ] = "ERROBJ",
 }
@@ -76,6 +91,10 @@ Names = {
 	[TV_B_F] = "News Anchor",
 	[TV_T_F] = "TV_T_F",
 	[Trash_P] = "Paper Trash",
+	[Trash_Can] = "Trash Can",
+	[Poster_Bu] = "Blue Poster",
+	[Poster_Pu] = "Purple Poster",
+	[Flag] = "Flag",
 	
 	[ERROBJ] = "ERROBJ",
 }

@@ -12,8 +12,8 @@ World.Map[12]:setLineV(6,3,5,Planks,Bar_L)
 World.Map[12]:setTile(6,6,Planks,Bar_TL)
 World.Map[12]:setTile(5,6,Planks,Bar_T)
 
-World.Map[12]:addProp(Prop.new(12,0.5,ERROBJ))
-World.Map[12]:addProp(Prop.new(19,0.5,ERROBJ))
+World.Map[12]:addProp(Prop.new(12,0.5,Poster_Pu))
+World.Map[12]:addProp(Prop.new(19,0.5,Flag))
 
 World.Map[12]:addProp(Prop.new(20,2,ERROBJ))
 World.Map[12]:addProp(Prop.new(21,2,ERROBJ))
@@ -22,7 +22,7 @@ World.Map[12]:addProp(Prop.new(21,3,ERROBJ))
 World.Map[12]:addProp(Prop.new(20,4,ERROBJ))
 World.Map[12]:addProp(Prop.new(21,4,ERROBJ))
 
-World.Map[12]:addProp(Prop.new(20.5,12.5,ERROBJ))
+World.Map[12]:addProp(Prop.new(20.5,12.5,Trash_Can))
 
 World.Map[12]:addProp(Prop.new(13,12,ERROBJ))
 World.Map[12]:addProp(Prop.new(14,12,ERROBJ))

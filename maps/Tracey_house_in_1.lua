@@ -53,3 +53,5 @@ World.Map[2]:addProp(Prop.new(8,1.5,Vase))
 World.Map[2]:addProp(Prop.new(13,1.5,Vase))
 World.Map[2]:addProp(Prop.new(8,0.5,Flowers,1))
 World.Map[2]:addProp(Prop.new(13,0.5,Flowers,1))
+
+World.Map[2]:addProp(Prop.new(4.75,8.75,Trash_Can))

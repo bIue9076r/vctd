@@ -58,6 +58,8 @@ if House[1].HouseTrait == "Neat" then
 	World.Map[14]:addProp(Prop.new(13,1.5,Vase))
 	World.Map[14]:addProp(Prop.new(8,0.5,Flowers,1))
 	World.Map[14]:addProp(Prop.new(13,0.5,Flowers,1))
+	
+	World.Map[14]:addProp(Prop.new(4.75,8.75,Trash_Can))
 end
 
 if House[1].HouseTrait == "Messy" then
