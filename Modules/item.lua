@@ -94,21 +94,21 @@ function ItemBag:drawInv()
 		love.graphics.rectangle("fill",50,50,500,300)
 		love.graphics.print({{0,0,0},"Inventory - Page "..self.page},60,60)
 		
-		love.graphics.setColor(1,0,1)
-		love.graphics.rectangle("fill",55,100,490,240)
-		love.graphics.setColor(0,1,1)
-		love.graphics.rectangle("fill",60,105,235,50)
-		love.graphics.rectangle("fill",305,105,235,50)
-		
-		love.graphics.rectangle("fill",60,165,235,50)
-		love.graphics.rectangle("fill",305,165,235,50)
-		
-		love.graphics.rectangle("fill",60,225,235,50)
-		love.graphics.rectangle("fill",305,225,235,50)
-		
-		love.graphics.rectangle("fill",60,285,235,50)
-		love.graphics.rectangle("fill",305,285,235,50)
-		love.graphics.setColor(1,1,1)
+		--love.graphics.setColor(1,0,1)
+		--love.graphics.rectangle("fill",55,100,490,240)
+		--love.graphics.setColor(0,1,1)
+		--love.graphics.rectangle("fill",60,105,235,50)
+		--love.graphics.rectangle("fill",305,105,235,50)
+		--
+		--love.graphics.rectangle("fill",60,165,235,50)
+		--love.graphics.rectangle("fill",305,165,235,50)
+		--
+		--love.graphics.rectangle("fill",60,225,235,50)
+		--love.graphics.rectangle("fill",305,225,235,50)
+		--
+		--love.graphics.rectangle("fill",60,285,235,50)
+		--love.graphics.rectangle("fill",305,285,235,50)
+		--love.graphics.setColor(1,1,1)
 		
 		love.graphics.setColor(1,0,0)
 		love.graphics.setLineWidth(5)
