@@ -25,15 +25,20 @@ TV_T_F = 0x16
 Trash_P = 0x17
 -- Trash = 0x18
 -- Trash = 0x19
-Trash_Can = 0x20
-Poster_Bu = 0x21
--- Poster_Gr = 0x22
--- Poster_Or = 0x23
--- Poster_Ye = 0x24
--- Poster_Bl = 0x25
--- Poster_Wh = 0x26
-Poster_Pu = 0x27
-Flag = 0x28
+Trash_Can = 0x1A
+Poster_Bu = 0x1B
+-- Poster_Gr = 0x1C
+-- Poster_Or = 0x1D
+-- Poster_Ye = 0x1E
+-- Poster_Bl = 0x1F
+-- Poster_Wh = 0x20
+Poster_Pu = 0x21
+Flag = 0x22
+Bass_Drum = 0x23
+Snare_Drum = 0x24
+Tom_Drum = 0x25
+Crash_Cymbal = 0x26
+Ride_Cymbal = 0x27
 
 ERROBJ = 0xFF
 
@@ -64,6 +69,11 @@ CtS = {
 	[Poster_Bu] = "Poster_Bu",
 	[Poster_Pu] = "Poster_Pu",
 	[Flag] = "Flag",
+	[Bass_Drum] = "Bass_Drum",
+	[Snare_Drum] = "Snare_Drum",
+	[Tom_Drum] = "Tom_Drum",
+	[Crash_Cymbal] = "Crash_Cymbal",
+	[Ride_Cymbal] = "Ride_Cymbal",
 	
 	[ERROBJ] = "ERROBJ",
 }

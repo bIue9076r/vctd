@@ -11,7 +11,7 @@ World.Map[6]:setTile(7,7,Road_N_T)
 World.Map[6]:setLineH(1,6,8,Concrete)
 World.Map[6]:setTile(8,7,Concrete)
 
-World.Map[6]:addWall(Box.new(0,9,0.1,5,1,1,function()
+World.Map[6]:addWall(Box.new(0,9.1,0.1,4.9,1,1,function()
 	Map = World.Map[1]
 	setPlr(20.5,Plr.y)
 end))

@@ -1,5 +1,5 @@
 Play.Scenes[2] = Scene.new(World.Map[5])
-Play.Scenes[2].tickGoal = 800
+Play.Scenes[2].tickGoal = 800--math.floor(9223372036854775807 / 10000000000000)
 Play.Scenes[2].Hour = Noon
 Play.Scenes[2].Min = 0
 Play.Scenes[2].Actors[1] = Actor.new(Tracey,5.6,7.7)
@@ -10,6 +10,11 @@ Play.Scenes[2].Actors[5] = Actor.new(B_Guitar_L,9.6,8.7)
 Play.Scenes[2].Actors[6] = Actor.new(Mic,10.1,9)
 Play.Scenes[2].Actors[7] = Actor.new(Amp,10.6,7.7)
 Play.Scenes[2].Actors[8] = Actor.new(Rachel,7.6,4.7)
+Play.Scenes[2].Actors[9] = Actor.new(Ride_Cymbal,6.8,4.9)
+Play.Scenes[2].Actors[10] = Actor.new(Crash_Cymbal,8.4,4.9)
+Play.Scenes[2].Actors[11] = Actor.new(Snare_Drum,8,5.3)
+Play.Scenes[2].Actors[12] = Actor.new(Tom_Drum,7.2,5.3)
+Play.Scenes[2].Actors[13] = Actor.new(Bass_Drum,7.6,5.5)
 
 local sbs_1, sbs_2, sbs_3, sbs_4
 Play.Scenes[2].transition = function(self,t)
