@@ -106,7 +106,6 @@ end
 
 Plr.inv:add(guitar)
 
-
 function setPlr(x,y)
 	Plr.x = x
 	Plr.y = y

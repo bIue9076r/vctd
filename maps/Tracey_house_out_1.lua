@@ -58,7 +58,11 @@ World.Map[1]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
 	setPlr(Plr.x,0.5)
 end))
 
-World.Map[1]:addNpc(Npc.new(7.6,4.7,Tracey,1,0,function()
+World.Map[1]:addNpc(Npc.new(3.5,5.0,Tracey,1,0,function()
+	
+end))
+
+World.Map[1]:addNpc(Npc.new(7.6,4.7,Rachel,5,0,function()
 	
 end))
 
@@ -66,3 +70,9 @@ World.Map[1]:addProp(Prop.new(7.6,4.7,R_Guitar_L))
 World.Map[1]:addProp(Prop.new(6,3,Mic,1))
 World.Map[1]:addProp(Prop.new(5,2,Amp))
 World.Map[1]:addProp(Prop.new(8.6,3.7,Amp))
+
+World.Map[1]:addProp(Prop.new(3.5-0.8,5.0+0.2,Ride_Cymbal))
+World.Map[1]:addProp(Prop.new(3.5+0.8,5.0+0.2,Crash_Cymbal))
+World.Map[1]:addProp(Prop.new(3.5+0.4,5.0+0.6,Snare_Drum))
+World.Map[1]:addProp(Prop.new(3.5-0.4,5.0+0.6,Tom_Drum))
+World.Map[1]:addProp(Prop.new(3.5+0.0,5.0+0.8,Bass_Drum))

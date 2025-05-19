@@ -37,3 +37,16 @@ World.Dialoge[French][4] = Dialoge.new({
 	Text.new("Rien des tout a en train.",TV_B),
 	Text.new("*Charabia Random*",TV_B),
 },1)
+
+World.Dialoge[French][5] = Dialoge.new({
+	Text.new("Salut",Varisa),
+	Text.new("Salut Var!",Rachel),
+	Text.new("Est ce que mère de Tracey a encore des biscits?",Varisa),
+	Text.new("Ouais? Je pense",Rachel),
+	Text.new("Super!",Varisa),
+},0,function()
+	World.nextMap(World.Map[2])
+	World.AfterEffect = function()
+		setPlr(10.5,12.5)
+	end
+end)

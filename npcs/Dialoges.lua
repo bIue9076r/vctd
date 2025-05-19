@@ -37,3 +37,16 @@ World.Dialoge[English][4] = Dialoge.new({
 	Text.new("Nothing out of the ordinary just happened.",TV_B),
 	Text.new("*Random Gibberish*",TV_B),
 },1)
+
+World.Dialoge[English][5] = Dialoge.new({
+	Text.new("Hey",Varisa),
+	Text.new("Hi Var!",Rachel),
+	Text.new("Does Tracey's mom still have any cookies?",Varisa),
+	Text.new("Yeah? I think",Rachel),
+	Text.new("Sweet!",Varisa),
+},0,function()
+	World.nextMap(World.Map[2])
+	World.AfterEffect = function()
+		setPlr(10.5,12.5)
+	end
+end)
