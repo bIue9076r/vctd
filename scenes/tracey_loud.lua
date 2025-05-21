@@ -19,7 +19,7 @@ Play.Scenes[3].Actors[12] = Actor.new(ERROBJ,21,3)
 Play.Scenes[3].Actors[13] = Actor.new(ERROBJ,20,4)
 Play.Scenes[3].Actors[14] = Actor.new(ERROBJ,21,4)
 
-local sbs_1, sbs_2, sbs_3, sbs_4
+local sbs
 Play.Scenes[3].transition = function(self,t)
 	if(t < 2) then
 		sbs = sound.getSound("EpT3_D")
@@ -46,6 +46,7 @@ Play.Scenes[3].transition = function(self,t)
 	elseif(t < self.tickGoal) then
 		
 	else
+		sbs:stop()
 		if Play.unmuteAfter then
 			muted = false
 			plyed = false
