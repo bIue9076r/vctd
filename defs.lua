@@ -39,6 +39,13 @@ Snare_Drum = 0x24
 Tom_Drum = 0x25
 Crash_Cymbal = 0x26
 Ride_Cymbal = 0x27
+Sand = 0x28
+Sand_L = 0x29
+Sand_R = 0x2A
+Sand_TL = 0x2B
+Sand_BL = 0x2C
+Sand_TR = 0x2D
+Sand_BR = 0x2E
 
 ERROBJ = 0xFF
 
@@ -79,7 +86,13 @@ CtS = {
 	[Tom_Drum] = "Tom_Drum",
 	[Crash_Cymbal] = "Crash_Cymbal",
 	[Ride_Cymbal] = "Ride_Cymbal",
-	
+	[Sand] = "Sand",
+	[Sand_L] = "Sand_L",
+	[Sand_R] = "Sand_R",
+	[Sand_TL] = "Sand_TL",
+	[Sand_BL] = "Sand_BL",
+	[Sand_TR] = "Sand_TR",
+	[Sand_BR] = "Sand_BR",
 	[ERROBJ] = "ERROBJ",
 }
 
@@ -115,7 +128,18 @@ Names = {
 	[Poster_Wh] = " Poster",
 	[Poster_Pu] = "Purple Poster",
 	[Flag] = "Flag",
-	
+	[Bass_Drum] = "Bass Drum",
+	[Snare_Drum] = "Snare Drum",
+	[Tom_Drum] = "Tom Drum",
+	[Crash_Cymbal] = "Crash Cymbal",
+	[Ride_Cymbal] = "Ride Cymbal",
+	[Sand] = "Sand",
+	[Sand_L] = "Sand Left",
+	[Sand_R] = "Sand Right",
+	[Sand_TL] = "Sand Top Left",
+	[Sand_BL] = "Sand Bottom Left",
+	[Sand_TR] = "Sand Top Right",
+	[Sand_BR] = "Sand Bottom Right",
 	[ERROBJ] = "ERROBJ",
 }
 
