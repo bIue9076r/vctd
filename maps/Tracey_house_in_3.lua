@@ -12,8 +12,8 @@ World.Map[4]:setLineV(6,3,5,Planks,Bar_L)
 World.Map[4]:setTile(6,6,Planks,Bar_TL)
 World.Map[4]:setTile(5,6,Planks,Bar_T)
 
-World.Map[4]:addProp(Prop.new(12,0.5,ERROBJ))
-World.Map[4]:addProp(Prop.new(19,0.5,ERROBJ))
+World.Map[4]:addProp(Prop.new(12,0.5,Poster_Pu))
+World.Map[4]:addProp(Prop.new(19,0.5,Poster_Wh))
 
 World.Map[4]:addProp(Prop.new(20,2,ERROBJ))
 World.Map[4]:addProp(Prop.new(21,2,ERROBJ))
