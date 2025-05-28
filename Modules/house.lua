@@ -78,6 +78,14 @@ function House.new()
 	return tbl
 end
 
+function House.save()
+	
+end
+
+function House.load()
+	
+end
+
 House[1] = House.new()
 House[2] = House.new()
 House[3] = House.new()

@@ -65,6 +65,14 @@ function ItemBag:add(itm)
 	table.insert(self.items,itm)
 end
 
+function ItemBag.save()
+	
+end
+
+function ItemBag.load()
+	
+end
+
 function ItemBag:draw()
 	if self.index and self.items[self.index] then
 		self.items[self.index]:draw()
