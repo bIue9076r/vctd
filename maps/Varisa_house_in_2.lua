@@ -27,8 +27,7 @@ end))
 
 World.Map[10]:addProp(Prop.new(20.5,12.5,Vase))
 World.Map[10]:addProp(Prop.new(20.5,11.5,Flowers,1))
-World.Map[10]:addProp(Prop.new(10.5,3,Vase))
-World.Map[10]:addProp(Prop.new(10.5,2,Flowers,1))
+
 World.Map[10]:addProp(Prop.new(20.5,3,Vase))
 World.Map[10]:addProp(Prop.new(20.5,2,Flowers,1))
 
