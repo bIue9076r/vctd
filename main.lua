@@ -367,7 +367,7 @@ function love.load()
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")
 	
 	muted = true
-	Play.scene = Play.Scenes[2]--math.random(1,3)]
+	Play.scene = Play.Scenes[math.random(1,3)]
 	
 	local mods = love.filesystem.getInfo("/mods/")
 	if mods then
