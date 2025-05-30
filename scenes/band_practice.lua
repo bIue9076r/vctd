@@ -19,7 +19,7 @@ Play.Scenes[2].Actors[13] = Actor.new(Bass_Drum,7.6,5.5)
 local sbs_1, sbs_2, sbs_3, sbs_4
 Play.Scenes[2].transition = function(self,t)
 	if(t < 2) then
-		local n = tostring(math.random(1,4))
+		local n = tostring(math.random(1,6))
 		sbs_1 = sound.getSound("EpT"..(n).."_B")
 		sbs_2 = sound.getSound("EpT"..(n).."_L")
 		sbs_3 = sound.getSound("EpT"..(n).."_G")
