@@ -40,7 +40,7 @@ World.Map[15]:addWall(Box.new(8,0,4,2))
 World.Map[15]:addWall(Box.new(12,0,2,1))
 World.Map[15]:addWall(Box.new(14,0,8,2))
 World.Map[15]:addWall(Box.new(10,4,0.1,6))
-World.Map[15]:addProp(Prop.new(14.7,6,ERROBJ,1,1))
+World.Map[15]:addWall(Box.new(8,4,2,0.1))
 
 World.Map[15]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 	Map = World.Map[14]
@@ -58,8 +58,8 @@ World.Map[15]:addWall(Box.new(11.9,1,2.2,0.1,1,1,function()
 end))
 
 World.Map[15]:addWall(Box.new(8,1.9,0.1,2.2,1,1,function()
-	--Map = World.Map[5]
-	--setPlr(12.5,12.5)
+	Map = World.Map[28]
+	setPlr(12.5,12.5)
 	print("To House In 4")
 end))
 
@@ -88,7 +88,6 @@ if House[1].HouseTrait == "Messy" then
 	World.Map[15]:addProp(Prop.new(19.0,2.5,Trash_P))
 	
 	World.Map[15]:addProp(Prop.new(20.5,12.5,Vase_C))
-	World.Map[15]:addProp(Prop.new(10.5,3,Vase_C))
 	World.Map[15]:addProp(Prop.new(20.5,3,Vase_C))
 end
 
