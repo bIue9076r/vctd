@@ -48,19 +48,18 @@ World.Map[15]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 end))
 
 World.Map[15]:addWall(Box.new(8,6.5,1.8,0.1,1,1,function()
-	Map = World.Map[17]
+	Map = World.Map[16]
 	setPlr(Plr.x,5.25)
 end))
 
 World.Map[15]:addWall(Box.new(11.9,1,2.2,0.1,1,1,function()
-	Map = World.Map[16]
+	Map = World.Map[18]
 	setPlr(12.5,12.5)
 end))
 
 World.Map[15]:addWall(Box.new(8,1.9,0.1,2.2,1,1,function()
-	Map = World.Map[28]
+	Map = World.Map[17]
 	setPlr(20.5,Plr.y)
-	print("To House In 4")
 end))
 
 if House[1].HouseTrait == "Neat" then

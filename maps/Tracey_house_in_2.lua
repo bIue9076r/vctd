@@ -65,9 +65,8 @@ World.Map[3]:addWall(Box.new(11.9,1,2.2,0.1,1,1,function()
 end))
 
 World.Map[3]:addWall(Box.new(8,1.9,0.1,2.2,1,1,function()
-	Map = World.Map[26]
+	Map = World.Map[6]
 	setPlr(20.5,Plr.y)
-	print("To House In 4")
 end))
 
 World.Map[3]:addNpc(Npc.new(13,6.5,Zoey,2,0,function()

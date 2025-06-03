@@ -53,15 +53,11 @@ World.Map[13]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
 end))
 
 World.Map[13]:addWall(Box.new(0,9,0.1,5,1,1,function()
-	Map = World.Map[18]
-	setPlr(20.5,Plr.y - 6)
+	Map = World.Map[26]
+	setPlr(20.5,(2*Plr.y) - 15)
 end))
 
 World.Map[13]:addWall(Box.new(21.9,9,0.1,5,1,1,function()
-	Map = World.Map[8]
+	Map = World.Map[7]
 	setPlr(0.5,Plr.y)
-end))
-
-World.Map[13]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
-	print("To House 3 Down")
 end))
