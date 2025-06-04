@@ -37,7 +37,7 @@ World.Map[26]:setTile(5,7,Road_R)
 World.Map[26]:setTile(6,7,Road_L)
 
 World.Map[26]:addWall(Box.new(21.9,3,0.1,8,1,1,function()
-	Map = World.Map[13]
+	Map = World.Map[19]
 	setPlr(0.5,(Plr.y/2) + 7.5)
 end))
 
