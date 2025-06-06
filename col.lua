@@ -5,6 +5,13 @@ function npcCollide(Tx,Ty,Nx,Ny)
 	)
 end
 
+function npcInside(Tx,Ty,Nx,Ny)
+	return (
+		(Tx + 1 > Nx) and (Tx < Nx + 1) and
+		(Ty + 1 > Ny) and (Ty < Ny + 1)
+	)
+end
+
 function wallCollide(Tx,Ty,Wx,Wy,Ww,Wh)
 	return (
 		(Tx + 1 >= Wx) and (Tx <= Wx + Ww) and
@@ -12,9 +19,28 @@ function wallCollide(Tx,Ty,Wx,Wy,Ww,Wh)
 	)
 end
 
+function wallInside(Tx,Ty,Wx,Wy,Ww,Wh)
+	return (
+		(Tx + 1 > Wx) and (Tx < Wx + Ww) and
+		(Ty + 1 > Wy) and (Ty < Wy + Wh)
+	)
+end
+
+function directionX(Tx)
+	local Dx = Tx - Plr.x
+	if Dx == 0 then return 0 end
+	return Dx / abs(Dx)
+end
+
+function directionY(Ty)
+	local Dy = Ty - Plr.y
+	if Dy == 0 then return 0 end
+	return Dy / abs(Dy)
+end
+
 function checkNpcCollision(Tx,Ty)
 	for i,v in pairs(Map:getNpcs()) do
-		if npcCollide(Tx,Ty,v.x,v.y) and (not (v.g == 1)) then
+		if npcInside(Tx,Ty,v.x,v.y) and (not (v.g == 1)) then
 			Plr.tx = Plr.x
 			Plr.ty = Plr.y
 		end
@@ -23,7 +49,7 @@ end
 
 function checkPropCollision(Tx,Ty)
 	for i,v in pairs(Map:getProps()) do
-		if npcCollide(Tx,Ty,v.x,v.y) and (not (v.g == 1)) and (not (v.p == 1)) then
+		if npcInside(Tx,Ty,v.x,v.y) and (not (v.g == 1)) and (not (v.p == 1)) then
 			Plr.tx = Plr.x
 			Plr.ty = Plr.y
 		end
@@ -46,10 +72,13 @@ function checkCollision()
 			local Ww = v.w
 			local Wh = v.h
 			
-			if wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
+			if wallInside(Tx,Ty,Wx,Wy,Ww,Wh) then
 				if v.c == 0 then
+					local dx = directionX(Tx)
+					local dy = directionY(Ty)
+					
 					Plr.tx = Plr.x
-					Plr.ty = Plr.y
+					Plr.ty = Plr.y		
 				end
 				
 				if v.t == 1 then v.e() end
@@ -67,7 +96,7 @@ function checkCollision()
 				local Ww = v.w
 				local Wh = v.h
 				
-				if wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
+				if wallInside(Tx,Ty,Wx,Wy,Ww,Wh) then
 					rnpc = Map.npcs[v.i]
 					rdbox = Map.dboxs[i]
 				end
