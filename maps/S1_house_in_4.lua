@@ -24,5 +24,5 @@ if House[1].HouseTrait == "Messy" then
 end
 
 if House[1].HouseTrait == "Fanatic" then
-	
+	World.Map[17]:addProp(Prop.new(14.6,0.5,Poster_Bu))
 end
