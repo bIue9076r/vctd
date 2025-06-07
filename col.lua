@@ -41,8 +41,15 @@ end
 function checkNpcCollision(Tx,Ty)
 	for i,v in pairs(Map:getNpcs()) do
 		if npcInside(Tx,Ty,v.x,v.y) and (not (v.g == 1)) then
-			Plr.tx = Plr.x
-			Plr.ty = Plr.y
+			local t = 9
+			repeat
+				Tx = (Plr.tx)*(t/10) - ((t/10) - 1)*(Plr.x)
+				Ty = (Plr.ty)*(t/10) - ((t/10) - 1)*(Plr.y)
+				t = t - 1
+			until (not npcInside(Tx,Ty,v.x,v.y) or (t < 0))
+			
+			Plr.tx = Tx
+			Plr.ty = Ty
 		end
 	end
 end
@@ -50,8 +57,15 @@ end
 function checkPropCollision(Tx,Ty)
 	for i,v in pairs(Map:getProps()) do
 		if npcInside(Tx,Ty,v.x,v.y) and (not (v.g == 1)) and (not (v.p == 1)) then
-			Plr.tx = Plr.x
-			Plr.ty = Plr.y
+			local t = 9
+			repeat
+				Tx = (Plr.tx)*(t/10) - ((t/10) - 1)*(Plr.x)
+				Ty = (Plr.ty)*(t/10) - ((t/10) - 1)*(Plr.y)
+				t = t - 1
+			until (not npcInside(Tx,Ty,v.x,v.y) or (t < 0))
+			
+			Plr.tx = Tx
+			Plr.ty = Ty
 		end
 	end
 end
@@ -74,11 +88,15 @@ function checkCollision()
 			
 			if wallInside(Tx,Ty,Wx,Wy,Ww,Wh) then
 				if v.c == 0 then
-					local dx = directionX(Tx)
-					local dy = directionY(Ty)
+					local t = 9
+					repeat
+						Tx = (Plr.tx)*(t/10) - ((t/10) - 1)*(Plr.x)
+						Ty = (Plr.ty)*(t/10) - ((t/10) - 1)*(Plr.y)
+						t = t - 1
+					until (not wallInside(Tx,Ty,Wx,Wy,Ww,Wh) or (t < 0))
 					
-					Plr.tx = Plr.x
-					Plr.ty = Plr.y		
+					Plr.tx = Tx
+					Plr.ty = Ty
 				end
 				
 				if v.t == 1 then v.e() end
@@ -103,13 +121,13 @@ function checkCollision()
 			end
 		end
 		
-		
-		-- TODO: Move Player to closest valid position
 		-- update player position
 		Plr.x = Plr.tx
 		Plr.y = Plr.ty
 	else
-		-- return to last position
+		-- return to map
+		Plr.x = max(0,min(Plr.x,2*Map.X - 1))
+		Plr.y = max(0,min(Plr.y,2*Map.Y - 1))
 		Plr.tx = Plr.x
 		Plr.ty = Plr.y
 	end
