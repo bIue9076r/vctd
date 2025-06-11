@@ -48,6 +48,13 @@ Sand_TL = 0x2D
 Sand_BL = 0x2E
 Sand_TR = 0x2F
 Sand_BR = 0x30
+Table_BL = 0x31
+Table_BR = 0x32
+Table_TL = 0x33
+Table_TR = 0x34
+Warning_T = 0x35
+Warning_M = 0x36
+Warning_B = 0x37
 
 ERROBJ = 0xFF
 
@@ -97,6 +104,13 @@ CtS = {
 	[Sand_BL] = "Sand_BL",
 	[Sand_TR] = "Sand_TR",
 	[Sand_BR] = "Sand_BR",
+	[Table_BL] = "Table_BL",
+	[Table_BR] = "Table_BR",
+	[Table_TL] = "Table_TL",
+	[Table_TR] = "Table_TR",
+	[Warning_T] = "Warning_T",
+	[Warning_M] = "Warning_M",
+	[Warning_B] = "Warning_B",
 	[ERROBJ] = "ERROBJ",
 }
 
@@ -146,6 +160,13 @@ Names = {
 	[Sand_BL] = "Sand Bottom Left",
 	[Sand_TR] = "Sand Top Right",
 	[Sand_BR] = "Sand Bottom Right",
+	[Table_BL] = "Table Bottom Left",
+	[Table_BR] = "Table Bottom Right",
+	[Table_TL] = "Table Top Left",
+	[Table_TR] = "Table Top Right",
+	[Warning_T] = "Warning Top",
+	[Warning_M] = "Warning Middle",
+	[Warning_B] = "Warning Bottom",
 	[ERROBJ] = "ERROBJ",
 }
 

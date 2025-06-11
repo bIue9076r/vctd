@@ -58,6 +58,6 @@ World.Map[25]:addProp(Prop.new(10.8+6,2.9+3,Sand_TL,1,1))
 
 World.Map[25]:addProp(Prop.new(4.5,4.0,Trash_Can))
 
-World.Map[25]:addProp(Prop.new(17.1,11,ERROBJ))
-World.Map[25]:addProp(Prop.new(17.1,11+1,ERROBJ))
-World.Map[25]:addProp(Prop.new(17.1,11+2,ERROBJ))
+World.Map[25]:addProp(Prop.new(17.1,11,Warning_T))
+World.Map[25]:addProp(Prop.new(17.1,12,Warning_M))
+World.Map[25]:addProp(Prop.new(17.1,13,Warning_B))

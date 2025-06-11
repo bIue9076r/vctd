@@ -24,9 +24,10 @@ World.Map[10]:addProp(Prop.new(21,4,ERROBJ))
 
 World.Map[10]:addProp(Prop.new(20.5,12.5,Trash_Can))
 
-World.Map[10]:addProp(Prop.new(13,12,ERROBJ))
-World.Map[10]:addProp(Prop.new(14,12,ERROBJ))
-World.Map[10]:addProp(Prop.new(15,12,ERROBJ))
+World.Map[10]:addProp(Prop.new(15,11,Table_TL))
+World.Map[10]:addProp(Prop.new(16,11,Table_TR))
+World.Map[10]:addProp(Prop.new(15,12,Table_BL))
+World.Map[10]:addProp(Prop.new(16,12,Table_BR))
 
 World.Map[10]:addProp(Prop.new(20.5,5,Amp))
 World.Map[10]:addProp(Prop.new(20,5,B_Guitar_R))

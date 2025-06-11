@@ -22,6 +22,8 @@ Play.Scenes[1].transition = function(self,t)
 	elseif(t < 800) then
 		
 	else
+		Voices[self.dtbl.v]:pause()
+		Voices[self.dtbl.v]:seek(0)
 		if Play.unmuteAfter then
 			muted = false
 			plyed = false
