@@ -55,6 +55,10 @@ Table_TR = 0x34
 Warning_T = 0x35
 Warning_M = 0x36
 Warning_B = 0x37
+Box_1_1 = 0x38
+Box_1_2 = 0x39
+Box_1_3 = 0x3A
+Box_1_4 = 0x3B
 
 ERROBJ = 0xFF
 
@@ -111,6 +115,10 @@ CtS = {
 	[Warning_T] = "Warning_T",
 	[Warning_M] = "Warning_M",
 	[Warning_B] = "Warning_B",
+	[Box_1_1] = "Box_1_1",
+	[Box_1_2] = "Box_1_2",
+	[Box_1_3] = "Box_1_3",
+	[Box_1_4] = "Box_1_4",
 	[ERROBJ] = "ERROBJ",
 }
 
@@ -167,6 +175,10 @@ Names = {
 	[Warning_T] = "Warning Top",
 	[Warning_M] = "Warning Middle",
 	[Warning_B] = "Warning Bottom",
+	[Box_1_1] = "Box-1 1",
+	[Box_1_2] = "Box-1 2",
+	[Box_1_3] = "Box-1 3",
+	[Box_1_4] = "Box-1 4",
 	[ERROBJ] = "ERROBJ",
 }
 
