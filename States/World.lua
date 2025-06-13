@@ -31,7 +31,7 @@ World.ChangeMap = false
 World.AfterEffect = function()
 	
 end
-require("maps/Maps")
+--require("/maps/Maps")
 World.Dialoge = {}
 -- Include Dialoge File
 require("npcs/Dialoges")

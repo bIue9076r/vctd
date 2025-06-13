@@ -1,6 +1,6 @@
 Play = {}
 Play.Scenes = {}
-require("/scenes/Scenes")
+--require("/scenes/Scenes")
 
 Play.scene = Scene.new()
 Play.unmuteAfter = true
