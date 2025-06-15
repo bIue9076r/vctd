@@ -54,6 +54,13 @@ image.newImage("Box_1_2","Assets/box_1_2.png")
 image.newImage("Box_1_3","Assets/box_1_3.png")
 image.newImage("Box_1_4","Assets/box_1_4.png")
 
+image.newImage("Bed_1_1","Assets/bed_1_1.png")
+image.newImage("Bed_1_2","Assets/bed_1_2.png")
+image.newImage("Bed_1_3","Assets/bed_1_3.png")
+image.newImage("Bed_1_4","Assets/bed_1_4.png")
+image.newImage("Bed_1_5","Assets/bed_1_5.png")
+image.newImage("Bed_1_6","Assets/bed_1_6.png")
+
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage(1,"Assets/error_obj.png")
 

@@ -59,6 +59,12 @@ Box_1_1 = 0x38
 Box_1_2 = 0x39
 Box_1_3 = 0x3A
 Box_1_4 = 0x3B
+Bed_1_1 = 0x3C
+Bed_1_2 = 0x3D
+Bed_1_3 = 0x3E
+Bed_1_4 = 0x3F
+Bed_1_5 = 0x40
+Bed_1_6 = 0x41
 
 ERROBJ = 0xFF
 
@@ -119,6 +125,12 @@ CtS = {
 	[Box_1_2] = "Box_1_2",
 	[Box_1_3] = "Box_1_3",
 	[Box_1_4] = "Box_1_4",
+	[Bed_1_1] = "Bed_1_1",
+	[Bed_1_2] = "Bed_1_2",
+	[Bed_1_3] = "Bed_1_3",
+	[Bed_1_4] = "Bed_1_4",
+	[Bed_1_5] = "Bed_1_5",
+	[Bed_1_6] = "Bed_1_6",
 	[ERROBJ] = "ERROBJ",
 }
 
@@ -179,6 +191,12 @@ Names = {
 	[Box_1_2] = "Box-1 2",
 	[Box_1_3] = "Box-1 3",
 	[Box_1_4] = "Box-1 4",
+	[Bed_1_1] = "Bed-1 1",
+	[Bed_1_2] = "Bed-1 2",
+	[Bed_1_3] = "Bed-1 3",
+	[Bed_1_4] = "Bed-1 4",
+	[Bed_1_5] = "Bed-1 5",
+	[Bed_1_6] = "Bed-1 6",
 	[ERROBJ] = "ERROBJ",
 }
 
