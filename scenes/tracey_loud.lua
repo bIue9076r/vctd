@@ -9,15 +9,15 @@ Play.Scenes[3].Actors[4] = Actor.new(Snare_Drum,15.2+0.4,6.9+0.6)
 Play.Scenes[3].Actors[5] = Actor.new(Tom_Drum,15.2-0.4,6.9+0.6)
 Play.Scenes[3].Actors[6] = Actor.new(Bass_Drum,15.2+0.0,6.9+0.8)
 
-Play.Scenes[3].Actors[7] = Actor.new(ERROBJ,12,0.5)
-Play.Scenes[3].Actors[8] = Actor.new(ERROBJ,19,0.5)
+Play.Scenes[3].Actors[7] = Actor.new(Poster_Pu,12,0.5)
+Play.Scenes[3].Actors[8] = Actor.new(Poster_Wh,19,0.5)
 
-Play.Scenes[3].Actors[9] = Actor.new(ERROBJ,20,2)
-Play.Scenes[3].Actors[10] = Actor.new(ERROBJ,21,2)
-Play.Scenes[3].Actors[11] = Actor.new(ERROBJ,20,3)
-Play.Scenes[3].Actors[12] = Actor.new(ERROBJ,21,3)
-Play.Scenes[3].Actors[13] = Actor.new(ERROBJ,20,4)
-Play.Scenes[3].Actors[14] = Actor.new(ERROBJ,21,4)
+Play.Scenes[3].Actors[9] = Actor.new(Bed_1_1,20,2)
+Play.Scenes[3].Actors[10] = Actor.new(Bed_1_2,21,2)
+Play.Scenes[3].Actors[11] = Actor.new(Bed_1_3,20,3)
+Play.Scenes[3].Actors[12] = Actor.new(Bed_1_4,21,3)
+Play.Scenes[3].Actors[13] = Actor.new(Bed_1_5,20,4)
+Play.Scenes[3].Actors[14] = Actor.new(Bed_1_6,21,4)
 
 local sbs
 Play.Scenes[3].transition = function(self,t)
