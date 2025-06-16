@@ -77,7 +77,7 @@ function checkCollision()
 	local rnpc, rdbox
 	
 	-- if the player is inside the map
-	if (Tx >= 0 and Ty >= 0) and (((Tx + 1) <= 2*Map.X) and ((Ty + 1) <= 2*Map.Y)) then
+	--if (Tx >= 0 and Ty >= 0) and (((Tx + 1) <= 2*Map.X) and ((Ty + 1) <= 2*Map.Y)) then
 		
 		-- check collision with walls
 		for i,v in ipairs(Map:getWalls()) do
@@ -122,20 +122,23 @@ function checkCollision()
 		end
 		
 		-- update player position
-		Plr.x = Plr.tx
-		Plr.y = Plr.ty
-	else
+		Plr.x = max(0,min(Plr.tx,2*Map.X - 1))
+		--Plr.x = Plr.tx
+		Plr.y = max(0,min(Plr.ty,2*Map.Y - 1))
+		--Plr.y = Plr.ty
+	--else
 		-- return to map
-		Plr.x = max(0,min(Plr.x,2*Map.X - 1))
-		Plr.y = max(0,min(Plr.y,2*Map.Y - 1))
-		Plr.tx = Plr.x
-		Plr.ty = Plr.y
-	end
+		--Plr.x = max(0,min(Plr.x,2*Map.X - 1))
+		--Plr.y = max(0,min(Plr.y,2*Map.Y - 1))
+		--Plr.tx = Plr.x
+		--Plr.ty = Plr.y
+	--end
 	
 	return rnpc, rdbox
 end
 
 function movePlayer(dt,ms)
+	print(dt)
 	local npc, dbox;
 	if love.keyboard.isDown("a") then
 		Plr.tx = Plr.x - ms*dt
