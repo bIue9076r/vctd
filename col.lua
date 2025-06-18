@@ -138,7 +138,6 @@ function checkCollision()
 end
 
 function movePlayer(dt,ms)
-	print(dt)
 	local npc, dbox;
 	if love.keyboard.isDown("a") then
 		Plr.tx = Plr.x - ms*dt

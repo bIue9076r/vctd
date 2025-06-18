@@ -15,12 +15,14 @@ World.Map[10]:setTile(5,6,Planks,Bar_T)
 World.Map[10]:addProp(Prop.new(12,0.5,Poster_Pu))
 World.Map[10]:addProp(Prop.new(19,0.5,Flag))
 
-World.Map[10]:addProp(Prop.new(20,2,Bed_1_1))
-World.Map[10]:addProp(Prop.new(21,2,Bed_1_2))
-World.Map[10]:addProp(Prop.new(20,3,Bed_1_3))
-World.Map[10]:addProp(Prop.new(21,3,Bed_1_4))
-World.Map[10]:addProp(Prop.new(20,4,Bed_1_5))
-World.Map[10]:addProp(Prop.new(21,4,Bed_1_6))
+World.Map[10]:addProp(Prop.new(20,2,Bed_1_1,1,1))
+World.Map[10]:addProp(Prop.new(21,2,Bed_1_2,1,1))
+World.Map[10]:addProp(Prop.new(20,3,Bed_1_3,1,1))
+World.Map[10]:addProp(Prop.new(21,3,Bed_1_4,1,1))
+World.Map[10]:addProp(Prop.new(20,4,Bed_1_5,1,1))
+World.Map[10]:addProp(Prop.new(21,4,Bed_1_6,1,1))
+
+World.Map[10]:addWall(Box.new(20,3.8,2,0.3))
 
 World.Map[10]:addProp(Prop.new(20.5,12.5,Trash_Can))
 
