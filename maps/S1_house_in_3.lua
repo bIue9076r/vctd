@@ -27,6 +27,21 @@ World.Map[16]:addProp(Prop.new(19,10,Box_1_2))
 World.Map[16]:addProp(Prop.new(18,11,Box_1_3))
 World.Map[16]:addProp(Prop.new(19,11,Box_1_4))
 
+World.Map[16]:addProp(Prop.new(19.5,7.5,Box_1_1))
+World.Map[16]:addProp(Prop.new(20.5,7.5,Box_1_2))
+World.Map[16]:addProp(Prop.new(19.5,8.5,Box_1_3))
+World.Map[16]:addProp(Prop.new(20.5,8.5,Box_1_4))
+
+World.Map[16]:addProp(Prop.new(10.9,7,Box_1_1))
+World.Map[16]:addProp(Prop.new(11.9,7,Box_1_2))
+World.Map[16]:addProp(Prop.new(10.9,8,Box_1_3))
+World.Map[16]:addProp(Prop.new(11.9,8,Box_1_4))
+
+World.Map[16]:addProp(Prop.new(15.2,8.5,Box_1_1))
+World.Map[16]:addProp(Prop.new(16.2,8.5,Box_1_2))
+World.Map[16]:addProp(Prop.new(15.2,9.5,Box_1_3))
+World.Map[16]:addProp(Prop.new(16.2,9.5,Box_1_4))
+
 World.Map[16]:addProp(Prop.new(20,2,Bed_1_1,1,1))
 World.Map[16]:addProp(Prop.new(21,2,Bed_1_2,1,1))
 World.Map[16]:addProp(Prop.new(20,3,Bed_1_3,1,1))
