@@ -48,6 +48,8 @@ World.Map[9]:addWall(Box.new(14,0,8,2))
 World.Map[9]:addWall(Box.new(10,4,0.1,6))
 World.Map[9]:addWall(Box.new(8,4,2,0.1))
 
+World.Map[9]:addWall(Box.new(18.4,6.88,1.6,2))
+
 World.Map[9]:addProp(Prop.new(14.7,6,ERROBJ,1,1))
 
 World.Map[9]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()

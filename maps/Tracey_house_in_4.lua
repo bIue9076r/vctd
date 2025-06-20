@@ -24,6 +24,7 @@ World.Map[6]:addProp(Prop.new(12,4,Bed_1_5,1,1))
 World.Map[6]:addProp(Prop.new(13,4,Bed_1_6,1,1))
 
 World.Map[6]:addWall(Box.new(12,3.8,2,0.3))
+World.Map[6]:addWall(Box.new(20.4,8.88,1.6,2))
 
 World.Map[6]:addWall(Box.new(21.9,2,0.1,1,1,1,function()
 	Map = World.Map[3]
