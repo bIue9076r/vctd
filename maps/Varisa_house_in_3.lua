@@ -12,7 +12,9 @@ World.Map[10]:setLineV(6,3,5,Planks,Bar_L)
 World.Map[10]:setTile(6,6,Planks,Bar_TL)
 World.Map[10]:setTile(5,6,Planks,Bar_T)
 
-World.Map[10]:addProp(Prop.new(12,0.5,Poster_Pu))
+World.Map[10]:addProp(Prop.new(10.5,0.5,Poster_Bl))
+World.Map[10]:addProp(Prop.new(12,0.25,Poster_Pu))
+World.Map[10]:addProp(Prop.new(13.5,0.75,Poster_Or))
 World.Map[10]:addProp(Prop.new(19,0.5,Flag))
 
 World.Map[10]:addProp(Prop.new(20,2,Bed_1_1,1,1))

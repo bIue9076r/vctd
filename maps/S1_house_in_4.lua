@@ -29,20 +29,20 @@ if House[1].HouseTrait == "Neat" then
 end
 
 if House[1].HouseTrait == "Messy" then
-	World.Map[17]:addProp(Prop.new(13.4,8.5,Trash_P))
+	World.Map[17]:addProp(Prop.new(13.9,9.0,Trash_P))
 	World.Map[17]:addProp(Prop.new(13.4,9.0,Trash_P))
 	World.Map[17]:addProp(Prop.new(13.9,8.5,Trash_P))
-	World.Map[17]:addProp(Prop.new(13.9,9.0,Trash_P))
+	World.Map[17]:addProp(Prop.new(13.4,8.5,Trash_P))
 	
-	World.Map[17]:addProp(Prop.new(18.4,11.6,Trash_P))
+	World.Map[17]:addProp(Prop.new(18.9,12.1,Trash_P))
 	World.Map[17]:addProp(Prop.new(18.4,12.1,Trash_P))
 	World.Map[17]:addProp(Prop.new(18.9,11.6,Trash_P))
-	World.Map[17]:addProp(Prop.new(18.9,12.1,Trash_P))
+	World.Map[17]:addProp(Prop.new(18.4,11.6,Trash_P))
 	
-	World.Map[17]:addProp(Prop.new(17.7,5.7,Trash_P))
+	World.Map[17]:addProp(Prop.new(18.2,6.2,Trash_P))
 	World.Map[17]:addProp(Prop.new(17.7,6.2,Trash_P))
 	World.Map[17]:addProp(Prop.new(18.2,5.7,Trash_P))
-	World.Map[17]:addProp(Prop.new(18.2,6.2,Trash_P))
+	World.Map[17]:addProp(Prop.new(17.7,5.7,Trash_P))
 end
 
 if House[1].HouseTrait == "Fanatic" then
