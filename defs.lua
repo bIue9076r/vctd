@@ -65,6 +65,16 @@ Bed_1_3 = 0x3E
 Bed_1_4 = 0x3F
 Bed_1_5 = 0x40
 Bed_1_6 = 0x41
+Vivian = 0x42
+Brian = 0x43
+Sean = 0x44
+Ella = 0x45
+Karina = 0x46
+Zach = 0x47
+Wilkie = 0x48
+Mollie = 0x49
+Fredrick = 0x4A
+Jami = 0x4B
 
 ERROBJ = 0xFF
 
@@ -131,6 +141,16 @@ CtS = {
 	[Bed_1_4] = "Bed_1_4",
 	[Bed_1_5] = "Bed_1_5",
 	[Bed_1_6] = "Bed_1_6",
+	[Vivian] = "Vivian",
+	[Brian] = "Brian",
+	[Sean] = "Sean",
+	[Ella] = "Ella",
+	[Karina] = "Karina",
+	[Zach] = "Zach",
+	[Wilkie] = "Wilkie",
+	[Mollie] = "Mollie",
+	[Fredrick] = "Fredrick",
+	[Jami] = "Jami",
 	[ERROBJ] = "ERROBJ",
 }
 
@@ -197,6 +217,16 @@ Names = {
 	[Bed_1_4] = "Bed-1 4",
 	[Bed_1_5] = "Bed-1 5",
 	[Bed_1_6] = "Bed-1 6",
+	[Vivian] = "Vivian",
+	[Brian] = "Brian",
+	[Sean] = "Sean",
+	[Ella] = "Ella",
+	[Karina] = "Karina",
+	[Zach] = "Zach",
+	[Wilkie] = "Wilkie",
+	[Mollie] = "Mollie",
+	[Fredrick] = "Fredrick",
+	[Jami] = "Jami",
 	[ERROBJ] = "ERROBJ",
 }
 
