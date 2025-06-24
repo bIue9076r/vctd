@@ -16,6 +16,9 @@ Play.Scenes[2].Actors[11] = Actor.new(Snare_Drum,8,5.3)
 Play.Scenes[2].Actors[12] = Actor.new(Tom_Drum,7.2,5.3)
 Play.Scenes[2].Actors[13] = Actor.new(Bass_Drum,7.6,5.5)
 
+Play.Scenes[2].Actors[14] = Actor.new(Zoey,6.6,11.7)
+Play.Scenes[2].Actors[15] = Actor.new(Lassie,9.8,12.1)
+
 local sbs_1, sbs_2, sbs_3, sbs_4
 Play.Scenes[2].transition = function(self,t)
 	if(t < 2) then
