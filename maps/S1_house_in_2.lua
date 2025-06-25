@@ -93,5 +93,22 @@ if House[1].HouseTrait == "Messy" then
 end
 
 if House[1].HouseTrait == "Fanatic" then
+	World.Map[15]:addProp(Prop.new(18.4,0.75,Poster_Ye,1))
+	World.Map[15]:addProp(Prop.new(20.3,0.25,Poster_Gr,1))
+	World.Map[15]:addProp(Prop.new(10.4,0.75,Poster_Bl,1))
 	
+	World.Map[15]:addProp(Prop.new(19,2.6,Box_1_1))
+	World.Map[15]:addProp(Prop.new(20,2.6,Box_1_2))
+	World.Map[15]:addProp(Prop.new(19,3.6,Box_1_3))
+	World.Map[15]:addProp(Prop.new(20,3.6,Box_1_4))
+	
+	World.Map[15]:addProp(Prop.new(18.7,11.1,Box_1_1))
+	World.Map[15]:addProp(Prop.new(19.7,11.1,Box_1_2))
+	World.Map[15]:addProp(Prop.new(18.7,12.1,Box_1_3))
+	World.Map[15]:addProp(Prop.new(19.7,12.1,Box_1_4))
+	
+	World.Map[15]:addProp(Prop.new(10.4,6.6,Box_1_1))
+	World.Map[15]:addProp(Prop.new(11.4,6.6,Box_1_2))
+	World.Map[15]:addProp(Prop.new(10.4,7.6,Box_1_3))
+	World.Map[15]:addProp(Prop.new(11.4,7.6,Box_1_4))
 end
