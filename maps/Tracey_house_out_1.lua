@@ -61,6 +61,10 @@ World.Map[1]:addNpc(Npc.new(7.6,4.7,Rachel,5,0,function()
 	
 end))
 
+World.Map[1]:addNpc(Npc.new(11.0,8.4,Mailbox,5,0,function()
+	
+end))
+
 World.Map[1]:addProp(Prop.new(7.6,4.7,R_Guitar_L))
 World.Map[1]:addProp(Prop.new(6,3,Mic,1))
 World.Map[1]:addProp(Prop.new(5,2,Amp))

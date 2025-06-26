@@ -46,7 +46,7 @@ end))
 
 print(House[1].HouseTrait)
 
-World.Map[14]:addProp(Prop.new(21,9.45,ERROBJ))
+World.Map[14]:addProp(Prop.new(21,9.45,Computer))
 
 if House[1].HouseTrait == "Neat" then
 	World.Map[14]:addProp(Prop.new(8,12.5,Vase))

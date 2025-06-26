@@ -75,6 +75,8 @@ Wilkie = 0x48
 Mollie = 0x49
 Fredrick = 0x4A
 Jami = 0x4B
+Computer = 0x4C
+Mailbox = 0x4D
 
 ERROBJ = 0xFF
 
@@ -151,6 +153,8 @@ CtS = {
 	[Mollie] = "Mollie",
 	[Fredrick] = "Fredrick",
 	[Jami] = "Jami",
+	[Computer] = "Computer",
+	[Mailbox] = "Mailbox",
 	[ERROBJ] = "ERROBJ",
 }
 
@@ -227,6 +231,8 @@ Names = {
 	[Mollie] = "Mollie",
 	[Fredrick] = "Fredrick",
 	[Jami] = "Jami",
+	[Computer] = "Computer",
+	[Mailbox] = "Mailbox",
 	[ERROBJ] = "ERROBJ",
 }
 

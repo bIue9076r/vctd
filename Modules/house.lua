@@ -51,6 +51,19 @@ function pop(tbl)
 	return r
 end
 
+Families = {
+	[1] = "Wilkie",
+	[2] = "Sean",
+	[3] = "Karina",
+	[4] = "Vivian",
+	[5] = "Jami",
+	[6] = "Fredrick",
+	[7] = "Mollie",
+	[8] = "Rachel",
+	[9] = "Empty",
+	[10] = "Empty",
+}
+
 HouseHolds = Range.parse("1~10")
 randomizeTbl(HouseHolds)
 randomizeTbl(HouseHolds)
@@ -71,9 +84,13 @@ function House.new()
 	local tbl = {
 		isKiller = kl,
 		HouseTrait = tr1,
-		isOpen = true,-- false,
+		isOpen = true,
 		HouseHold = pop(HouseHolds),
 	}
+	
+	if Families[tbl.HouseHold] == "Empty" then
+		tbl.isOpen = false
+	end
 	
 	return tbl
 end
@@ -100,5 +117,8 @@ House[9] = House.new()
 House[10] = House.new()
 
 for i = 1,10 do
-	print(i..":",House[i].HouseTrait)
+	print(i..":",
+		House[i].HouseTrait,
+		"\t"..Families[House[i].HouseHold]
+	)
 end

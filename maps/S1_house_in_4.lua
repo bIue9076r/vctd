@@ -7,6 +7,9 @@ World.Map[17]:setLineV(4,1,7,Void)
 World.Map[17]:setLineV(5,1,7,Void)
 World.Map[17]:setLineV(6,1,7,Wall)
 
+World.Map[17]:setTile(11,6,BigTable_B)
+World.Map[17]:setTile(11,5,BigTable_T)
+
 World.Map[17]:addWall(Box.new(0,0,12,14))
 World.Map[17]:addWall(Box.new(12,0,10,2))
 
@@ -18,6 +21,7 @@ World.Map[17]:addProp(Prop.new(12,4,Bed_1_5,1,1))
 World.Map[17]:addProp(Prop.new(13,4,Bed_1_6,1,1))
 
 World.Map[17]:addWall(Box.new(12,3.8,2,0.3))
+World.Map[17]:addWall(Box.new(20.4,8.88,1.6,2))
 
 World.Map[17]:addWall(Box.new(21.9,2,0.1,1,1,1,function()
 	Map = World.Map[15]
