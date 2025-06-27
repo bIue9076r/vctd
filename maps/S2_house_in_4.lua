@@ -51,4 +51,20 @@ end
 
 if House[2].HouseTrait == "Fanatic" then
 	World.Map[23]:addProp(Prop.new(14.6,0.5,Poster_Bu))
+	World.Map[23]:addProp(Prop.new(19.2,0.25,Poster_Or))
+	
+	World.Map[23]:addProp(Prop.new(19.0,11.6,Box_1_1))
+	World.Map[23]:addProp(Prop.new(20.0,11.6,Box_1_2))
+	World.Map[23]:addProp(Prop.new(19.0,12.6,Box_1_3))
+	World.Map[23]:addProp(Prop.new(20.0,12.6,Box_1_4))
+	
+	World.Map[23]:addProp(Prop.new(13.0,10.8,Box_1_1))
+	World.Map[23]:addProp(Prop.new(14.0,10.8,Box_1_2))
+	World.Map[23]:addProp(Prop.new(13.0,11.8,Box_1_3))
+	World.Map[23]:addProp(Prop.new(14.0,11.8,Box_1_4))
+	
+	World.Map[23]:addProp(Prop.new(12.5,5.4,Box_1_1))
+	World.Map[23]:addProp(Prop.new(13.5,5.4,Box_1_2))
+	World.Map[23]:addProp(Prop.new(12.5,6.4,Box_1_3))
+	World.Map[23]:addProp(Prop.new(13.5,6.4,Box_1_4))
 end

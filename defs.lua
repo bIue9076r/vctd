@@ -77,6 +77,8 @@ Fredrick = 0x4A
 Jami = 0x4B
 Computer = 0x4C
 Mailbox = 0x4D
+Sale_Sign_1 = 0x4E
+Sale_Sign_2 = 0x4F
 
 ERROBJ = 0xFF
 
@@ -155,6 +157,8 @@ CtS = {
 	[Jami] = "Jami",
 	[Computer] = "Computer",
 	[Mailbox] = "Mailbox",
+	[Sale_Sign_1] = "Sale_Sign_1",
+	[Sale_Sign_2] = "Sale_Sign_2",
 	[ERROBJ] = "ERROBJ",
 }
 
@@ -233,6 +237,8 @@ Names = {
 	[Jami] = "Jami",
 	[Computer] = "Computer",
 	[Mailbox] = "Mailbox",
+	[Sale_Sign_1] = "Sale Sign 1",
+	[Sale_Sign_2] = "Sale Sign 2",
 	[ERROBJ] = "ERROBJ",
 }
 

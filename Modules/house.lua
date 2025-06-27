@@ -31,17 +31,10 @@ end
 
 function randomizeTbl(tbl)
 	for i = 1,#tbl do
-		if math.random(1,2) == 2 then
-			if (i + 1) <= #tbl then
-				local tmp = tbl[i]
-				tbl[i] = tbl[i + 1]
-				tbl[i + 1] = tmp
-			else
-				local tmp = tbl[i]
-				tbl[i] = tbl[i - 1]
-				tbl[i - 1] = tmp
-			end
-		end
+		local r = math.random(1,#tbl)
+		local tmp = tbl[i]
+		tbl[i] = tbl[r]
+		tbl[r] = tmp
 	end
 end
 
@@ -65,8 +58,6 @@ Families = {
 }
 
 HouseHolds = Range.parse("1~10")
-randomizeTbl(HouseHolds)
-randomizeTbl(HouseHolds)
 randomizeTbl(HouseHolds)
 
 House = {}
