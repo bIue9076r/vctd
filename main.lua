@@ -359,13 +359,13 @@ function daudio()
 	end
 end
 
-function love.load()
+function love.load(arg)
 	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
 	love.window.setTitle(String.get(3))
 	
 	-- TODO: add a save feature
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")
-	Seed = math.random(0,0xFFFFF)
+	Seed = arg[1] or math.random(0,0xFFFFF)
 	math.randomseed(Seed)
 	print(string.format("Seed: 0x%05X",Seed))
 	require("/Modules/house")
