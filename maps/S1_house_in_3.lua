@@ -61,15 +61,15 @@ World.Map[16]:addWall(Box.new(8,6.5,1.8,0.1,1,1,function()
 	setPlr(Plr.x,7.75)
 end))
 
-if House[1].HouseTrait == "Neat" then
+if House.house[1].HouseTrait == "Neat" then
 	
 end
 
-if House[1].HouseTrait == "Messy" then
+if House.house[1].HouseTrait == "Messy" then
 	
 end
 
-if House[1].HouseTrait == "Fanatic" then
+if House.house[1].HouseTrait == "Fanatic" then
 	World.Map[16]:addProp(Prop.new(12.5,0.75,Poster_Bu))
 	World.Map[16]:addProp(Prop.new(16.8,0.25,Poster_Pu))
 end

@@ -44,11 +44,11 @@ World.Map[14]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 	setPlr(18.5,8)
 end))
 
-print(House[1].HouseTrait)
+print(House.house[1].HouseTrait)
 
 World.Map[14]:addProp(Prop.new(21,9.45,Computer))
 
-if House[1].HouseTrait == "Neat" then
+if House.house[1].HouseTrait == "Neat" then
 	World.Map[14]:addProp(Prop.new(8,12.5,Vase))
 	World.Map[14]:addProp(Prop.new(13,12.5,Vase))
 	World.Map[14]:addProp(Prop.new(8,11.5,Flowers,1))
@@ -62,7 +62,7 @@ if House[1].HouseTrait == "Neat" then
 	World.Map[14]:addProp(Prop.new(4.75,8.75,Trash_Can))
 end
 
-if House[1].HouseTrait == "Messy" then
+if House.house[1].HouseTrait == "Messy" then
 	World.Map[14]:addProp(Prop.new(4.8,8.8,Trash_P))
 	World.Map[14]:addProp(Prop.new(4.3,8.8,Trash_P))
 	World.Map[14]:addProp(Prop.new(4.8,8.3,Trash_P))
@@ -113,6 +113,6 @@ if House[1].HouseTrait == "Messy" then
 	World.Map[14]:addProp(Prop.new(8,1.5,Vase_C))
 end
 
-if House[1].HouseTrait == "Fanatic" then
+if House.house[1].HouseTrait == "Fanatic" then
 	
 end

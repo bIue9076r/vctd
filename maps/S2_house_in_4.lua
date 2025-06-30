@@ -28,11 +28,11 @@ World.Map[23]:addWall(Box.new(21.9,2,0.1,1,1,1,function()
 	setPlr(8.5,Plr.y)
 end))
 
-if House[2].HouseTrait == "Neat" then
+if House.house[2].HouseTrait == "Neat" then
 	
 end
 
-if House[2].HouseTrait == "Messy" then
+if House.house[2].HouseTrait == "Messy" then
 	World.Map[23]:addProp(Prop.new(13.9,9.0,Trash_P))
 	World.Map[23]:addProp(Prop.new(13.4,9.0,Trash_P))
 	World.Map[23]:addProp(Prop.new(13.9,8.5,Trash_P))
@@ -49,7 +49,7 @@ if House[2].HouseTrait == "Messy" then
 	World.Map[23]:addProp(Prop.new(17.7,5.7,Trash_P))
 end
 
-if House[2].HouseTrait == "Fanatic" then
+if House.house[2].HouseTrait == "Fanatic" then
 	World.Map[23]:addProp(Prop.new(14.6,0.5,Poster_Bu))
 	World.Map[23]:addProp(Prop.new(19.2,0.25,Poster_Or))
 	
