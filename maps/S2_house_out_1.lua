@@ -37,7 +37,7 @@ World.Map[19]:addWall(Box.new(18,0,2,7))
 World.Map[19]:addWall(Box.new(20,0,2,8))
 
 World.Map[19]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
-	if House[2].isOpen then
+	if House.house[2].isOpen then
 		Map = World.Map[20]
 		setPlr(10.5,12.5)
 	else
@@ -52,7 +52,7 @@ World.Map[19]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
 	end
 end))
 
-if Families[House[2].HouseHold] == "Empty" then
+if Families[House.house[2].HouseHold] == "Empty" then
 	World.Map[19]:addProp(Prop.new(14.6,6.0,Sale_Sign_1))
 	World.Map[19]:addProp(Prop.new(15.6,6.0,Sale_Sign_2))
 end

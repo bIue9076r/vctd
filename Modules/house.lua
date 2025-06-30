@@ -94,22 +94,22 @@ function House.load()
 	
 end
 
-House[1] = House.new()
-House[2] = House.new()
-House[3] = House.new()
-House[4] = House.new()
+House.house[1] = House.new()
+House.house[2] = House.new()
 
-House[5] = House.new()
-House[6] = House.new()
-House[7] = House.new()
+House.house[3] = House.new()
+House.house[4] = House.new()
+House.house[5] = House.new()
+House.house[6] = House.new()
 
-House[8] = House.new()
-House[9] = House.new()
-House[10] = House.new()
+House.house[7] = House.new()
+House.house[8] = House.new()
+House.house[9] = House.new()
+House.house[10] = House.new()
 
 for i = 1,10 do
 	print(i..":",
-		House[i].HouseTrait,
-		"\t"..Families[House[i].HouseHold]
+		House.house[i].HouseTrait,
+		"\t"..Families[House.house[i].HouseHold]
 	)
 end
