@@ -11,20 +11,10 @@ Traits.lastGiven = 0
 function Traits.newTrait()
 	local t;
 	
-	if Traits.killerGiven then
-		repeat
-			t = math.random(2,4)
-		until not (t == Traits.lastGiven)
-		Traits.lastGiven = t
-	else
-		repeat
-			t = math.random(1,4)
-		until not (t == Traits.lastGiven)
-		Traits.lastGiven = t
-		if t == 1 then
-			Traits.killerGiven = true
-		end
-	end
+	repeat
+		t = math.random(2,4)
+	until not (t == Traits.lastGiven)
+	Traits.lastGiven = t
 	
 	return Traits[t]
 end
@@ -58,26 +48,28 @@ Families = {
 }
 
 HouseHolds = Range.parse("1~10")
+Killers = {0,0,1}
 randomizeTbl(HouseHolds)
+randomizeTbl(Killers)
 
 House = {}
 House.house = {}
 
 function House.new()
-	local tr1 = Traits.newTrait()
-	local tr2 = Traits.newTrait()
-	local kl = ((tr1 == "Killer") or (tr2 == "Killer"))
-	
-	if tr1 == "Killer" then
-		tr1 = tr2
-	end
+	local tr = Traits.newTrait()
 	
 	local tbl = {
-		isKiller = kl,
-		HouseTrait = tr1,
+		isKiller = false,
+		HouseTrait = tr,
 		isOpen = true,
 		HouseHold = pop(HouseHolds),
 	}
+	
+	if tbl.HouseHold == 4 or tbl.HouseHold == 6 or tbl.HouseHold == 7 then
+		local t = {[0] = false, [1] = true}
+		tbl.isKiller = t[pop(Killers)]
+	end
+		
 	
 	if Families[tbl.HouseHold] == "Empty" then
 		tbl.isOpen = false
@@ -112,4 +104,8 @@ for i = 1,10 do
 		House.house[i].HouseTrait,
 		"\t"..Families[House.house[i].HouseHold]
 	)
+	
+	if House.house[i].HouseHold == 4 or House.house[i].HouseHold == 6 or House.house[i].HouseHold == 7 then
+		print("Killer: "..tostring(House.house[i].isKiller))
+	end
 end
