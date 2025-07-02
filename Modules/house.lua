@@ -48,7 +48,7 @@ Families = {
 }
 
 HouseHolds = Range.parse("1~10")
-Killers = {0,0,1}
+Killers = {1,0,0}
 randomizeTbl(HouseHolds)
 randomizeTbl(Killers)
 
@@ -100,12 +100,16 @@ House.house[9] = House.new()
 House.house[10] = House.new()
 
 for i = 1,10 do
-	print(i..":",
-		House.house[i].HouseTrait,
-		"\t"..Families[House.house[i].HouseHold]
-	)
-	
 	if House.house[i].HouseHold == 4 or House.house[i].HouseHold == 6 or House.house[i].HouseHold == 7 then
-		print("Killer: "..tostring(House.house[i].isKiller))
+		print(i..":",
+			House.house[i].HouseTrait,
+			"\t"..Families[House.house[i].HouseHold],
+			"\t"..tostring(House.house[i].isKiller)
+		)
+	else
+		print(i..":",
+			House.house[i].HouseTrait,
+			"\t"..Families[House.house[i].HouseHold]
+		)
 	end
 end

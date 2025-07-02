@@ -365,7 +365,7 @@ function love.load(arg)
 	
 	-- TODO: add a save feature
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")
-	Seed = arg[1] or math.random(0,0xFFFFF)
+	Seed = tonumber(arg[1]) or math.random(0,0xFFFFF)
 	math.randomseed(Seed)
 	print(string.format("Seed: 0x%05X",Seed))
 	require("/Modules/house")
