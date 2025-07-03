@@ -213,6 +213,14 @@ function kctrlOps(key)
 					"ty = "..Plr.ty..",\n\t"..
 					"c = "..Plr.c.."("..Names[Plr.c]..")\n}"
 			)
+		elseif key == "o" then
+			for i,v in pairs(World.Map) do
+				if Map == v then
+					print(
+						"Map = "..tostring(i)
+					)
+				end
+			end
 		end
 		Crtlcheck = false
 	end

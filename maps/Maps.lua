@@ -28,8 +28,6 @@ require("maps/Vertical_2")
 require("maps/Vertical_3")
 require("maps/Vertical_4")
 require("maps/Vertical_5")
-
---[[
 require("maps/House_05/S3_house_out_1")
 require("maps/House_05/S3_house_in_1")
 require("maps/House_05/S3_house_in_2")
@@ -78,4 +76,3 @@ require("maps/House_12/S10_house_in_2")
 require("maps/House_12/S10_house_in_3")
 require("maps/House_12/S10_house_in_4")
 require("maps/House_12/S10_house_out_2")
-]]

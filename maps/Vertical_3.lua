@@ -37,8 +37,8 @@ World.Map[28]:setTile(5,7,Road_R)
 World.Map[28]:setTile(6,7,Road_L)
 
 World.Map[28]:addWall(Box.new(21.9,3,0.1,8,1,1,function()
-	print("To House ?")
-	--setPlr(0.5,(Plr.y/2) + 7.5)
+	Map = World.Map[49]
+	setPlr(0.5,(Plr.y/2) + 7.5)
 end))
 
 World.Map[28]:addWall(Box.new(0,0,22,0.1,1,1,function()

@@ -44,8 +44,6 @@ World.Map[20]:addWall(Box.new(9.9,13.9,2.2,0.1,1,1,function()
 	setPlr(18.5,8)
 end))
 
-print(House.house[2].HouseTrait)
-
 World.Map[20]:addProp(Prop.new(21,9.45,Computer))
 
 if House.house[2].HouseTrait == "Neat" then
