@@ -373,7 +373,8 @@ function love.load(arg)
 	
 	-- TODO: add a save feature
 	--Save = love.filesystem.getInfo("/Save/.SaveFile")
-	Seed = tonumber(arg[1]) or math.random(0,0xFFFFF)
+	-- True Seeds 0x27D410, 0x2FAEBD, 0x84EEAA, 0xAF7BF3, 0x1136DF2, 0x124C879, 0x14335C4, 0x1F2414C, 0x22A817A, 0x259EB27
+	Seed = tonumber(arg[1]) or math.random(0,0xFFFFFFF)
 	math.randomseed(Seed)
 	print(string.format("Seed: 0x%05X",Seed))
 	require("/Modules/house")
