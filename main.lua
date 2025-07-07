@@ -120,7 +120,7 @@ GameState = Cutscene
 DialogeBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
-Language = French
+Language = English
 String.NewLocale(Language)
 
 -- debug variables
@@ -376,7 +376,7 @@ function love.load(arg)
 	-- True Seeds 0x27D410, 0x2FAEBD, 0x84EEAA, 0xAF7BF3, 0x1136DF2, 0x124C879, 0x14335C4, 0x1F2414C, 0x22A817A, 0x259EB27
 	Seed = tonumber(arg[1]) or math.random(0,0xFFFFFFF)
 	math.randomseed(Seed)
-	print(string.format("Seed: 0x%05X",Seed))
+	print(string.format("Seed: 0x%07X",Seed))
 	require("/Modules/house")
 	require("/maps/Maps")
 	require("/scenes/Scenes")

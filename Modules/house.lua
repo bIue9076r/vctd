@@ -47,6 +47,19 @@ Families = {
 	[10] = "Empty",
 }
 
+Families.isOpen = {
+	[1] = true,
+	[2] = false,
+	[3] = false,
+	[4] = false,
+	[5] = false,
+	[6] = false,
+	[7] = false,
+	[8] = true,
+	[9] = false,
+	[10] = false,
+}
+
 HouseHolds = Range.parse("1~10")
 Killers = {1,0,0}
 randomizeTbl(HouseHolds)
@@ -61,7 +74,7 @@ function House.new()
 	local tbl = {
 		isKiller = false,
 		HouseTrait = tr,
-		isOpen = true,
+		isOpen = false,
 		HouseHold = pop(HouseHolds),
 	}
 	
@@ -69,11 +82,8 @@ function House.new()
 		local t = {[0] = false, [1] = true}
 		tbl.isKiller = t[pop(Killers)]
 	end
-		
 	
-	if Families[tbl.HouseHold] == "Empty" then
-		tbl.isOpen = false
-	end
+	tbl.isOpen = Families.isOpen[tbl.HouseHold] or false
 	
 	return tbl
 end
