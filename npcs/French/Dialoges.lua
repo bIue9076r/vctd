@@ -50,3 +50,5 @@ World.Dialoge[French][5] = Dialoge.new({
 		setPlr(10.5,12.5)
 	end
 end)
+
+require("/npcs/French/general/mailboxes")
