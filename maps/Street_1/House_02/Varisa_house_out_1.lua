@@ -51,6 +51,6 @@ World.Map[7]:addWall(Box.new(21.9,9,0.1,5,1,1,function()
 	setPlr(0.5,Plr.y)
 end))
 
-World.Map[7]:addNpc(Npc.new(11.0,8.4,Mailbox,5,0,function()
+World.Map[7]:addNpc(Npc.new(11.0,8.4,Mailbox,7,0,function()
 	
 end))

@@ -61,7 +61,7 @@ World.Map[1]:addNpc(Npc.new(7.6,4.7,Rachel,5,0,function()
 	
 end))
 
-World.Map[1]:addNpc(Npc.new(11.0,8.4,Mailbox,5,0,function()
+World.Map[1]:addNpc(Npc.new(11.0,8.4,Mailbox,6,0,function()
 	
 end))
 
