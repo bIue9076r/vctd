@@ -60,6 +60,19 @@ Families.isOpen = {
 	[10] = false,
 }
 
+Families.mail = {
+	["Wilkie"] = 8,
+	["Sean"] = 9,
+	["Karina"] = 17,
+	["Vivian"] = 10,
+	["Jami"] = 11,
+	["Fredrick"] = 16,
+	["Mollie"] = 12,
+	["Rachel"] = 13,
+	["Empty"] = 14,
+	["Empty"] = 15,
+}
+
 HouseHolds = Range.parse("1~10")
 Killers = {1,0,0}
 randomizeTbl(HouseHolds)
