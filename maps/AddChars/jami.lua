@@ -1,0 +1,3 @@
+function addJami(Map)
+	
+end

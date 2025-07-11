@@ -1,0 +1,3 @@
+function addKarina(Map)
+	
+end
