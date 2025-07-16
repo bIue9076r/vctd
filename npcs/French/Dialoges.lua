@@ -52,3 +52,10 @@ World.Dialoge[French][5] = Dialoge.new({
 end)
 
 require("/npcs/French/general/mailboxes")
+
+World.Dialoge[French][18] = Dialoge.new({
+	Text.new("Bonjour Varisa.",Wilkie),
+	Text.new("Salut.",Varisa),
+	Text.new("J'ai pense que tu as finir volontariat?",Wilkie),
+	Text.new("Pas jour.",Varisa),
+},1)

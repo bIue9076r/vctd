@@ -1,0 +1,8 @@
+require("maps/AddChars/wilkie")
+require("maps/AddChars/sean")
+require("maps/AddChars/karina")
+require("maps/AddChars/vivian")
+require("maps/AddChars/jami")
+require("maps/AddChars/fredrick")
+require("maps/AddChars/mollie")
+require("maps/AddChars/rachel")

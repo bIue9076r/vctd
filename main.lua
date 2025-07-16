@@ -378,6 +378,7 @@ function love.load(arg)
 	math.randomseed(Seed)
 	print(string.format("Seed: 0x%07X",Seed))
 	require("/Modules/house")
+	require("/maps/Chars")
 	require("/maps/Maps")
 	require("/scenes/Scenes")
 	
