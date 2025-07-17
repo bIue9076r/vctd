@@ -11,7 +11,9 @@ function addSeanIn2(Map)
 end
 
 function addSeanIn3(Map)
+	World.Map[Map]:addNpc(Npc.new(12.9,7.7,Sean,26,0,function()
 	
+	end))
 end
 
 function addSeanIn4(Map)
