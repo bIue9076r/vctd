@@ -16,4 +16,4 @@ World.Map[18]:addWall(Box.new(11.9,13.9,2.2,0.1,1,1,function()
 	setPlr(12.5,1.5)
 end))
 
-addWilkie(18)
+Families.add[House.house[1].HouseHold](18)

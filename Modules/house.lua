@@ -73,6 +73,19 @@ Families.mail = {
 	["Empty"] = 15,
 }
 
+Families.add = {
+	[1] = addWilkie,
+	[2] = addSean,
+	[3] = addKarina,
+	[4] = addVivian,
+	[5] = addJami,
+	[6] = addFredrick,
+	[7] = addMollie,
+	[8] = addRachel,
+	[9] = function() end,
+	[10] = function() end,
+}
+
 HouseHolds = Range.parse("1~10")
 Killers = {1,0,0}
 randomizeTbl(HouseHolds)
@@ -96,7 +109,7 @@ function House.new()
 		tbl.isKiller = t[pop(Killers)]
 	end
 	
-	tbl.isOpen = Families.isOpen[tbl.HouseHold] or false
+	tbl.isOpen = true -- For Testing --Families.isOpen[tbl.HouseHold] or false
 	
 	return tbl
 end

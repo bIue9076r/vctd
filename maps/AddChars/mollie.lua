@@ -3,9 +3,7 @@ function addMollieOut1(Map)
 end
 
 function addMollieIn1(Map)
-	World.Map[Map]:addNpc(Npc.new(19.2,9.7,Wilkie,18,0,function()
 	
-	end))
 end
 
 function addMollieIn2(Map)

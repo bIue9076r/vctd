@@ -15,3 +15,5 @@ World.Map[72]:addWall(Box.new(11.9,13.9,2.2,0.1,1,1,function()
 	Map = World.Map[69]
 	setPlr(12.5,1.5)
 end))
+
+Families.add[House.house[9].HouseHold](72)

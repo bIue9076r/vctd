@@ -3,9 +3,7 @@ function addFredrickOut1(Map)
 end
 
 function addFredrickIn1(Map)
-	World.Map[Map]:addNpc(Npc.new(19.2,9.7,Wilkie,18,0,function()
 	
-	end))
 end
 
 function addFredrickIn2(Map)
