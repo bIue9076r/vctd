@@ -90,7 +90,10 @@ function World.Keypressed(key)
 			}
 			
 			local wd = World.Dialoge[Language][World.snpc.i]
-			if not wd then wd = World.Dialoge[English][World.snpc.i] end
+			if not wd then
+				World.snpc.i = 0
+				wd = World.Dialoge[Language][World.snpc.i]
+			end
 			if wd then
 				World.dtbl = wd:get()
 				

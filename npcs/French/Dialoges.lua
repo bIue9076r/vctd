@@ -1,5 +1,10 @@
 World.Dialoge[French] = {}
 
+World.Dialoge[French][0] = Dialoge.new({
+	Text.new("Ils sont ne dire pas trop.",Varisa),
+	Text.new("Leur dialogue pourrait être détruite.",Varisa),
+},0)
+
 World.Dialoge[French][1] = Dialoge.new({
 	Text.new("Salut",Varisa),
 	Text.new("Salut Var!",Tracey),
