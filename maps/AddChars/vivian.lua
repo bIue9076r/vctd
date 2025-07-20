@@ -18,6 +18,10 @@ function addVivianIn4(Map)
 	World.Map[Map]:addNpc(Npc.new(13.0,11.6,Vivian,25,0,function()
 	
 	end))
+	
+	World.Map[Map]:addNpc(Npc.new(18.7,9.4,Brian,28,0,function()
+	
+	end))
 end
 
 function addVivian(Map)
