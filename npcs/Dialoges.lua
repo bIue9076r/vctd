@@ -64,3 +64,44 @@ World.Dialoge[English][18] = Dialoge.new({
 	Text.new("I thought you were done with volunteering?",Wilkie),
 	Text.new("Not today.",Varisa),
 },1)
+
+-- Todo: Story Flow chart / Dialoge
+World.Dialoge[English][19] = Dialoge.new({
+	Text.new("Hello Varisa.",Karina),
+},1)
+
+World.Dialoge[English][20] = Dialoge.new({
+	Text.new("Hello Varisa.",Zach),
+},1)
+
+World.Dialoge[English][21] = Dialoge.new({
+	Text.new("Hello Varisa.",Jami),
+},1)
+
+World.Dialoge[English][22] = Dialoge.new({
+	Text.new("Hello Varisa.",Mollie),
+},1)
+
+World.Dialoge[English][23] = Dialoge.new({
+	Text.new("Hello Varisa.",Lassie),
+},1)
+
+World.Dialoge[English][24] = Dialoge.new({
+	Text.new("Hello Varisa.",Fredrick),
+},1)
+
+World.Dialoge[English][25] = Dialoge.new({
+	Text.new("Hello Varisa.",Vivian),
+},1)
+
+World.Dialoge[English][26] = Dialoge.new({
+	Text.new("Hello Varisa.",Sean),
+},1)
+
+World.Dialoge[English][27] = Dialoge.new({
+	Text.new("Hello Varisa.",Ella),
+},1)
+
+World.Dialoge[English][28] = Dialoge.new({
+	Text.new("Hello Varisa.",Brian),
+},1)

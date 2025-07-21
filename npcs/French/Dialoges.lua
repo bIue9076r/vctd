@@ -64,3 +64,43 @@ World.Dialoge[French][18] = Dialoge.new({
 	Text.new("J'ai pense que tu as finir volontariat?",Wilkie),
 	Text.new("Pas jour.",Varisa),
 },1)
+
+World.Dialoge[French][19] = Dialoge.new({
+	Text.new("Salut Varisa.",Karina),
+},1)
+
+World.Dialoge[French][20] = Dialoge.new({
+	Text.new("Salut Varisa.",Zach),
+},1)
+
+World.Dialoge[French][21] = Dialoge.new({
+	Text.new("Salut Varisa.",Jami),
+},1)
+
+World.Dialoge[French][22] = Dialoge.new({
+	Text.new("Salut Varisa.",Mollie),
+},1)
+
+World.Dialoge[French][23] = Dialoge.new({
+	Text.new("Salut Varisa.",Lassie),
+},1)
+
+World.Dialoge[French][24] = Dialoge.new({
+	Text.new("Salut Varisa.",Fredrick),
+},1)
+
+World.Dialoge[French][25] = Dialoge.new({
+	Text.new("Salut Varisa.",Vivian),
+},1)
+
+World.Dialoge[French][26] = Dialoge.new({
+	Text.new("Salut Varisa.",Sean),
+},1)
+
+World.Dialoge[French][27] = Dialoge.new({
+	Text.new("Salut Varisa.",Ella),
+},1)
+
+World.Dialoge[French][28] = Dialoge.new({
+	Text.new("Salut Varisa.",Brian),
+},1)

@@ -109,7 +109,7 @@ function House.new()
 		tbl.isKiller = t[pop(Killers)]
 	end
 	
-	tbl.isOpen = true -- For Testing --Families.isOpen[tbl.HouseHold] or false
+	tbl.isOpen = Families.isOpen[tbl.HouseHold] or false
 	
 	return tbl
 end
