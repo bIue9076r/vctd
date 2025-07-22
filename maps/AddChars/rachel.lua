@@ -13,7 +13,7 @@ function addRachelIn2(Map)
 end
 
 function addRachelIn3(Map)
-	
+	World.Map[Map]:addProp(Prop.new(14.3,2,Amp))
 end
 
 function addRachelIn4(Map)
