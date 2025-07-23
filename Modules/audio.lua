@@ -1,6 +1,7 @@
 sound.new("Roof","/Assets/Roof_Floor.mp3","stream")
 sound.new("Ground","/Assets/Ground_Floor.mp3","stream")
 sound.new("Main","/Assets/Main_Floor.mp3","stream")
+sound.new("Scary_1","/Assets/Midnight_Horror.mp3","stream")
 
 sound.new("EpT1","/Assets/episode_1_theme.mp3","stream")
 sound.new("EpT1_L","/Assets/Ep1T_Lyrics.mp3","stream")
