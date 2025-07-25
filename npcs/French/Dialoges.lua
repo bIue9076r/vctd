@@ -74,7 +74,22 @@ World.Dialoge[French][20] = Dialoge.new({
 },1)
 
 World.Dialoge[French][21] = Dialoge.new({
-	Text.new("Salut Varisa.",Jami),
+	Text.new("C'est à été jours.",Jami),
+	Text.new("Je ne peux plus prendre ça.",Jami),
+	Text.new("Pourqoui?",Varisa),
+	Text.new("Ce sont pas tes affaires.",Jami),
+	Text.new("Ça va. je suppose...",Varisa),
+	Text.new("Cependant, avez-vous voir Zoey par ici?",Varisa),
+	Text.new("Elle est absent toujours?",Jami),
+	Text.new("Et toujours pas d'indices?",Jami),
+	Text.new("ouais...",Varisa),
+	Text.new("Es-tu dans sa testament?",Jami),
+	Text.new("Qu'est-ce qui va pas chez toi putain?!",Varisa),
+	Text.new("Désolé",Jami),
+	Text.new("Je voir que été un peu d'insensible",Jami),
+	Text.new("Vous pensez?",Varisa),
+	Text.new("Ici, prends ça.",Jami),
+	Text.new("Toutes mes excuses encore.",Jami),
 },1)
 
 World.Dialoge[French][22] = Dialoge.new({

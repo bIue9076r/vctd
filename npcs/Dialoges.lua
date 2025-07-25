@@ -75,7 +75,22 @@ World.Dialoge[English][20] = Dialoge.new({
 },1)
 
 World.Dialoge[English][21] = Dialoge.new({
-	Text.new("Hello Varisa.",Jami),
+	Text.new("It's been days.",Jami),
+	Text.new("I can't take this any longer.",Jami),
+	Text.new("For what?",Varisa),
+	Text.new("It's none of your buisness.",Jami),
+	Text.new("Okay, I guess...",Varisa),
+	Text.new("Though, have you seen Zoey around?",Varisa),
+	Text.new("She's still missing?",Jami),
+	Text.new("And still no leads?",Jami),
+	Text.new("yeah...",Varisa),
+	Text.new("Are you in her will?",Jami),
+	Text.new("What the fuck is wrong with you?!",Varisa),
+	Text.new("Sorry",Jami),
+	Text.new("I see that was a bit insensitive",Jami),
+	Text.new("You think?",Varisa),
+	Text.new("Here take this.",Jami), -- She gives some side quest item
+	Text.new("My appologies again.",Jami),
 },1)
 
 World.Dialoge[English][22] = Dialoge.new({
