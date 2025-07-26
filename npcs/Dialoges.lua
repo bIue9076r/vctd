@@ -44,17 +44,15 @@ World.Dialoge[English][4] = Dialoge.new({
 },1)
 
 World.Dialoge[English][5] = Dialoge.new({
-	Text.new("Hey",Varisa),
 	Text.new("Hi Var!",Rachel),
-	Text.new("Does Tracey's mom still have any cookies?",Varisa),
-	Text.new("Yeah? I think",Rachel),
-	Text.new("Sweet!",Varisa),
-},0,function()
-	World.nextMap(World.Map[2])
-	World.AfterEffect = function()
-		setPlr(10.5,12.5)
-	end
-end)
+	Text.new("Hey",Varisa),
+	Text.new("You think you could stop by my house?",Rachel),
+	Text.new("Yeah, I could stop by.",Varisa),
+	Text.new("Great.",Rachel),
+	Text.new("I need you to ask my mom for the toolbox.",Rachel),
+	Text.new("Alright.",Varisa),
+	Text.new("You got it?",Rachel),
+},1)
 
 require("/npcs/general/mailboxes")
 
