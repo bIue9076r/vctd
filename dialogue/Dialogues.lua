@@ -1,11 +1,11 @@
-World.Dialoge[English] = {}
+World.Dialogue[English] = {}
 
-World.Dialoge[English][0] = Dialoge.new({
+World.Dialogue[English][0] = Dialogue.new({
 	Text.new("They're not saying much.",Varisa),
-	Text.new("Their Dialoge might be broken.",Varisa),
+	Text.new("Their Dialogue might be broken.",Varisa),
 },0)
 
-World.Dialoge[English][1] = Dialoge.new({
+World.Dialogue[English][1] = Dialogue.new({
 	Text.new("Hey",Varisa),
 	Text.new("Hey Var!",Tracey),
 	Text.new("Does your mom still have any cookies?",Varisa),
@@ -18,7 +18,7 @@ World.Dialoge[English][1] = Dialoge.new({
 	end
 end)
 
-World.Dialoge[English][2] = Dialoge.new({
+World.Dialogue[English][2] = Dialogue.new({
 	Text.new("Hey Ms. Drew",Varisa),
 	Text.new("Hey Varisa",Zoey),
 	Text.new("Is your mom still around?",Zoey),
@@ -29,7 +29,7 @@ World.Dialoge[English][2] = Dialoge.new({
 	Text.new("....",Zoey),
 },1)
 
-World.Dialoge[English][3] = Dialoge.new({
+World.Dialogue[English][3] = Dialogue.new({
 	Text.new("This Just in!",TV_B),
 	Text.new("5 Confirmed Deaths in relation to Serial Killer",TV_B),
 	Text.new("Experts Weigh in...",TV_B),
@@ -37,13 +37,13 @@ World.Dialoge[English][3] = Dialoge.new({
 	Text.new("*Random Gibberish*",TV_B),
 },1)
 
-World.Dialoge[English][4] = Dialoge.new({
+World.Dialogue[English][4] = Dialogue.new({
 	Text.new("Folks....",TV_B),
 	Text.new("Nothing out of the ordinary just happened.",TV_B),
 	Text.new("*Random Gibberish*",TV_B),
 },1)
 
-World.Dialoge[English][5] = Dialoge.new({
+World.Dialogue[English][5] = Dialogue.new({
 	Text.new("Hi Var!",Rachel),
 	Text.new("Hey",Varisa),
 	Text.new("You think you could stop by my house?",Rachel),
@@ -54,25 +54,25 @@ World.Dialoge[English][5] = Dialoge.new({
 	Text.new("You got it?",Rachel),
 },1)
 
-require("/npcs/general/mailboxes")
+require("/dialogue/general/mailboxes")
 
-World.Dialoge[English][18] = Dialoge.new({
+World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Hello Varisa.",Wilkie),
 	Text.new("Hey.",Varisa),
 	Text.new("I thought you were done with volunteering?",Wilkie),
 	Text.new("Not today.",Varisa),
 },1)
 
--- Todo: Story Flow chart / Dialoge
-World.Dialoge[English][19] = Dialoge.new({
+-- Todo: Story Flow chart / Dialogue
+World.Dialogue[English][19] = Dialogue.new({
 	Text.new("Hello Varisa.",Karina),
 },1)
 
-World.Dialoge[English][20] = Dialoge.new({
+World.Dialogue[English][20] = Dialogue.new({
 	Text.new("Hello Varisa.",Zach),
 },1)
 
-World.Dialoge[English][21] = Dialoge.new({
+World.Dialogue[English][21] = Dialogue.new({
 	Text.new("It's been days.",Jami),
 	Text.new("I can't take this any longer.",Jami),
 	Text.new("For what?",Varisa),
@@ -91,30 +91,30 @@ World.Dialoge[English][21] = Dialoge.new({
 	Text.new("My appologies again.",Jami),
 },1)
 
-World.Dialoge[English][22] = Dialoge.new({
+World.Dialogue[English][22] = Dialogue.new({
 	Text.new("Hello Varisa.",Mollie),
 },1)
 
-World.Dialoge[English][23] = Dialoge.new({
+World.Dialogue[English][23] = Dialogue.new({
 	Text.new("Hello Varisa.",Lassie),
 },1)
 
-World.Dialoge[English][24] = Dialoge.new({
+World.Dialogue[English][24] = Dialogue.new({
 	Text.new("Hello Varisa.",Fredrick),
 },1)
 
-World.Dialoge[English][25] = Dialoge.new({
+World.Dialogue[English][25] = Dialogue.new({
 	Text.new("Hello Varisa.",Vivian),
 },1)
 
-World.Dialoge[English][26] = Dialoge.new({
+World.Dialogue[English][26] = Dialogue.new({
 	Text.new("Hello Varisa.",Sean),
 },1)
 
-World.Dialoge[English][27] = Dialoge.new({
+World.Dialogue[English][27] = Dialogue.new({
 	Text.new("Hello Varisa.",Ella),
 },1)
 
-World.Dialoge[English][28] = Dialoge.new({
+World.Dialogue[English][28] = Dialogue.new({
 	Text.new("Hello Varisa.",Brian),
 },1)

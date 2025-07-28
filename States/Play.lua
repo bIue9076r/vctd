@@ -8,7 +8,7 @@ Play.ticker = ticker.new()
 
 function Play.Draw()
 	Play.scene:draw()
-	Play.scene:drawDialoge()
+	Play.scene:drawDialogue()
 end
 
 function Play.Update(dt)

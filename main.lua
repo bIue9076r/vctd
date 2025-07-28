@@ -12,7 +12,7 @@ require("/Modules/spString")
 --require("/Modules/house")
 require("/Locales/English")
 require("/Locales/French")
-require("/Modules/Dialoge")
+require("/Modules/Dialogue")
 require("/Modules/npc")
 require("/Modules/prop")
 require("/Modules/item")
@@ -117,7 +117,7 @@ Map = MapObj.new()
 
 -- globals
 GameState = Cutscene
-DialogeBuffer = 50
+DialogueBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
 Language = English
@@ -172,14 +172,14 @@ function kctrlOps(key)
 		Crtlcheck = true
 	elseif Crtlcheck then
 		if key == "0" then
-			DialogeBuffer = 0
+			DialogueBuffer = 0
 		elseif key == "1" then
-			DialogeBuffer = 50
+			DialogueBuffer = 50
 		elseif key == "2" then
-			DialogeBuffer = 75
+			DialogueBuffer = 75
 		elseif key == "3" then
 			-- slow reader huh?
-			DialogeBuffer = 100
+			DialogueBuffer = 100
 		elseif key == "l" then
 			DrawCoords = not(DrawCoords)
 		elseif key == "y" then

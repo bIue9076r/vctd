@@ -75,6 +75,7 @@ image.newImage("Sale_Sign_1","Assets/sale_sign_1.png")
 image.newImage("Sale_Sign_2","Assets/sale_sign_2.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
+image.newImage("Interaction","Assets/interact.png")
 image.newImage(1,"Assets/error_obj.png")
 
 image.newImage("Void","/Assets/void.png")

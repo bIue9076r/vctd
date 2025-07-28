@@ -1,11 +1,11 @@
-World.Dialoge[French] = {}
+World.Dialogue[French] = {}
 
-World.Dialoge[French][0] = Dialoge.new({
+World.Dialogue[French][0] = Dialogue.new({
 	Text.new("Ils sont ne dire pas trop.",Varisa),
 	Text.new("Leur dialogue pourrait être détruite.",Varisa),
 },0)
 
-World.Dialoge[French][1] = Dialoge.new({
+World.Dialogue[French][1] = Dialogue.new({
 	Text.new("Salut",Varisa),
 	Text.new("Salut Var!",Tracey),
 	Text.new("Est ce que ta mamam a encore des biscits?",Varisa),
@@ -18,7 +18,7 @@ World.Dialoge[French][1] = Dialoge.new({
 	end
 end)
 
-World.Dialoge[French][2] = Dialoge.new({
+World.Dialogue[French][2] = Dialogue.new({
 	Text.new("Bonjour Mademoiselle Drew",Varisa),
 	Text.new("Salut Varisa",Zoey),
 	Text.new("Est ce que ta mère est encore ici?",Zoey),
@@ -29,7 +29,7 @@ World.Dialoge[French][2] = Dialoge.new({
 	Text.new("....",Zoey),
 },1)
 
-World.Dialoge[French][3] = Dialoge.new({
+World.Dialogue[French][3] = Dialogue.new({
 	Text.new("Attention!",TV_B),
 	Text.new("5 morts en relation à tueur",TV_B),
 	Text.new("Les officials demander...",TV_B),
@@ -37,13 +37,13 @@ World.Dialoge[French][3] = Dialoge.new({
 	Text.new("*Charabia Random*",TV_B),
 },1)
 
-World.Dialoge[French][4] = Dialoge.new({
+World.Dialogue[French][4] = Dialogue.new({
 	Text.new("Tout le monde....",TV_B),
 	Text.new("Rien des tout a en train.",TV_B),
 	Text.new("*Charabia Random*",TV_B),
 },1)
 
-World.Dialoge[French][5] = Dialoge.new({
+World.Dialogue[French][5] = Dialogue.new({
 	Text.new("Salut Var!",Rachel),
 	Text.new("Salut",Varisa),
 	Text.new("You think you could stop by my house?",Rachel),
@@ -54,24 +54,24 @@ World.Dialoge[French][5] = Dialoge.new({
 	Text.new("You got it?",Rachel),
 },1)
 
-require("/npcs/French/general/mailboxes")
+require("/dialogue/French/general/mailboxes")
 
-World.Dialoge[French][18] = Dialoge.new({
+World.Dialogue[French][18] = Dialogue.new({
 	Text.new("Bonjour Varisa.",Wilkie),
 	Text.new("Salut.",Varisa),
 	Text.new("J'ai pense que tu as finir volontariat?",Wilkie),
 	Text.new("Pas jour.",Varisa),
 },1)
 
-World.Dialoge[French][19] = Dialoge.new({
+World.Dialogue[French][19] = Dialogue.new({
 	Text.new("Salut Varisa.",Karina),
 },1)
 
-World.Dialoge[French][20] = Dialoge.new({
+World.Dialogue[French][20] = Dialogue.new({
 	Text.new("Salut Varisa.",Zach),
 },1)
 
-World.Dialoge[French][21] = Dialoge.new({
+World.Dialogue[French][21] = Dialogue.new({
 	Text.new("C'est à été jours.",Jami),
 	Text.new("Je ne peux plus prendre ça.",Jami),
 	Text.new("Pourqoui?",Varisa),
@@ -90,30 +90,30 @@ World.Dialoge[French][21] = Dialoge.new({
 	Text.new("Toutes mes excuses encore.",Jami),
 },1)
 
-World.Dialoge[French][22] = Dialoge.new({
+World.Dialogue[French][22] = Dialogue.new({
 	Text.new("Salut Varisa.",Mollie),
 },1)
 
-World.Dialoge[French][23] = Dialoge.new({
+World.Dialogue[French][23] = Dialogue.new({
 	Text.new("Salut Varisa.",Lassie),
 },1)
 
-World.Dialoge[French][24] = Dialoge.new({
+World.Dialogue[French][24] = Dialogue.new({
 	Text.new("Salut Varisa.",Fredrick),
 },1)
 
-World.Dialoge[French][25] = Dialoge.new({
+World.Dialogue[French][25] = Dialogue.new({
 	Text.new("Salut Varisa.",Vivian),
 },1)
 
-World.Dialoge[French][26] = Dialoge.new({
+World.Dialogue[French][26] = Dialogue.new({
 	Text.new("Salut Varisa.",Sean),
 },1)
 
-World.Dialoge[French][27] = Dialoge.new({
+World.Dialogue[French][27] = Dialogue.new({
 	Text.new("Salut Varisa.",Ella),
 },1)
 
-World.Dialoge[French][28] = Dialoge.new({
+World.Dialogue[French][28] = Dialogue.new({
 	Text.new("Salut Varisa.",Brian),
 },1)

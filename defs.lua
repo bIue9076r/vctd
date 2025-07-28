@@ -81,6 +81,7 @@ Sale_Sign_1 = 0x4E
 Sale_Sign_2 = 0x4F
 
 ERROBJ = 0xFF
+Interaction = 0x1FF
 
 -- Char to Sprite
 CtS = {
@@ -160,6 +161,7 @@ CtS = {
 	[Sale_Sign_1] = "Sale_Sign_1",
 	[Sale_Sign_2] = "Sale_Sign_2",
 	[ERROBJ] = "ERROBJ",
+	[Interaction] = "Interaction",
 }
 
 -- Names
@@ -240,6 +242,7 @@ Names = {
 	[Sale_Sign_1] = "Sale Sign 1",
 	[Sale_Sign_2] = "Sale Sign 2",
 	[ERROBJ] = "ERROBJ",
+	[Interaction] = "...",
 }
 
 -- Character Range
@@ -431,7 +434,7 @@ SongList = {
 }
 
 
--- Dialoge Voices
+-- Dialogue Voices
 Voices = {
 	["Normal"] = sound.getSound("Talk_1"),
 	["Slow"] = sound.getSound("Talk_2"),

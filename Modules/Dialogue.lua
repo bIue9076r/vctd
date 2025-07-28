@@ -29,10 +29,10 @@ function Text:get()
 	return rs, rc, rv
 end
 
-Dialoge = {}
-Dialoge.text = {Text.new("......")}
-Dialoge.index = 1
-Dialoge.cycle = 0
+Dialogue = {}
+Dialogue.text = {Text.new("......")}
+Dialogue.index = 1
+Dialogue.cycle = 0
 
 --{
 --	s="......",
@@ -41,7 +41,7 @@ Dialoge.cycle = 0
 --	t=ticker.new()
 --}
 
-function Dialoge.new(ttbl,c,e)
+function Dialogue.new(ttbl,c,e)
 	local tbl = {
 		text = ttbl or {Text.new("......")},
 		index = 1,
@@ -52,14 +52,14 @@ function Dialoge.new(ttbl,c,e)
 	}
 	
 	local mt = {
-		__index = Dialoge,
-		__call = Dialoge.get,
+		__index = Dialogue,
+		__call = Dialogue.get,
 	}
 	
 	return setmetatable(tbl,mt)
 end
 
-function Dialoge:get()
+function Dialogue:get()
 	local rs, rc, rv = self.text[self.index]()
 	self.index = self.index + 1
 	if self.index > #self.text then

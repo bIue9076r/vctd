@@ -148,7 +148,7 @@ function drawBackgound()
 	end
 end
 
-function drawDialoge()
+function drawDialogue()
 	if IsTalking then
 		local dt = World.dticker:get()
 		local sl = utf8.len(World.dtbl.s)
@@ -181,7 +181,7 @@ function drawDialoge()
 			Voices[World.dtbl.v]:seek(0)
 		end
 		
-		if dt < (sl + DialogeBuffer) then
+		if dt < (sl + DialogueBuffer) then
 			World.dticker()
 		else
 			-- stop talking

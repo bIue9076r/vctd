@@ -32,10 +32,10 @@ World.AfterEffect = function()
 	
 end
 --require("/maps/Maps")
-World.Dialoge = {}
--- Include Dialoge File
-require("npcs/Dialoges")
-require("npcs/French/Dialoges")
+World.Dialogue = {}
+-- Include Dialogue File
+require("dialogue/Dialogues")
+require("dialogue/French/Dialogues")
 --
 
 function World.nextMap(map)
@@ -50,7 +50,7 @@ function World.Draw()
 	Plr.inv:drawInv()
 	
 	-- if talking
-	drawDialoge()
+	drawDialogue()
 end
 
 function World.Update(dt)
@@ -89,20 +89,20 @@ function World.Keypressed(key)
 				n = World.snpc.c,
 			}
 			
-			local wd = World.Dialoge[Language][World.snpc.i]
+			local wd = World.Dialogue[Language][World.snpc.i]
 			if not wd then
 				World.snpc.i = 0
-				wd = World.Dialoge[Language][World.snpc.i]
+				wd = World.Dialogue[Language][World.snpc.i]
 			end
 			if wd then
 				World.dtbl = wd:get()
 				
-				if World.Dialoge[Language][World.snpc.i] then
-					if World.Dialoge[English][World.snpc.i] then
-						World.Dialoge[English][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+				if World.Dialogue[Language][World.snpc.i] then
+					if World.Dialogue[English][World.snpc.i] then
+						World.Dialogue[English][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
 					end
-					if World.Dialoge[French][World.snpc.i] then
-						World.Dialoge[French][World.snpc.i].index = World.Dialoge[Language][World.snpc.i].index
+					if World.Dialogue[French][World.snpc.i] then
+						World.Dialogue[French][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
 					end
 				end
 			end

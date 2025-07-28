@@ -176,7 +176,7 @@ function Scene:drawActors()
 	end
 end
 
-function Scene:drawDialoge()
+function Scene:drawDialogue()
 	if self.IsTalking then
 		local dt = self.dticker:get()
 		local sl = utf8.len(self.dtbl.s)
@@ -209,7 +209,7 @@ function Scene:drawDialoge()
 			Voices[self.dtbl.v]:seek(0)
 		end
 		
-		if dt < (sl + DialogeBuffer) then
+		if dt < (sl + DialogueBuffer) then
 			self.dticker()
 		else
 			-- stop talking
