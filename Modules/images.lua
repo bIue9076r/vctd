@@ -136,3 +136,5 @@ image.newImage("Bar_TL","/Assets/Bar_TL.png")
 image.newImage("Bar_TR","/Assets/Bar_TR.png")
 image.newImage("Bar_BL","/Assets/Bar_BL.png")
 image.newImage("Bar_BR","/Assets/Bar_BR.png")
+
+image.newImage("Map","/Assets/map.png")

@@ -146,6 +146,9 @@ end
 function ItemBag:Keypressed(key)
 	if key == "i" then
 		self.visible = not self.visible
+		if (World.showMap) then
+			World.showMap = false
+		end
 		return
 	end
 	if self.index and self.items[self.index] then
