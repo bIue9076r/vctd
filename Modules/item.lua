@@ -1,9 +1,10 @@
 Item = {}
 Item.i = -1
 
-function Item.new(i)
+function Item.new(i,n)
 	local tbl = {
 		i = i or -1, -- index (Char)
+		n = n or "Item ?",
 	}
 	
 	local mt = {
@@ -82,6 +83,9 @@ end
 function ItemBag:update(dt)
 	if self.visible then
 		local x,y = love.mouse.getPosition()
+		x = 600*(x / SCREEN_X)
+		y = 400*(y / SCREEN_Y)
+		
 		if not(self.ly == y) and not(self.lx == x) then
 			if x >= 55 and x <= (490 + 55) then
 				if y >= 100 and y <= (100 + 240) then
@@ -99,28 +103,32 @@ function ItemBag:drawInv()
 	if self.visible then
 		-- draw inventory
 		-- pause game to be safe
-		love.graphics.rectangle("fill",50,50,500,300)
-		love.graphics.print({{0,0,0},"Inventory - Page "..self.page},60,60)
 		
-		--love.graphics.setColor(1,0,1)
-		--love.graphics.rectangle("fill",55,100,490,240)
-		--love.graphics.setColor(0,1,1)
-		--love.graphics.rectangle("fill",60,105,235,50)
-		--love.graphics.rectangle("fill",305,105,235,50)
-		--
-		--love.graphics.rectangle("fill",60,165,235,50)
-		--love.graphics.rectangle("fill",305,165,235,50)
-		--
-		--love.graphics.rectangle("fill",60,225,235,50)
-		--love.graphics.rectangle("fill",305,225,235,50)
-		--
-		--love.graphics.rectangle("fill",60,285,235,50)
-		--love.graphics.rectangle("fill",305,285,235,50)
-		--love.graphics.setColor(1,1,1)
+		love.graphics.rectangle("fill",
+			(SCREEN_X/12),
+			(SCREEN_Y/8),
+			((SCREEN_X*5)/6),
+			((SCREEN_Y*3)/4)
+		)
+		
+		love.graphics.print({{0,0,0},"Inventory - Page "..self.page},
+			(SCREEN_X/10),
+			((SCREEN_Y*3)/20),
+			0,
+			SCREEN_X/600,SCREEN_Y/400
+		)
 		
 		love.graphics.setColor(1,0,0)
 		love.graphics.setLineWidth(5)
-		love.graphics.rectangle("line",60 + (245 * ((self.sx or 1) - 1)),105 + (60 * ((self.sy or 1) - 1)),235,50)
+		local psx, psy
+		psx = ((60 + (245 * ((self.sx or 1) - 1)))/600)
+		psy = ((105 + (60 * ((self.sy or 1) - 1)))/400)
+		love.graphics.rectangle("line",
+			SCREEN_X*psx,
+			SCREEN_Y*psy,
+			((SCREEN_X*47)/120),
+			(SCREEN_Y/8)
+		)
 		love.graphics.setLineWidth(1)
 		love.graphics.setColor(1,1,1)
 		
@@ -136,7 +144,15 @@ function ItemBag:drawInv()
 			for y = 1,4 do
 				local i = y+(x-1)*(self.page_size/2)
 				if self.items[i] then
-					love.graphics.print({{0,0,0},"Item#"..x.."-"..y},60+(245 * (x-1)),105+(60 * (y-1)))
+					local psx, psy
+					psx = ((60+(245 * (x-1)))/600)
+					psy = ((105+(60 * (y-1)))/400)
+					love.graphics.print({{0,0,0},self.items[i].name},
+						SCREEN_X*psx,
+						SCREEN_Y*psy,
+						0,
+						SCREEN_X/600,SCREEN_Y/400
+					)
 				end
 			end
 		end
