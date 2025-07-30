@@ -79,6 +79,7 @@ Computer = 0x4C
 Mailbox = 0x4D
 Sale_Sign_1 = 0x4E
 Sale_Sign_2 = 0x4F
+Toolbox = 0x50
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -160,6 +161,7 @@ CtS = {
 	[Mailbox] = "Mailbox",
 	[Sale_Sign_1] = "Sale_Sign_1",
 	[Sale_Sign_2] = "Sale_Sign_2",
+	[Toolbox] = "Toolbox",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -241,6 +243,7 @@ Names = {
 	[Mailbox] = "Mailbox",
 	[Sale_Sign_1] = "Sale Sign 1",
 	[Sale_Sign_2] = "Sale Sign 2",
+	[Toolbox] = "Toolbox",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }
