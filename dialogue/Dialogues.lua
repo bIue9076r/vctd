@@ -83,6 +83,7 @@ World.Dialogue[English][21] = Dialogue.new({
 	Text.new("And still no leads?",Jami),
 	Text.new("yeah...",Varisa),
 	Text.new("Are you in her will?",Jami),
+	Text.new("what?",Varisa),
 	Text.new("What the fuck is wrong with you?!",Varisa),
 	Text.new("Sorry",Jami),
 	Text.new("I see that was a bit insensitive",Jami),
@@ -96,7 +97,13 @@ World.Dialogue[English][22] = Dialogue.new({
 },1)
 
 World.Dialogue[English][23] = Dialogue.new({
-	Text.new("Hello Varisa.",Lassie),
+	Text.new("Hey Varisa.",Lassie),
+	Text.new("Hey.",Varisa),
+	Text.new("Do you know where the toolbox is?",Varisa),
+	Text.new("I think i gave it to Wilkie a few days ago...",Lassie),
+	Text.new("Oh.",Varisa),
+	Text.new("Yeah, sorry.",Lassie),
+	Text.new("They should still have it.",Varisa),
 },1)
 
 World.Dialogue[English][24] = Dialogue.new({

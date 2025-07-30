@@ -74,7 +74,7 @@ World.Dialogue[French][20] = Dialogue.new({
 World.Dialogue[French][21] = Dialogue.new({
 	Text.new("C'est à été jours.",Jami),
 	Text.new("Je ne peux plus prendre ça.",Jami),
-	Text.new("Pourqoui?",Varisa),
+	Text.new("Pourquoi?",Varisa),
 	Text.new("Ce sont pas tes affaires.",Jami),
 	Text.new("Ça va. je suppose...",Varisa),
 	Text.new("Cependant, avez-vous voir Zoey par ici?",Varisa),
@@ -82,6 +82,7 @@ World.Dialogue[French][21] = Dialogue.new({
 	Text.new("Et toujours pas d'indices?",Jami),
 	Text.new("ouais...",Varisa),
 	Text.new("Es-tu dans sa testament?",Jami),
+	Text.new("Quoi?",Varisa),
 	Text.new("Qu'est-ce qui va pas chez toi putain?!",Varisa),
 	Text.new("Désolé",Jami),
 	Text.new("Je voir que été un peu d'insensible",Jami),
@@ -95,7 +96,13 @@ World.Dialogue[French][22] = Dialogue.new({
 },1)
 
 World.Dialogue[French][23] = Dialogue.new({
-	Text.new("Salut Varisa.",Lassie),
+	Text.new("Hey Varisa.",Lassie),
+	Text.new("Hey.",Varisa),
+	Text.new("Do you know where the toolbox is?",Varisa),
+	Text.new("I think i gave it to Wilkie a few days ago...",Lassie),
+	Text.new("Oh.",Varisa),
+	Text.new("Yeah, sorry.",Lassie),
+	Text.new("They should still have it.",Varisa),
 },1)
 
 World.Dialogue[French][24] = Dialogue.new({
