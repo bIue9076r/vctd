@@ -46,12 +46,12 @@ World.Dialogue[French][4] = Dialogue.new({
 World.Dialogue[French][5] = Dialogue.new({
 	Text.new("Salut Var!",Rachel),
 	Text.new("Salut",Varisa),
-	Text.new("You think you could stop by my house?",Rachel),
-	Text.new("Yeah, I could stop by.",Varisa),
-	Text.new("Great.",Rachel),
-	Text.new("I need you to ask my mom for the toolbox.",Rachel),
-	Text.new("Alright.",Varisa),
-	Text.new("You got it?",Rachel),
+	Text.new("Tu penses que tu peux visiter ma maison?",Rachel),
+	Text.new("Ouais, Je peux visiter.",Varisa),
+	Text.new("Super.",Rachel),
+	Text.new("J'ai besoin que tu demandes la boîte à outils à ma mère.",Rachel),
+	Text.new("Ouais.",Varisa),
+	Text.new("Tu l'as?",Rachel),
 },1)
 
 require("/dialogue/French/general/mailboxes")
@@ -96,13 +96,13 @@ World.Dialogue[French][22] = Dialogue.new({
 },1)
 
 World.Dialogue[French][23] = Dialogue.new({
-	Text.new("Hey Varisa.",Lassie),
-	Text.new("Hey.",Varisa),
-	Text.new("Do you know where the toolbox is?",Varisa),
+	Text.new("Salut Varisa.",Lassie),
+	Text.new("Salut.",Varisa),
+	Text.new("Sais-tu où est la boîte à outils?",Varisa),
 	Text.new("I think i gave it to Wilkie a few days ago...",Lassie),
 	Text.new("Oh.",Varisa),
-	Text.new("Yeah, sorry.",Lassie),
-	Text.new("They should still have it.",Varisa),
+	Text.new("Ouais, desolé.",Lassie),
+	Text.new("Il devrait toujours l'avoir.",Varisa),
 },1)
 
 World.Dialogue[French][24] = Dialogue.new({
