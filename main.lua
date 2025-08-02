@@ -56,8 +56,6 @@ Plr = {
 
 require("items/guitar")
 
-Plr.inv:add(Guitar)
-
 function setPlr(x,y)
 	Plr.x = x
 	Plr.y = y
