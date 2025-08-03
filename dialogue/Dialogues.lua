@@ -89,7 +89,7 @@ World.Dialogue[English][21] = Dialogue.new({
 	Text.new("I see that was a bit insensitive",Jami),
 	Text.new("You think?",Varisa),
 	Text.new("Here take this.",Jami,nil,function()
-		Plr.inv:add(Guitar)
+		
 	end), -- She gives some side quest item
 	Text.new("My appologies again.",Jami),
 },1)

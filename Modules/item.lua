@@ -96,6 +96,10 @@ function ItemBag:update(dt)
 			end
 		end
 		self.lx, self.ly = x, y
+		
+		if love.mouse.isDown(2) then
+			self.index = nil
+		end
 	end
 end
 
@@ -166,6 +170,8 @@ function ItemBag:Keypressed(key)
 			World.showMap = false
 		end
 		return
+	elseif key == "escape" or key == "o" then
+		self.index = nil
 	end
 	if self.index and self.items[self.index] then
 		self.items[self.index]:act(key)

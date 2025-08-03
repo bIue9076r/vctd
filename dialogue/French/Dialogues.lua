@@ -88,7 +88,7 @@ World.Dialogue[French][21] = Dialogue.new({
 	Text.new("Je voir que été un peu d'insensible",Jami),
 	Text.new("Vous pensez?",Varisa),
 	Text.new("Ici, prends ça.",Jami,nil,function()
-		Plr.inv:add(Guitar)
+		
 	end),
 	Text.new("Toutes mes excuses encore.",Jami),
 },1)

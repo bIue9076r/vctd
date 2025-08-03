@@ -55,6 +55,9 @@ Plr = {
 }
 
 require("items/guitar")
+require("items/toolbox")
+Plr.inv:add(Guitar)
+Plr.inv:add(Item_Toolbox)
 
 function setPlr(x,y)
 	Plr.x = x
@@ -163,7 +166,7 @@ function kctrlOps(key)
 					"ty = "..Plr.ty..",\n\t"..
 					"c = "..Plr.c.."("..Names[Plr.c]..")\n}"
 			)
-		elseif key == "o" then
+		elseif key == "b" then
 			for i,v in pairs(World.Map) do
 				if Map == v then
 					print(
