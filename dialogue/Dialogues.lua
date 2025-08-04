@@ -59,8 +59,20 @@ require("/dialogue/general/mailboxes")
 World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Hello Varisa.",Wilkie),
 	Text.new("Hey.",Varisa),
-	Text.new("I thought you were done with volunteering?",Wilkie),
-	Text.new("Not today.",Varisa),
+	Text.new("What brings you over here today?.",Wilkie),
+	Text.new("Mrs. [] said you had her toolbox.",Varisa),
+	Text.new("She needs it back?",Wilkie),
+	Text.new("No no no.",Varisa),
+	Text.new("I just need something from it.",Varisa),
+	Text.new("Oh, Okay.",Wilkie),
+	Text.new("What do you need then?",Wilkie),
+	Text.new("Uhh....",Varisa),
+	Text.new("Can I get back to you?",Varisa),
+	Text.new("Sure take your time",Wilkie,nil,function()
+		-- Change Rachel's Dialogue Number
+		print("Look, i'm doing something")
+	end),
+	Text.new("Sure take your time",Wilkie),
 },1)
 
 -- Todo: Story Flow chart / Dialogue
@@ -105,7 +117,7 @@ World.Dialogue[English][23] = Dialogue.new({
 	Text.new("I think i gave it to Wilkie a few days ago...",Lassie),
 	Text.new("Oh.",Varisa),
 	Text.new("Yeah, sorry.",Lassie),
-	Text.new("They should still have it.",Varisa),
+	Text.new("They should still have it.",Lassie),
 },1)
 
 World.Dialogue[English][24] = Dialogue.new({

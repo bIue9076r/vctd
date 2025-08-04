@@ -104,7 +104,7 @@ World.Dialogue[French][23] = Dialogue.new({
 	Text.new("I think i gave it to Wilkie a few days ago...",Lassie),
 	Text.new("Oh.",Varisa),
 	Text.new("Ouais, desolé.",Lassie),
-	Text.new("Il devrait toujours l'avoir.",Varisa),
+	Text.new("Il devrait toujours l'avoir.",Lassie),
 },1)
 
 World.Dialogue[French][24] = Dialogue.new({

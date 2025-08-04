@@ -6,7 +6,7 @@ function Item_Toolbox:act(key)
 	-- Quest Item
 	if not self.added then
 		--Plr.inv:add(screwdriver)
-		Plr.inv:add(Guitar)
+		-- Play some sort of sound
 		self.added = true
 	end
 end
