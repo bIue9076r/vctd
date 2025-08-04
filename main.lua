@@ -55,6 +55,7 @@ Plr = {
 }
 
 require("items/guitar")
+--require("items/screwdriver")
 require("items/toolbox")
 Plr.inv:add(Guitar)
 Plr.inv:add(Item_Toolbox)
