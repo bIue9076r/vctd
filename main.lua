@@ -3,6 +3,7 @@ jit.off()
 love.graphics.setDefaultFilter("nearest", "nearest")
 utf8 = require("utf8")
 require("/Engine/filesConfig")
+require("/Modules/file")
 require("/Modules/Range")
 require("/Modules/time")
 require("/Modules/box")
@@ -23,6 +24,7 @@ require("/Modules/song")
 require("/Modules/audio")
 require("/Modules/drawSprites")
 require("/Modules/Animate")
+require("/Modules/story")
 require("defs")
 require("/States/Intro")
 require("/States/World")
@@ -321,15 +323,26 @@ function daudio()
 end
 
 function love.load(arg)
+	if not love.filesystem.getInfo("/Save") then
+		love.filesystem.createDirectory("/Save")
+	end
+	
 	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
 	love.window.setTitle(String.get(3))
 	
-	-- TODO: add a save feature
-	--Save = love.filesystem.getInfo("/Save/.SaveFile")
-	-- True Seeds 0x27D410, 0x2FAEBD, 0x84EEAA, 0xAF7BF3, 0x1136DF2, 0x124C879, 0x14335C4, 0x1F2414C, 0x22A817A, 0x259EB27
-	Seed = tonumber(arg[1]) or math.random(0,0xFFFFFFF)
+	-- TODO: add a working save feature
+	Save = love.filesystem.getInfo("/Save/.SaveFile")
+	if not Save then
+		-- True Seeds 0x27D410, 0x2FAEBD, 0x84EEAA, 0xAF7BF3, 0x1136DF2, 0x124C879, 0x14335C4, 0x1F2414C, 0x22A817A, 0x259EB27
+		Seed = tonumber(arg[1]) or math.random(0,0xFFFFFFF)
+	else
+		local sf = File.new("/Save/.SaveFile")
+		Story.Load(sf)
+	end
+	
 	math.randomseed(Seed)
 	print(string.format("Seed: 0x%07X",Seed))
+	
 	require("/maps/Chars")
 	require("/Modules/house")
 	require("/maps/Maps")
