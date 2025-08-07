@@ -1,18 +1,46 @@
 Story = {}
 Story.vars = {}
+Story.beats = {}
 
-function Story.set(n,v)
-	Story.vars[n] = v or false
+function Story.set(n,v,r)
+	Story.vars[n] = {
+		v = v or false,
+		r = r or false,
+		e = true
+	}
+	
+	if not Story.vars[n].v then
+		return
+	end
+	
+	if not Story.beats[n] then
+		return
+	end
+	
+	if Story.vars[n].e then
+		Story.beats[n]()
+		Story.vars[n].e = false
+	else
+		if Story.vars[n].r then
+			Story.beats[n]()
+		end
+	end
+end
+
+function Story.setBeat(n,b)
+	Story.beats[n] = b or function() end
 end
 
 function Story.get(n)
-	return Story.vars[n] or false
+	return Story.vars[n].v or false
 end
 
 function Story.Save(file)
 	file:SetHeader()
 	for i,v in pairs(Story.vars) do
-		file:NewField(tostring(i),tostring(v))
+		file:NewField(tostring(i).."_v",tostring(v.v))
+		file:NewField(tostring(i).."_r",tostring(v.r))
+		file:NewField(tostring(i).."_e",tostring(v.e))
 	end
 end
 
@@ -22,7 +50,15 @@ function Story.Load(file)
 	if not e then
 		for i,v in pairs(tbl) do
 			print(i,v)
-			Story.vars[i] = v
+			Story.vars[i:sub(1,-3)] = Story.vars[i:sub(1,-3)] or {}
+			
+			if i:sub(-2) == "_v" then
+				Story.vars[i:sub(1,-3)].v = v
+			elseif i:sub(-2) == "_r" then
+				Story.vars[i:sub(1,-3)].r = v
+			elseif i:sub(-2) == "_e" then
+				Story.vars[i:sub(1,-3)].e = v
+			end
 		end
 	end
 end
