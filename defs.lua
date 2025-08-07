@@ -259,7 +259,8 @@ Intro = 0
 Load = 1
 WORLD = 2
 Cutscene = 3
-END = 4
+SAVE = 4
+END = 5
 
 local tileTicker = ticker.new()
 -- tiles

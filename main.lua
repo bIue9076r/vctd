@@ -29,6 +29,7 @@ require("defs")
 require("/States/Intro")
 require("/States/World")
 require("/States/Play")
+require("/States/Save")
 require("/States/End")
 
 SCREEN_X = love.graphics.getWidth()
@@ -87,6 +88,7 @@ STATE_KEYPRESSED = {
 	[Load] = Load_Keypressed,
 	[WORLD] = World.Keypressed,
 	[Cutscene] = Play.Keypressed,
+	[SAVE] = Save_Keypressed,
 	[END] = End_Keypressed,
 }
 
@@ -95,6 +97,7 @@ STATE_UPDATE = {
 	[Load] = Load_Update,
 	[WORLD] = World.Update,
 	[Cutscene] = Play.Update,
+	[SAVE] = Save_Update,
 	[END] = End_Update,
 }
 
@@ -103,6 +106,7 @@ STATE_DRAW = {
 	[Load] = Load_Draw,
 	[WORLD] = World.Draw,
 	[Cutscene] = Play.Draw,
+	[SAVE] = Save_Draw,
 	[END] = End_Draw,
 }
 
