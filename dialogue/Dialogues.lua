@@ -60,7 +60,7 @@ World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Hello Varisa.",Wilkie),
 	Text.new("Hey.",Varisa),
 	Text.new("What brings you over here today?.",Wilkie),
-	Text.new("Mrs. [] said you had her toolbox.",Varisa),
+	Text.new("Mrs. Fisher said you had her toolbox.",Varisa),
 	Text.new("She needs it back?",Wilkie),
 	Text.new("No no no.",Varisa),
 	Text.new("I just need something from it.",Varisa),

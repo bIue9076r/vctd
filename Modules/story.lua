@@ -38,9 +38,9 @@ end
 function Story.Save(file)
 	file:SetHeader()
 	for i,v in pairs(Story.vars) do
-		file:NewField(tostring(i).."_v",tostring(v.v))
-		file:NewField(tostring(i).."_r",tostring(v.r))
-		file:NewField(tostring(i).."_e",tostring(v.e))
+		file:NewField("story_"..tostring(i).."_v",tostring(v.v))
+		file:NewField("story_"..tostring(i).."_r",tostring(v.r))
+		file:NewField("story_"..tostring(i).."_e",tostring(v.e))
 	end
 end
 
@@ -49,15 +49,18 @@ function Story.Load(file)
 	print("Todo")
 	if not e then
 		for i,v in pairs(tbl) do
-			print(i,v)
-			Story.vars[i:sub(1,-3)] = Story.vars[i:sub(1,-3)] or {}
-			
-			if i:sub(-2) == "_v" then
-				Story.vars[i:sub(1,-3)].v = v
-			elseif i:sub(-2) == "_r" then
-				Story.vars[i:sub(1,-3)].r = v
-			elseif i:sub(-2) == "_e" then
-				Story.vars[i:sub(1,-3)].e = v
+			if i:sub(1,6) == "story_" then
+				i = i:sub(7)
+				print(i,v)
+				Story.vars[i:sub(1,-3)] = Story.vars[i:sub(1,-3)] or {}
+				
+				if i:sub(-2) == "_v" then
+					Story.vars[i:sub(1,-3)].v = v
+				elseif i:sub(-2) == "_r" then
+					Story.vars[i:sub(1,-3)].r = v
+				elseif i:sub(-2) == "_e" then
+					Story.vars[i:sub(1,-3)].e = v
+				end
 			end
 		end
 	end
