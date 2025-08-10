@@ -57,22 +57,22 @@ World.Dialogue[French][5] = Dialogue.new({
 require("/dialogue/French/general/mailboxes")
 
 World.Dialogue[French][18] = Dialogue.new({
-	Text.new("Hello Varisa.",Wilkie),
-	Text.new("Hey.",Varisa),
+	Text.new("Bonjour Varisa.",Wilkie),
+	Text.new("Salut.",Varisa),
 	Text.new("What brings you over here today?.",Wilkie),
-	Text.new("Mme. Fisher said you had her toolbox.",Varisa),
-	Text.new("She needs it back?",Wilkie),
-	Text.new("No no no.",Varisa),
-	Text.new("I just need something from it.",Varisa),
-	Text.new("Oh, Okay.",Wilkie),
-	Text.new("What do you need then?",Wilkie),
-	Text.new("Uhh....",Varisa),
-	Text.new("Can I get back to you?",Varisa),
-	Text.new("Sure take your time",Wilkie,nil,function()
+	Text.new("Mme. Fisher a dit que vous avez sa boîte à outils.",Varisa),
+	Text.new("Elle en a besoin?",Wilkie),
+	Text.new("Non non non.",Varisa),
+	Text.new("Je juste as besoin de quelques chose de lui.",Varisa),
+	Text.new("Ah, Ouais.",Wilkie),
+	Text.new("De quoi as-tu besoin alors?",Wilkie),
+	Text.new("Euhh....",Varisa),
+	Text.new("Peux-je revenir à toi?",Varisa),
+	Text.new("Ouais, prend ton temps",Wilkie,nil,function()
 		-- Change Rachel's Dialogue Number
-		print("Look, i'm doing something")
+		print("Look, i'm doing something but in french")
 	end),
-	Text.new("Sure take your time",Wilkie),
+	Text.new("Ouais, prend ton temps",Wilkie),
 },1)
 
 -- Todo: Story Flow chart / Dialogue but in French

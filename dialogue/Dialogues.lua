@@ -68,11 +68,11 @@ World.Dialogue[English][18] = Dialogue.new({
 	Text.new("What do you need then?",Wilkie),
 	Text.new("Uhh....",Varisa),
 	Text.new("Can I get back to you?",Varisa),
-	Text.new("Sure take your time",Wilkie,nil,function()
+	Text.new("Sure, take your time",Wilkie,nil,function()
 		-- Change Rachel's Dialogue Number
 		print("Look, i'm doing something")
 	end),
-	Text.new("Sure take your time",Wilkie),
+	Text.new("Sure, take your time",Wilkie),
 },1)
 
 -- Todo: Story Flow chart / Dialogue
