@@ -24,6 +24,7 @@ function File:SetHeader()
 	self.file = love.filesystem.newFile(self.path)
 	self.file:open("w")
 	self.file:write("HEADR 0x4A215A\n")
+	self.file:write("VERSN 0.1.0\n")
 	self.file:close()
 end
 
@@ -39,6 +40,11 @@ function File:GetHeader()
 	return tonumber(s:sub(7))
 end
 
+function File:GetVersion()
+	local s = (self.file:lines())()
+	return s:sub(7)
+end
+
 function File:Read()
 	self.file = love.filesystem.newFile(self.path)
 	local r = {}
@@ -47,6 +53,8 @@ function File:Read()
 		e = nil
 		self.file:open("r")
 		local T = self:GetHeader()
+		local V = self:GetVersion()
+		isVersionCompatible(V) -- Will cause a panic
 		if T == 0x4A215A then
 			for line in self.file:lines() do
 				if line:sub(1,5) == "FIELD" then
