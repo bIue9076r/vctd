@@ -26,6 +26,7 @@ require("/Modules/audio")
 require("/Modules/drawSprites")
 require("/Modules/Animate")
 require("/Modules/story")
+require("/beats/sbeats")
 require("defs")
 require("/States/Intro")
 require("/States/World")
@@ -59,6 +60,7 @@ Plr = {
 }
 
 require("items/guitar")
+require("items/guitar_rachel")
 --require("items/screwdriver")
 require("items/toolbox")
 Plr.inv:add(Guitar)

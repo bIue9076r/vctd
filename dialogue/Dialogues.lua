@@ -51,6 +51,9 @@ World.Dialogue[English][5] = Dialogue.new({
 	Text.new("Great.",Rachel),
 	Text.new("I need you to ask my mom for the toolbox.",Rachel),
 	Text.new("Alright.",Varisa),
+	Text.new("You got it?",Rachel,nil,function()
+		Story.set("Toolbox_Wilkie_1",true)
+	end),
 	Text.new("You got it?",Rachel),
 },1)
 
@@ -71,10 +74,7 @@ World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Sure, take your time",Wilkie,nil,function()
 		-- Change Rachel's Dialogue Number
 		print("Look, i'm doing something")
-		Story.set("Toolbox_Wilkie_1",true)
-		
-		-- Should be in it's own story beat
-		World.Map[1].npcs[2].i = 29
+		Story.set("Toolbox_Wilkie_2",true)
 	end),
 	Text.new("Sure, take your time",Wilkie),
 },1)
@@ -106,9 +106,6 @@ World.Dialogue[English][21] = Dialogue.new({
 	Text.new("You think?",Varisa),
 	Text.new("Here take this.",Jami,nil,function()
 		Story.set("Screw_Drive_Jami",true)
-		
-		-- Should be in it's own story beat
-		World.Map[1].npcs[2].i = 30
 	end), -- She gives some side quest item
 	Text.new("My appologies again.",Jami),
 },1)
