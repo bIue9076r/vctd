@@ -59,7 +59,7 @@ require("/dialogue/general/mailboxes")
 World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Hello Varisa.",Wilkie),
 	Text.new("Hey.",Varisa),
-	Text.new("What brings you over here today?.",Wilkie),
+	Text.new("What brings you over here today?",Wilkie),
 	Text.new("Mrs. Fisher said you had her toolbox.",Varisa),
 	Text.new("She needs it back?",Wilkie),
 	Text.new("No no no.",Varisa),
@@ -71,6 +71,10 @@ World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Sure, take your time",Wilkie,nil,function()
 		-- Change Rachel's Dialogue Number
 		print("Look, i'm doing something")
+		Story.set("Toolbox_Wilkie_1",true)
+		
+		-- Should be in it's own story beat
+		World.Map[1].npcs[2].i = 29
 	end),
 	Text.new("Sure, take your time",Wilkie),
 },1)
@@ -101,7 +105,10 @@ World.Dialogue[English][21] = Dialogue.new({
 	Text.new("I see that was a bit insensitive",Jami),
 	Text.new("You think?",Varisa),
 	Text.new("Here take this.",Jami,nil,function()
+		Story.set("Screw_Drive_Jami",true)
 		
+		-- Should be in it's own story beat
+		World.Map[1].npcs[2].i = 30
 	end), -- She gives some side quest item
 	Text.new("My appologies again.",Jami),
 },1)
@@ -139,3 +146,32 @@ World.Dialogue[English][27] = Dialogue.new({
 World.Dialogue[English][28] = Dialogue.new({
 	Text.new("Hello Varisa.",Brian),
 },1)
+
+World.Dialogue[English][29] = Dialogue.new({
+	Text.new("Did you get the toolbox?",Rachel),
+	Text.new("Wilkie's still using it.",Varisa),
+	Text.new("But he'll let us borrow the tool you need.",Varisa),
+	Text.new("Okay.",Rachel),
+	Text.new("Ask him for the screwdriver.",Rachel),
+	Text.new("Or better yet, take my guitar.",Rachel,nil,function()
+		World.Map[1].props[1].g = 1
+		Plr.inv:add(Rachel_Guitar_Broke)
+	end),
+	Text.new("You're the one thats gonna fix it anyway.",Rachel),
+	Text.new("I'm counting on you.",Rachel),
+},1)
+
+World.Dialogue[English][30] = Dialogue.new({
+	Text.new("Did you get the toolbox?",Rachel),
+	Text.new("No but our old math teacher gave me this.",Varisa),
+	Text.new("No way!",Rachel),
+	Text.new("That's exactly what I need!",Rachel),
+	Text.new("Well, that works I guess.",Varisa),
+	Text.new("Here, take my guitar.",Rachel,nil,function()
+		World.Map[1].props[1].g = 1
+		Plr.inv:add(Rachel_Guitar_Broke)
+	end),
+	Text.new("Now you can fix it.",Rachel),
+	Text.new("I'm counting on you.",Rachel),
+},1)
+

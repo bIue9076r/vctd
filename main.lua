@@ -50,9 +50,9 @@ end
 
 -- Player table
 Plr = {
-	x = 20,
+	x = 2,
 	y = 12,
-	tx = 20,
+	tx = 2,
 	ty = 12,
 	c = Varisa, -- Varisa
 	inv = ItemBag.new(),
