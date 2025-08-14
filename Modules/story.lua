@@ -32,7 +32,11 @@ function Story.setBeat(n,b)
 end
 
 function Story.get(n)
-	return Story.vars[n].v or false
+	if Story.vars[n] then
+		return Story.vars[n].v or false
+	else
+		return false
+	end
 end
 
 function Story.Save(file)

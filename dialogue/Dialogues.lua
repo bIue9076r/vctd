@@ -151,8 +151,7 @@ World.Dialogue[English][29] = Dialogue.new({
 	Text.new("Okay.",Rachel),
 	Text.new("Ask him for the screwdriver.",Rachel),
 	Text.new("Or better yet, take my guitar.",Rachel,nil,function()
-		World.Map[1].props[1].g = 1
-		Plr.inv:add(Rachel_Guitar_Broke)
+		Story.set("Rachel_Guitar_1",true)
 	end),
 	Text.new("You're the one thats gonna fix it anyway.",Rachel),
 	Text.new("I'm counting on you.",Rachel),
@@ -165,10 +164,47 @@ World.Dialogue[English][30] = Dialogue.new({
 	Text.new("That's exactly what I need!",Rachel),
 	Text.new("Well, that works I guess.",Varisa),
 	Text.new("Here, take my guitar.",Rachel,nil,function()
-		World.Map[1].props[1].g = 1
-		Plr.inv:add(Rachel_Guitar_Broke)
+		Story.set("Rachel_Guitar_1",true)
 	end),
 	Text.new("Now you can fix it.",Rachel),
 	Text.new("I'm counting on you.",Rachel),
 },1)
 
+World.Dialogue[English][31] = Dialogue.new({
+	Text.new("Did you get the toolbox?",Rachel),
+	Text.new("Wilkie's still using it.",Varisa),
+	Text.new("But he'll let us borrow the tool you need.",Varisa),
+	Text.new("Okay.",Rachel),
+	Text.new("Ask him for the screwdriver.",Rachel),
+	Text.new("Screwdriver?",Varisa),
+	Text.new("Yeah?",Varisa),
+	Text.new("Look what our old math teacher gave me.",Varisa),
+	Text.new("No way!",Rachel),
+	Text.new("That's exactly what I need!",Rachel),
+	Text.new("Well, that works I guess.",Varisa),
+	Text.new("Here, take my guitar.",Rachel,nil,function()
+		Story.set("Rachel_Guitar_1",true)
+	end),
+	Text.new("Now you can fix it.",Rachel),
+	Text.new("I'm counting on you.",Rachel),
+},1)
+
+World.Dialogue[English][32] = Dialogue.new({
+	Text.new("Hi Var!",Rachel),
+	Text.new("Hey",Varisa),
+	Text.new("You think you could stop by my house?",Rachel),
+	Text.new("Yeah, I could stop by.",Varisa),
+	Text.new("Great.",Rachel),
+	Text.new("I need you to ask my mom for the toolbox.",Rachel),
+	Text.new("Wait, what do you need from it?",Varisa),
+	Text.new("A screwdriver?",Rachel),
+	Text.new("Look what our old math teacher gave me.",Varisa),
+	Text.new("No way!",Rachel),
+	Text.new("That's exactly what I need!",Rachel),
+	Text.new("Well, that works I guess.",Varisa),
+	Text.new("Here, take my guitar.",Rachel,nil,function()
+		Story.set("Rachel_Guitar_1",true)
+	end),
+	Text.new("Now you can fix it.",Rachel),
+	Text.new("I'm counting on you.",Rachel),
+},1)
