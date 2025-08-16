@@ -24,7 +24,7 @@ function File:SetHeader()
 	self.file = love.filesystem.newFile(self.path)
 	self.file:open("w")
 	self.file:write("HEADR 0x4A215A\n")
-	self.file:write("VERSN 0.1.0\n")
+	self.file:write("VERSN 0.1\n")
 	self.file:close()
 end
 
@@ -41,7 +41,8 @@ function File:GetHeader()
 end
 
 function File:GetVersion()
-	local s = (self.file:lines())()
+	local f = self.file:lines(); f()
+	local s = f()
 	return s:sub(7)
 end
 

@@ -41,6 +41,7 @@ end
 
 function Story.Save(file)
 	file:SetHeader()
+	file:NewField("Seed",tostring(Seed or 0x27D410))
 	for i,v in pairs(Story.vars) do
 		file:NewField("story_"..tostring(i).."_v",tostring(v.v))
 		file:NewField("story_"..tostring(i).."_r",tostring(v.r))
@@ -53,6 +54,9 @@ function Story.Load(file)
 	print("Todo")
 	if not e then
 		for i,v in pairs(tbl) do
+			if i == "Seed" then
+				Seed = tonumber(v) or 0x27D410
+			end
 			if i:sub(1,6) == "story_" then
 				i = i:sub(7)
 				print(i,v)

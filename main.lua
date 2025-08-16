@@ -337,6 +337,9 @@ function love.load(arg)
 	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
 	love.window.setTitle(String.get(3))
 	
+	--local sf = File.new("/Save/.SaveFile")
+	--Story.Save(sf) -- test saving
+	
 	-- TODO: add a working save feature
 	Save = love.filesystem.getInfo("/Save/.SaveFile")
 	if not Save then
