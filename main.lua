@@ -75,7 +75,7 @@ end
 Map = MapObj.new()
 
 -- globals
-GameState = Cutscene
+GameState = SAVE
 DialogueBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
@@ -337,10 +337,6 @@ function love.load(arg)
 	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
 	love.window.setTitle(String.get(3))
 	
-	--local sf = File.new("/Save/.SaveFile")
-	--Story.Save(sf) -- test saving
-	
-	-- TODO: add a working save feature
 	Save = love.filesystem.getInfo("/Save/.SaveFile")
 	if not Save then
 		-- True Seeds 0x27D410, 0x2FAEBD, 0x84EEAA, 0xAF7BF3, 0x1136DF2, 0x124C879, 0x14335C4, 0x1F2414C, 0x22A817A, 0x259EB27
