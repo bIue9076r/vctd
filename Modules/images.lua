@@ -139,3 +139,4 @@ image.newImage("Bar_BL","/Assets/Bar_BL.png")
 image.newImage("Bar_BR","/Assets/Bar_BR.png")
 
 image.newImage("Map","/Assets/map.png")
+image.newImage("Save","/Assets/Save_state.png")

@@ -94,7 +94,7 @@ World.Dialogue[English][21] = Dialogue.new({
 	Text.new("For what?",Varisa),
 	Text.new("It's none of your buisness.",Jami),
 	Text.new("Okay, I guess...",Varisa),
-	Text.new("Though, have you seen Zoey around?",Varisa),
+	Text.new("Though, have you seen Karly around?",Varisa),
 	Text.new("She's still missing?",Jami),
 	Text.new("And still no leads?",Jami),
 	Text.new("yeah...",Varisa),

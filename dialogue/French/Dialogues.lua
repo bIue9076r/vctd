@@ -94,7 +94,7 @@ World.Dialogue[French][21] = Dialogue.new({
 	Text.new("Pourquoi?",Varisa),
 	Text.new("Ce sont pas tes affaires.",Jami),
 	Text.new("Ça va. je suppose...",Varisa),
-	Text.new("Cependant, avez-vous voir Zoey par ici?",Varisa),
+	Text.new("Cependant, avez-vous voir Karly par ici?",Varisa),
 	Text.new("Elle est absent toujours?",Jami),
 	Text.new("Et toujours pas d'indices?",Jami),
 	Text.new("ouais...",Varisa),

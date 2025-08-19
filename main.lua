@@ -354,7 +354,7 @@ function love.load(arg)
 	require("/maps/Maps")
 	require("/scenes/Scenes")
 	
-	muted = true
+	--muted = true
 	Play.scene = Play.Scenes[math.random(1,3)]
 	
 	local mods = love.filesystem.getInfo("/mods/")
@@ -473,7 +473,9 @@ function love.keypressed(key)
 end
 
 function love.draw()
-	daudio()
+	if not (GameState == SAVE) then
+		daudio()
+	end
 	local f = STATE_DRAW[GameState] or derror
 	if f then f() end
 	files.draw()
