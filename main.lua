@@ -75,7 +75,7 @@ end
 Map = MapObj.new()
 
 -- globals
-GameState = SAVE
+GameState = Cutscene
 DialogueBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
@@ -342,6 +342,7 @@ function love.load(arg)
 		-- True Seeds 0x27D410, 0x2FAEBD, 0x84EEAA, 0xAF7BF3, 0x1136DF2, 0x124C879, 0x14335C4, 0x1F2414C, 0x22A817A, 0x259EB27
 		Seed = tonumber(arg[1]) or math.random(0,0xFFFFFFF)
 	else
+		
 		local sf = File.new("/Save/.SaveFile")
 		Story.Load(sf)
 	end
@@ -354,8 +355,12 @@ function love.load(arg)
 	require("/maps/Maps")
 	require("/scenes/Scenes")
 	
-	--muted = true
+	muted = true
 	Play.scene = Play.Scenes[math.random(1,3)]
+	
+	if Save then
+		Play.scene.Next = SAVE
+	end
 	
 	local mods = love.filesystem.getInfo("/mods/")
 	if mods then

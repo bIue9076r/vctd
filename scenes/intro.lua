@@ -1,5 +1,6 @@
 Play.Scenes[1] = Scene.new(World.Map[1])
 Play.Scenes[1].tickGoal = 800
+Play.Scenes[1].Next = Intro
 Play.Scenes[1].Actors[1] = Actor.new(Karly,0,12)
 Play.Scenes[1].transition = function(self,t)
 	if(t < 200) then
@@ -31,7 +32,7 @@ Play.Scenes[1].transition = function(self,t)
 			bs = sound.getSound(SongListSelect(SongList))
 			song_silence = false
 		end
-		GameState = Intro
+		GameState = self.Next
 		Play.ticker:reset()
 	end
 end

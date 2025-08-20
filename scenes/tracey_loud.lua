@@ -1,5 +1,6 @@
 Play.Scenes[3] = Scene.new(World.Map[4])
 Play.Scenes[3].tickGoal = 800
+Play.Scenes[3].Next = Intro
 Play.Scenes[3].Hour = Noon
 Play.Scenes[3].Min = 0
 Play.Scenes[3].Actors[1] = Actor.new(Tracey,15.2,6.9)
@@ -54,7 +55,7 @@ Play.Scenes[3].transition = function(self,t)
 			bs = sound.getSound(SongListSelect(SongList))
 			song_silence = false
 		end
-		GameState = Intro
+		GameState = self.Next
 		Play.ticker:reset()
 	end
 end

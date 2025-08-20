@@ -62,7 +62,7 @@ Scene.dtbl = {
 }
 Scene.dticker = ticker.new()
 Scene.tickGoal = 0
-Scene.Next = 1 -- Map location
+Scene.Next = 1
 
 function Scene.new(m,g,t)
 	local tbl = {
