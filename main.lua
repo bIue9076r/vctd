@@ -362,6 +362,9 @@ function love.load(arg)
 		Play.scene.Next = SAVE
 	end
 	
+	Map = World.Map[1]
+	setPlr(1,12)
+	
 	local mods = love.filesystem.getInfo("/mods/")
 	if mods then
 		if mods.type == "directory" then

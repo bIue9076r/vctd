@@ -1,5 +1,6 @@
 -- Game Version
 VERSION = "0.1"
+CVERSION = "0.1"
 
 -- Char vars
 Varisa = 0x00 --\

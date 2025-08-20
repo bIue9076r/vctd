@@ -42,6 +42,7 @@ end
 function Story.Save(file)
 	file:SetHeader()
 	file:NewField("Seed",tostring(Seed or 0x27D410))
+	file:NewField("Language",tostring(Language or 1))
 	for i,v in pairs(Story.vars) do
 		file:NewField("story_"..tostring(i).."_v",tostring(v.v))
 		file:NewField("story_"..tostring(i).."_r",tostring(v.r))
