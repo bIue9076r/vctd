@@ -77,6 +77,25 @@ function File:Read()
 	return r, e
 end
 
+function File:Delete()
+	self.file = love.filesystem.newFile(self.path)
+	local r = {}
+	local e = "File Does Not Exist"
+	if self:Exists() then
+		e = nil
+		self.file:open("r")
+		local T = self:GetHeader()
+		local V = self:GetVersion()
+		if T == 0x4A215A then
+			for i,v in pairs(love.filesystem) do
+				love.filesystem.remove(self.path)
+			end
+		end	
+		self.file:close()
+	end
+	return r, e
+end
+
 function File:Log(...)
 	self.file = love.filesystem.newFile(self.path)
 	self.file:open("a")

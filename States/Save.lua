@@ -1,4 +1,5 @@
 Savesong = sound.getSound("Save")
+local savefile = File.new("/Save/.SaveFile")
 
 SaveLang = {
 	[English] = "English",
@@ -13,6 +14,38 @@ SaveConfirm_2 = ""
 
 SaveCon = false
 LoadCon = false
+DeleCon = false
+
+function Game_Save(file)
+	file:SetHeader()
+	file:NewField("Seed",tostring(Seed or 0x27D410))
+	file:NewField("Language",tostring(Language or 1))
+	Story.Save(file)
+	Plr.inv:save(file)
+end
+
+function Game_Load(file)
+	local tbl, e = file:Read()
+	if not e then
+		print("Todo: Game Load")
+		for i,v in pairs(tbl) do
+			if i == "Seed" then
+				Seed = tonumber(v) or 0x27D410
+			end
+			if i == "Language" then
+				Language = tonumber(v) or 1
+			end
+		end
+		
+		Story.Load(file)
+		Plr.inv:load(file)
+	end
+	return e
+end
+
+function Game_Delete(file)
+	file:Delete()
+end
 
 function Save_Draw()
 	if not muted then
@@ -106,22 +139,39 @@ function Save_Keypressed(key)
 			SaveConfirm_1 = ""
 			SaveConfirm_2 = ""
 			SaveCon = false
+			Game_Save(savefile)
 		else
 			SaveConfirm_1 = "Are you sure"
 			SaveConfirm_2 = "you want to save?"
 			SaveCon = true
 		end
 		LoadCon = false
+		DeleCon = false
 	elseif key == "l" then
 		if LoadCon then
 			SaveConfirm_1 = ""
 			SaveConfirm_2 = ""
 			LoadCon = false
+			Game_Load(savefile)
 		else
 			SaveConfirm_1 = "Are you sure"
 			SaveConfirm_2 = "you want to load?"
 			LoadCon = true
 		end
+		SaveCon = false
+		DeleCon = false
+	elseif key == "d" then
+		if DeleCon then
+			SaveConfirm_1 = ""
+			SaveConfirm_2 = ""
+			DeleCon = false
+			Game_Delete(savefile)
+		else
+			SaveConfirm_1 = "Are you sure"
+			SaveConfirm_2 = "you want to delete?"
+			DeleCon = true
+		end
+		LoadCon = false
 		SaveCon = false
 	elseif key == "return" or key == "q" then
 		Savesong:stop()
@@ -131,5 +181,6 @@ function Save_Keypressed(key)
 		SaveConfirm_2 = ""
 		LoadCon = false
 		SaveCon = false
+		DeleCon = false
 	end
 end

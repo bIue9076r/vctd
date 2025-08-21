@@ -40,9 +40,6 @@ function Story.get(n)
 end
 
 function Story.Save(file)
-	file:SetHeader()
-	file:NewField("Seed",tostring(Seed or 0x27D410))
-	file:NewField("Language",tostring(Language or 1))
 	for i,v in pairs(Story.vars) do
 		file:NewField("story_"..tostring(i).."_v",tostring(v.v))
 		file:NewField("story_"..tostring(i).."_r",tostring(v.r))
@@ -52,12 +49,9 @@ end
 
 function Story.Load(file)
 	local tbl, e = file:Read()
-	print("Todo")
+	print("Todo: Story Load")
 	if not e then
 		for i,v in pairs(tbl) do
-			if i == "Seed" then
-				Seed = tonumber(v) or 0x27D410
-			end
 			if i:sub(1,6) == "story_" then
 				i = i:sub(7)
 				print(i,v)

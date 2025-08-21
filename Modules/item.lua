@@ -66,12 +66,12 @@ function ItemBag:add(itm)
 	table.insert(self.items,itm)
 end
 
-function ItemBag.save()
-	
+function ItemBag:save(file)
+	file:NewField("item_VarisaGuitar")
 end
 
-function ItemBag.load()
-	
+function ItemBag:load()
+	-- things i guess
 end
 
 function ItemBag:draw()

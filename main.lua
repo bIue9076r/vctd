@@ -344,7 +344,7 @@ function love.load(arg)
 	else
 		
 		local sf = File.new("/Save/.SaveFile")
-		Story.Load(sf)
+		Game_Load(sf)
 	end
 	
 	math.randomseed(Seed)
