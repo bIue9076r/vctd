@@ -1,6 +1,8 @@
 Savesong = sound.getSound("Save")
 local savefile = File.new("/Save/.SaveFile")
 
+Save_LastState = WORLD
+
 SaveLang = {
 	[English] = "English",
 	[French] = "French",
@@ -21,6 +23,9 @@ function Game_Save(file)
 	file:NewField("Seed",tostring(Seed or 0x27D410))
 	file:NewField("Language",tostring(Language or 1))
 	Story.Save(file)
+	file:NewField("Px",tostring(Plr.x or 0))
+	file:NewField("Py",tostring(Plr.y or 0))
+	file:NewField("Map",tostring(MaptoN() or 1))
 	Plr.inv:save(file)
 end
 
@@ -34,6 +39,20 @@ function Game_Load(file)
 			end
 			if i == "Language" then
 				Language = tonumber(v) or 1
+			end
+			
+			if i == "Px" then
+				Plr.x = tonumber(v) or 0
+				Plr.tx = Plr.x
+			end
+			
+			if i == "Py" then
+				Plr.y = tonumber(v) or 0
+				Plr.ty = Plr.y
+			end
+			
+			if i == "Map" then
+				Map = World.Map[tonumber(v) or 1]
 			end
 		end
 		
@@ -175,7 +194,7 @@ function Save_Keypressed(key)
 		SaveCon = false
 	elseif key == "return" or key == "q" then
 		Savesong:stop()
-		GameState = WORLD
+		GameState = Save_LastState
 	else
 		SaveConfirm_1 = ""
 		SaveConfirm_2 = ""

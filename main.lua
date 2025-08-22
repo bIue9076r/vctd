@@ -128,6 +128,14 @@ function LocaleChange()
 	love.window.setTitle(String.get(3))
 end
 
+function MaptoN()
+	for i,v in pairs(World.Map) do
+		if Map == v then
+			return v
+		end
+	end
+end
+
 -- (K)eypressed Control Ops
 function kctrlOps(key)
 	if key == "lctrl" then
@@ -157,6 +165,10 @@ function kctrlOps(key)
 			if bs then
 				bs:stop()
 			end
+		elseif key == "=" and not (GameState == Cutscene) and not (GameState == SAVE) then
+			love.audio.stop()
+			Save_LastState = GameState
+			GameState = SAVE
 		elseif key == "z" then
 			love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
 			love.resize()
@@ -176,13 +188,9 @@ function kctrlOps(key)
 					"c = "..Plr.c.."("..Names[Plr.c]..")\n}"
 			)
 		elseif key == "b" then
-			for i,v in pairs(World.Map) do
-				if Map == v then
-					print(
-						"Map = "..tostring(i)
-					)
-				end
-			end
+			print(
+				"Map = "..MaptoN()
+			)
 		end
 		Crtlcheck = false
 	end
