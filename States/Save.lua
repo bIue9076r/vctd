@@ -58,6 +58,15 @@ function Game_Load(file)
 		
 		Story.Load(file)
 		Plr.inv:load(file)
+		
+		package.loaded["/maps/Chars"] = nil
+		package.loaded["/Modules/house"] = nil
+		package.loaded["/maps/Maps"] = nil
+		package.loaded["/scenes/Scenes"] = nil
+		require("/maps/Chars")
+		require("/Modules/house")
+		require("/maps/Maps")
+		require("/scenes/Scenes")
 	end
 	return e
 end
