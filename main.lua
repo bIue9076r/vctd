@@ -61,7 +61,7 @@ Plr = {
 
 require("items/guitar")
 require("items/guitar_rachel")
---require("items/screwdriver")
+require("items/screwdriver")
 require("items/toolbox")
 Plr.inv:add(Guitar)
 
