@@ -10,10 +10,13 @@ end)
 Story.setBeat("Screw_Drive_Jami",function()
 	if Story.get("Toolbox_Wilkie_2") then
 		World.Map[1].npcs[2].i = 31
+		Plr.inv:add(Item_Screwdriver)
 	elseif Story.get("Toolbox_Wilkie_1") then
 		World.Map[1].npcs[2].i = 30
+		Plr.inv:add(Item_Screwdriver)
 	elseif not Story.get("Rachel_Guitar_1") then
 		World.Map[1].npcs[2].i = 32
+		Plr.inv:add(Item_Screwdriver)
 	end
 end)
 
