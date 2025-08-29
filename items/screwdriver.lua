@@ -1,4 +1,4 @@
-Item_Screwdriver = Item.new(Toolbox)
+Item_Screwdriver = Item.new(Screwdriver)
 Item_Screwdriver.name = "Screwdriver"
 Item_Screwdriver.added = false
 

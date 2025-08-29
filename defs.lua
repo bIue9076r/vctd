@@ -84,6 +84,7 @@ Mailbox = 0x4D
 Sale_Sign_1 = 0x4E
 Sale_Sign_2 = 0x4F
 Toolbox = 0x50
+Screwdriver = 0x51
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -166,6 +167,7 @@ CtS = {
 	[Sale_Sign_1] = "Sale_Sign_1",
 	[Sale_Sign_2] = "Sale_Sign_2",
 	[Toolbox] = "Toolbox",
+	[Screwdriver] = "Screwdriver",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -248,6 +250,7 @@ Names = {
 	[Sale_Sign_1] = "Sale Sign 1",
 	[Sale_Sign_2] = "Sale Sign 2",
 	[Toolbox] = "Toolbox",
+	[Screwdriver] = "Screwdriver",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }
