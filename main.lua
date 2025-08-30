@@ -480,8 +480,8 @@ function love.update(dt)
 	local f = STATE_UPDATE[GameState]
 	if f then f(dt) end
 	files.update(dt)
-	if dt < (1/30) then
-		love.timer.sleep(1/30 - dt)
+	if dt < 1/40 then
+		love.timer.sleep(1/40 - dt)
 	end
 end
 

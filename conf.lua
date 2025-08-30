@@ -13,4 +13,5 @@ function love.conf(t)
 	t.modules.timer = true
 	t.modules.window = true
 	t.modules.image = true
+	t.console = true
 end
