@@ -1,8 +1,8 @@
 Days = {}
 Days.days = {}
 
-function Days.newDay(f)
-	Days.days = f or function()
+function Days.newDay(d,f)
+	Days.days[d] = f or function()
 		-- nothing
 	end
 end

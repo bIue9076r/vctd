@@ -25,8 +25,10 @@ require("/Modules/song")
 require("/Modules/audio")
 require("/Modules/drawSprites")
 require("/Modules/Animate")
+require("/Modules/days")
 require("/Modules/story")
 require("/beats/sbeats")
+require("/days/ldays")
 require("defs")
 require("/States/Intro")
 require("/States/World")
@@ -76,6 +78,7 @@ Map = MapObj.new()
 
 -- globals
 GameState = Cutscene
+GameDay = 1
 DialogueBuffer = 50
 Ending = 0	--	good ending
 IsTalking = false
@@ -88,7 +91,7 @@ HitBoxes = false
 
 STATE_KEYPRESSED = {
 	[Intro] = Intro_Keypressed,
-	[Load] = Load_Keypressed,
+	--[Load] = Load_Keypressed,
 	[WORLD] = World.Keypressed,
 	[Cutscene] = Play.Keypressed,
 	[SAVE] = Save_Keypressed,
@@ -97,7 +100,7 @@ STATE_KEYPRESSED = {
 
 STATE_UPDATE = {
 	[Intro] = Intro_Update,
-	[Load] = Load_Update,
+	--[Load] = Load_Update,
 	[WORLD] = World.Update,
 	[Cutscene] = Play.Update,
 	[SAVE] = Save_Update,
@@ -106,7 +109,7 @@ STATE_UPDATE = {
 
 STATE_DRAW = {
 	[Intro] = Intro_Draw,
-	[Load] = Load_Draw,
+	--[Load] = Load_Draw,
 	[WORLD] = World.Draw,
 	[Cutscene] = Play.Draw,
 	[SAVE] = Save_Draw,

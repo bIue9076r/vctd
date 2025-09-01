@@ -37,8 +37,13 @@ function Game_Load(file)
 			if i == "Seed" then
 				Seed = tonumber(v) or 0x27D410
 			end
+
 			if i == "Language" then
 				Language = tonumber(v) or 1
+			end
+
+			if i == "Day" then
+				GameDay = tonumber(v) or 1
 			end
 			
 			if i == "Px" then
@@ -67,6 +72,7 @@ function Game_Load(file)
 		
 		Story.Load(file)
 		Plr.inv:load(file)
+		Days.loadDay(GameDay)
 	end
 	return e
 end
