@@ -9,13 +9,13 @@ end
 function addSeanIn2(Map)
 	World.Map[Map]:addNpc(Npc.new(15.2,10.2,Ella,27,0,function()
 	
-	end))
+	end,"Ella"))
 end
 
 function addSeanIn3(Map)
 	World.Map[Map]:addNpc(Npc.new(12.9,7.7,Sean,26,0,function()
 	
-	end))
+	end,"Sean"))
 end
 
 function addSeanIn4(Map)

@@ -6,7 +6,7 @@ Prop.p = 0
 Prop.b = 0
 Prop.g = 0
 
-function Prop.new(x,y,c,p,b,g,o)
+function Prop.new(x,y,c,p,b,g,o,f)
 	local tbl = {
 		x = x or 0,
 		y = y or 0,
@@ -14,6 +14,7 @@ function Prop.new(x,y,c,p,b,g,o)
 		p = p or 0,		-- Pass Through
 		b = b or 0,		-- Background
 		g = g or 0,		-- Ghost
+		f = f or "";	-- Find Value
 		onTimeChange = o or function()
 			
 		end,

@@ -13,7 +13,7 @@ end
 function addMollieIn3(Map)
 	World.Map[Map]:addNpc(Npc.new(10.0,12.7,Mollie,22,0,function()
 	
-	end))
+	end,"Mollie"))
 end
 
 function addMollieIn4(Map)

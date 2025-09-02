@@ -5,7 +5,7 @@ end
 function addFredrickIn1(Map)
 	World.Map[Map]:addNpc(Npc.new(3.2,1.0,Fredrick,24,0,function()
 	
-	end))
+	end,"Fredrick"))
 end
 
 function addFredrickIn2(Map)

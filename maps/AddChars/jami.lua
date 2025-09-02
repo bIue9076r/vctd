@@ -1,7 +1,7 @@
 function addJamiOut1(Map)
 	World.Map[Map]:addNpc(Npc.new(12.0,8.3,Jami,21,0,function()
 	
-	end))
+	end,"Jami"))
 end
 
 function addJamiIn1(Map)

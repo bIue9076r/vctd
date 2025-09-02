@@ -5,13 +5,14 @@ Npc.c = -1
 Npc.i = 0
 Npc.g = 0
 
-function Npc.new(x,y,c,i,g,o)
+function Npc.new(x,y,c,i,g,o,f)
 	local tbl = {
 		x = x or 0,
 		y = y or 0,
 		c = c or -1,	-- Char
 		i = i or 0,		-- Index
 		g = g or 0,		-- Ghost
+		f = f or "",	-- Find Value
 		onTimeChange = o or function()
 			
 		end,

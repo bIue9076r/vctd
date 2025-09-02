@@ -73,4 +73,4 @@ end))
 
 World.Map[3]:addNpc(Npc.new(13,6.5,Zoey,2,0,function()
 	
-end))
+end,"Zoey"))
