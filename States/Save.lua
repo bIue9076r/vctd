@@ -127,7 +127,7 @@ function Save_Draw()
 	)
 	
 	love.graphics.print(
-		{{0,0,0}," "},
+		{{0,0,0},"Day: "..tostring(GameDay)},
 		((3*SCREEN_X)/5),(SCREEN_Y/2),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)

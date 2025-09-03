@@ -14,7 +14,7 @@ function Prop.new(x,y,c,p,b,g,o,f)
 		p = p or 0,		-- Pass Through
 		b = b or 0,		-- Background
 		g = g or 0,		-- Ghost
-		f = f or "";	-- Find Value
+		f = f or nil;	-- Find Value
 		onTimeChange = o or function()
 			
 		end,

@@ -12,7 +12,7 @@ function Npc.new(x,y,c,i,g,o,f)
 		c = c or -1,	-- Char
 		i = i or 0,		-- Index
 		g = g or 0,		-- Ghost
-		f = f or "",	-- Find Value
+		f = f or nil;	-- Find Value
 		onTimeChange = o or function()
 			
 		end,
