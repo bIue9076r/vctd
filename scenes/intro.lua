@@ -12,7 +12,7 @@ Play.Scenes[1].transition = function(self,t)
 				v = "Normal",
 			}
 		end
-		self.Actors[1].x = Scene.lerp(0,21,t/200)
+		self.Actors[1].x = Scene.lerp(-1,22,t/200)
 		if t == 199 then
 			self.Actors[1] = nil
 		end

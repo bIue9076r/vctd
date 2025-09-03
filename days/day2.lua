@@ -10,4 +10,30 @@ Days.newDay(2,function()
 			v.g = 1
 		end
 	end
+
+	local I
+	for i,v in ipairs(House.house) do
+		if v.HouseHold == 5 then
+			I = 13 + 6*(i - 1)
+		end
+
+		if v.HouseHold == 1 then
+			v.isOpen = false
+		end
+	end
+
+	for i,v in pairs(World.Map[I].npcs) do
+		if v.f then
+			v.g = 1
+		end
+	end
+
+	for i,v in pairs(World.Map[25].npcs) do
+		if v.f then
+			v.g = 0
+		end
+	end
+
+	Map = World.Map[25]
+	setPlr(1.7,8.7)
 end)
