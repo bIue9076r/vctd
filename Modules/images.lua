@@ -74,7 +74,7 @@ image.newImage("Mailbox","Assets/mailbox.png")
 image.newImage("Sale_Sign_1","Assets/sale_sign_1.png")
 image.newImage("Sale_Sign_2","Assets/sale_sign_2.png")
 image.newImage("Toolbox","Assets/toolbox.png")
-image.newImage("Screwdriver","Assets/Screwdriver.png")
+image.newImage("Screwdriver","Assets/screwdriver.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")
