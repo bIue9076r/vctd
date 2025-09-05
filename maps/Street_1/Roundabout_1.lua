@@ -63,18 +63,18 @@ World.Map[25]:addProp(Prop.new(17.1,12,Warning_M))
 World.Map[25]:addProp(Prop.new(17.1,13,Warning_B))
 
 
-World.Map[25]:addNpc(Npc.new(1.7,7.2,Tracey,0,1,function()
+World.Map[25]:addNpc(Npc.new(1.7,7.2,Tracey,33,1,function()
 	
 end,"Tracey"))
 
-World.Map[25]:addNpc(Npc.new(13.0,10.2,Fredrick,0,1,function()
+World.Map[25]:addNpc(Npc.new(13.0,10.2,Fredrick,34,1,function()
 	
 end,"Fredrick"))
 
-World.Map[25]:addNpc(Npc.new(14.5,10.2,Wilkie,0,1,function()
+World.Map[25]:addNpc(Npc.new(14.5,10.2,Wilkie,35,1,function()
 	
 end,"Wilkie"))
 
-World.Map[25]:addNpc(Npc.new(13.5,5.0,Mollie,0,1,function()
+World.Map[25]:addNpc(Npc.new(13.5,5.0,Mollie,36,1,function()
 	
 end,"Mollie"))

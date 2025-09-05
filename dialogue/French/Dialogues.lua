@@ -208,3 +208,20 @@ World.Dialogue[French][32] = Dialogue.new({
 	Text.new("Maintenant tu peux le réparer.",Rachel),
 	Text.new("Je t'attends.",Rachel),
 },1)
+
+World.Dialogue[French][33] = Dialogue.new({
+	Text.new("Hi Var!",Tracey),
+	Text.new("Hey",Varisa),
+},1)
+
+World.Dialogue[French][34] = Dialogue.new({
+	Text.new("...",Fredrick),
+},1)
+
+World.Dialogue[French][35] = Dialogue.new({
+	Text.new("...",Wilkie),
+},1)
+
+World.Dialogue[French][36] = Dialogue.new({
+	Text.new("Eww",Mollie),
+},1)

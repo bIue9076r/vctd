@@ -31,6 +31,13 @@ Days.newDay(2,function()
 	for i,v in pairs(World.Map[25].npcs) do
 		if v.f then
 			v.g = 0
+			if v.f == "Wilkie" and Story.get() then
+				if Story.get("Toolbox_Wilkie_1") then
+					
+				elseif Story.get("Toolbox_Wilkie_2") then
+					
+				end
+			end
 		end
 	end
 

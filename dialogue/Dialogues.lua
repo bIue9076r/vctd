@@ -208,3 +208,20 @@ World.Dialogue[English][32] = Dialogue.new({
 	Text.new("Now you can fix it.",Rachel),
 	Text.new("I'm counting on you.",Rachel),
 },1)
+
+World.Dialogue[English][33] = Dialogue.new({
+	Text.new("Hi Var!",Tracey),
+	Text.new("Hey",Varisa),
+},1)
+
+World.Dialogue[English][34] = Dialogue.new({
+	Text.new("...",Fredrick),
+},1)
+
+World.Dialogue[English][35] = Dialogue.new({
+	Text.new("...",Wilkie),
+},1)
+
+World.Dialogue[English][36] = Dialogue.new({
+	Text.new("Eww",Mollie),
+},1)
