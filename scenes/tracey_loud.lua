@@ -20,17 +20,23 @@ Play.Scenes[3].Actors[12] = Actor.new(Bed_1_4,21,3)
 Play.Scenes[3].Actors[13] = Actor.new(Bed_1_5,20,4)
 Play.Scenes[3].Actors[14] = Actor.new(Bed_1_6,21,4)
 
+Play.Scenes[3].Actors[15] = Actor.new(Zoey,8.5,6.8)
+
 local sbs
 Play.Scenes[3].transition = function(self,t)
 	if(t < 2) then
+		self.Actors[15].x = -8.5
 		sbs = sound.getSound("EpT3_D")
 		if Play.unmuteAfter then
 			sbs:seek(15)
 			sbs:play()
 		end
+	elseif(t < 600) then
+		self.Actors[1].y = 6.9 + math.abs(math.sin(math.pi * ((t*4)/100))/6)
 	elseif(t == 600) then
 		sbs:stop()
-		Play.Scenes[3].Actors[7] = Actor.new(Zoey,8.5,6.8)
+		self.Actors[15].x = 8.5
+		self.Actors[15].y = 6.8
 		self.IsTalking = true
 		self.dtbl = {
 			s = String.get(5),

@@ -22,6 +22,7 @@ Play.Scenes[2].Actors[15] = Actor.new(Lassie,9.8,12.1)
 
 local sbs_1, sbs_2, sbs_3, sbs_4
 Play.Scenes[2].transition = function(self,t)
+	self.Actors[8].y = 4.7 + math.abs(math.sin(math.pi * ((t*4)/100))/6)
 	if(t < 2) then
 		local n = tostring(math.random(1,7))
 		sbs_1 = sound.getSound("EpT"..(n).."_B")

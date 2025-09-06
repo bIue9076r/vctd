@@ -210,8 +210,17 @@ World.Dialogue[English][32] = Dialogue.new({
 },1)
 
 World.Dialogue[English][33] = Dialogue.new({
-	Text.new("Hi Var!",Tracey),
-	Text.new("Hey",Varisa),
+	Text.new("There's a lot more people than usual.",Tracey),
+	Text.new("You could say.",Varisa),
+	Text.new("What's Mollie doing at the park",Tracey),
+	Text.new("Playing in the sand?",Varisa),
+	Text.new("Isn't she like what, 82?",Tracey),
+	Text.new("27.",Varisa),
+	Text.new("Wouldn't books be more her style?",Tracey),
+	Text.new("English teachers can do other things...",Varisa),
+	Text.new("Like?",Tracey),
+	Text.new("Playing in the sand.",Varisa),
+	Text.new("...",Tracey),
 },1)
 
 World.Dialogue[English][34] = Dialogue.new({
@@ -223,5 +232,62 @@ World.Dialogue[English][35] = Dialogue.new({
 },1)
 
 World.Dialogue[English][36] = Dialogue.new({
-	Text.new("Eww",Mollie),
+	Text.new("Eww...",Mollie),
+	Text.new("What?",Varisa),
+	Text.new("You and your stupid friend are at park",Mollie),
+	Text.new("We just got here...",Varisa),
+	Text.new("I know.",Mollie),
+	Text.new("Don't you have a mother to be looking for?",Mollie),
+	Text.new("Yeah why?",Varisa),
+	Text.new("So you can quit bothering me twerp.",Mollie),
+	Text.new("You know, you never told me why you hate me?",Varisa),
+	Text.new("Well, isn't it obvious? You suck!",Mollie),
+	Text.new("You're a terrible student!",Mollie),
+	Text.new("You and that punk friend of yours!",Mollie),
+	Text.new("I'm surprised they even let you graduate!",Mollie),
+	Text.new("You never paid attention in my class!",Mollie),
+	Text.new("You always...",Mollie),
+	Text.new("Well now you've got me rambling.",Mollie),
+	Text.new("But like I'm out of your hair now?",Varisa),
+	Text.new("So? You aren't right now.",Mollie),
+	Text.new("Well the case is special",Varisa),
+	Text.new("I guess...",Mollie),
+	Text.new("So what are you doing in the sand?",Varisa),
+	Text.new("I dunno, something distract me from them...",Mollie),
+	Text.new("Who?",Varisa),
+	Text.new("Sean and that... bitch.",Mollie),
+	Text.new("She's not a teacher?",Varisa),
+	Text.new("Yeah, she's just some random chick",Mollie),
+	Text.new("Intresting",Varisa),
+	Text.new("It makes me so angry seeing them together.",Mollie,nil,function()
+		World.AfterEffect = function ()
+			GameState = Cutscene
+			Play.scene = Play.Scenes[5]
+			Play.scene.Next = WORLD
+			print(Play.Scenes[2].Next)
+		end
+	end),
+},1)
+
+World.Dialogue[English][37] = Dialogue.new({
+	Text.new("Eww...",Mollie),
+	Text.new("What?",Varisa),
+	Text.new("You and your stupid friend are ruining my park time",Mollie),
+	Text.new("We just got here...",Varisa),
+	Text.new("I know.",Mollie),
+	Text.new("Don't you have a dead mother to be looking for?",Mollie),
+	Text.new("Yeah why?",Varisa),
+	Text.new("So you can quit bothering me twerp.",Mollie),
+	Text.new("You know, you never told me why you hate me?",Varisa),
+	Text.new("Well, isn't it obvious? You suck!",Mollie),
+	Text.new("You're a terrible student!",Mollie),
+	Text.new("You and that punk friend of yours!",Mollie),
+	Text.new("I'm surprised they even let you graduate!",Mollie),
+	Text.new("You never paid attention in my class!",Mollie),
+	Text.new("You always...",Mollie),
+	Text.new("Well now you've got me rambling.",Mollie),
+	Text.new("But like I'm out of your hair now?",Varisa),
+	Text.new("So? You aren't right now.",Mollie),
+	Text.new("Well the case is special",Varisa),
+	Text.new("I guess...",Mollie),
 },1)

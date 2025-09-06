@@ -165,6 +165,7 @@ function kctrlOps(key)
 			HitBoxes = not(HitBoxes)
 		elseif key == "m" and not (GameState == Cutscene) then
 			muted = not(muted)
+			Play.unmuteAfter = false
 			if bs then
 				bs:stop()
 			end
