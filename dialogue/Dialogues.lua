@@ -267,6 +267,26 @@ World.Dialogue[English][36] = Dialogue.new({
 			print(Play.Scenes[2].Next)
 		end
 	end),
+	Text.new("Uh...",Varisa),
+	Text.new("What?",Mollie),
+	Text.new("Don't tell me you watched the WHOLE time.",Varisa),
+	Text.new("Well how else would I have found out?",Mollie),
+	Text.new("So, he dumped you to get with your best friend.",Varisa),
+	Text.new("FORMER!",Mollie),
+	Text.new("Okay former best friend.",Varisa),
+	Text.new("And you're going to help me break them up.",Mollie),
+	Text.new("What?",Varisa),
+	Text.new("Yes, what's the matter?",Mollie),
+	Text.new("I dunno, that seems like quite a leap.",Varisa),
+	Text.new("Surely, you could eaisly find someone else.",Varisa),
+	Text.new("Sean's not just anyone, okay.",Mollie),
+	Text.new("So are you going to do it or not?",Mollie),
+	Text.new("It would make me like you better if you did.",Mollie),
+	Text.new("I guess, I'll do it.",Varisa,nil,function()
+		Story.set("Mollie_Breakup_1",true)
+	end),
+	Text.new("Great, now get on with it, twerp",Mollie),
+	Text.new("You done, twerp?",Mollie),
 },1)
 
 World.Dialogue[English][37] = Dialogue.new({

@@ -41,6 +41,12 @@ Days.newDay(2,function()
 		end
 	end
 
+	for i,v in pairs(World.Map[25].props) do
+		if v.f then
+			v.g = 0
+		end
+	end
+
 	Map = World.Map[25]
 	setPlr(1.7,8.7)
 	Time.setHour(Noon)
