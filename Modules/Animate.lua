@@ -63,6 +63,7 @@ Scene.dtbl = {
 Scene.dticker = ticker.new()
 Scene.tickGoal = 0
 Scene.Next = 1
+Scene.LastDialogueBuffer = 50
 
 function Scene.new(m,g,t)
 	local tbl = {
