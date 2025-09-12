@@ -72,6 +72,8 @@ Play.Scenes[5].transition = function(self,t)
 				v = "Normal",
 			}
 		end
+	elseif(t < 1120) then
+		
 	elseif(t < self.tickGoal) then
 		local _t = (t - 1120) / 100
 		Play.Scenes[5].Actors[3].x = Scene.lerp(16.6,18.2,_t)

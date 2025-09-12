@@ -250,18 +250,21 @@ World.Dialogue[English][36] = Dialogue.new({
 	Text.new("Well now you've got me rambling.",Mollie),
 	Text.new("But you don't even teach me anymore?",Varisa),
 	Text.new("So why are you bothering me right now?",Mollie),
-	Text.new("I need your help.",Varisa),
+	Text.new("Cause I need your help.",Varisa),
 	Text.new("I suppose I could help...",Mollie),
-	Text.new("You owe me big time after this.",Mollie),
+	Text.new("But you owe me big time after this.",Mollie),
 	Text.new("Sure.",Varisa),
 	Text.new("So what are you doing in the sand?",Varisa),
 	Text.new("I dunno, something distract me from them...",Mollie),
 	Text.new("Who?",Varisa),
 	Text.new("Sean and that... bitch.",Mollie),
-	Text.new("The one with the pink hair?",Varisa),
-	Text.new("Yes",Mollie),
-	Text.new("Intresting",Varisa),
-	Text.new("It makes me so angry seeing them together.",Mollie,nil,function()
+	Text.new("You have to be specific, I know several.",Varisa),
+	Text.new("You know that one with the pink hair?",Mollie),
+	Text.new("Yeah, I think?",Varisa),
+	Text.new("Isn't she a teacher?",Varisa),
+	Text.new("She couldn't teach even if she wanted to.",Mollie),
+	Text.new("Intresting...",Varisa),
+	Text.new("It just makes me so angry seeing them together.",Mollie,nil,function()
 		World.AfterEffect = function ()
 			muted = true
 			if bs then
