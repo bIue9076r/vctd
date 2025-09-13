@@ -224,17 +224,27 @@ World.Dialogue[English][33] = Dialogue.new({
 },1)
 
 World.Dialogue[English][34] = Dialogue.new({
+	Text.new("Stay away from me.",Fredrick),
+	Text.new("Geez, sorry.",Varisa),
 	Text.new("...",Fredrick),
 },1)
 
 World.Dialogue[English][35] = Dialogue.new({
-	Text.new("...",Wilkie),
+	Text.new("Hey Varisa",Wilkie),
+	Text.new("Hey.",Varisa),
+	Text.new("What are you doing at the park today?",Wilkie),
+	Text.new("Looking for my mother.",Varisa),
+	Text.new("Oh dear, she's still missing?",Wilkie),
+	Text.new("Yeah...",Varisa),
+	Text.new("I hope you find her soon.",Wilkie),
+	Text.new("I'm trying...",Varisa),
+	Text.new("If you need anything, I'm right here.",Wilkie),
 },1)
 
 World.Dialogue[English][36] = Dialogue.new({
 	Text.new("Eww...",Mollie),
 	Text.new("What?",Varisa),
-	Text.new("You and your stupid friend are at park",Mollie),
+	Text.new("You and your stupid friend are at park.",Mollie),
 	Text.new("We just got here...",Varisa),
 	Text.new("I know.",Mollie),
 	Text.new("Don't you have a mother to be looking for?",Mollie),
@@ -273,7 +283,6 @@ World.Dialogue[English][36] = Dialogue.new({
 			GameState = Cutscene
 			Play.scene = Play.Scenes[5]
 			Play.scene.Next = WORLD
-			print(Play.Scenes[2].Next)
 		end
 	end),
 	Text.new("Uh...",Varisa),
@@ -303,15 +312,18 @@ World.Dialogue[English][36] = Dialogue.new({
 World.Dialogue[English][37] = Dialogue.new({
 	Text.new("Eww...",Mollie),
 	Text.new("What?",Varisa),
-	Text.new("You and your stupid friend are at park",Mollie),
+	Text.new("You and your stupid friend are at park.",Mollie),
 	Text.new("We just got here...",Varisa),
 	Text.new("I know.",Mollie),
 	Text.new("Don't you have a dead mother to be looking for?",Mollie),
-	Text.new("Yeah... wait?",Varisa),
+	Text.new("Yeah............",Varisa),
+	Text.new("Wait?",Varisa),
+	Text.new("What did you say?",Varisa),
 	Text.new("It's been like what, 2 days.",Mollie),
 	Text.new("There's a killer on the loose.",Mollie),
 	Text.new("Put two and two, together.",Mollie),
 	Text.new("What the fuck is wrong with you?!",Varisa),
+	Text.new("I'm just telling you the truth.",Mollie),
 	Text.new("Maybe being an asshole is just natural to you.",Varisa),
 	Text.new("Fuck off.",Mollie),
 },1)

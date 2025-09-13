@@ -38,6 +38,14 @@ Days.newDay(2,function()
 
 				end
 			end
+
+			if v.f == "Mollie" then
+				for i = 1,10 do
+					if House.house[i].HouseHold == 7 and House.house[i].isKiller then
+						v.i = 37
+					end
+				end
+			end
 		end
 	end
 
