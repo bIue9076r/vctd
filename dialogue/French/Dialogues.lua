@@ -210,18 +210,120 @@ World.Dialogue[French][32] = Dialogue.new({
 },1)
 
 World.Dialogue[French][33] = Dialogue.new({
-	Text.new("Hi Var!",Tracey),
-	Text.new("Hey",Varisa),
+	Text.new("There's a lot more people than usual.",Tracey),
+	Text.new("You could say.",Varisa),
+	Text.new("What's Mollie doing at the park",Tracey),
+	Text.new("Playing in the sand?",Varisa),
+	Text.new("Isn't she like what, 82?",Tracey),
+	Text.new("27.",Varisa),
+	Text.new("Wouldn't books be more her style?",Tracey),
+	Text.new("French teachers can do other things...",Varisa),
+	Text.new("Like?",Tracey),
+	Text.new("Playing in the sand.",Varisa),
+	Text.new("...",Tracey),
 },1)
 
 World.Dialogue[French][34] = Dialogue.new({
+	Text.new("Stay away from me.",Fredrick),
+	Text.new("Geez, sorry.",Varisa),
 	Text.new("...",Fredrick),
 },1)
 
 World.Dialogue[French][35] = Dialogue.new({
-	Text.new("...",Wilkie),
+	Text.new("Hey Varisa",Wilkie),
+	Text.new("Hey.",Varisa),
+	Text.new("What are you doing at the park today?",Wilkie),
+	Text.new("Looking for my mother.",Varisa),
+	Text.new("Oh dear, she's still missing?",Wilkie),
+	Text.new("Yeah...",Varisa),
+	Text.new("I hope you find her soon.",Wilkie),
+	Text.new("I'm trying...",Varisa),
+	Text.new("If you need anything, I'm right here.",Wilkie),
 },1)
 
 World.Dialogue[French][36] = Dialogue.new({
-	Text.new("Eww",Mollie),
+	Text.new("Eww...",Mollie),
+	Text.new("What?",Varisa),
+	Text.new("You and your stupid friend are at park.",Mollie),
+	Text.new("We just got here...",Varisa),
+	Text.new("I know.",Mollie),
+	Text.new("Don't you have a mother to be looking for?",Mollie),
+	Text.new("Yeah why?",Varisa),
+	Text.new("So you can quit bothering me, twerp.",Mollie),
+	Text.new("Why do you hate me so much?",Varisa),
+	Text.new("Well, isn't it obvious? You suck!",Mollie),
+	Text.new("You're a terrible student!",Mollie),
+	Text.new("You and that punk friend of yours!",Mollie),
+	Text.new("I'm surprised you even graduated!",Mollie),
+	Text.new("You never paid attention in my class!",Mollie),
+	Text.new("You always...",Mollie),
+	Text.new("Well now you've got me rambling.",Mollie),
+	Text.new("But you don't even teach me anymore?",Varisa),
+	Text.new("So why are you bothering me right now?",Mollie),
+	Text.new("Cause I need your help.",Varisa),
+	Text.new("I suppose I could help...",Mollie),
+	Text.new("But you owe me big time after this.",Mollie),
+	Text.new("Sure.",Varisa),
+	Text.new("So what are you doing in the sand?",Varisa),
+	Text.new("I dunno, something distract me from them...",Mollie),
+	Text.new("Who?",Varisa),
+	Text.new("Sean and that... bitch.",Mollie),
+	Text.new("You have to be specific, I know several.",Varisa),
+	Text.new("You know that one with the pink hair?",Mollie),
+	Text.new("Yeah, I think?",Varisa),
+	Text.new("Isn't she a teacher?",Varisa),
+	Text.new("She couldn't teach even if she wanted to.",Mollie),
+	Text.new("Intresting...",Varisa),
+	Text.new("It just makes me so angry seeing them together.",Mollie,nil,function()
+		World.AfterEffect = function ()
+			muted = true
+			if bs then
+				bs:stop()
+			end
+			GameState = Cutscene
+			Play.scene = Play.Scenes[5]
+			Play.scene.Next = WORLD
+		end
+	end),
+	Text.new("Uh...",Varisa),
+	Text.new("What?",Mollie),
+	Text.new("Don't tell me you watched them the WHOLE time.",Varisa),
+	Text.new("Well how else would I have found out?",Mollie),
+	Text.new("So, lets get this straight.",Varisa),
+	Text.new("He dumped you to get with your best friend.",Varisa),
+	Text.new("FORMER!",Mollie),
+	Text.new("Okay, former best friend.",Varisa),
+	Text.new("And you're going to help me break them up.",Mollie),
+	Text.new("What?",Varisa),
+	Text.new("Yes, what's the matter?",Mollie),
+	Text.new("I dunno, that seems like quite a leap.",Varisa),
+	Text.new("You just said you'd help me earlier",Mollie),
+	Text.new("Surely, you could eaisly find someone else.",Varisa),
+	Text.new("Sean's not just anyone, okay.",Mollie),
+	Text.new("So are you going to do it or not?",Mollie),
+	Text.new("It would make me like you better if you did.",Mollie),
+	Text.new("I guess, I'll do it.",Varisa,nil,function()
+		Story.set("Mollie_Breakup_1",true)
+	end),
+	Text.new("Great, now get on with it, twerp",Mollie),
+	Text.new("You done, twerp?",Mollie),
+},1)
+
+World.Dialogue[French][37] = Dialogue.new({
+	Text.new("Eww...",Mollie),
+	Text.new("What?",Varisa),
+	Text.new("You and your stupid friend are at park.",Mollie),
+	Text.new("We just got here...",Varisa),
+	Text.new("I know.",Mollie),
+	Text.new("Don't you have a dead mother to be looking for?",Mollie),
+	Text.new("Yeah............",Varisa),
+	Text.new("Wait?",Varisa),
+	Text.new("What did you say?",Varisa),
+	Text.new("It's been like what, 2 days.",Mollie),
+	Text.new("There's a killer on the loose.",Mollie),
+	Text.new("Put two and two, together.",Mollie),
+	Text.new("What the fuck is wrong with you?!",Varisa),
+	Text.new("I'm just telling you the truth.",Mollie),
+	Text.new("Maybe being an asshole is just natural to you.",Varisa),
+	Text.new("Fuck off.",Mollie),
 },1)
