@@ -25,3 +25,11 @@ Story.setBeat("Rachel_Guitar_1",function()
 	Plr.inv:add(Rachel_Guitar_Broke)
 	--World.Map[1].npcs[2].i = 29
 end)
+
+Story.setBeat("Mollie_Breakup_1",function()
+	for i = 1,10 do
+		if House.house[i].HouseHold == 2 then
+			House.house[i].isOpen = true
+		end
+	end
+end)
