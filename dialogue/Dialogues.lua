@@ -133,11 +133,12 @@ World.Dialogue[English][25] = Dialogue.new({
 },1)
 
 World.Dialogue[English][26] = Dialogue.new({
-	Text.new("Hello Varisa.",Sean),
+	Text.new("Varisa?",Sean),
+	Text.new("Hey...",Varisa),
 },1)
 
 World.Dialogue[English][27] = Dialogue.new({
-	Text.new("Hello Varisa.",Ella),
+	Text.new("Who the hell are you?",Ella),
 },1)
 
 World.Dialogue[English][28] = Dialogue.new({
@@ -261,7 +262,9 @@ World.Dialogue[English][36] = Dialogue.new({
 	Text.new("But you don't even teach me anymore?",Varisa),
 	Text.new("So why are you bothering me right now?",Mollie),
 	Text.new("Cause I need your help.",Varisa),
-	Text.new("I suppose I could help...",Mollie),
+	Text.new("You need my help?",Mollie),
+	Text.new("Out of everyone in town?",Mollie),
+	Text.new("I suppose I could help you...",Mollie),
 	Text.new("But you owe me big time after this.",Mollie),
 	Text.new("Sure.",Varisa),
 	Text.new("So what are you doing in the sand?",Varisa),
