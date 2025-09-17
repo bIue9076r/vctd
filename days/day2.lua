@@ -14,7 +14,7 @@ Days.newDay(2,function()
 	local I
 	for i,v in ipairs(House.house) do
 		if v.HouseHold == 5 then
-			I = 13 + 6*(i - 1)
+			I = Families.HouseMap[i]
 		end
 
 		if v.HouseHold == 1 then

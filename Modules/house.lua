@@ -86,6 +86,19 @@ Families.add = {
 	[10] = function() end,
 }
 
+Families.HouseMap = {
+	[1] = 13,
+	[2] = 19,
+	[3] = 31,
+	[4] = 37,
+	[5] = 43,
+	[6] = 49,
+	[7] = 55,
+	[8] = 61,
+	[9] = 67,
+	[10] = 73,
+}
+
 HouseHolds = Range.parse("1~10")
 Killers = {1,0,0}
 randomizeTbl(HouseHolds)
