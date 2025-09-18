@@ -300,10 +300,13 @@ World.Dialogue[French][36] = Dialogue.new({
 	Text.new("Yes, what's the matter?",Mollie),
 	Text.new("I dunno, that seems like quite a leap.",Varisa),
 	Text.new("You just said you'd help me earlier",Mollie),
-	Text.new("Surely, you could eaisly find someone else.",Varisa),
-	Text.new("Sean's not just anyone, okay.",Mollie),
-	Text.new("So are you going to do it or not?",Mollie),
-	Text.new("It would make me like you better if you did.",Mollie),
+	Text.new("How am I supposed to do that?",Varisa),
+	Text.new("Well they're not home right now.",Mollie),
+	Text.new("Sean's definitly cheating on her.",Mollie),
+	Text.new("Or she's cheating on him.",Mollie),
+	Text.new("Now, I still have one of his spare keys.",Mollie),
+	Text.new("So you're going find something damming in his house.",Mollie),
+	Text.new("Then bring it back to me.",Mollie),
 	Text.new("I guess, I'll do it.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_1",true)
 	end),
