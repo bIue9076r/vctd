@@ -25,6 +25,27 @@ function World.doTalk(key)
 	)
 end
 
+function World.endTalk()
+	-- stop talking
+	Voices[World.dtbl.v]:pause()
+	Voices[World.dtbl.v]:seek(0)
+	World.dtbl = nil
+	IsTalking = false
+	World.dticker:reset()
+	if World.ChangeMap then
+		Map = World.NextMap
+		Time.changed()
+		World.NextMap = nil
+		World.ChangeMap = false
+	end
+	if World.AfterEffect then
+		World.AfterEffect()
+		World.AfterEffect = function()
+				
+		end
+	end
+end
+
 World.Map = {}
 World.NextMap = {}
 World.ChangeMap = false
@@ -183,6 +204,10 @@ function World.Keypressed(key)
 			if (Plr.inv.visible) then
 				Plr.inv.visible = false
 			end
+		end
+	else
+		if key == "e" then
+			World.endTalk()
 		end
 	end
 end

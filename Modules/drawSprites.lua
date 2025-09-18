@@ -184,24 +184,9 @@ function drawDialogue()
 		if dt < (sl + DialogueBuffer) then
 			World.dticker()
 		else
-			-- stop talking
+			-- End Voice
 			Voices[World.dtbl.v]:pause()
 			Voices[World.dtbl.v]:seek(0)
-			World.dtbl = nil
-			IsTalking = false
-			World.dticker:reset()
-			if World.ChangeMap then
-				Map = World.NextMap
-				Time.changed()
-				World.NextMap = nil
-				World.ChangeMap = false
-			end
-			if World.AfterEffect then
-				World.AfterEffect()
-				World.AfterEffect = function()
-					
-				end
-			end
 		end
 	end
 end

@@ -12,9 +12,14 @@ Days.newDay(2,function()
 	end
 
 	local I
+	local I2
 	for i,v in ipairs(House.house) do
 		if v.HouseHold == 5 then
 			I = Families.HouseMap[i]
+		end
+
+		if v.HouseHold == 2 then
+			I2 = Families.HouseMap[i]
 		end
 
 		if v.HouseHold == 1 then
@@ -23,6 +28,18 @@ Days.newDay(2,function()
 	end
 
 	for i,v in pairs(World.Map[I].npcs) do
+		if v.f then
+			v.g = 1
+		end
+	end
+	
+	for i,v in pairs(World.Map[I2 + 2].npcs) do
+		if v.f then
+			v.g = 1
+		end
+	end
+
+	for i,v in pairs(World.Map[I2 + 3].npcs) do
 		if v.f then
 			v.g = 1
 		end
