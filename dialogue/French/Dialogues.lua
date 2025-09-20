@@ -1,5 +1,9 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-1] = Dialogue.new({
+	Text.new("Je peux pas utiliser ce.",Varisa),
+},0)
+
 World.Dialogue[French][0] = Dialogue.new({
 	Text.new("Ils sont ne dire pas trop.",Varisa),
 	Text.new("Leur dialogue pourrait être détruite.",Varisa),
@@ -133,11 +137,12 @@ World.Dialogue[French][25] = Dialogue.new({
 },1)
 
 World.Dialogue[French][26] = Dialogue.new({
-	Text.new("Salut Varisa.",Sean),
+	Text.new("Varisa?",Sean),
+	Text.new("Salut...",Varisa),
 },1)
 
 World.Dialogue[French][27] = Dialogue.new({
-	Text.new("Salut Varisa.",Ella),
+	Text.new("Qui es-tu merde?",Ella),
 },1)
 
 World.Dialogue[French][28] = Dialogue.new({
@@ -305,7 +310,7 @@ World.Dialogue[French][36] = Dialogue.new({
 	Text.new("Sean's definitly cheating on her.",Mollie),
 	Text.new("Or she's cheating on him.",Mollie),
 	Text.new("Now, I still have one of his spare keys.",Mollie),
-	Text.new("So you're going find something damming in his house.",Mollie),
+	Text.new("So you're going find proof in his house.",Mollie),
 	Text.new("Then bring it back to me.",Mollie),
 	Text.new("I guess, I'll do it.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_1",true)

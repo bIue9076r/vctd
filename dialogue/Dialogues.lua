@@ -1,5 +1,9 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-1] = Dialogue.new({
+	Text.new("I can't use this.",Varisa),
+},0)
+
 World.Dialogue[English][0] = Dialogue.new({
 	Text.new("They're not saying much.",Varisa),
 	Text.new("Their Dialogue might be broken.",Varisa),
@@ -306,7 +310,7 @@ World.Dialogue[English][36] = Dialogue.new({
 	Text.new("Sean's definitly cheating on her.",Mollie),
 	Text.new("Or she's cheating on him.",Mollie),
 	Text.new("Now, I still have one of his spare keys.",Mollie),
-	Text.new("So you're going find something damming in his house.",Mollie),
+	Text.new("So you're going find proof in his house.",Mollie),
 	Text.new("Then bring it back to me.",Mollie),
 	Text.new("I guess, I'll do it.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_1",true)
