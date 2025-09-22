@@ -88,6 +88,7 @@ String.NewLocale(Language)
 -- debug variables
 DrawCoords = false
 HitBoxes = false
+FmovePlr = false
 
 STATE_KEYPRESSED = {
 	[Intro] = Intro_Keypressed,
@@ -191,6 +192,18 @@ function kctrlOps(key)
 					"ty = "..Plr.ty..",\n\t"..
 					"c = "..Plr.c.."("..Names[Plr.c]..")\n}"
 			)
+		elseif key == "f" then
+			FmovePlr = not(FmovePlr)
+		elseif key == "k" then
+			Plr.c = Plr.c + 1
+			if Plr.c > LastChar then
+				Plr.c = Varisa
+			end
+		elseif key == "j" then
+			Plr.c = Plr.c - 1
+			if Plr.c < 0x00 then
+				Plr.c = LastChar
+			end
 		elseif key == "b" then
 			print(
 				"Map = "..MaptoN()
@@ -283,6 +296,15 @@ function dctrlOps()
 			SCREEN_X*psw,
 			SCREEN_Y*psh
 		)
+	end
+	if FmovePlr then
+		local x = love.mouse.getX()
+		local y = love.mouse.getY()
+
+		local wx = ((x/SCREEN_X)*600 - 25)/25
+		local wy = ((y/SCREEN_Y)*400 - 25)/25
+
+		setPlr(wx,wy)
 	end
 end
 

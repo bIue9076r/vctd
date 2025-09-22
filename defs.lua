@@ -90,6 +90,8 @@ Ella_sand = 0x52
 ERROBJ = 0xFF
 Interaction = 0x1FF
 
+LastChar = Ella_sand
+
 -- Char to Sprite
 CtS = {
 	[Varisa] = "Varisa",

@@ -1,5 +1,9 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-2] = Dialogue.new({
+	Text.new("Il n'y a rien ici.",Varisa),
+},0)
+
 World.Dialogue[French][-1] = Dialogue.new({
 	Text.new("Je peux pas utiliser ce.",Varisa),
 },0)
