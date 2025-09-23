@@ -31,7 +31,7 @@ function addSeanIn3(Map)
 		
 	end))
 
-	World.Map[Map]:addNpc(Npc.new(15.1,9.0,Interaction,-1,0,function()
+	World.Map[Map]:addNpc(Npc.new(15.7,9.0,Interaction,-1,0,function()
 		
 	end))
 end
