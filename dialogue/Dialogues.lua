@@ -1,5 +1,27 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-6] = Dialogue.new({
+	Text.new("There's a code in this box.",Varisa,nil,function()
+		Story.set("Mollie_Breakup_2",true)
+	end),
+	Text.new("There's a code in this box.",Varisa),
+},0)
+
+World.Dialogue[English][-5] = Dialogue.new({
+	Text.new("There's nothing in this box.",Varisa),
+},0)
+
+World.Dialogue[English][-4] = Dialogue.new({
+	Text.new("There's food in here.",Varisa,nil,function()
+		-- give random food
+	end),
+	Text.new("There's food in here.",Varisa),
+},0)
+
+World.Dialogue[English][-3] = Dialogue.new({
+	Text.new("It's locked, I need a code.",Varisa),
+},0)
+
 World.Dialogue[English][-2] = Dialogue.new({
 	Text.new("There's nothing here.",Varisa),
 },0)
