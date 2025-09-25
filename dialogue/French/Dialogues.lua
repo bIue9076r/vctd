@@ -1,5 +1,9 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-7] = Dialogue.new({
+	Text.new("That's too disgusting to touch.",Varisa),
+},0)
+
 World.Dialogue[French][-6] = Dialogue.new({
 	Text.new("There's a code in this box.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_2",true)

@@ -1,5 +1,9 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-7] = Dialogue.new({
+	Text.new("That's too disgusting to touch.",Varisa),
+},0)
+
 World.Dialogue[English][-6] = Dialogue.new({
 	Text.new("There's a code in this box.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_2",true)
@@ -184,7 +188,7 @@ World.Dialogue[English][29] = Dialogue.new({
 	Text.new("Or better yet, take my guitar.",Rachel,nil,function()
 		Story.set("Rachel_Guitar_1",true)
 	end),
-	Text.new("You're the one thats gonna fix it anyway.",Rachel),
+	Text.new("You're the one that's gonna fix it anyway.",Rachel),
 	Text.new("I'm counting on you.",Rachel),
 },1)
 

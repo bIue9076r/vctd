@@ -3,11 +3,11 @@ function addSeanOut1(Map)
 end
 
 function addSeanIn1(Map)
-	World.Map[Map]:addNpc(Npc.new(21,9.45,Interaction,-1,0,function()
+	World.Map[Map]:addNpc(Npc.new(21,9.45,Interaction,-3,0,function()
 		
-	end))
+	end,"Computer"))
 
-	World.Map[Map]:addNpc(Npc.new(2.5,0.0,Interaction,-1,0,function()
+	World.Map[Map]:addNpc(Npc.new(2.5,0.0,Interaction,-4,0,function()
 		
 	end))
 end
@@ -23,21 +23,21 @@ function addSeanIn3(Map)
 	
 	end,"Sean"))
 
-	World.Map[Map]:addNpc(Npc.new(17.5,5.4,Interaction,-1,0,function()
+	World.Map[Map]:addNpc(Npc.new(17.5,5.4,Interaction,-5,0,function()
 		
 	end))
 
-	World.Map[Map]:addNpc(Npc.new(11.5, 7.5,Interaction,-1,0,function()
+	World.Map[Map]:addNpc(Npc.new(11.5, 7.5,Interaction,-5,0,function()
 		
 	end))
 
-	World.Map[Map]:addNpc(Npc.new(15.7,9.0,Interaction,-1,0,function()
+	World.Map[Map]:addNpc(Npc.new(15.7,9.0,Interaction,-6,0,function()
 		
 	end))
 end
 
 function addSeanIn4(Map)
-	World.Map[Map]:addNpc(Npc.new(12.9,2.7,Interaction,-1,0,function()
+	World.Map[Map]:addNpc(Npc.new(12.9,2.7,Interaction,-7,0,function()
 		
 	end))
 end
