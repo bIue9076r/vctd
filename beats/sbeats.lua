@@ -33,3 +33,11 @@ Story.setBeat("Mollie_Breakup_1",function()
 		end
 	end
 end)
+
+Story.setBeat("Mollie_Breakup_2",function()
+	for i = 1,10 do
+		if House.house[i].HouseHold == 2 then
+			
+		end
+	end
+end)
