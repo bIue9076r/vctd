@@ -42,3 +42,7 @@ Story.setBeat("Mollie_Breakup_2",function()
 		end
 	end
 end)
+
+Story.setBeat("Mollie_Breakup_3",function()
+	
+end)

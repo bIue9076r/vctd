@@ -1,7 +1,14 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-9] = Dialogue.new({
+	Text.new("It's an engagement ring?",Varisa,nil,function()
+		Story.set("Mollie_Breakup_3",true)
+	end),
+	Text.new("It's an engagement ring?",Varisa),
+},0)
+
 World.Dialogue[English][-8] = Dialogue.new({
-	Text.new("The evidence is in the bookshelf.",Varisa),
+	Text.new("There's something in the bookshelf.",Varisa),
 },0)
 
 World.Dialogue[English][-7] = Dialogue.new({
