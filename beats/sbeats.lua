@@ -44,5 +44,10 @@ Story.setBeat("Mollie_Breakup_2",function()
 end)
 
 Story.setBeat("Mollie_Breakup_3",function()
-	
+	for i = 1,10 do
+		if House.house[i].HouseHold == 2 then
+			local I = Families.HouseMap[i]
+			World.Map[I + 1].npcs[3].i = -9
+		end
+	end
 end)

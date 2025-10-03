@@ -10,6 +10,10 @@ function addSeanIn1(Map)
 	World.Map[Map]:addNpc(Npc.new(2.5,0.0,Interaction,-4,0,function()
 		
 	end))
+
+	World.Map[Map]:addNpc(Npc.new(18.3,4.36,Interaction,-2,0,function()
+		
+	end,"Books"))
 end
 
 function addSeanIn2(Map)
