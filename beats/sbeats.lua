@@ -51,3 +51,15 @@ Story.setBeat("Mollie_Breakup_3",function()
 		end
 	end
 end)
+
+Story.setBeat("Mollie_Breakup_4",function()
+	for i,v in pairs(World.Map[25].npcs) do
+		if v.f == "Mollie" then
+			for i = 1,10 do
+				if House.house[i].HouseHold == 7 and not(House.house[i].isKiller) then
+					v.i = 38
+				end
+			end
+		end
+	end
+end)
