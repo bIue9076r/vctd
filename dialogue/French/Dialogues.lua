@@ -381,3 +381,16 @@ World.Dialogue[French][37] = Dialogue.new({
 	Text.new("Maybe being an asshole is just natural to you.",Varisa),
 	Text.new("Fuck off.",Mollie),
 },1)
+
+World.Dialogue[French][38] = Dialogue.new({
+	Text.new("You done, twerp?",Mollie),
+	Text.new("Yep.",Varisa),
+	Text.new("What did you find?",Mollie),
+	Text.new("An engagement ring.",Varisa),
+	Text.new("Seriously?",Mollie),
+	Text.new("Yeah.",Varisa),
+	Text.new("Screw me I guess.",Mollie),
+	Text.new("You could try therapy.",Varisa),
+	Text.new("...",Mollie),
+	Text.new("I guess...",Mollie),
+},1)
