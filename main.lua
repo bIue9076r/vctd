@@ -494,8 +494,6 @@ function love.load(arg)
 			print("Error: Mod directory is a file")
 		end
 	end
-
-	Days.loadDay(2)
 end
 
 function love.resize()

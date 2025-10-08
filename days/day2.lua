@@ -78,5 +78,5 @@ Days.newDay(2,function()
 	Mood.set(-4)
 
 	GameState = Cutscene
-	--Play.scene = Play.Scenes[4]
+	Play.scene = Play.Scenes[4]
 end)
