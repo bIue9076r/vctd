@@ -1,6 +1,6 @@
 Play.Scenes[4] = Scene.new(World.Map[25])
 Play.Scenes[4].tickGoal = 1200
-Play.Scenes[4].Next = Intro
+Play.Scenes[4].Next = WORLD
 Play.Scenes[4].Hour = Noon
 Play.Scenes[4].Min = 0
 Play.Scenes[4].Actors[1] = Actor.new(Sand_BR,10.8,2.9-1)

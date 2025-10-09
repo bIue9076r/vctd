@@ -10,6 +10,7 @@ end
 function Days.loadDay(d)
 	local f = Days.days[d]
 	if f then
+		GameDay = d
 		f()
 	end
 end
