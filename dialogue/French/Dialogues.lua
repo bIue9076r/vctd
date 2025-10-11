@@ -1,5 +1,15 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-10] = Dialogue.new({
+	Text.new("Next Day?",Varisa),
+	Text.new("Are you sure?",Varisa),
+	Text.new("Zzzz...",Varisa,nil,function()
+		World.AfterEffect = function()
+			Days.loadDay(GameDay + 1)
+		end
+	end),
+},0)
+
 World.Dialogue[French][-9] = Dialogue.new({
 	Text.new("It's an engagement ring?",Varisa,nil,function()
 		Story.set("Mollie_Breakup_4",true)
