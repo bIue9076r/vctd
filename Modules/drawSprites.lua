@@ -85,6 +85,17 @@ function drawSprites()
 	love.graphics.setColor(1,1,1)
 end
 
+function drawSpritesNoTint()
+	local Cx = Plr.x
+	local Cy = Plr.y
+	
+	drawBackTiles()
+	drawBackProps()
+	drawChars(Cx,Cy)
+	drawForeProps()
+	drawForeTiles()
+end
+
 function drawChars(Cx,Cy)
 	local Tx = (SCREEN_X/24)
 	local Ty = (SCREEN_Y/16)

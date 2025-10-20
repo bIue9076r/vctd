@@ -1,7 +1,7 @@
 Savesong = sound.getSound("Save")
 local savefile = File.new("/Save/.SaveFile")
 
-Save_LastState = WORLD
+Save_LastState = Fade
 
 SaveLang = {
 	[English] = "English",

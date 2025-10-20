@@ -32,6 +32,6 @@ end
 
 function Intro_Keypressed(key)
 	if key == "return" then
-		GameState = WORLD
+		GameState = Fade
 	end
 end
