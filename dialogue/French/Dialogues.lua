@@ -1,8 +1,8 @@
 World.Dialogue[French] = {}
 
 World.Dialogue[French][-10] = Dialogue.new({
-	Text.new("Next Day?",Varisa),
-	Text.new("Are you sure?",Varisa),
+	Text.new("Après Jour?",Varisa),
+	Text.new("Êtes-vous sûr?",Varisa),
 	Text.new("Zzzz...",Varisa,nil,function()
 		World.AfterEffect = function()
 			Days.loadDay(GameDay + 1)
