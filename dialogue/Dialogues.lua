@@ -89,9 +89,9 @@ World.Dialogue[English][2] = Dialogue.new({
 
 World.Dialogue[English][3] = Dialogue.new({
 	Text.new("This Just in!",TV_B),
-	Text.new("5 Confirmed Deaths in relation to Serial Killer",TV_B),
+	Text.new("Still one person missing",TV_B),
 	Text.new("Experts Weigh in...",TV_B),
-	Text.new("Are they a satanist?",TV_B),
+	Text.new("Are satanists responsible?",TV_B),
 	Text.new("*Random Gibberish*",TV_B),
 },1)
 
@@ -403,4 +403,11 @@ World.Dialogue[English][38] = Dialogue.new({
 	Text.new("You could try therapy.",Varisa),
 	Text.new("...",Mollie),
 	Text.new("I guess...",Mollie),
+},1)
+
+World.Dialogue[English][39] = Dialogue.new({
+	Text.new("This just in...",TV_B),
+	Text.new("Police are now offering $5000...",TV_B),
+	Text.new("To anyone with information on Mrs. Carmel.",TV_B),
+	Text.new("*Random Gibberish*",TV_B),
 },1)
