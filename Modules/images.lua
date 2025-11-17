@@ -82,6 +82,7 @@ image.newImage("Interaction","Assets/interact.png")
 image.newImage(1,"Assets/error_obj.png")
 
 image.newImage("Void","/Assets/void.png")
+image.newImage("Empty","/Assets/empty.png")
 image.newImage("AntiVoid","/Assets/AntiVoid.png")
 image.newImage("Grass_1","/Assets/grassblock_1.png")
 image.newImage("Grass_2","/Assets/grassblock_2.png")
