@@ -63,3 +63,11 @@ Story.setBeat("Mollie_Breakup_4",function()
 		end
 	end
 end)
+
+Story.setBeat("Karina_1",function()
+	
+end)
+
+Story.setBeat("Brian_1", function()
+	
+end)
