@@ -68,6 +68,6 @@ Story.setBeat("Karina_1",function()
 	
 end)
 
-Story.setBeat("Brian_1", function()
+Story.setBeat("Brian_Trash_1", function()
 	
 end)
