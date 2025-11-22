@@ -62,6 +62,17 @@ World.Map[25]:addProp(Prop.new(17.1,11,Warning_T))
 World.Map[25]:addProp(Prop.new(17.1,12,Warning_M))
 World.Map[25]:addProp(Prop.new(17.1,13,Warning_B))
 
+-- Day 1
+
+World.Map[25]:addNpc(Npc.new(13.5,5.0,Sean,40,0,function()
+	
+end,"Sean"))
+
+World.Map[25]:addNpc(Npc.new(15.0,5.0,Ella,41,0,function()
+	
+end,"Ella"))
+
+-- Day 2
 
 World.Map[25]:addNpc(Npc.new(1.7,7.2,Tracey,33,1,function()
 	

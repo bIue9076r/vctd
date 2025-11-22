@@ -425,3 +425,11 @@ World.Dialogue[English][39] = Dialogue.new({
 	Text.new("To anyone with information on Mrs. Carmel.",TV_B),
 	Text.new("*Random Gibberish*",TV_B),
 },1)
+
+World.Dialogue[English][40] = Dialogue.new({
+	Text.new("Hey...",Varisa),
+},1)
+
+World.Dialogue[English][41] = Dialogue.new({
+	Text.new("Hey...",Varisa),
+},1)
