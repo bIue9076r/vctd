@@ -63,6 +63,14 @@ Days.newDay(2,function()
 					end
 				end
 			end
+
+			if v.f == "Sean" then
+				v.g = 1
+			end
+
+			if v.f == "Ella" then
+				v.g = 1
+			end
 		end
 	end
 

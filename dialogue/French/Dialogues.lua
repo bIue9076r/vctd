@@ -5,6 +5,7 @@ World.Dialogue[French][-10] = Dialogue.new({
 	Text.new("Êtes-vous sûr?",Varisa),
 	Text.new("Zzzz...",Varisa,nil,function()
 		World.AfterEffect = function()
+			bs:stop()
 			Days.loadDay(GameDay + 1)
 		end
 	end),
@@ -410,4 +411,12 @@ World.Dialogue[French][39] = Dialogue.new({
 	Text.new("Police are now offering $5000...",TV_B),
 	Text.new("To anyone with information on Mrs. Carmel.",TV_B),
 	Text.new("*Random Gibberish*",TV_B),
+},1)
+
+World.Dialogue[French][40] = Dialogue.new({
+	Text.new("Salut...",Varisa),
+},1)
+
+World.Dialogue[French][41] = Dialogue.new({
+	Text.new("Salut...",Varisa),
 },1)

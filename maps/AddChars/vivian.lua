@@ -1,5 +1,5 @@
 function addVivianOut1(Map)
-	World.Map[Map]:addNpc(Npc.new(18.7,9.4,Brian,28,0,function()
+	World.Map[Map]:addNpc(Npc.new(15.8,8.5,Brian,28,0,function()
 	
 	end,"Brian"))
 end
