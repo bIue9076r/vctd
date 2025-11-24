@@ -1,5 +1,11 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-11] = Dialogue.new({
+	Text.new("It's trash",Varisa,nil,function()
+		Story.set("Brian_Trash_2",true)
+	end),
+},0)
+
 World.Dialogue[French][-10] = Dialogue.new({
 	Text.new("Après Jour?",Varisa),
 	Text.new("Êtes-vous sûr?",Varisa),
@@ -201,7 +207,21 @@ World.Dialogue[French][27] = Dialogue.new({
 },1)
 
 World.Dialogue[French][28] = Dialogue.new({
-	Text.new("Salut Varisa.",Brian),
+	Text.new("Salut Varisa...",Brian),
+	Text.new("Ehh... Ouais.",Varisa),
+	Text.new("I'm very busy right now...",Brian),
+	Text.new("And uhh, Vivian told me to take out the trash.",Brian),
+	Text.new("You wouldn't mind taking it out for me?",Brian),
+	Text.new("But aren't you just standing around?",Varisa),
+	Text.new("I'm very busy, you wouldn't understand.",Brian),
+	Text.new("Yeah me too.",Varisa),
+	Text.new("Too busy for 150?",Brian),
+	Text.new("You're bluffing.",Varisa),
+	Text.new("Your loss, I guess.",Brian),
+	Text.new("Where's the trash?",Varisa),
+	Text.new("Backyard, and make it quick.",Brian,nil,function()
+		Story.set("Brian_Trash_1",true)
+	end),
 },1)
 
 World.Dialogue[French][29] = Dialogue.new({

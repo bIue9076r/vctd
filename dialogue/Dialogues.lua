@@ -1,5 +1,11 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-11] = Dialogue.new({
+	Text.new("It's trash",Varisa,nil,function()
+		Story.set("Brian_Trash_2",true)
+	end),
+},0)
+
 World.Dialogue[English][-10] = Dialogue.new({
 	Text.new("Next Day?",Varisa),
 	Text.new("Are you sure?",Varisa),

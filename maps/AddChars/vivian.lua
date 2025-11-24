@@ -23,6 +23,9 @@ function addVivianIn4(Map)
 end
 
 function addVivian(Map)
+	World.Map[Map]:addNpc(Npc.new(10.0,10.0,Trash_P,-11,0,function ()
+		
+	end,"trash"))
 	
 	addVivianOut1(Map - 5)
 	addVivianIn1(Map - 4)
