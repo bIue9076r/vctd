@@ -76,6 +76,7 @@ image.newImage("Sale_Sign_2","Assets/sale_sign_2.png")
 image.newImage("Toolbox","Assets/toolbox.png")
 image.newImage("Screwdriver","Assets/screwdriver.png")
 image.newImage("Ella_sand","Assets/Ella_sand.png")
+image.newImage("Wastecan","Assets/wastecan.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")
