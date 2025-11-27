@@ -86,6 +86,7 @@ Sale_Sign_2 = 0x4F
 Toolbox = 0x50
 Screwdriver = 0x51
 Ella_sand = 0x52
+Wastecan = 0x53
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -172,6 +173,7 @@ CtS = {
 	[Toolbox] = "Toolbox",
 	[Screwdriver] = "Screwdriver",
 	[Ella_sand] = "Ella_sand",
+	[Wastecan] = "Wastecan",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -256,6 +258,7 @@ Names = {
 	[Toolbox] = "Toolbox",
 	[Screwdriver] = "Screwdriver",
 	[Ella_sand] = "Ella Sand",
+	[Wastecan] = "Wastecan",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }
