@@ -1,17 +1,21 @@
 World.Dialogue[French] = {}
 
-World.Dialogue[French][-12] = Dialogue.new({
+World.Dialogue[French][-13] = Dialogue.new({
 	Text.new("Threw the trash away",Varisa,nil,function()
 		Story.set("Brian_Trash_3",true)
 	end),
 	Text.new("It's a trash can.",Varisa),
-},0)
+},1)
+
+World.Dialogue[French][-12] = Dialogue.new({
+	Text.new("It's a trash can.",Varisa),
+},1)
 
 World.Dialogue[French][-11] = Dialogue.new({
 	Text.new("It's trash",Varisa,nil,function()
 		Story.set("Brian_Trash_2",true)
 	end),
-},0)
+},1)
 
 World.Dialogue[French][-10] = Dialogue.new({
 	Text.new("Après Jour?",Varisa),
@@ -29,48 +33,48 @@ World.Dialogue[French][-9] = Dialogue.new({
 		Story.set("Mollie_Breakup_4",true)
 	end),
 	Text.new("It's an engagement ring?",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-8] = Dialogue.new({
 	Text.new("There's something in the bookshelf.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_3",true)
 	end),
 	Text.new("There's something in the bookshelf.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-7] = Dialogue.new({
 	Text.new("That's too disgusting to touch.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-6] = Dialogue.new({
 	Text.new("There's a code in this box.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_2",true)
 	end),
 	Text.new("There's a code in this box.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-5] = Dialogue.new({
 	Text.new("There's nothing in this box.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-4] = Dialogue.new({
 	Text.new("There's food in here.",Varisa,nil,function()
 		-- give random food
 	end),
 	Text.new("There's food in here.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-3] = Dialogue.new({
 	Text.new("It's locked, I need a code.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-2] = Dialogue.new({
 	Text.new("Il n'y a rien ici.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][-1] = Dialogue.new({
 	Text.new("Je peux pas utiliser ce.",Varisa),
-},0)
+},1)
 
 World.Dialogue[French][0] = Dialogue.new({
 	Text.new("Ils sont ne dire pas trop.",Varisa),
@@ -446,4 +450,17 @@ World.Dialogue[French][40] = Dialogue.new({
 
 World.Dialogue[French][41] = Dialogue.new({
 	Text.new("Salut...",Varisa),
+},1)
+
+World.Dialogue[French][42] = Dialogue.new({
+	Text.new("You actually did it?",Brian),
+	Text.new("Wait...",Varisa),
+	Text.new("I suppose I should pay you.",Brian),
+	Text.new("You weren't before?",Varisa),
+	Text.new("I'm a better person than that.",Brian),
+	Text.new("Okay",Varisa),
+	Text.new("Take this check.",Brian,nil,function()
+		
+	end),
+	Text.new("Thanks I guess",Varisa),
 },1)
