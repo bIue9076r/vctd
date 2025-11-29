@@ -22,7 +22,9 @@ World.Dialogue[English][-10] = Dialogue.new({
 	Text.new("Are you sure?",Varisa),
 	Text.new("Zzzz...",Varisa,nil,function()
 		World.AfterEffect = function()
-			bs:stop()
+			if bs then
+				bs:stop()
+			end
 			Days.loadDay(GameDay + 1)
 		end
 	end),
