@@ -94,3 +94,7 @@ Story.setBeat("Brian_Trash_3", function()
 		end
 	end
 end)
+
+Story.setBeat("Fredrick_1", function()
+	
+end)
