@@ -203,7 +203,35 @@ World.Dialogue[French][23] = Dialogue.new({
 },1)
 
 World.Dialogue[French][24] = Dialogue.new({
-	Text.new("Salut Varisa.",Fredrick),
+	Text.new("What is the matter?",Fredrick),
+	Text.new("Hey...",Varisa),
+	Text.new("Yes?",Fredrick),
+	Text.new("You know my mom right?",Varisa),
+	Text.new("Who are you, again?",Fredrick),
+	Text.new("Varisa Carmel.... The girl that-",Varisa),
+	Text.new("Threw eggs at my house.",Fredrick),
+	Text.new("Oh yeah, I remember you...",Fredrick),
+	Text.new("Why aren't you still in jail?",Fredrick),
+	Text.new("Cause that happened when I was 12.",Varisa),
+	Text.new("It's been like 7 years...",Varisa),
+	Text.new("I thought you'd remember me because I help Wilkie a lot",Varisa),
+	Text.new("But Farisa does that.",Fredrick),
+	Text.new("What does they look like...",Varisa),
+	Text.new("...",Fredrick),
+	Text.new("You I suppose...",Fredrick,nil,function()
+		Story.set("Fredrick_Reconsider",true)
+	end),
+	Text.new("Peculiar.",Varisa),
+	Text.new("So you're not completely terrible",Fredrick),
+	Text.new("Perhaps.",Varisa),
+	Text.new("Anyway, would you like to exercise with me?",Fredrick),
+	Text.new("What?",Varisa),
+	Text.new("You know, moving around.",Fredrick),
+	Text.new("It helps keep the body in shape.",Fredrick),
+	Text.new("I guess...",Varisa,nil,function()
+		Story.set("Fredrick_Exercise_1",true)
+	end),
+	Text.new("At least pretend to use the jump rope.",Fredrick),
 },1)
 
 World.Dialogue[French][25] = Dialogue.new({
@@ -465,4 +493,8 @@ World.Dialogue[French][42] = Dialogue.new({
 		
 	end),
 	Text.new("Thanks I guess",Varisa),
+},1)
+
+World.Dialogue[French][43] = Dialogue.new({
+	Text.new("Go away.",Fredrick),
 },1)

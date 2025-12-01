@@ -23,9 +23,9 @@ function Game_Save(file)
 	file:NewField("Seed",tostring(Seed or 0x27D410))
 	file:NewField("Language",tostring(Language or 1))
 	Story.Save(file)
-	file:NewField("Px",tostring(Plr.x or 0))
-	file:NewField("Py",tostring(Plr.y or 0))
-	file:NewField("Map",tostring(MaptoN() or 1))
+	--file:NewField("Px",tostring(Plr.x or 0))
+	--file:NewField("Py",tostring(Plr.y or 0))
+	--file:NewField("Map",tostring(MaptoN() or 1))
 	Plr.inv:save(file)
 end
 
@@ -46,19 +46,21 @@ function Game_Load(file)
 				GameDay = tonumber(v) or 1
 			end
 			
-			if i == "Px" then
-				Plr.x = tonumber(v) or 0
-				Plr.tx = Plr.x
-			end
+			--Start day over until dialogue, items, and quests can be saved.
 			
-			if i == "Py" then
-				Plr.y = tonumber(v) or 0
-				Plr.ty = Plr.y
-			end
+			--if i == "Px" then
+			--	Plr.x = tonumber(v) or 0
+			--	Plr.tx = Plr.x
+			--end
 			
-			if i == "Map" then
-				Map = World.Map[tonumber(v) or 1]
-			end
+			--if i == "Py" then
+			--	Plr.y = tonumber(v) or 0
+			--	Plr.ty = Plr.y
+			--end
+			
+			--if i == "Map" then
+			--	Map = World.Map[tonumber(v) or 1]
+			--end
 		end
 		
 		package.loaded["/maps/Chars"] = nil

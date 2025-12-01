@@ -95,6 +95,6 @@ Story.setBeat("Brian_Trash_3", function()
 	end
 end)
 
-Story.setBeat("Fredrick_1", function()
+Story.setBeat("Fredrick_Exercise_1", function()
 	
 end)

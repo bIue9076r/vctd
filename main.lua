@@ -139,7 +139,7 @@ end
 function MaptoN()
 	for i,v in pairs(World.Map) do
 		if Map == v then
-			return v
+			return i
 		end
 	end
 end
