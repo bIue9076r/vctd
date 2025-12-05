@@ -214,7 +214,8 @@ World.Dialogue[French][24] = Dialogue.new({
 	Text.new("Why aren't you still in jail?",Fredrick),
 	Text.new("Cause that happened when I was 12.",Varisa),
 	Text.new("It's been like 7 years...",Varisa),
-	Text.new("I thought you'd remember me because I help Wilkie a lot",Varisa),
+	Text.new("I thought you'd remember me because...",Varisa),
+	Text.new("I help Wilkie a lot",Varisa),
 	Text.new("But Farisa does that.",Fredrick),
 	Text.new("What does they look like...",Varisa),
 	Text.new("...",Fredrick),
@@ -231,7 +232,7 @@ World.Dialogue[French][24] = Dialogue.new({
 	Text.new("I guess...",Varisa,nil,function()
 		Story.set("Fredrick_Exercise_1",true)
 	end),
-	Text.new("At least pretend to use the jump rope.",Fredrick),
+	Text.new("At least pretend to use the jump rope I gave you.",Fredrick),
 },1)
 
 World.Dialogue[French][25] = Dialogue.new({

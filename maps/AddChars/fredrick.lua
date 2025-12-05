@@ -1,11 +1,11 @@
 function addFredrickOut1(Map)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 6 and House.house[i].isKiller then
-			World.Map[Map]:addNpc(Npc.new(3.2,1.0,Fredrick,43,0,function()
+			World.Map[Map]:addNpc(Npc.new(3.2,8.4,Fredrick,43,0,function()
 				
 			end,"Fredrick"))
 		else
-			World.Map[Map]:addNpc(Npc.new(3.2,1.0,Fredrick,24,0,function()
+			World.Map[Map]:addNpc(Npc.new(3.2,8.4,Fredrick,24,0,function()
 				
 			end,"Fredrick"))
 		end
