@@ -1,6 +1,7 @@
 function love.conf(t)
 	t.version = "11.3"
 	t.identity = "VCTD"
+	t.window.icon = "Assets/Varisa.png"
 	t.window.title = "Detective Rpg"
 	t.window.width = 600
 	t.window.height = 400
