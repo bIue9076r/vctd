@@ -87,6 +87,7 @@ Toolbox = 0x50
 Screwdriver = 0x51
 Ella_sand = 0x52
 Wastecan = 0x53
+Rope = 0x54
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -174,6 +175,7 @@ CtS = {
 	[Screwdriver] = "Screwdriver",
 	[Ella_sand] = "Ella_sand",
 	[Wastecan] = "Wastecan",
+	[Rope] = "Rope",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -259,6 +261,7 @@ Names = {
 	[Screwdriver] = "Screwdriver",
 	[Ella_sand] = "Ella Sand",
 	[Wastecan] = "Wastecan",
+	[Rope] = "Rope",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }
