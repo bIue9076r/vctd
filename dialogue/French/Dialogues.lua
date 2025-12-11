@@ -499,3 +499,8 @@ World.Dialogue[French][42] = Dialogue.new({
 World.Dialogue[French][43] = Dialogue.new({
 	Text.new("Go away.",Fredrick),
 },1)
+
+World.Dialogue[French][44] = Dialogue.new({
+	Text.new("You, there.",Karina),
+	Text.new("Don't you roll your eyes at me.",Karina),
+},1)
