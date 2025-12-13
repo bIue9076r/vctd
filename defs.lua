@@ -88,6 +88,9 @@ Screwdriver = 0x51
 Ella_sand = 0x52
 Wastecan = 0x53
 Rope = 0x54
+Pink_Crystal = 0x55
+--Pentagram_Lit = 0x56
+--Pentagram_Unlit = 0x57
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -176,6 +179,9 @@ CtS = {
 	[Ella_sand] = "Ella_sand",
 	[Wastecan] = "Wastecan",
 	[Rope] = "Rope",
+	[Pink_Crystal] = "Pink_Crystal",
+	--[Pentagram_Lit] = "Pentagram_Lit",
+	--[Pentagram_Unlit] = "Pentagram_Unlit",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -262,6 +268,9 @@ Names = {
 	[Ella_sand] = "Ella Sand",
 	[Wastecan] = "Wastecan",
 	[Rope] = "Rope",
+	[Pink_Crystal] = "Pink_Crystal",
+	--[Pentagram_Lit] = "Pentagram_Lit",
+	--[Pentagram_Unlit] = "Pentagram_Unlit",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }

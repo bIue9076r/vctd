@@ -10,57 +10,49 @@ Days.newDay(2,function()
 			v.g = 1
 		end
 	end
-
-	local I
-	local I2
-	local I3
-	local I4
+	
 	for i,v in ipairs(House.house) do
 		if v.HouseHold == 5 then
-			I = Families.HouseMap[i]
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f then
+					v.g = 1
+				end
+			end
 		end
 
 		if v.HouseHold == 2 then
-			I2 = Families.HouseMap[i]
+			local I2 = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I2 + 2].npcs) do
+				if v.f then
+					v.g = 1
+				end
+			end
+
+			for i,v in pairs(World.Map[I2 + 3].npcs) do
+				if v.f then
+					v.g = 1
+				end
+			end
 		end
 
 		if v.HouseHold == 6 then
 			v.isOpen = false
-			I3 = Families.HouseMap[i]
+			local I3 = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I3].npcs) do
+				if v.f then
+					v.g = 1
+				end
+			end
 		end
 
 		if v.HouseHold == 4 then
-			I4 = Families.HouseMap[i]
-		end
-	end
-
-	for i,v in pairs(World.Map[I].npcs) do
-		if v.f then
-			v.g = 1
-		end
-	end
-	
-	for i,v in pairs(World.Map[I2 + 2].npcs) do
-		if v.f then
-			v.g = 1
-		end
-	end
-
-	for i,v in pairs(World.Map[I2 + 3].npcs) do
-		if v.f then
-			v.g = 1
-		end
-	end
-
-	for i,v in pairs(World.Map[I3].npcs) do
-		if v.f then
-			v.g = 1
-		end
-	end
-
-	for i,v in pairs(World.Map[I4].npcs) do
-		if v.f then
-			v.g = 1
+			local I4 = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I4].npcs) do
+				if v.f then
+					v.g = 1
+				end
+			end
 		end
 	end
 
@@ -68,10 +60,22 @@ Days.newDay(2,function()
 		if v.f then
 			v.g = 0
 			if v.f == "Wilkie" then
-				if Story.get("Toolbox_Wilkie_1") then
+				if Story.get("Toolbox_Wilkie_2") then
 					
-				elseif Story.get("Toolbox_Wilkie_2") then
+				elseif Story.get("Toolbox_Wilkie_1") then
 
+				end
+			end
+			
+			if v.f == "Fredrick" then
+				for i = 1,10 do
+					if House.house[i].HouseHold == 6 and (not House.house[i].isKiller) then
+						if Story.get("Fredrick_Exercise_2") then
+							
+						elseif Story.get("Fredrick_Exercise_1") then
+
+						end
+					end
 				end
 			end
 
