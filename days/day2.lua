@@ -22,14 +22,14 @@ Days.newDay(2,function()
 		end
 
 		if v.HouseHold == 2 then
-			local I2 = Families.HouseMap[i]
-			for i,v in pairs(World.Map[I2 + 2].npcs) do
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I + 2].npcs) do
 				if v.f then
 					v.g = 1
 				end
 			end
 
-			for i,v in pairs(World.Map[I2 + 3].npcs) do
+			for i,v in pairs(World.Map[I + 3].npcs) do
 				if v.f then
 					v.g = 1
 				end
@@ -38,8 +38,8 @@ Days.newDay(2,function()
 
 		if v.HouseHold == 6 then
 			v.isOpen = false
-			local I3 = Families.HouseMap[i]
-			for i,v in pairs(World.Map[I3].npcs) do
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
 				if v.f then
 					v.g = 1
 				end
@@ -47,10 +47,19 @@ Days.newDay(2,function()
 		end
 
 		if v.HouseHold == 4 then
-			local I4 = Families.HouseMap[i]
-			for i,v in pairs(World.Map[I4].npcs) do
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
 				if v.f then
 					v.g = 1
+				end
+			end
+		end
+
+		if v.HouseHold == 3 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f then
+					-- Unhide Karina
 				end
 			end
 		end
