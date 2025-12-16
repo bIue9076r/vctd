@@ -33,6 +33,7 @@ function Game_Load(file)
 	local tbl, e = file:Read()
 	if not e then
 		print("Todo: Game Load")
+		local gd = 1
 		for i,v in pairs(tbl) do
 			if i == "Seed" then
 				Seed = tonumber(v) or 0x27D410
@@ -43,7 +44,7 @@ function Game_Load(file)
 			end
 
 			if i == "Day" then
-				GameDay = tonumber(v) or 1
+				gd = tonumber(v) or 1
 			end
 			
 			--Start day over until dialogue, items, and quests can be saved.
@@ -62,7 +63,22 @@ function Game_Load(file)
 			--	Map = World.Map[tonumber(v) or 1]
 			--end
 		end
+
+		math.randomseed(Seed)
+		print(string.format("Seed: 0x%07X",Seed))
+
+		muted = true
+		Savesong:stop()
 		
+		for i,v in pairs(package.loaded) do
+			if i:sub(1,4) == "maps" then
+				package.loaded[i] = nil
+			end
+
+			if i:sub(1,6) == "scenes" then
+				package.loaded[i] = nil
+			end
+		end
 		package.loaded["/maps/Chars"] = nil
 		package.loaded["/Modules/house"] = nil
 		package.loaded["/maps/Maps"] = nil
@@ -74,7 +90,7 @@ function Game_Load(file)
 		
 		Story.Load(file)
 		Plr.inv:load(file)
-		Days.loadDay(GameDay)
+		Days.loadDay(gd)
 	end
 	return e
 end
@@ -209,7 +225,7 @@ function Save_Keypressed(key)
 		end
 		LoadCon = false
 		SaveCon = false
-	elseif key == "return" or key == "q" then
+	elseif key == "return" or key == "q" or key == "escape" or key == "backspace" then
 		Savesong:stop()
 		GameState = Save_LastState
 	else

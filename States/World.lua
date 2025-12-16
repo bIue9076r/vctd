@@ -55,7 +55,6 @@ end
 --require("/maps/Maps")
 World.Dialogue = {}
 -- Include Dialogue File
-require("Modules/SaveDialogue")
 require("dialogue/Dialogues")
 require("dialogue/French/Dialogues")
 --
