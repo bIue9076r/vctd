@@ -65,8 +65,6 @@ World.Map[1]:addNpc(Npc.new(11.0,8.4,Mailbox,6,0,function()
 	
 end))
 
-print("run")
-
 World.Map[1]:addProp(Prop.new(7.6,4.7,R_Guitar_L,0,0,0,nil,"Stuff"))
 World.Map[1]:addProp(Prop.new(6,3,Mic,1,0,0,nil,"Stuff"))
 World.Map[1]:addProp(Prop.new(5,2,Amp,0,0,0,nil,"Stuff"))
