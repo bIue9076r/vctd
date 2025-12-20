@@ -12,13 +12,13 @@ Days.newDay(3,function()
 
 	for i,v in pairs(World.Map[25].npcs) do
 		if v.f then
-			v.g = 0
+			v.g = 1
 		end
 	end
 
 	for i,v in pairs(World.Map[25].props) do
-		if v.f then
-			v.g = 0
+		if v.f == "Ella_sand" then
+			v.g = 1
 		end
 	end
 
