@@ -1,11 +1,11 @@
 function addKarinaOut1(Map)
+	World.Map[Map]:addNpc(Npc.new(1.3,4.1,Karina,44,0,function()
 	
+	end,"Karina"))
 end
 
 function addKarinaIn1(Map)
-	World.Map[Map]:addNpc(Npc.new(1.3,4.1,Karina,19,0,function()
 	
-	end,"Karina"))
 end
 
 function addKarinaIn2(Map)

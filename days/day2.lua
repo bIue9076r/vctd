@@ -59,7 +59,9 @@ Days.newDay(2,function()
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f then
-					-- Unhide Karina
+					v.g = 0
+					v.x = 13.8
+					v.y = 8.7
 				end
 			end
 		end
