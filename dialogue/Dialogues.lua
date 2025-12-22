@@ -464,7 +464,9 @@ World.Dialogue[English][38] = Dialogue.new({
 	Text.new("Yeah.",Varisa),
 	Text.new("Screw me I guess.",Mollie),
 	Text.new("You could try therapy.",Varisa),
-	Text.new("...",Mollie),
+	Text.new("...",Mollie,nil,function()
+		Story.set("Mollie_Breakup_5",true)
+	end),
 	Text.new("I guess...",Mollie),
 },1)
 
@@ -491,7 +493,7 @@ World.Dialogue[English][42] = Dialogue.new({
 	Text.new("I'm a better person than that.",Brian),
 	Text.new("Okay",Varisa),
 	Text.new("Take this check.",Brian,nil,function()
-		
+		Story.set("Brian_Trash_4",true)
 	end),
 	Text.new("Thanks I guess",Varisa),
 },1)
@@ -503,4 +505,25 @@ World.Dialogue[English][43] = Dialogue.new({
 World.Dialogue[English][44] = Dialogue.new({
 	Text.new("You, there.",Karina),
 	Text.new("Don't you roll your eyes at me.",Karina),
+	Text.new("I have something important to say.",Karina),
+	Text.new("More fire and brimstone?",Varisa),
+	Text.new("Not necessarily, but...",Karina),
+	Text.new("Everyone here is a sicko.",Karina),
+	Text.new("And you wonder why people hate you.",Varisa),
+	Text.new("It's persecution I say.",Karina),
+	Text.new("Anything else new to say?",Varisa),
+	Text.new("What more is there to say?",Karina),
+	Text.new("What's that.",Varisa),
+	Text.new("My crucifix?",Karina),
+	Text.new("You can have it if you want.",Karina),
+	Text.new("I have a bunch lying around.",Karina),
+	Text.new("I guess.",Varisa,nil,function()
+		Story.set("Karina_1",true)
+	end),
+	Text.new("Save your soul",Karina),
+	Text.new("I'll be waiting.",Karina),
+},1)
+
+World.Dialogue[English][45] = Dialogue.new({
+	Text.new("Hey.",Lassie),
 },1)

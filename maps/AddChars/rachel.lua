@@ -3,7 +3,7 @@ function addRachelOut1(Map)
 end
 
 function addRachelIn1(Map)
-	World.Map[Map]:addNpc(Npc.new(15.7,4.2,Lassie,23,1,function()
+	World.Map[Map]:addNpc(Npc.new(1.3,2.7,Lassie,45,1,function()
 	
 	end,"Lassie"))
 end
