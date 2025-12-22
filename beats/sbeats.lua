@@ -90,7 +90,7 @@ Story.setBeat("Brian_Trash_3", function()
 	for i = 1,10 do
 		if House.house[i].HouseHold == 4 then
 			local I = Families.HouseMap[i]
-		World.Map[I].npcs[2].i = 42
+			World.Map[I].npcs[2].i = 42
 		end
 	end
 end)
