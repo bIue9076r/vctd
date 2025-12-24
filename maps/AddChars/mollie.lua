@@ -11,6 +11,17 @@ function addMollieIn2(Map)
 end
 
 function addMollieIn3(Map)
+	for i = 1,10 do
+		if House.house[i].HouseHold == 7 and House.house[i].isKiller then
+			World.Map[Map]:addProp(Prop.new(11.28,4.92,Pentagram_Lit_1,1,1,0,"pentagram",function()
+				
+			end))
+		
+			World.Map[Map]:addProp(Prop.new(12.28,4.92,Pentagram_Lit_2,1,1,0,"pentagram",function()
+				
+			end))
+		end
+	end
 	World.Map[Map]:addNpc(Npc.new(10.0,12.7,Mollie,22,0,function()
 	
 	end,"Mollie"))

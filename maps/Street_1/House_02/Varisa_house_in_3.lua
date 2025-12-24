@@ -49,13 +49,3 @@ end))
 World.Map[10]:addNpc(Npc.new(21.0,2.5,Interaction,-10,0,function()
 	
 end))
-
---[[
-World.Map[10]:addProp(Prop.new(11.28,4.92,Pentagram_Lit_1,1,1,0,"pentagram",function()
-
-end))
-
-World.Map[10]:addProp(Prop.new(12.28,4.92,Pentagram_Lit_2,1,1,0,"pentagram",function()
-
-end))
-]]
