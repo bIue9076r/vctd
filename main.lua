@@ -66,6 +66,7 @@ require("items/guitar")
 require("items/guitar_rachel")
 require("items/screwdriver")
 require("items/toolbox")
+require("items/crucifix")
 -- Lock pick?
 Plr.inv:add(Guitar)
 

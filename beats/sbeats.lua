@@ -65,7 +65,7 @@ Story.setBeat("Mollie_Breakup_4",function()
 end)
 
 Story.setBeat("Karina_1",function()
-	
+	Plr.inv:add(Item_Crucifix)
 end)
 
 Story.setBeat("Brian_Trash_1", function()
