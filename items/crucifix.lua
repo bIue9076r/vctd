@@ -1,4 +1,4 @@
-Item_Crucifix = Item.new(Screwdriver)
+Item_Crucifix = Item.new(Crucifix)
 Item_Crucifix.name = "Crucifix"
 Item_Crucifix.added = false
 

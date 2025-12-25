@@ -93,6 +93,7 @@ Pentagram_Lit_1 = 0x56
 Pentagram_Lit_2 = 0x57
 Pentagram_Unlit_1 = 0x58
 Pentagram_Unlit_2 = 0x59
+Crucifix = 0x5A
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -186,6 +187,7 @@ CtS = {
 	[Pentagram_Lit_2] = "Pentagram_Lit_2",
 	[Pentagram_Unlit_1] = "Pentagram_Unlit_1",
 	[Pentagram_Unlit_2] = "Pentagram_Unlit_2",
+	[Crucifix] = "Crucifix",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -277,6 +279,7 @@ Names = {
 	[Pentagram_Lit_2] = "Pentagram Lit 2",
 	[Pentagram_Unlit_1] = "Pentagram Unlit 1",
 	[Pentagram_Unlit_2] = "Pentagram Unlit 2",
+	[Crucifix] = "Crucifix",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }
