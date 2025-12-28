@@ -526,4 +526,17 @@ World.Dialogue[French][44] = Dialogue.new({
 
 World.Dialogue[French][45] = Dialogue.new({
 	Text.new("Hey.",Lassie),
+	Text.new("Hey",Varisa),
+	Text.new("I need your help baking.",Lassie),
+	Text.new("What do you need?",Varisa),
+	Text.new("Uhh...",Lassie),
+	Text.new("Rachel always knew were everything was...",Lassie),
+	Text.new("Let me try to remember...",Lassie),
+	Text.new("I need a cup of milk.",Lassie),
+	Text.new("It should be in the fridge.",Lassie,nil,function ()
+		Story.set("Lassie_Baking_1",true)
+	end),
+	Text.new("Sure.",Varisa),
+	Text.new("Alright.",Lassie),
+	Text.new("You got it?",Lassie),
 },1)

@@ -98,3 +98,7 @@ end)
 Story.setBeat("Fredrick_Exercise_1", function()
 	
 end)
+
+Story.setBeat("Lassie_Baking_1", function()
+	
+end)
