@@ -100,5 +100,31 @@ Story.setBeat("Fredrick_Exercise_1", function()
 end)
 
 Story.setBeat("Lassie_Baking_1", function()
+	for i = 1,10 do
+		if House.house[i].HouseHold == 8 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I + 1].npcs) do
+				if v.f == "Fridge" then
+					v.i = -15
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Lassie_Baking_2", function()
+	for i = 1,10 do
+		if House.house[i].HouseHold == 8 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I + 1].npcs) do
+				if v.f == "Lassie" then
+					v.i = 46
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Lassie_Baking_3", function()
 	
 end)

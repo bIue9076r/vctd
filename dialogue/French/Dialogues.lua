@@ -1,5 +1,16 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-15] = Dialogue.new({
+	Text.new("Got the milk.",Varisa,nil,function()
+		Story.set("Lassie_Baking_1",true)
+	end),
+	Text.new("There's no milk.",Varisa),
+},1)
+
+World.Dialogue[French][-14] = Dialogue.new({
+	Text.new("There's a lot of stuff.",Varisa),
+},1)
+
 World.Dialogue[French][-13] = Dialogue.new({
 	Text.new("Threw the trash away",Varisa,nil,function()
 		Story.set("Brian_Trash_3",true)
@@ -539,4 +550,9 @@ World.Dialogue[French][45] = Dialogue.new({
 	Text.new("Sure.",Varisa),
 	Text.new("Alright.",Lassie),
 	Text.new("You got it?",Lassie),
+},1)
+
+World.Dialogue[French][46] = Dialogue.new({
+	Text.new("Hey.",Lassie),
+	Text.new("Hey",Varisa),
 },1)
