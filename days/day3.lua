@@ -33,5 +33,5 @@ Days.newDay(3,function()
 
 	Time.setHour(Day)
     GameState = Cutscene
-	Play.scene = Play.Scenes[4]
+	Play.scene = Play.Scenes[5]
 end)

@@ -8,12 +8,6 @@ function Days.newDay(d,f)
 end
 
 function Days.loadDay(d)
-	if d >= 8 then
-		--player dies
-		GameState = Intro
-		return
-	end
-	
 	local f = Days.days[d]
 	if f then
 		GameDay = d

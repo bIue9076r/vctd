@@ -1,3 +1,8 @@
 require("/days/day1")
 require("/days/day2")
 require("/days/day3")
+require("/days/day4")
+require("/days/day5")
+require("/days/day6")
+require("/days/day7")
+require("/days/day8")

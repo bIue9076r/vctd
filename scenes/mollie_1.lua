@@ -1,15 +1,15 @@
-Play.Scenes[5] = Scene.new(World.Map[19])
-Play.Scenes[5].tickGoal = 1220
-Play.Scenes[5].Next = WORLD
-Play.Scenes[5].Hour = Evening
+Play.Scenes[11] = Scene.new(World.Map[19])
+Play.Scenes[11].tickGoal = 1220
+Play.Scenes[11].Next = WORLD
+Play.Scenes[11].Hour = Evening
 
-Play.Scenes[5].Actors[1] = Actor.new(Mailbox,11.0,8.4)
-Play.Scenes[5].Actors[2] = Actor.new(Mollie,9.9,8.2)
-Play.Scenes[5].Actors[3] = Actor.new(Ella,16.6,9.6)
-Play.Scenes[5].Actors[4] = Actor.new(Sean,18.3,9.6)
+Play.Scenes[11].Actors[1] = Actor.new(Mailbox,11.0,8.4)
+Play.Scenes[11].Actors[2] = Actor.new(Mollie,9.9,8.2)
+Play.Scenes[11].Actors[3] = Actor.new(Ella,16.6,9.6)
+Play.Scenes[11].Actors[4] = Actor.new(Sean,18.3,9.6)
 
 local sbs
-Play.Scenes[5].transition = function(self,t)
+Play.Scenes[11].transition = function(self,t)
 	if(t < 250) then
 		if t == 1 then
 			Scene.LastDialogueBuffer = DialogueBuffer
@@ -76,11 +76,11 @@ Play.Scenes[5].transition = function(self,t)
 		
 	elseif(t < self.tickGoal) then
 		local _t = (t - 1120) / 100
-		Play.Scenes[5].Actors[3].x = Scene.lerp(16.6,18.2,_t)
-		Play.Scenes[5].Actors[4].x = Scene.lerp(18.3,18.7,_t)
+		Play.Scenes[11].Actors[3].x = Scene.lerp(16.6,18.2,_t)
+		Play.Scenes[11].Actors[4].x = Scene.lerp(18.3,18.7,_t)
 
-		Play.Scenes[5].Actors[3].y = Scene.lerp(9.6,8.0,_t)
-		Play.Scenes[5].Actors[4].y = Scene.lerp(9.6,7.4,_t)
+		Play.Scenes[11].Actors[3].y = Scene.lerp(9.6,8.0,_t)
+		Play.Scenes[11].Actors[4].y = Scene.lerp(9.6,7.4,_t)
 	else
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
