@@ -1,30 +1,47 @@
-Play.Scenes[10] = Scene.new(World.Map[25])
-Play.Scenes[10].tickGoal = 1200
+Play.Scenes[10] = Scene.new(World.Map[10])
+Play.Scenes[10].tickGoal = 800
 Play.Scenes[10].Next = Fade
-Play.Scenes[10].Hour = Noon
+Play.Scenes[10].Hour = Night
 Play.Scenes[10].Min = 0
 
-Play.Scenes[10].Actors[1] = Actor.new(Varisa,1.7,7.2)
-Play.Scenes[10].Actors[2] = Actor.new(Vivian,1.7,8.7)
+Play.Scenes[10].Actors[1] = Actor.new(Poster_Bl,10.5,0.5)
+Play.Scenes[10].Actors[2] = Actor.new(Poster_Pu,12,0.25)
+Play.Scenes[10].Actors[3] = Actor.new(Poster_Or,13.5,0.75)
+Play.Scenes[10].Actors[4] = Actor.new(Flag,19,0.5)
+Play.Scenes[10].Actors[5] = Actor.new(Bed_1_1,20,2)
+Play.Scenes[10].Actors[6] = Actor.new(Bed_1_2,21,2)
+Play.Scenes[10].Actors[7] = Actor.new(Bed_1_3,20,3)
+Play.Scenes[10].Actors[8] = Actor.new(Bed_1_4,21,3)
+Play.Scenes[10].Actors[9] = Actor.new(Bed_1_5,20,4)
+Play.Scenes[10].Actors[10] = Actor.new(Bed_1_6,21,4)
+Play.Scenes[10].Actors[11] = Actor.new(Trash_Can,20.5,12.5)
+Play.Scenes[10].Actors[12] = Actor.new(Table_TL,15,11)
+Play.Scenes[10].Actors[13] = Actor.new(Table_TR,16,11)
+Play.Scenes[10].Actors[14] = Actor.new(Table_BL,15,12)
+Play.Scenes[10].Actors[15] = Actor.new(Table_BR,16,12)
+Play.Scenes[10].Actors[16] = Actor.new(Amp,20.5,5)
+Play.Scenes[10].Actors[17] = Actor.new(B_Guitar_R,20,5)
+
+Play.Scenes[10].Actors[18] = Actor.new(Varisa,20.0,2.8)
+Play.Scenes[10].Actors[19] = Actor.new(Vivian,1.7,2.8)
 
 Play.Scenes[10].transition = function(self,t)
-	if(t < 150) then
+	if(t < self.tickGoal) then
 		if t == 1 then
 			for i = 1,10 do
 				if House.house[i].isKiller then
 					local H = House.house[i].HouseHolds
 					if H == 4 then
-						Play.Scenes[10].Actors[2].c = Vivian
+						Play.Scenes[10].Actors[19].c = Vivian
 					elseif H == 6 then
-						Play.Scenes[10].Actors[2].c = Mollie
+						Play.Scenes[10].Actors[19].c = Mollie
 					elseif H == 7 then
-						Play.Scenes[10].Actors[2].c = Fredrick
+						Play.Scenes[10].Actors[19].c = Fredrick
 					end
 				end
 			end
 		end
-	elseif(t < self.tickGoal) then
-		
+		Play.Scenes[10].Actors[19].x = Scene.lerp(10.5,19.0,t/800)
 	else
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
