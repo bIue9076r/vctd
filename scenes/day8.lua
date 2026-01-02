@@ -30,13 +30,13 @@ Play.Scenes[10].transition = function(self,t)
 		if t == 1 then
 			for i = 1,10 do
 				if House.house[i].isKiller then
-					local H = House.house[i].HouseHolds
+					local H = House.house[i].HouseHold
 					if H == 4 then
 						Play.Scenes[10].Actors[19].c = Vivian
 					elseif H == 6 then
-						Play.Scenes[10].Actors[19].c = Mollie
-					elseif H == 7 then
 						Play.Scenes[10].Actors[19].c = Fredrick
+					elseif H == 7 then
+						Play.Scenes[10].Actors[19].c = Mollie
 					end
 				end
 			end
