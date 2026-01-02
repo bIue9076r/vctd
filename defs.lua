@@ -94,6 +94,7 @@ Pentagram_Lit_2 = 0x57
 Pentagram_Unlit_1 = 0x58
 Pentagram_Unlit_2 = 0x59
 Crucifix = 0x5A
+Knife = 0x5B
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -188,6 +189,7 @@ CtS = {
 	[Pentagram_Unlit_1] = "Pentagram_Unlit_1",
 	[Pentagram_Unlit_2] = "Pentagram_Unlit_2",
 	[Crucifix] = "Crucifix",
+	[Knife] = "Knife",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -280,6 +282,7 @@ Names = {
 	[Pentagram_Unlit_1] = "Pentagram Unlit 1",
 	[Pentagram_Unlit_2] = "Pentagram Unlit 2",
 	[Crucifix] = "Crucifix",
+	[Knife] = "Knife",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }

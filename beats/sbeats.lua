@@ -128,3 +128,63 @@ end)
 Story.setBeat("Lassie_Baking_3", function()
 	
 end)
+
+Story.setBeat("Zoey_Errands_1", function()
+	
+end)
+
+Story.setBeat("Jami_Experiment_1_1", function()
+	
+end)
+
+Story.setBeat("Jami_Experiment_2_1", function()
+	
+end)
+
+Story.setBeat("Karina_Investigation_1", function()
+	
+end)
+
+Story.setBeat("Zach_Gardening_1", function()
+	
+end)
+
+Story.setBeat("Vivian_Show_1", function()
+	
+end)
+
+Story.setBeat("Sean_1", function()
+	
+end)
+
+Story.setBeat("Ella_1", function()
+	
+end)
+
+Story.setBeat("Mollie_Vengeance_1", function()
+	
+end)
+
+Story.setBeat("Karina_Breakthrough_1", function()
+	
+end)
+
+Story.setBeat("Zach_Details_1", function()
+	
+end)
+
+Story.setBeat("Wilkie_Details_1", function()
+	
+end)
+
+Story.setBeat("Jami_Suspicions_1_1", function()
+	
+end)
+
+Story.setBeat("Jami_Suspicions_2_1", function()
+	
+end)
+
+Story.setBeat("Jami_Suspicions_3_1", function()
+	
+end)

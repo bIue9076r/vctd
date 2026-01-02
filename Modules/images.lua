@@ -84,6 +84,7 @@ image.newImage("Pentagram_Lit_2","Assets/pentagram_lit_2.png")
 image.newImage("Pentagram_Unlit_1","Assets/pentagram_unlit_1.png")
 image.newImage("Pentagram_Unlit_2","Assets/pentagram_unlit_2.png")
 image.newImage("Crucifix","Assets/crucifix.png")
+image.newImage("Knife","Assets/knife.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")

@@ -24,6 +24,7 @@ Play.Scenes[10].Actors[17] = Actor.new(B_Guitar_R,20,5)
 
 Play.Scenes[10].Actors[18] = Actor.new(Varisa,20.0,2.8)
 Play.Scenes[10].Actors[19] = Actor.new(Vivian,1.7,2.8)
+Play.Scenes[10].Actors[20] = Actor.new(Knife,1.7,2.8)
 
 Play.Scenes[10].transition = function(self,t)
 	if(t < self.tickGoal) then
@@ -42,6 +43,7 @@ Play.Scenes[10].transition = function(self,t)
 			end
 		end
 		Play.Scenes[10].Actors[19].x = Scene.lerp(10.5,19.0,t/800)
+		Play.Scenes[10].Actors[20].x = Play.Scenes[10].Actors[19].x
 	else
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
