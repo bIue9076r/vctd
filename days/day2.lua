@@ -40,6 +40,15 @@ Days.newDay(2,function()
 			end
 		end
 
+		if v.HouseHold == 3 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Karina" then
+					v.g = 0
+				end
+			end
+		end
+
 		if v.HouseHold == 6 then
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I].npcs) do
