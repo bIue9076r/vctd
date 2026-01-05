@@ -489,11 +489,36 @@ World.Dialogue[French][39] = Dialogue.new({
 },1)
 
 World.Dialogue[French][40] = Dialogue.new({
-	Text.new("Salut...",Varisa),
+	Text.new("Hey.",Varisa),
+	Text.new("We're kinda in the middle of something.",Sean),
+	Text.new("So? I need help.",Varisa),
+	Text.new("Why do you keep bothering me?",Sean),
+	Text.new("You graduated so long ago already?",Sean),
+	Text.new("My mom is still missing.",Varisa),
+	Text.new("I'm sorry but I don't know anything.",Sean,nil, function()
+		for i,v in pairs(World.Map[25].npcs) do
+			if v.f == "Ella" then
+				v.i = 48
+			end
+		end
+	end),
+	Text.new("I'm sorry but I don't know anything.",Sean),
 },1)
 
 World.Dialogue[French][41] = Dialogue.new({
-	Text.new("Salut...",Varisa),
+	Text.new("Hey.",Varisa),
+	Text.new("I don't like the way you look at us.",Ella),
+	Text.new("Uhh I'm not looking at you weird?",Varisa),
+	Text.new("I'd appreciate it if you left.",Ella),
+	Text.new("Alright I guess.",Varisa),
+	Text.new("Go on.",Ella,nil, function()
+		for i,v in pairs(World.Map[25].npcs) do
+			if v.f == "Sean" then
+				v.i = 47
+			end
+		end
+	end),
+	Text.new("Go on.",Ella),
 },1)
 
 World.Dialogue[French][42] = Dialogue.new({
@@ -555,4 +580,17 @@ World.Dialogue[French][45] = Dialogue.new({
 World.Dialogue[French][46] = Dialogue.new({
 	Text.new("Hey.",Lassie),
 	Text.new("Hey",Varisa),
+},1)
+
+World.Dialogue[French][47] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+	Text.new("You heard what she said.",Sean),
+	Text.new("Now if you don't mind, we're busy.",Sean),
+	Text.new("Go on scram.",Sean),
+},1)
+
+World.Dialogue[French][48] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+	Text.new("I'm not much help too.",Ella),
+	Text.new("I don't know anything.",Ella),
 },1)
