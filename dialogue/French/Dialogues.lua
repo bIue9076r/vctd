@@ -594,3 +594,19 @@ World.Dialogue[French][48] = Dialogue.new({
 	Text.new("I'm not much help too.",Ella),
 	Text.new("I don't know anything.",Ella),
 },1)
+
+World.Dialogue[French][49] = Dialogue.new({
+	Text.new("Hey Varisa.",Zoey),
+	Text.new("Hey Ms. Drew.",Varisa),
+	Text.new("If you're not too busy I need some help.",Zoey),
+	Text.new("Help with what?",Varisa),
+	Text.new("I ordered something about a month ago...",Zoey),
+	Text.new("I checked the postal office two days ago...",Zoey),
+	Text.new("They say it's been delivered, but I haven't seen it.",Zoey),
+	Text.new("Please do help me look around for it.",Zoey),
+	Text.new("Alright, i'll keep an eye out",Varisa,nil,function()
+		Story.set("Zoey_Errands_1",true)
+	end),
+	Text.new("Thank you so much.",Zoey),
+	Text.new("This means so much to me.",Zoey),
+},1)

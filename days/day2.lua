@@ -5,6 +5,12 @@ Days.newDay(2,function()
 		end
 	end
 
+	for i,v in pairs(World.Map[3].npcs) do
+		if v.f == "Zoey" then
+			v.i = 49
+		end
+	end
+
 	for i,v in pairs(World.Map[1].props) do
 		if v.f then
 			v.g = 1
