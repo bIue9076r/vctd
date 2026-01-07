@@ -2,6 +2,10 @@ function addJamiOut1(Map)
 	World.Map[Map]:addNpc(Npc.new(12.0,8.3,Jami,21,0,function()
 	
 	end,"Jami"))
+
+	World.Map[Map]:addNpc(Npc.new(11.0,9.4,MiniBox,-16,1,function()
+	
+	end,"Box"))
 end
 
 function addJamiIn1(Map)

@@ -130,6 +130,38 @@ Story.setBeat("Lassie_Baking_3", function()
 end)
 
 Story.setBeat("Zoey_Errands_1", function()
+	for i = 1,10 do
+		if House.house[i].HouseHold == 5 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Box" then
+					v.i = -17
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Zoey_Errands_2", function()
+	for i = 1,10 do
+		if House.house[i].HouseHold == 5 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Box" then
+					v.g = 1
+				end
+			end
+		end
+	end
+
+	for i,v in pairs(World.Map[3].npcs) do
+		if v.f == "Zoey" then
+			--v.i = 50
+		end
+	end
+end)
+
+Story.setBeat("Zoey_Errands_3", function()
 	
 end)
 

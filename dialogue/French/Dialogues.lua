@@ -1,5 +1,15 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-17] = Dialogue.new({
+	Text.new("Got the box.",Varisa,nil,function()
+		Story.set("Zoey_Errands_2",true)
+	end),
+},1)
+
+World.Dialogue[French][-16] = Dialogue.new({
+	Text.new("What a nice box.",Varisa),
+},1)
+
 World.Dialogue[French][-15] = Dialogue.new({
 	Text.new("Got the milk.",Varisa,nil,function()
 		Story.set("Lassie_Baking_1",true)
