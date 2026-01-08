@@ -620,3 +620,12 @@ World.Dialogue[English][49] = Dialogue.new({
 	Text.new("Thank you so much.",Zoey),
 	Text.new("This means so much to me.",Zoey),
 },1)
+
+World.Dialogue[English][50] = Dialogue.new({
+	Text.new("You found it!",Zoey),
+	Text.new("Where was it?",Zoey),
+	Text.new("It was out by Jami's house.",Varisa),
+	Text.new("That's strange...",Zoey),
+	Text.new("But at least I have my package.",Zoey),
+	Text.new("You and Tracey stay safe now.",Zoey),
+},1)

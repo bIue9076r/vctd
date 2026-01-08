@@ -156,13 +156,13 @@ Story.setBeat("Zoey_Errands_2", function()
 
 	for i,v in pairs(World.Map[3].npcs) do
 		if v.f == "Zoey" then
-			--v.i = 50
+			v.i = 50
 		end
 	end
 end)
 
 Story.setBeat("Zoey_Errands_3", function()
-	
+
 end)
 
 Story.setBeat("Jami_Experiment_1_1", function()
