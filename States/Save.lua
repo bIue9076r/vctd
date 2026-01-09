@@ -95,6 +95,40 @@ function Game_Load(file)
 	return e
 end
 
+function Game_getData(file)
+	file.file = love.filesystem.newFile(file.path)
+	if file:Exists() then
+		file.file:open("r")
+		ConfVer = file:GetVersion()
+		file.file:close()
+	end
+	
+	local tbl, e = file:Read()
+	if not e then
+		for i,v in pairs(tbl) do
+			if i == "Seed" then
+				ConfSeed = tonumber(v) or 0x27D410
+			end
+
+			if i == "Language" then
+				ConfLang = SaveLang[tonumber(v)] or nil
+			end
+
+			if i == "Day" then
+				ConfDay = tonumber(v) or 1
+			end
+		end
+	end
+	return e
+end
+
+function Game_clearData()
+	ConfSeed = nil
+	ConfLang = nil
+	ConfDay = nil
+	ConfVer = VERSION
+end
+
 function Game_Delete(file)
 	file:Delete()
 end
@@ -127,25 +161,25 @@ function Save_Draw()
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Version: "..CVERSION},
+		{{0,0,0},"Version: "..(ConfVer or CVERSION)},
 		((3*SCREEN_X)/5),((5*SCREEN_Y)/16),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 		love.graphics.print(
-		{{0,0,0},string.format("Seed: 0x%07X",Seed)},
+		{{0,0,0},string.format("Seed: 0x%07X",ConfSeed or Seed)},
 		((3*SCREEN_X)/5),((3*SCREEN_Y)/8),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Language: "..tostring(SaveLang[Language])},
+		{{0,0,0},"Language: "..tostring(ConfLang or SaveLang[Language])},
 		((3*SCREEN_X)/5),((7*SCREEN_Y)/16),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Day: "..tostring(GameDay)},
+		{{0,0,0},"Day: "..tostring(ConfDay or GameDay)},
 		((3*SCREEN_X)/5),(SCREEN_Y/2),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
@@ -195,6 +229,7 @@ function Save_Keypressed(key)
 		else
 			SaveConfirm_1 = "Are you sure"
 			SaveConfirm_2 = "you want to save?"
+			Game_clearData()
 			SaveCon = true
 		end
 		LoadCon = false
@@ -208,6 +243,7 @@ function Save_Keypressed(key)
 		else
 			SaveConfirm_1 = "Are you sure"
 			SaveConfirm_2 = "you want to load?"
+			Game_getData(savefile)
 			LoadCon = true
 		end
 		SaveCon = false
@@ -221,14 +257,22 @@ function Save_Keypressed(key)
 		else
 			SaveConfirm_1 = "Are you sure"
 			SaveConfirm_2 = "you want to delete?"
+			Game_getData(savefile)
 			DeleCon = true
 		end
 		LoadCon = false
 		SaveCon = false
-	elseif key == "return" or key == "q" or key == "escape" or key == "backspace" then
+	elseif key == "return" or key == "escape" or key == "backspace" then
+		Game_clearData()
 		Savesong:stop()
+		SaveConfirm_1 = ""
+		SaveConfirm_2 = ""
+		LoadCon = false
+		SaveCon = false
+		DeleCon = false
 		GameState = Save_LastState
 	else
+		Game_clearData()
 		SaveConfirm_1 = ""
 		SaveConfirm_2 = ""
 		LoadCon = false

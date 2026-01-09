@@ -33,6 +33,6 @@ function isVersionCompatible(tv)
 	
 	if not (pv == ptv) then
 		-- throw warning
-		CVERSION = ptv
+		CVERSION = mtv.."."..ptv
 	end
 end
