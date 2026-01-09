@@ -41,6 +41,7 @@ function Game_Load(file)
 
 			if i == "Language" then
 				Language = tonumber(v) or 1
+				LocaleChange()
 			end
 
 			if i == "Day" then

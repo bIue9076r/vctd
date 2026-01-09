@@ -24,7 +24,7 @@ function File:SetHeader()
 	self.file = love.filesystem.newFile(self.path)
 	self.file:open("w")
 	self.file:write("HEADR 0x4A215A\n")
-	self.file:write("VERSN 0.1\n")
+	self.file:write("VERSN "..VERSION.."\n")
 	self.file:close()
 end
 
