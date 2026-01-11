@@ -73,6 +73,9 @@ Days.newDay(2,function()
 				if v.f == "Box" then
 					v.g = 0
 				end
+				if v.f == "Jami_2" then
+					v.g = 0
+				end
 			end
 		end
 

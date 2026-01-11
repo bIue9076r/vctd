@@ -629,3 +629,18 @@ World.Dialogue[French][50] = Dialogue.new({
 	Text.new("But at least I have my package.",Zoey),
 	Text.new("You and Tracey stay safe now.",Zoey),
 },1)
+
+World.Dialogue[French][51] = Dialogue.new({
+	Text.new("Who's package is that?",Jami),
+	Text.new("I dunno",Varisa),
+},1)
+
+World.Dialogue[French][52] = Dialogue.new({
+	Text.new("Who's package is that?",Jami),
+	Text.new("Zoey's",Varisa),
+},1)
+
+World.Dialogue[French][53] = Dialogue.new({
+	Text.new("Who's package was that?",Jami),
+	Text.new("Zoey's",Varisa),
+},1)

@@ -15,6 +15,10 @@ Days.newDay(3,function()
 				if v.f == "Box" then
 					v.g = 1
 				end
+
+				if v.f == "Jami_2" then
+					v.g = 1
+				end
 			end
 		end
 
