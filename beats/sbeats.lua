@@ -137,6 +137,9 @@ Story.setBeat("Zoey_Errands_1", function()
 				if v.f == "Box" then
 					v.i = -17
 				end
+				if v.f == "Jami_2" then
+					v.i = 52
+				end
 			end
 		end
 	end
@@ -149,6 +152,9 @@ Story.setBeat("Zoey_Errands_2", function()
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f == "Box" then
 					v.g = 1
+				end
+				if v.f == "Jami_2" then
+					v.i = 53
 				end
 			end
 		end

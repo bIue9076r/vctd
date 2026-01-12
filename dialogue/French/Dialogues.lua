@@ -632,15 +632,23 @@ World.Dialogue[French][50] = Dialogue.new({
 
 World.Dialogue[French][51] = Dialogue.new({
 	Text.new("Who's package is that?",Jami),
-	Text.new("I dunno",Varisa),
+	Text.new("I dunno.",Varisa),
+	Text.new("It just showed up today for some reason.",Jami),
+	Text.new("Odd.",Varisa),
+	Text.new("Indeed.",Jami),
 },1)
 
 World.Dialogue[French][52] = Dialogue.new({
 	Text.new("Who's package is that?",Jami),
 	Text.new("Zoey's",Varisa),
+	Text.new("Hmm... Intresting.",Jami),
+	Text.new("So i'm gonna take it now...",Varisa),
+	Text.new("Sure it's not my package.",Jami),
 },1)
 
 World.Dialogue[French][53] = Dialogue.new({
 	Text.new("Who's package was that?",Jami),
 	Text.new("Zoey's",Varisa),
+	Text.new("Hmm... Intresting.",Jami),
+	Text.new("Tell her I appologize for the inconvenience.",Jami),
 },1)
