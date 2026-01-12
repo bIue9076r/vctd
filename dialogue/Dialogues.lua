@@ -1,5 +1,16 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-19] = Dialogue.new({
+	Text.new("Nothing left.",Varisa),
+},1)
+
+World.Dialogue[English][-18] = Dialogue.new({
+	Text.new("Found something.",Varisa,nil,function()
+		Story.set("Find",true)
+		Story.set("Find",false)
+	end),
+},1)
+
 World.Dialogue[English][-17] = Dialogue.new({
 	Text.new("Got the box.",Varisa,nil,function()
 		Story.set("Zoey_Errands_2",true)

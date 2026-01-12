@@ -1,6 +1,7 @@
 Item_Toolbox = Item.new(Toolbox)
 Item_Toolbox.name = "Toolbox"
 Item_Toolbox.added = false
+Item_Toolbox.save = "DAY1"
 
 function Item_Toolbox:act(key)
 	-- Quest Item

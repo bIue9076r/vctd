@@ -4,7 +4,8 @@ Item.i = -1
 function Item.new(i,n)
 	local tbl = {
 		i = i or -1, -- index (Char)
-		n = n or "Item ?",
+		name = n or "Item ?",
+		save = "DEF ",
 	}
 	
 	local mt = {
