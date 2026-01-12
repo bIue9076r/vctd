@@ -39,8 +39,8 @@ function World.endTalk()
 		World.ChangeMap = false
 	end
 	if World.AfterEffect then
-		World.AfterEffect()
-		World.AfterEffect = function()
+		World.AfterEffect(World.snpc)
+		World.AfterEffect = function(npc)
 				
 		end
 	end
@@ -49,7 +49,7 @@ end
 World.Map = {}
 World.NextMap = {}
 World.ChangeMap = false
-World.AfterEffect = function()
+World.AfterEffect = function(npc)
 	
 end
 --require("/maps/Maps")
@@ -185,7 +185,7 @@ function World.Keypressed(key)
 				wd = World.Dialogue[Language][World.snpc.i]
 			end
 			if wd then
-				World.dtbl = wd:get()
+				World.dtbl = wd:get(World.snpc)
 				
 				if World.Dialogue[Language][World.snpc.i] then
 					if World.Dialogue[English][World.snpc.i] then

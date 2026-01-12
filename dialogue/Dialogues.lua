@@ -5,8 +5,8 @@ World.Dialogue[English][-19] = Dialogue.new({
 },1)
 
 World.Dialogue[English][-18] = Dialogue.new({
-	Text.new("Found something.",Varisa,nil,function()
-		Story.set("Find",true)
+	Text.new("Found something.",Varisa,nil,function(npc)
+		Story.set("Find",true,npc)
 		Story.set("Find",false)
 	end),
 },1)

@@ -1,13 +1,13 @@
-Story.setBeat("Toolbox_Wilkie_1",function()
+Story.setBeat("Toolbox_Wilkie_1",function(npc)
 	--World.Map[1].npcs[2].i = 29
 end)
 
-Story.setBeat("Toolbox_Wilkie_2",function()
+Story.setBeat("Toolbox_Wilkie_2",function(npc)
 	World.Map[1].npcs[2].i = 29
 end)
 
 
-Story.setBeat("Screw_Drive_Jami",function()
+Story.setBeat("Screw_Drive_Jami",function(npc)
 	if Story.get("Toolbox_Wilkie_2") then
 		World.Map[1].npcs[2].i = 31
 		Plr.inv:add(Item_Screwdriver)
@@ -20,13 +20,13 @@ Story.setBeat("Screw_Drive_Jami",function()
 	end
 end)
 
-Story.setBeat("Rachel_Guitar_1",function()
+Story.setBeat("Rachel_Guitar_1",function(npc)
 	World.Map[1].props[1].g = 1
 	Plr.inv:add(Rachel_Guitar_Broke)
 	--World.Map[1].npcs[2].i = 29
 end)
 
-Story.setBeat("Mollie_Breakup_1",function()
+Story.setBeat("Mollie_Breakup_1",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 2 then
 			House.house[i].isOpen = true
@@ -34,7 +34,7 @@ Story.setBeat("Mollie_Breakup_1",function()
 	end
 end)
 
-Story.setBeat("Mollie_Breakup_2",function()
+Story.setBeat("Mollie_Breakup_2",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 2 then
 			local I = Families.HouseMap[i]
@@ -43,7 +43,7 @@ Story.setBeat("Mollie_Breakup_2",function()
 	end
 end)
 
-Story.setBeat("Mollie_Breakup_3",function()
+Story.setBeat("Mollie_Breakup_3",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 2 then
 			local I = Families.HouseMap[i]
@@ -52,7 +52,7 @@ Story.setBeat("Mollie_Breakup_3",function()
 	end
 end)
 
-Story.setBeat("Mollie_Breakup_4",function()
+Story.setBeat("Mollie_Breakup_4",function(npc)
 	for i,v in pairs(World.Map[25].npcs) do
 		if v.f == "Mollie" then
 			for i = 1,10 do
@@ -64,11 +64,11 @@ Story.setBeat("Mollie_Breakup_4",function()
 	end
 end)
 
-Story.setBeat("Karina_1",function()
+Story.setBeat("Karina_1",function(npc)
 	Plr.inv:add(Item_Crucifix)
 end)
 
-Story.setBeat("Brian_Trash_1", function()
+Story.setBeat("Brian_Trash_1", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 4 then
 			House.house[i].isOpen = true
@@ -76,7 +76,7 @@ Story.setBeat("Brian_Trash_1", function()
 	end
 end)
 
-Story.setBeat("Brian_Trash_2", function()
+Story.setBeat("Brian_Trash_2", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 4 then
 			local I = Families.HouseMap[i]
@@ -86,7 +86,7 @@ Story.setBeat("Brian_Trash_2", function()
 	end
 end)
 
-Story.setBeat("Brian_Trash_3", function()
+Story.setBeat("Brian_Trash_3", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 4 then
 			local I = Families.HouseMap[i]
@@ -95,11 +95,11 @@ Story.setBeat("Brian_Trash_3", function()
 	end
 end)
 
-Story.setBeat("Fredrick_Exercise_1", function()
+Story.setBeat("Fredrick_Exercise_1", function(npc)
 	
 end)
 
-Story.setBeat("Lassie_Baking_1", function()
+Story.setBeat("Lassie_Baking_1", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 8 then
 			local I = Families.HouseMap[i]
@@ -112,7 +112,7 @@ Story.setBeat("Lassie_Baking_1", function()
 	end
 end)
 
-Story.setBeat("Lassie_Baking_2", function()
+Story.setBeat("Lassie_Baking_2", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 8 then
 			local I = Families.HouseMap[i]
@@ -125,11 +125,11 @@ Story.setBeat("Lassie_Baking_2", function()
 	end
 end)
 
-Story.setBeat("Lassie_Baking_3", function()
+Story.setBeat("Lassie_Baking_3", function(npc)
 	
 end)
 
-Story.setBeat("Zoey_Errands_1", function()
+Story.setBeat("Zoey_Errands_1", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 5 then
 			local I = Families.HouseMap[i]
@@ -145,7 +145,7 @@ Story.setBeat("Zoey_Errands_1", function()
 	end
 end)
 
-Story.setBeat("Zoey_Errands_2", function()
+Story.setBeat("Zoey_Errands_2", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 5 then
 			local I = Families.HouseMap[i]
@@ -167,62 +167,69 @@ Story.setBeat("Zoey_Errands_2", function()
 	end
 end)
 
-Story.setBeat("Zoey_Errands_3", function()
+Story.setBeat("Zoey_Errands_3", function(npc)
 
 end)
 
-Story.setBeat("Jami_Experiment_1_1", function()
+Story.setBeat("Jami_Experiment_1_1", function(npc)
 	
 end)
 
-Story.setBeat("Jami_Experiment_2_1", function()
+Story.setBeat("Jami_Experiment_2_1", function(npc)
 	
 end)
 
-Story.setBeat("Karina_Investigation_1", function()
+Story.setBeat("Karina_Investigation_1", function(npc)
 	
 end)
 
-Story.setBeat("Zach_Gardening_1", function()
+Story.setBeat("Zach_Gardening_1", function(npc)
 	
 end)
 
-Story.setBeat("Vivian_Show_1", function()
+Story.setBeat("Vivian_Show_1", function(npc)
 	
 end)
 
-Story.setBeat("Sean_1", function()
+Story.setBeat("Sean_1", function(npc)
 	
 end)
 
-Story.setBeat("Ella_1", function()
+Story.setBeat("Ella_1", function(npc)
 	
 end)
 
-Story.setBeat("Mollie_Vengeance_1", function()
+Story.setBeat("Mollie_Vengeance_1", function(npc)
 	
 end)
 
-Story.setBeat("Karina_Breakthrough_1", function()
+Story.setBeat("Karina_Breakthrough_1", function(npc)
 	
 end)
 
-Story.setBeat("Zach_Details_1", function()
+Story.setBeat("Zach_Details_1", function(npc)
 	
 end)
 
-Story.setBeat("Wilkie_Details_1", function()
+Story.setBeat("Wilkie_Details_1", function(npc)
 	
 end)
 
-Story.setBeat("Jami_Suspicions_1_1", function()
+Story.setBeat("Jami_Suspicions_1_1", function(npc)
 	
 end)
 
-Story.setBeat("Jami_Suspicions_2_1", function()
+Story.setBeat("Jami_Suspicions_2_1", function(npc)
 	
 end)
 
-Story.setBeat("Jami_Suspicions_3_1", function()
+Story.setBeat("Jami_Suspicions_3_1", function(npc)
 	
+end)
+
+
+---
+
+Story.setBeat("Find", function(npc)
+	npc.i = -19
 end)

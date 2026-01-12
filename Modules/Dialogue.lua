@@ -59,7 +59,7 @@ function Dialogue.new(ttbl,c,e)
 	return setmetatable(tbl,mt)
 end
 
-function Dialogue:get()
+function Dialogue:get(npc)
 	local rs, rc, rv = self.text[self.index]()
 	self.index = self.index + 1
 	if self.index > #self.text then
@@ -68,7 +68,7 @@ function Dialogue:get()
 		else
 			self.index = self.index - 1
 		end
-		self.effect()
+		self.effect(npc)
 	end
 	return {s=rs, n=rc, v=rv}
 end

@@ -2,7 +2,7 @@ Story = {}
 Story.vars = {}
 Story.beats = {}
 
-function Story.set(n,v,r)
+function Story.set(n,v,npc,r)
 	Story.vars[n] = {
 		v = v or false,
 		r = r or false,
@@ -18,11 +18,11 @@ function Story.set(n,v,r)
 	end
 	
 	if Story.vars[n].e then
-		Story.beats[n]()
+		Story.beats[n](npc)
 		Story.vars[n].e = false
 	else
 		if Story.vars[n].r then
-			Story.beats[n]()
+			Story.beats[n](npc)
 		end
 	end
 end
