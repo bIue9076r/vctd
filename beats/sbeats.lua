@@ -81,6 +81,7 @@ Story.setBeat("Brian_Trash_2", function(npc)
 		if House.house[i].HouseHold == 4 then
 			local I = Families.HouseMap[i]
 			World.Map[I + 5].npcs[1].g = 1
+			-- change to "npc.g = 1" later
 			World.Map[I].npcs[3].i = -13
 		end
 	end

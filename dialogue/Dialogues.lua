@@ -23,7 +23,7 @@ World.Dialogue[English][-16] = Dialogue.new({
 
 World.Dialogue[English][-15] = Dialogue.new({
 	Text.new("Got the milk.",Varisa,nil,function()
-		Story.set("Lassie_Baking_1",true)
+		Story.set("Lassie_Baking_2",true)
 	end),
 	Text.new("There's no milk.",Varisa),
 },1)
