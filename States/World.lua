@@ -25,6 +25,19 @@ function World.doTalk(key)
 	)
 end
 
+function World.isOutdoors(n)
+	return (
+		(n == 1) or (n == 5) or (n == 7) or (n == 12) or
+		(n == 13) or (n == 18) or (n == 19) or (n == 24) or
+		(n == 25) or (n == 26) or (n == 27) or (n == 28) or
+		(n == 29) or (n == 30) or (n == 31) or (n == 36) or
+		(n == 37) or (n == 42) or (n == 43) or (n == 48) or
+		(n == 49) or (n == 54) or (n == 55) or (n == 60) or
+		(n == 61) or (n == 66) or (n == 67) or (n == 72) or
+		(n == 73) or (n == 78) or (n == 79) or (n == 80)
+	)
+end
+
 function World.endTalk()
 	-- stop talking
 	Voices[World.dtbl.v]:pause()
@@ -164,6 +177,17 @@ function World.Update(dt)
 		if not wallCollide(Tx,Ty,Wx,Wy,Ww,Wh) then
 			World.snpc = nil
 			World.sdbox = nil
+		end
+	end
+
+	if Story.get("Power_Up_1") then
+		if not(false) then -- Completed power up
+			local n = MaptoN()
+			if World.isOutdoors(n) then
+				Mood.darkSet(0)
+			else
+				Mood.darkSet(2)
+			end
 		end
 	end
 end

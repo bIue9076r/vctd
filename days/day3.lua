@@ -53,7 +53,11 @@ Days.newDay(3,function()
 		end
 	end
 
+	Mood.darkSet(2)
+	Mood.set(-4/2.5)
 	Time.setHour(Day)
     GameState = Cutscene
 	Play.scene = Play.Scenes[5]
+
+	Story.set("Power_Up_1",true)
 end)

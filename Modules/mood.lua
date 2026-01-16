@@ -40,13 +40,13 @@ function Mood.darkSet(dm)
 end
 
 function Mood.get()
-	return math.max(math.min(5,Mood.mood + Mood.timeMood - Mood.darkness),-5)
+	return math.max(math.min(5,Mood.mood + (Mood.timeMood/2.5) - (Mood.darkness / 2)),-5)
 end
 
 function Mood.print()
-	print(math.max(math.min(5,Mood.mood + Mood.timeMood - Mood.darkness),-5))
+	print(math.max(math.min(5,Mood.mood + (Mood.timeMood/2.5) - (Mood.darkness / 2)),-5))
 end
 
 function Mood.str()
-	return tostring(math.max(math.min(5,Mood.mood + Mood.timeMood - Mood.darkness),-5))
+	return tostring(math.max(math.min(5,Mood.mood + (Mood.timeMood/2.5) - (Mood.darkness/2)),-5))
 end
