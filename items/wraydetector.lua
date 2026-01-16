@@ -33,7 +33,6 @@ function Item_WRayDetector:act(key)
 			v = "Normal",
 		}
 	else
-		Item_WRayDetector.count = Item_WRayDetector.count + 1
 		IsTalking = true
 		World.dtbl = {
 			s = "It says "..(Mood.str()),
@@ -41,5 +40,12 @@ function Item_WRayDetector:act(key)
 			v = "Normal",
 		}
 		Item_WRayDetector.last = m
+
+		if Item_WRayDetector.count < 2 then
+			Item_WRayDetector.count = Item_WRayDetector.count + 1
+		else
+			Item_WRayDetector.count = 0
+			Story.set("Jami_Experiment_1_2",true)
+		end
 	end
 end

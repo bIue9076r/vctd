@@ -102,6 +102,13 @@ function ItemBag:update(dt)
 			self.index = nil
 		end
 	end
+
+	-- todo
+	--[[
+	if self.index and self.items[self.index] then
+		self.items[self.index]:update(dt)
+	end
+	]]
 end
 
 function ItemBag:drawInv()

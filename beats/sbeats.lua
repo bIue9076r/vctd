@@ -176,6 +176,10 @@ Story.setBeat("Jami_Experiment_1_1", function(npc)
 	
 end)
 
+Story.setBeat("Jami_Experiment_1_2", function(npc)
+	
+end)
+
 Story.setBeat("Jami_Experiment_2_1", function(npc)
 	
 end)

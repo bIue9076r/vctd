@@ -13,11 +13,13 @@ function skyTint()
 	local r2 = Sky[h2][1]
 	local g2 = Sky[h2][2]
 	local b2 = Sky[h2][3]
+
+	local bh = 0.2*Mood.darkness
 	
 	love.graphics.setColor(
-		lerp(r1,r2,tm),
-		lerp(g1,g2,tm),
-		lerp(b1,b2,tm)
+		lerp(r1,r2,tm) - bh,
+		lerp(g1,g2,tm) - bh,
+		lerp(b1,b2,tm) - bh
 	)
 end
 

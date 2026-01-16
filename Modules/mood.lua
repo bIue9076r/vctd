@@ -1,6 +1,7 @@
 Mood = {}
 Mood.mood = 0 -- -5 <-> 5
 Mood.timeMood = 0
+Mood.darkness = 0
 
 Mood.moodChanged = nil
 
@@ -30,14 +31,22 @@ function Mood.timeSet(tm)
 	end
 end
 
+function Mood.darkSet(dm)
+	Mood.darkness = dm or 0
+	
+	if Mood.moodChanged then
+		Mood.moodChanged()
+	end
+end
+
 function Mood.get()
-	return math.max(math.min(5,Mood.mood + Mood.timeMood),-5)
+	return math.max(math.min(5,Mood.mood + Mood.timeMood - Mood.darkness),-5)
 end
 
 function Mood.print()
-	print(math.max(math.min(5,Mood.mood + Mood.timeMood),-5))
+	print(math.max(math.min(5,Mood.mood + Mood.timeMood - Mood.darkness),-5))
 end
 
 function Mood.str()
-	return tostring(math.max(math.min(5,Mood.mood + Mood.timeMood),-5))
+	return tostring(math.max(math.min(5,Mood.mood + Mood.timeMood - Mood.darkness),-5))
 end
