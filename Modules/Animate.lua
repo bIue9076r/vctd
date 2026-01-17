@@ -55,6 +55,7 @@ Scene.Actors = {}
 Scene.Backround = Backround.new()
 Scene.Hour = 0
 Scene.Min = 0
+Scene.darkness = 0
 Scene.dtbl = {
 	s = "......",
 	n = Varisa,
@@ -71,6 +72,7 @@ function Scene.new(m,g,t)
 		Backround = Backround.new(m),
 		Hour = 0,
 		Min = 0,
+		darkness = 0,
 		dtbl = {
 			s = "......",
 			n = Varisa,
@@ -104,11 +106,13 @@ function Scene:skyTint()
 	local r2 = Sky[h2][1]
 	local g2 = Sky[h2][2]
 	local b2 = Sky[h2][3]
+
+	local bh = 0.2*self.darkness
 	
 	love.graphics.setColor(
-		Scene.lerp(r1,r2,tm),
-		Scene.lerp(g1,g2,tm),
-		Scene.lerp(b1,b2,tm)
+		Scene.lerp(r1,r2,tm) - bh,
+		Scene.lerp(g1,g2,tm) - bh,
+		Scene.lerp(b1,b2,tm) - bh
 	)
 end
 

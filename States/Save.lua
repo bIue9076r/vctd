@@ -156,31 +156,31 @@ function Save_Draw()
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Current:"},
+		{{0,0,0},String.get(22)},
 		((3*SCREEN_X)/5),(SCREEN_Y/4),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Version: "..(ConfVer or CVERSION)},
+		{{0,0,0},String.get(23)..(ConfVer or CVERSION)},
 		((3*SCREEN_X)/5),((5*SCREEN_Y)/16),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 		love.graphics.print(
-		{{0,0,0},string.format("Seed: 0x%07X",ConfSeed or Seed)},
+		{{0,0,0},string.format(String.get(24),ConfSeed or Seed)},
 		((3*SCREEN_X)/5),((3*SCREEN_Y)/8),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Language: "..tostring(ConfLang or SaveLang[Language])},
+		{{0,0,0},String.get(25)..tostring(ConfLang or SaveLang[Language])},
 		((3*SCREEN_X)/5),((7*SCREEN_Y)/16),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Day: "..tostring(ConfDay or GameDay)},
+		{{0,0,0},String.get(26)..tostring(ConfDay or GameDay)},
 		((3*SCREEN_X)/5),(SCREEN_Y/2),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
@@ -204,13 +204,13 @@ function Save_Draw()
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Load [l]"},
+		{{0,0,0},String.get(27)},
 		((3*SCREEN_X)/5),((3*SCREEN_Y)/4),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
 	
 	love.graphics.print(
-		{{0,0,0},"Save [s]"},
+		{{0,0,0},String.get(28)},
 		((3*SCREEN_X)/5),((13*SCREEN_Y)/16),
 		0,SCREEN_X/600,SCREEN_Y/400
 	)
@@ -228,8 +228,8 @@ function Save_Keypressed(key)
 			SaveCon = false
 			Game_Save(savefile)
 		else
-			SaveConfirm_1 = "Are you sure"
-			SaveConfirm_2 = "you want to save?"
+			SaveConfirm_1 = String.get(29)
+			SaveConfirm_2 = String.get(30)
 			Game_clearData()
 			SaveCon = true
 		end
@@ -242,8 +242,8 @@ function Save_Keypressed(key)
 			LoadCon = false
 			Game_Load(savefile)
 		else
-			SaveConfirm_1 = "Are you sure"
-			SaveConfirm_2 = "you want to load?"
+			SaveConfirm_1 = String.get(29)
+			SaveConfirm_2 = String.get(31)
 			Game_getData(savefile)
 			LoadCon = true
 		end
@@ -256,8 +256,8 @@ function Save_Keypressed(key)
 			DeleCon = false
 			Game_Delete(savefile)
 		else
-			SaveConfirm_1 = "Are you sure"
-			SaveConfirm_2 = "you want to delete?"
+			SaveConfirm_1 = String.get(29)
+			SaveConfirm_2 = String.get(32)
 			Game_getData(savefile)
 			DeleCon = true
 		end

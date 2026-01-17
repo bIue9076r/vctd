@@ -33,8 +33,8 @@ World.Map[10]:addProp(Prop.new(16,11,Table_TR))
 World.Map[10]:addProp(Prop.new(15,12,Table_BL))
 World.Map[10]:addProp(Prop.new(16,12,Table_BR))
 
-World.Map[10]:addProp(Prop.new(20.5,5,Amp))
-World.Map[10]:addProp(Prop.new(20,5,B_Guitar_R))
+World.Map[10]:addProp(Prop.new(20.5,5,Amp,0,0,0,nil,"Stuff_day1"))
+World.Map[10]:addProp(Prop.new(20,5,B_Guitar_R,0,0,0,nil,"Stuff_day1"))
 
 World.Map[10]:addWall(Box.new(0,0,8,14))
 World.Map[10]:addWall(Box.new(8,0,14,2))
@@ -49,3 +49,23 @@ end))
 World.Map[10]:addNpc(Npc.new(21.0,2.5,Interaction,-10,0,function()
 	
 end))
+
+World.Map[10]:addNpc(Npc.new(14.6,9.7,Rachel,0,1,function()
+	
+end,"Rachel"))
+
+World.Map[10]:addNpc(Npc.new(16.6,6.7,Tracey,0,1,function()
+	
+end,"Tracey"))
+
+World.Map[10]:addProp(Prop.new(14.6,9.7,R_Guitar_L,0,0,1,nil,"Stuff_day3"))
+World.Map[10]:addProp(Prop.new(13.6,8.7,Amp,0,0,1,nil,"Stuff_day3"))
+
+World.Map[10]:addProp(Prop.new(19.1,11,Mic,1,0,1,nil,"Stuff_day3"))
+World.Map[10]:addProp(Prop.new(19.6,9.7,Amp,0,0,1,nil,"Stuff_day3"))
+
+World.Map[10]:addProp(Prop.new(6.8 + 9,4.9 + 2,Ride_Cymbal,0,0,1,nil,"Stuff_day3"))
+World.Map[10]:addProp(Prop.new(8.4 + 9,4.9 + 2,Crash_Cymbal,0,0,1,nil,"Stuff_day3"))
+World.Map[10]:addProp(Prop.new(8 + 9,5.3 + 2,Snare_Drum,0,0,1,nil,"Stuff_day3"))
+World.Map[10]:addProp(Prop.new(7.2 + 9,5.3 + 2,Tom_Drum,0,0,1,nil,"Stuff_day3"))
+World.Map[10]:addProp(Prop.new(7.6 + 9,5.5 + 2,Bass_Drum,0,0,1,nil,"Stuff_day3"))
