@@ -90,4 +90,8 @@ World.Map[25]:addNpc(Npc.new(13.5,5.0,Mollie,36,1,function()
 	
 end,"Mollie"))
 
+World.Map[25]:addNpc(Npc.new(19.8,1.0,Jami,57,1,function()
+	
+end,"Jami"))
+
 World.Map[25]:addProp(Prop.new(14.0,4.5,Ella_sand,1,1,1,nil,"Ella_sand"))

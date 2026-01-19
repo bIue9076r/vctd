@@ -50,11 +50,11 @@ World.Map[10]:addNpc(Npc.new(21.0,2.5,Interaction,-10,0,function()
 	
 end))
 
-World.Map[10]:addNpc(Npc.new(14.6,9.7,Rachel,0,1,function()
+World.Map[10]:addNpc(Npc.new(14.6,9.7,Rachel,54,1,function()
 	
 end,"Rachel"))
 
-World.Map[10]:addNpc(Npc.new(16.6,6.7,Tracey,0,1,function()
+World.Map[10]:addNpc(Npc.new(16.6,6.7,Tracey,55,1,function()
 	
 end,"Tracey"))
 

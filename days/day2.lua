@@ -151,6 +151,10 @@ Days.newDay(2,function()
 			if v.f == "Ella" then
 				v.g = 1
 			end
+
+			if v.f == "Jami" then
+				v.g = 1
+			end
 		end
 	end
 

@@ -1,4 +1,16 @@
 Days.newDay(3,function()
+	for i,v in pairs(World.Map[1].npcs) do
+		if v.f == "Zoey" then
+			v.g = 0
+		end
+	end
+	
+	for i,v in pairs(World.Map[3].npcs) do
+		if v.f == "Zoey" then
+			v.g = 1
+		end
+	end
+
 	for i,v in ipairs(House.house) do
 		if v.HouseHold == 3 then
 			local I = Families.HouseMap[i]
@@ -44,6 +56,10 @@ Days.newDay(3,function()
 	for i,v in pairs(World.Map[25].npcs) do
 		if v.f then
 			v.g = 1
+		end
+
+		if v.f == "Jami" then
+			v.g = 0
 		end
 	end
 

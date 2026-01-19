@@ -671,3 +671,27 @@ World.Dialogue[English][53] = Dialogue.new({
 	Text.new("Hmm... Intresting.",Jami),
 	Text.new("Tell her I appologize for the inconvenience.",Jami),
 },1)
+
+World.Dialogue[English][54] = Dialogue.new({
+	Text.new("Damn, always on a Tuesday, huh",Rachel),
+	Text.new("I'd suggest you check what's going on outside",Rachel),
+	Text.new("...",Rachel),
+},1)
+
+World.Dialogue[English][55] = Dialogue.new({
+	Text.new("If only you played acoustic",Tracey),
+	Text.new("I'd suggest you check what's going on outside",Tracey),
+	Text.new("...",Tracey),
+},1)
+
+World.Dialogue[English][56] = Dialogue.new({
+	Text.new("If only you played acoustic",Tracey),
+	Text.new("I'd suggest you check what's going on outside",Tracey),
+	Text.new("...",Tracey),
+},1)
+
+World.Dialogue[English][57] = Dialogue.new({
+	Text.new("If only you played acoustic",Tracey),
+	Text.new("I'd suggest you check what's going on outside",Tracey),
+	Text.new("...",Tracey),
+},1)
