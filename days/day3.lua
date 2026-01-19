@@ -60,6 +60,9 @@ Days.newDay(3,function()
 
 		if v.f == "Jami" then
 			v.g = 0
+			if false then
+				v.i = 58
+			end
 		end
 	end
 

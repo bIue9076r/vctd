@@ -695,3 +695,9 @@ World.Dialogue[English][57] = Dialogue.new({
 	Text.new("I'd suggest you check what's going on outside",Tracey),
 	Text.new("...",Tracey),
 },1)
+
+World.Dialogue[English][58] = Dialogue.new({
+	Text.new("If only you played acoustic",Tracey),
+	Text.new("I'd suggest you check what's going on outside",Tracey),
+	Text.new("...",Tracey),
+},1)
