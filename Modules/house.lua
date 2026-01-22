@@ -73,6 +73,18 @@ Families.mail = {
 	["Empty"] = 15,
 }
 
+-- Todo: replace magic numbers everywhere
+Families.HouseHold = {
+	["Wilkie"] = 1,
+	["Sean"] = 2,
+	["Karina"] = 3,
+	["Vivian"] = 4,
+	["Jami"] = 5,
+	["Fredrick"] = 6,
+	["Mollie"] = 7,
+	["Rachel"] = 8,
+}
+
 Families.add = {
 	[1] = addWilkie,
 	[2] = addSean,

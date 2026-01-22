@@ -190,8 +190,6 @@ World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Uhh....",Varisa),
 	Text.new("Can I get back to you?",Varisa),
 	Text.new("Sure, take your time",Wilkie,nil,function()
-		-- Change Rachel's Dialogue Number
-		print("Look, i'm doing something")
 		Story.set("Toolbox_Wilkie_2",true)
 	end),
 	Text.new("Sure, take your time",Wilkie),
@@ -745,4 +743,7 @@ World.Dialogue[English][61] = Dialogue.new({
 	Text.new("Have fun, go nuts.",Jami),
 },1)
 
+World.Dialogue[English][62] = Dialogue.new({
+	Text.new("They still had it?",Lassie),
+},1)
 

@@ -4,6 +4,16 @@ end)
 
 Story.setBeat("Toolbox_Wilkie_2",function(npc)
 	World.Map[1].npcs[2].i = 29
+	for i = 1,10 do
+		if House.house[i].HouseHold == Families.HouseHold["Rachel"] then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I + 2].npcs) do
+				if v.f == "Lassie" then
+					v.i = 62
+				end
+			end
+		end
+	end
 end)
 
 

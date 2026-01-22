@@ -744,3 +744,7 @@ World.Dialogue[French][61] = Dialogue.new({
 	end),
 	Text.new("Have fun, go nuts.",Jami),
 },1)
+
+World.Dialogue[French][62] = Dialogue.new({
+	Text.new("They still had it?",Lassie),
+},1)
