@@ -21,11 +21,11 @@ function Text.new(s,c,v,e)
 	return setmetatable(tbl,mt)
 end
 
-function Text:get()
+function Text:get(npc)
 	local rs = self.s
 	local rc = self.c
 	local rv = self.v
-	self.e()
+	self.e(npc)
 	return rs, rc, rv
 end
 
@@ -60,7 +60,7 @@ function Dialogue.new(ttbl,c,e)
 end
 
 function Dialogue:get(npc)
-	local rs, rc, rv = self.text[self.index]()
+	local rs, rc, rv = self.text[self.index](npc)
 	self.index = self.index + 1
 	if self.index > #self.text then
 		if self.cycle == 0 then

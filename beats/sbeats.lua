@@ -139,7 +139,9 @@ Story.setBeat("Zoey_Errands_1", function(npc)
 					v.i = -17
 				end
 				if v.f == "Jami_2" then
-					v.i = 52
+					if v.i == 51 then
+						v.i = 52
+					end
 				end
 			end
 		end
@@ -155,7 +157,9 @@ Story.setBeat("Zoey_Errands_2", function(npc)
 					v.g = 1
 				end
 				if v.f == "Jami_2" then
-					v.i = 53
+					if v.i == 51 then
+						v.i = 53
+					end
 				end
 			end
 		end
@@ -173,10 +177,23 @@ Story.setBeat("Zoey_Errands_3", function(npc)
 end)
 
 Story.setBeat("Jami_Experiment_1_1", function(npc)
-	
+	Plr.inv:add(Item_WRayDetector)
 end)
 
 Story.setBeat("Jami_Experiment_1_2", function(npc)
+	for i = 1,10 do
+		if House.house[i].HouseHold == 5 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Jami_2" then
+					v.i = 52
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Jami_Experiment_1_3", function(npc)
 	
 end)
 

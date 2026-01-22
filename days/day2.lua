@@ -28,6 +28,13 @@ Days.newDay(2,function()
 				if v.f then
 					v.g = 1
 				end
+
+				if v.f == "Box" then
+					v.g = 0
+				end
+				if v.f == "Jami_2" then
+					v.g = 0
+				end
 			end
 		end
 
@@ -49,7 +56,7 @@ Days.newDay(2,function()
 		if v.HouseHold == 3 then
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I].npcs) do
-				if v.f == "Karina" then
+				if v.f then
 					v.g = 0
 				end
 			end
@@ -69,30 +76,6 @@ Days.newDay(2,function()
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f then
 					v.g = 1
-				end
-				if v.f == "Box" then
-					v.g = 0
-				end
-				if v.f == "Jami_2" then
-					v.g = 0
-				end
-			end
-		end
-
-		if v.HouseHold == 5 then
-			local I = Families.HouseMap[i]
-			for i,v in pairs(World.Map[I].npcs) do
-				if v.f == "Box" then
-					v.g = 0
-				end
-			end
-		end
-
-		if v.HouseHold == 3 then
-			local I = Families.HouseMap[i]
-			for i,v in pairs(World.Map[I].npcs) do
-				if v.f then
-					v.g = 0
 				end
 			end
 		end

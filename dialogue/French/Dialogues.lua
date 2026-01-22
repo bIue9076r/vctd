@@ -650,28 +650,9 @@ World.Dialogue[French][50] = Dialogue.new({
 },1)
 
 World.Dialogue[French][51] = Dialogue.new({
-	Text.new("Who's package is that?",Jami),
-	Text.new("I dunno.",Varisa),
-	Text.new("It just showed up today for some reason.",Jami),
-	Text.new("Odd.",Varisa),
-	Text.new("Indeed.",Jami),
-	
-	Text.new("Say...",Jami),
-	Text.new("If you don't mind, I need some help.",Jami),
-	Text.new("Sure....",Varisa),
-	Text.new("Uhhh.... i'm pretty sure you barely passed physics?",Jami),
-	Text.new("Yeah.",Varisa),
-	Text.new("Okay...",Jami),
-	Text.new("So, there's this energy",Jami),
-	Text.new("And I've made a detector for it",Jami),
-	Text.new("Here",Jami,nil,function()
-		Story.set("Jami_Experiment_1_1",true)
+	Text.new("Who's package is that?",Jami,nil,function(npc)
+		npc.i = 59
 	end),
-	Text.new("I need you to record 3 samples.",Jami),
-	Text.new("I have a feeling it's based on...",Jami),
-	Text.new("the number of people around.",Jami),
-	Text.new("Take samples far enough from each other.",Jami),
-	Text.new("Thanks for the help.",Jami),
 },1)
 
 World.Dialogue[French][52] = Dialogue.new({
@@ -679,48 +660,18 @@ World.Dialogue[French][52] = Dialogue.new({
 	Text.new("Zoey's",Varisa),
 	Text.new("Hmm... Intresting.",Jami),
 	Text.new("So i'm gonna take it now...",Varisa),
-	Text.new("Sure it's not my package.",Jami),
-	
-	Text.new("Say...",Jami),
-	Text.new("If you don't mind, I need some help.",Jami),
-	Text.new("Sure....",Varisa),
-	Text.new("Uhhh.... i'm pretty sure you barely passed physics?",Jami),
-	Text.new("Yeah.",Varisa),
-	Text.new("Okay...",Jami),
-	Text.new("So, there's this energy",Jami),
-	Text.new("And I've made a detector for it",Jami),
-	Text.new("Here",Jami,nil,function()
-		Story.set("Jami_Experiment_1_1",true)
+	Text.new("Sure it's not my package.",Jami,nil,function(npc)
+		npc.i = 60
 	end),
-	Text.new("I need you to record 3 samples.",Jami),
-	Text.new("I have a feeling it's based on...",Jami),
-	Text.new("the number of people around.",Jami),
-	Text.new("Take samples far enough from each other.",Jami),
-	Text.new("Thanks for the help.",Jami),
 },1)
 
 World.Dialogue[French][53] = Dialogue.new({
 	Text.new("Who's package was that?",Jami),
 	Text.new("Zoey's",Varisa),
 	Text.new("Hmm... Intresting.",Jami),
-	Text.new("Tell her I appologize for the inconvenience.",Jami),
-		
-	Text.new("Say...",Jami),
-	Text.new("If you don't mind, I need some help.",Jami),
-	Text.new("Sure....",Varisa),
-	Text.new("Uhhh.... i'm pretty sure you barely passed physics?",Jami),
-	Text.new("Yeah.",Varisa),
-	Text.new("Okay...",Jami),
-	Text.new("So, there's this energy",Jami),
-	Text.new("And I've made a detector for it",Jami),
-	Text.new("Here",Jami,nil,function()
-		Story.set("Jami_Experiment_1_1",true)
+	Text.new("Tell her I appologize for the inconvenience.",Jami,nil,function(npc)
+		npc.i = 60
 	end),
-	Text.new("I need you to record 3 samples.",Jami),
-	Text.new("I have a feeling it's based on...",Jami),
-	Text.new("the number of people around.",Jami),
-	Text.new("Take samples far enough from each other.",Jami),
-	Text.new("Thanks for the help.",Jami),
 },1)
 
 World.Dialogue[French][54] = Dialogue.new({
@@ -751,4 +702,45 @@ World.Dialogue[French][58] = Dialogue.new({
 	Text.new("If only you played acoustic",Tracey),
 	Text.new("I'd suggest you check what's going on outside",Tracey),
 	Text.new("...",Tracey),
+},1)
+
+World.Dialogue[French][59] = Dialogue.new({
+	Text.new("I dunno.",Varisa),
+	Text.new("It just showed up today for some reason.",Jami),
+	Text.new("Odd.",Varisa),
+	Text.new("Indeed.",Jami,nil,function(npc)
+		npc.i = 60
+	end),
+},1)
+
+World.Dialogue[French][60] = Dialogue.new({
+	Text.new("Say...",Jami),
+	Text.new("If you don't mind, I need some help.",Jami),
+	Text.new("Sure....",Varisa),
+	Text.new("Uhhh.... i'm pretty sure you barely passed physics?",Jami),
+	Text.new("Yeah.",Varisa),
+	Text.new("Okay...",Jami),
+	Text.new("So, there's this energy",Jami),
+	Text.new("And I've made a detector for it",Jami),
+	Text.new("Here",Jami,nil,function()
+		Story.set("Jami_Experiment_1_1",true)
+	end),
+	Text.new("I need you to record 3 samples.",Jami),
+	Text.new("I have a feeling it's based on...",Jami),
+	Text.new("the number of people around.",Jami),
+	Text.new("Take samples far enough from each other.",Jami),
+	Text.new("Thanks for the help.",Jami),
+},1)
+
+World.Dialogue[French][61] = Dialogue.new({
+	Text.new("You're done?",Jami),
+	Text.new("Yep.",Varisa),
+	Text.new("Great, let me look at what you recorded.",Jami),
+	Text.new("............",Jami),
+	Text.new("Wow, intresting",Jami),
+	Text.new("It seems like that's not the variable.",Jami),
+	Text.new("Say, keep it with you and record anything else you find.",Jami,nil,function()
+		Story.set("Jami_Experiment_1_3",true)
+	end),
+	Text.new("Have fun, go nuts.",Jami),
 },1)
