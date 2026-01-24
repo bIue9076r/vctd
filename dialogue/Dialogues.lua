@@ -680,7 +680,7 @@ World.Dialogue[English][54] = Dialogue.new({
 
 World.Dialogue[English][55] = Dialogue.new({
 	Text.new("If only you played acoustic",Tracey),
-	Text.new("I'd suggest you check what's going on outside",Tracey),
+	Text.new("You should probably check what's going on outside",Tracey),
 	Text.new("...",Tracey),
 },1)
 
@@ -747,3 +747,6 @@ World.Dialogue[English][62] = Dialogue.new({
 	Text.new("They still had it?",Lassie),
 },1)
 
+World.Dialogue[English][63] = Dialogue.new({
+	Text.new("",Varisa)
+},1)
