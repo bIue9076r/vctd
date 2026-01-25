@@ -750,5 +750,7 @@ World.Dialogue[French][62] = Dialogue.new({
 },1)
 
 World.Dialogue[French][63] = Dialogue.new({
-	Text.new("",Varisa)
+	Text.new("Say, I need your help again",Jami),
+	Text.new("What the hell is wrong with you?", Varisa),
+	Text.new("Huh?",Jami),
 },1)
