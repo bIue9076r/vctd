@@ -470,7 +470,7 @@ function love.load(arg)
 								if f1 then
 									require("mods/"..v.."/"..v);
 								elseif f2 then
-									require("mods/"..v.."/main.lua");
+									require("mods/"..v.."/main");
 								elseif f3 then
 									require("mods/"..v);
 								else
