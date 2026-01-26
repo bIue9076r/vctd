@@ -464,7 +464,7 @@ function love.load(arg)
 						if f.type == "directory" then
 							print("Log: [Dir]: "..v)
 							if not ((v:sub(1,1) == "_") or (v:sub(1,1) == ".")) then
-								local f1 = love.filesystem.getInfo("/mods/" .. v .. "/" .. v)
+								local f1 = love.filesystem.getInfo("/mods/" .. v .. "/" .. v .. ".lua")
 								local f2 = love.filesystem.getInfo("/mods/" .. v .. "/main.lua")
 								local f3 = love.filesystem.getInfo("/mods/" .. v .. "/init.lua")
 								if f1 then
