@@ -687,21 +687,50 @@ World.Dialogue[French][55] = Dialogue.new({
 },1)
 
 World.Dialogue[French][56] = Dialogue.new({
-	Text.new("If only you played acoustic",Tracey),
-	Text.new("I'd suggest you check what's going on outside",Tracey),
-	Text.new("...",Tracey),
+	Text.new("What's going on Varisa?",Zoey),
+	Text.new("I have no idea.",Varisa),
+	Text.new("Just stay CALM OKAY!",Zoey),
+	Text.new("uhh..........",Varisa),
+	Text.new("EVERYTHING will be alright.",Zoey),
+	Text.new("okay..........",Varisa),
 },1)
 
 World.Dialogue[French][57] = Dialogue.new({
-	Text.new("If only you played acoustic",Tracey),
-	Text.new("I'd suggest you check what's going on outside",Tracey),
-	Text.new("...",Tracey),
+	Text.new("Say, I need your help again",Jami),
+	Text.new("What the hell is wrong with you?", Varisa),
+	Text.new("Huh?",Jami),
+	Text.new("It's just part of the method.",Jami),
+	Text.new("Turn the lights back on.",Varisa),
+	Text.new("In a bit, I need you to measure in the dark.",Jami),
+	Text.new("What?",Varisa),
+	Text.new("Take that Wray and use it in the dark.",Jami),
+	Text.new("Is this why you had to cut the power?",Varisa),
+	Text.new("Yes.",Jami),
+	Text.new("You're insane.",Varisa),
+	Text.new("Every genius is.",Jami),
+	Text.new("I need you to record 3 more samples.",Jami,nil,function()
+		Story.set("Jami_Experiment_2_1",true)
+	end),
+	Text.new("Come back with those samples and i'll fix the power."),
+	Text.new("Fine....",Varisa),
+	Text.new("Tick tock.",Jami),
 },1)
 
 World.Dialogue[French][58] = Dialogue.new({
-	Text.new("If only you played acoustic",Tracey),
-	Text.new("I'd suggest you check what's going on outside",Tracey),
-	Text.new("...",Tracey),
+	Text.new("Say, I need your help",Jami),
+	Text.new("What the hell is wrong with you?", Varisa),
+	Text.new("Huh?",Jami),
+	Text.new("You're insane.",Varisa),
+	Text.new("Turn the lights back on.",Varisa),
+	Text.new("In a bit.",Jami),
+	Text.new("I don't have a 'bit'",Varisa),
+	Text.new("Here, this tool will explain everything.",Jami,nil,function()
+		Story.set("Jami_Experiment_2_1",true)
+	end),
+	Text.new("I need you to record 3 samples.",Jami),
+	Text.new("Take samples far enough from each other.",Jami),
+	Text.new("Come back with those samples and i'll fix the power."),
+	Text.new("Tick tock.",Jami),
 },1)
 
 World.Dialogue[French][59] = Dialogue.new({
@@ -753,4 +782,20 @@ World.Dialogue[French][63] = Dialogue.new({
 	Text.new("Say, I need your help again",Jami),
 	Text.new("What the hell is wrong with you?", Varisa),
 	Text.new("Huh?",Jami),
+	Text.new("It's just part of the method.",Jami),
+	Text.new("Turn the lights back on.",Varisa),
+	Text.new("In a bit, I need you to measure in the dark.",Jami),
+	Text.new("What?",Varisa),
+	Text.new("Take that Wray and use it in the dark.",Jami),
+	Text.new("Is this why you had to cut the power?",Varisa),
+	Text.new("Yes.",Jami),
+	Text.new("You're insane.",Varisa),
+	Text.new("Every genius is.",Jami),
+	Text.new("I need you to actually record 3 more samples.",Jami,nil,function()
+		Story.set("Jami_Experiment_2_1",true)
+	end),
+	Text.new("Come back with those samples and i'll fix the power."),
+	Text.new("Don't just leave like last time.",Jami),
+	Text.new("Fine....",Varisa),
+	Text.new("Tick tock.",Jami),
 },1)

@@ -60,8 +60,12 @@ Days.newDay(3,function()
 
 		if v.f == "Jami" then
 			v.g = 0
-			if false then
-				v.i = 58
+
+			if not Story.get("Jami_Experiment_1_3") then
+				v.i = 63
+				if not Story.get("Jami_Experiment_1_1") then
+					v.i = 58
+				end
 			end
 		end
 	end
@@ -69,6 +73,12 @@ Days.newDay(3,function()
 	for i,v in pairs(World.Map[25].props) do
 		if v.f == "Ella_sand" then
 			v.g = 1
+		end
+	end
+
+	for i,v in pairs(World.Map[26].npcs) do
+		if v.f then
+			v.g = 0
 		end
 	end
 
