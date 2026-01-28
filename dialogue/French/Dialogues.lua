@@ -711,7 +711,7 @@ World.Dialogue[French][57] = Dialogue.new({
 	Text.new("I need you to record 3 more samples.",Jami,nil,function()
 		Story.set("Jami_Experiment_2_1",true)
 	end),
-	Text.new("Come back with those samples and i'll fix the power."),
+	Text.new("Come back with those samples and i'll fix the power.",Jami),
 	Text.new("Fine....",Varisa),
 	Text.new("Tick tock.",Jami),
 },1)
@@ -729,7 +729,7 @@ World.Dialogue[French][58] = Dialogue.new({
 	end),
 	Text.new("I need you to record 3 samples.",Jami),
 	Text.new("Take samples far enough from each other.",Jami),
-	Text.new("Come back with those samples and i'll fix the power."),
+	Text.new("Come back with those samples and i'll fix the power.",Jami),
 	Text.new("Tick tock.",Jami),
 },1)
 
@@ -794,7 +794,7 @@ World.Dialogue[French][63] = Dialogue.new({
 	Text.new("I need you to actually record 3 more samples.",Jami,nil,function()
 		Story.set("Jami_Experiment_2_1",true)
 	end),
-	Text.new("Come back with those samples and i'll fix the power."),
+	Text.new("Come back with those samples and i'll fix the power.",Jami),
 	Text.new("Don't just leave like last time.",Jami),
 	Text.new("Fine....",Varisa),
 	Text.new("Tick tock.",Jami),

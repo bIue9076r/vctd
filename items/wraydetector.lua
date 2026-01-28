@@ -18,7 +18,32 @@ function Item_WRayDetector:act(key)
 
 	-- Experiment 2
 	if Story.get("Jami_Experiment_2_1") then
-
+		local m = MaptoN()
+		if m == Item_WRayDetector.last then
+			IsTalking = true
+				
+			World.dtbl = {
+				s = "I've used this here",
+				n = Varisa,
+				v = "Normal",
+			}
+		else
+			IsTalking = true
+			World.dtbl = {
+				s = "It says "..(Mood.str()),
+				n = Varisa,
+				v = "Normal",
+			}
+			
+			Item_WRayDetector.last = m
+			
+			if Item_WRayDetector.count < 2 then
+				Item_WRayDetector.count = Item_WRayDetector.count + 1
+			else
+				Item_WRayDetector.count = 0
+				Story.set("Jami_Experiment_2_2",true)
+			end
+		end
 		return
 	end
 
