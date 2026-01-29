@@ -797,3 +797,43 @@ World.Dialogue[English][63] = Dialogue.new({
 	Text.new("Fine....",Varisa),
 	Text.new("Tick tock.",Jami),
 },1)
+
+World.Dialogue[English][64] = Dialogue.new({
+	Text.new("What the hell is going on?",Lassie),
+},1)
+
+World.Dialogue[English][65] = Dialogue.new({
+	Text.new("They still had it?",Zach),
+},1)
+
+World.Dialogue[English][66] = Dialogue.new({
+	Text.new("They still had it?",Mollie),
+},1)
+
+World.Dialogue[English][67] = Dialogue.new({
+	Text.new("They still had it?",Sean),
+},1)
+
+World.Dialogue[English][68] = Dialogue.new({
+	Text.new("They still had it?",Ella),
+},1)
+
+World.Dialogue[English][69] = Dialogue.new({
+	Text.new("They still had it?",Brian),
+},1)
+
+World.Dialogue[English][70] = Dialogue.new({
+	Text.new("They still had it?",Vivian),
+},1)
+
+World.Dialogue[English][71] = Dialogue.new({
+	Text.new("They still had it?",Mollie),
+},1)
+
+World.Dialogue[English][72] = Dialogue.new({
+	Text.new("They still had it?",Vivian),
+},1)
+
+World.Dialogue[English][73] = Dialogue.new({
+	Text.new("They still had it?",Brian),
+},1)
