@@ -4,6 +4,7 @@ sound.new("Ground","/Assets/Ground_Floor.mp3","stream")
 sound.new("Main","/Assets/Main_Floor.mp3","stream")
 sound.new("Scary_1","/Assets/Midnight_Horror.mp3","stream")
 sound.new("Scary_2","/Assets/Underworld_Bash.mp3","stream")
+sound.new("Scary_3","/Assets/Chalk_Stars.mp3","stream")
 sound.new("Breakup","/Assets/Breakup_Sim.mp3","stream")
 sound.new("Ambience_1","/Assets/amb_1.mp3","stream")
 

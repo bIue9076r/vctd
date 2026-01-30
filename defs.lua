@@ -479,6 +479,7 @@ SongList = {
 	Song.new("Ground",-1,1),
 	Song.new("Scary_1",-5,-1),
 	Song.new("Scary_2",0,2),
+	Song.new("Scary_3",0,3),
 	--Song.new("Ambience_1",-5,-4),
 }
 
