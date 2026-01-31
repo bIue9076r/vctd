@@ -802,40 +802,81 @@ World.Dialogue[French][63] = Dialogue.new({
 
 World.Dialogue[French][64] = Dialogue.new({
 	Text.new("What the hell is going on?",Lassie),
+	Text.new("I just saw everyone here trying to call for help.",Lassie),
+	Text.new("Cool.",Varisa),
+	Text.new("...",Lassie),
 },1)
 
 World.Dialogue[French][65] = Dialogue.new({
-	Text.new("They still had it?",Zach),
+	Text.new("I wish the power company would come sooner.",Zach),
+	Text.new("Same.",Varisa),
+	Text.new("You should stay for the demonstration.",Zach),
+	Text.new("Maybe.",Varisa),
+	Text.new("...",Zach),
 },1)
 
 World.Dialogue[French][66] = Dialogue.new({
-	Text.new("They still had it?",Mollie),
+	Text.new("I hate those two.",Mollie),
+	Text.new("Nothing about the power?",Varisa),
+	Text.new("Huh, what?",Mollie),
+	Text.new("The reason why we're outside?",Varisa),
+	Text.new("Oh the power.",Mollie),
+	Text.new("...",Varisa),
+	Text.new("...",Mollie),
+	Text.new("I mean, just look at them.",Mollie),
+	Text.new("...",Mollie),
 },1)
 
 World.Dialogue[French][67] = Dialogue.new({
-	Text.new("They still had it?",Sean),
+	Text.new("What a day.",Sean),
+	Text.new("A day alright.",Varisa),
+	Text.new("...",Sean),
 },1)
 
 World.Dialogue[French][68] = Dialogue.new({
-	Text.new("They still had it?",Ella),
+	Text.new("God, I hate that bitch.",Ella),
+	Text.new("I HEARD THAT!",Mollie),
+	Text.new("The power?",Varisa),
+	Text.new("What about the power?",Ella),
+	Text.new("Okay...",Varisa),
+	Text.new("...",Ella),
 },1)
 
 World.Dialogue[French][69] = Dialogue.new({
-	Text.new("They still had it?",Brian),
+	Text.new("They really gotta upgrade the power here.",Brian),
+	Text.new("Yes.",Varisa),
+	Text.new("...",Brian),
 },1)
 
 World.Dialogue[French][70] = Dialogue.new({
-	Text.new("They still had it?",Vivian),
+	Text.new("It never hurts to leave the house.",Vivian),
+	Text.new("Yeah, but the power coming back would be nice.",Varisa),
 },1)
 
 World.Dialogue[French][71] = Dialogue.new({
-	Text.new("They still had it?",Mollie),
+	Text.new("I hate those two.",Mollie),
+	Text.new("Nothing about the power?",Varisa),
+	Text.new("It ruined my plans too.",Mollie),
+	Text.new("What plans?",Varisa),
+	Text.new("Nothing that concerns you...",Mollie),
+	Text.new("...",Varisa),
+	Text.new("...",Mollie),
 },1)
 
 World.Dialogue[French][72] = Dialogue.new({
-	Text.new("They still had it?",Vivian),
+	Text.new("It really hurts to leave the house.",Vivian),
+	Text.new("Yeah, the power coming back would be nice.",Varisa),
+	Text.new("Just a few more minutes and I would have been done.",Vivian),
+	Text.new("...",Vivian),
 },1)
 
 World.Dialogue[French][73] = Dialogue.new({
-	Text.new("They still had it?",Brian),
+	Text.new("The house reeked of something recently.",Brian),
+	Text.new("I could have sworn the trash was taken out.",Brian),
+	Text.new("Odd. Anything else out of the ordinary.",Varisa),
+	Text.new("Muffuled voices, but that might just be all those...",Brian),
+	Text.new("Crime shows Vivian watches.",Brian),
+	Text.new("Maybe she could help you with that mystery of yours.",Brian),
+	Text.new("Maybe...",Varisa),
+	Text.new("...",Brian),
 },1)
