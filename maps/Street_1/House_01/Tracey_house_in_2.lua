@@ -31,15 +31,13 @@ World.Map[3]:addProp(Prop.new(20.5,11.5,Flowers,1))
 World.Map[3]:addProp(Prop.new(20.5,3,Vase))
 World.Map[3]:addProp(Prop.new(20.5,2,Flowers,1))
 
-World.Map[3]:addProp(Prop.new(15.7,9,ERROBJ,1,1))
-World.Map[3]:addProp(Prop.new(15.7,8,ERROBJ,1,1))
-World.Map[3]:addProp(Prop.new(15.7,7,ERROBJ,1,1))
-World.Map[3]:addProp(Prop.new(15.7,6,ERROBJ,1,1))
+World.Map[3]:addProp(Prop.new(15.7,9,Couch_6,1,1))
+World.Map[3]:addProp(Prop.new(15.7,8,Couch_4,1,1))
+World.Map[3]:addProp(Prop.new(15.7,7,Couch_2,1,1))
 
-World.Map[3]:addProp(Prop.new(14.7,9,ERROBJ,1,1))
-World.Map[3]:addProp(Prop.new(14.7,8,ERROBJ,1,1))
-World.Map[3]:addProp(Prop.new(14.7,7,ERROBJ,1,1))
-World.Map[3]:addProp(Prop.new(14.7,6,ERROBJ,1,1))
+World.Map[3]:addProp(Prop.new(14.7,9,Couch_5,1,1))
+World.Map[3]:addProp(Prop.new(14.7,8,Couch_3,1,1))
+World.Map[3]:addProp(Prop.new(14.7,7,Couch_1,1,1))
 
 
 World.Map[3]:addWall(Box.new(0,0,8,14))
