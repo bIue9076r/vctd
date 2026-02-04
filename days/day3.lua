@@ -21,6 +21,10 @@ Days.newDay(3,function()
 			end
 		end
 
+		if v.HouseHold == 4 then
+			v.isOpen = true
+		end
+
 		if v.HouseHold == 5 then
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I].npcs) do
@@ -32,6 +36,10 @@ Days.newDay(3,function()
 					v.g = 1
 				end
 			end
+		end
+
+		if v.HouseHold == 7 then
+			v.isOpen = true
 		end
 
 		if v.HouseHold == 8 then
