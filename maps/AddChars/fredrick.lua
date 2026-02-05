@@ -21,17 +21,17 @@ function addFredrickIn2(Map)
 end
 
 function addFredrickIn3(Map)
-	for i = 1,10 do
-		if House.house[i].HouseHold == 6 and House.house[i].isKiller then
-			World.Map[Map]:addProp(Prop.new(11.28,4.92,Pentagram_Lit_1,1,1,0,"pentagram",function()
-				
-			end))
+	World.Map[Map]:addProp(Prop.new(11.28,4.92,Pentagram_Lit_1,1,1,1,"pentagram",function()
 		
-			World.Map[Map]:addProp(Prop.new(12.28,4.92,Pentagram_Lit_2,1,1,0,"pentagram",function()
-				
-			end))
-		end
-	end
+	end))
+	
+	World.Map[Map]:addProp(Prop.new(12.28,4.92,Pentagram_Lit_2,1,1,1,"pentagram",function()
+		
+	end))
+	
+	World.Map[Map]:addNpc(Npc.new(15,13,Karly,0,1,function()
+		
+	end,"Karly"))
 end
 
 function addFredrickIn4(Map)
