@@ -23,6 +23,9 @@ Days.newDay(3,function()
 
 		if v.HouseHold == 4 then
 			v.isOpen = true
+			if v.isKiller then
+				
+			end
 		end
 
 		if v.HouseHold == 5 then
@@ -40,6 +43,9 @@ Days.newDay(3,function()
 
 		if v.HouseHold == 7 then
 			v.isOpen = true
+			if v.isKiller then
+				
+			end
 		end
 
 		if v.HouseHold == 8 then
