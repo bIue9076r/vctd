@@ -24,7 +24,14 @@ Days.newDay(3,function()
 		if v.HouseHold == 4 then
 			v.isOpen = true
 			if v.isKiller then
+				local I = Families.HouseMap[i]
+				for i,v in pairs(World.Map[I + 3].npcs) do
+					v.g = 0
+				end
 				
+				for i,v in pairs(World.Map[I + 3].props) do
+					v.g = 0
+				end
 			end
 		end
 
@@ -44,7 +51,14 @@ Days.newDay(3,function()
 		if v.HouseHold == 7 then
 			v.isOpen = true
 			if v.isKiller then
+				local I = Families.HouseMap[i]
+				for i,v in pairs(World.Map[I + 3].npcs) do
+					v.g = 0
+				end
 				
+				for i,v in pairs(World.Map[I + 3].props) do
+					v.g = 0
+				end
 			end
 		end
 
