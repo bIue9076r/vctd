@@ -159,6 +159,15 @@ function drawBackgound()
 			)
 		end
 	end
+	
+	if not(HideControls) and (GameState == WORLD) then
+		love.graphics.print({{1,1,1},"Controls: [E] - talk, [I] - bag, [U] - map, [O] - unequip"},
+			SCREEN_X/60,
+			(SCREEN_Y*37)/40,
+			0,
+			SCREEN_X/600,SCREEN_Y/400
+		)
+	end
 end
 
 function drawDialogue()

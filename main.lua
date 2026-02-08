@@ -93,6 +93,7 @@ String.NewLocale(Language)
 DrawCoords = false
 HitBoxes = false
 FmovePlr = false
+HideControls = false
 
 STATE_KEYPRESSED = {
 	[Intro] = Intro_Keypressed,

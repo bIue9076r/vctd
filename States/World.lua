@@ -142,6 +142,13 @@ function World.drawMap()
 		
 		img = image.getImage(Families[House.house[7].HouseHold])
 		World.drawMapIcon(img,15,10.4)
+		
+		love.graphics.setColor(1,0,0)
+		local x = 0
+		local y = 0
+		-- Show player where they are
+		--love.graphics.rectangle("fill",SCREEN_X*(x/600),SCREEN_Y*(y/600),(SCREEN_X/50),((SCREEN_Y*3)/100))
+		love.graphics.setColor(1,1,1)
 	end
 end
 
@@ -228,6 +235,8 @@ function World.Keypressed(key)
 			if (Plr.inv.visible) then
 				Plr.inv.visible = false
 			end
+		elseif key == "h" then
+			HideControls = not(HideControls)
 		end
 	else
 		if key == "e" then
