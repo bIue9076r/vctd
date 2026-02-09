@@ -38,6 +38,31 @@ function World.isOutdoors(n)
 	)
 end
 
+function World.playerBox(n)
+	local x = 0
+	local y = 0
+	
+	if(n <= 6) then
+		x = 24 + 4
+		y = 9 + 4
+	elseif (7 <= n) and (n <= 12) then
+		x = 24 + 4
+		y = 9 + 4
+	elseif (13 <= n) and (n <= 18) then
+	elseif (19 <= n) and (n <= 24) then
+	elseif (31 <= n) and (n <= 36) then
+	elseif (37 <= n) and (n <= 42) then
+	elseif (43 <= n) and (n <= 48) then
+	elseif (49 <= n) and (n <= 54) then
+	elseif (55 <= n) and (n <= 60) then
+	elseif (61 <= n) and (n <= 66) then
+	elseif (67 <= n) and (n <= 72) then
+	elseif (73 <= n) and (n <= 78) then
+	end
+	
+	return x, y
+end
+
 function World.endTalk()
 	-- stop talking
 	Voices[World.dtbl.v]:pause()
@@ -146,8 +171,8 @@ function World.drawMap()
 		love.graphics.setColor(1,0,0)
 		local x = 0
 		local y = 0
-		-- Show player where they are
-		--love.graphics.rectangle("fill",SCREEN_X*(x/600),SCREEN_Y*(y/600),(SCREEN_X/50),((SCREEN_Y*3)/100))
+		x, y = World.playerBox(MaptoN())
+		love.graphics.rectangle("fill",SCREEN_X*((x * 12)/600),SCREEN_Y*((y * 12)/600),(SCREEN_X/50),((SCREEN_Y*3)/100))
 		love.graphics.setColor(1,1,1)
 	end
 end
