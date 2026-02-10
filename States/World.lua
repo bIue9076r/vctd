@@ -43,13 +43,17 @@ function World.playerBox(n)
 	local y = 0
 	
 	if(n <= 6) then
-		x = 24 + 4
-		y = 9 + 4
+		x = 37
+		y = 17
 	elseif (7 <= n) and (n <= 12) then
-		x = 24 + 4
-		y = 9 + 4
+		x = 29
+		y = 17
 	elseif (13 <= n) and (n <= 18) then
+		x = 21
+		y = 17
 	elseif (19 <= n) and (n <= 24) then
+		x = 13
+		y = 17
 	elseif (31 <= n) and (n <= 36) then
 	elseif (37 <= n) and (n <= 42) then
 	elseif (43 <= n) and (n <= 48) then
