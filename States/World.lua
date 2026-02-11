@@ -55,13 +55,29 @@ function World.playerBox(n)
 		x = 13
 		y = 17
 	elseif (31 <= n) and (n <= 36) then
+		x = 37
+		y = 27
 	elseif (37 <= n) and (n <= 42) then
+		x = 29
+		y = 27
 	elseif (43 <= n) and (n <= 48) then
+		x = 21
+		y = 27
 	elseif (49 <= n) and (n <= 54) then
+		x = 13
+		y = 27
 	elseif (55 <= n) and (n <= 60) then
+		x = 37
+		y = 37
 	elseif (61 <= n) and (n <= 66) then
+		x = 29
+		y = 37
 	elseif (67 <= n) and (n <= 72) then
+		x = 21
+		y = 37
 	elseif (73 <= n) and (n <= 78) then
+		x = 13
+		y = 37
 	end
 	
 	return x, y
