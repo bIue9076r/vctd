@@ -20,6 +20,12 @@ Days.newDay(2,function()
 	for i,v in ipairs(House.house) do
 		if v.HouseHold == 1 then
 			v.isOpen = false
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I + 1].npcs) do
+				if v.f == "Wilkie" then
+					v.g = 1
+				end
+			end
 		end
 		
 		if v.HouseHold == 5 then

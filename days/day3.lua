@@ -21,6 +21,7 @@ Days.newDay(3,function()
 		end
 		
 		if v.HouseHold == 3 then
+			v.isOpen = true
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f then
