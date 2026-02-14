@@ -22,10 +22,6 @@ function addMollieIn3(Map)
 	World.Map[Map]:addNpc(Npc.new(15,13,Karly,0,1,function()
 		
 	end,"Karly"))
-	
-	World.Map[Map]:addNpc(Npc.new(10.0,12.7,Mollie,22,0,function()
-	
-	end,"Mollie"))
 end
 
 function addMollieIn4(Map)
