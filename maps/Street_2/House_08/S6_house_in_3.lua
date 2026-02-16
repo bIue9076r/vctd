@@ -12,6 +12,7 @@ World.Map[52]:setLineV(6,3,5,Planks,Bar_L)
 World.Map[52]:setTile(6,6,Planks,Bar_TL)
 World.Map[52]:setTile(5,6,Planks,Bar_T)
 
+--[[
 World.Map[52]:addProp(Prop.new(17,5,Box_1_1))
 World.Map[52]:addProp(Prop.new(18,5,Box_1_2))
 World.Map[52]:addProp(Prop.new(17,6,Box_1_3))
@@ -55,6 +56,7 @@ World.Map[52]:addWall(Box.new(0,0,8,14))
 World.Map[52]:addWall(Box.new(8,0,14,2))
 World.Map[52]:addWall(Box.new(10,4,0.1,6))
 World.Map[52]:addWall(Box.new(8,10,2,0.1))
+]]
 
 World.Map[52]:addWall(Box.new(8,6.5,1.8,0.1,1,1,function()
 	Map = World.Map[51]

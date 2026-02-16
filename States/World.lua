@@ -39,8 +39,8 @@ function World.isOutdoors(n)
 end
 
 function World.playerBox(n)
-	local x = 0
-	local y = 0
+	local x = -1
+	local y = -1
 	
 	if(n <= 6) then
 		x = 37
