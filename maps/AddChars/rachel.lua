@@ -20,6 +20,14 @@ end
 
 function addRachelIn3(Map)
 	World.Map[Map]:addProp(Prop.new(14.3,2,Amp))
+	World.Map[Map]:addProp(Prop.new(20,2,Bed_1_1,1,1))
+	World.Map[Map]:addProp(Prop.new(21,2,Bed_1_2,1,1))
+	World.Map[Map]:addProp(Prop.new(20,3,Bed_1_3,1,1))
+	World.Map[Map]:addProp(Prop.new(21,3,Bed_1_4,1,1))
+	World.Map[Map]:addProp(Prop.new(20,4,Bed_1_5,1,1))
+	World.Map[Map]:addProp(Prop.new(21,4,Bed_1_6,1,1))
+	
+	World.Map[Map]:addWall(Box.new(20,3.8,2,0.3))
 end
 
 function addRachelIn4(Map)

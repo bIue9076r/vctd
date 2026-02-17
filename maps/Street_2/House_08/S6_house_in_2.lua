@@ -25,13 +25,13 @@ World.Map[51]:addNpc(Npc.new(18.75,8,TV_B,3,0,function()
 	
 end))
 
-World.Map[51]:addProp(Prop.new(15.7,9,Couch_6,1))
-World.Map[51]:addProp(Prop.new(15.7,8,Couch_4,1))
-World.Map[51]:addProp(Prop.new(15.7,7,Couch_2,1))
+World.Map[51]:addProp(Prop.new(15.7,9,Couch_6,1,1))
+World.Map[51]:addProp(Prop.new(15.7,8,Couch_4,1,1))
+World.Map[51]:addProp(Prop.new(15.7,7,Couch_2,1,1))
 
-World.Map[51]:addProp(Prop.new(14.7,9,Couch_5,1))
-World.Map[51]:addProp(Prop.new(14.7,8,Couch_3,1))
-World.Map[51]:addProp(Prop.new(14.7,7,Couch_1,1))
+World.Map[51]:addProp(Prop.new(14.7,9,Couch_5,1,1))
+World.Map[51]:addProp(Prop.new(14.7,8,Couch_3,1,1))
+World.Map[51]:addProp(Prop.new(14.7,7,Couch_1,1,1))
 
 World.Map[51]:addWall(Box.new(0,0,8,14))
 World.Map[51]:addWall(Box.new(8,0,4,2))
