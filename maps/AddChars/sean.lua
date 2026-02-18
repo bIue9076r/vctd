@@ -38,6 +38,41 @@ function addSeanIn3(Map)
 	World.Map[Map]:addNpc(Npc.new(15.7,9.0,Interaction,-6,0,function()
 		
 	end))
+	
+	World.Map[Map]:addProp(Prop.new(17,5,Box_1_1))
+	World.Map[Map]:addProp(Prop.new(18,5,Box_1_2))
+	World.Map[Map]:addProp(Prop.new(17,6,Box_1_3))
+	World.Map[Map]:addProp(Prop.new(18,6,Box_1_4))
+
+	World.Map[Map]:addProp(Prop.new(11,11,Box_1_1))
+	World.Map[Map]:addProp(Prop.new(12,11,Box_1_2))
+	World.Map[Map]:addProp(Prop.new(11,12,Box_1_3))
+	World.Map[Map]:addProp(Prop.new(12,12,Box_1_4))
+
+	World.Map[Map]:addProp(Prop.new(18,10,Box_1_1))
+	World.Map[Map]:addProp(Prop.new(19,10,Box_1_2))
+	World.Map[Map]:addProp(Prop.new(18,11,Box_1_3))
+	World.Map[Map]:addProp(Prop.new(19,11,Box_1_4))
+
+	World.Map[Map]:addProp(Prop.new(19.5,7.5,Box_1_1))
+	World.Map[Map]:addProp(Prop.new(20.5,7.5,Box_1_2))
+	World.Map[Map]:addProp(Prop.new(19.5,8.5,Box_1_3))
+	World.Map[Map]:addProp(Prop.new(20.5,8.5,Box_1_4))
+
+	World.Map[Map]:addProp(Prop.new(10.9,7,Box_1_1))
+	World.Map[Map]:addProp(Prop.new(11.9,7,Box_1_2))
+	World.Map[Map]:addProp(Prop.new(10.9,8,Box_1_3))
+	World.Map[Map]:addProp(Prop.new(11.9,8,Box_1_4))
+
+	World.Map[Map]:addProp(Prop.new(15.2,8.5,Box_1_1))
+	World.Map[Map]:addProp(Prop.new(16.2,8.5,Box_1_2))
+	World.Map[Map]:addProp(Prop.new(15.2,9.5,Box_1_3))
+	World.Map[Map]:addProp(Prop.new(16.2,9.5,Box_1_4))
+	
+	World.Map[Map]:addWall(Box.new(0,0,8,14))
+	World.Map[Map]:addWall(Box.new(8,0,14,2))
+	World.Map[Map]:addWall(Box.new(10,4,0.1,6))
+	World.Map[Map]:addWall(Box.new(8,10,2,0.1))
 end
 
 function addSeanIn4(Map)

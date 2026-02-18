@@ -84,6 +84,16 @@ Days.newDay(3,function()
 					v.g = 1
 				end
 			end
+			
+			if v.isKiller then
+				for i,v in pairs(World.Map[I + 3].npcs) do
+					v.g = 0
+				end
+				
+				for i,v in pairs(World.Map[I + 3].props) do
+					v.g = 0
+				end
+			end
 		end
 
 		if v.HouseHold == 10 then
