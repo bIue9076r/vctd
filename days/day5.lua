@@ -1,6 +1,6 @@
 Days.newDay(5,function()
 	Time.setHour(Day)
-    GameState = Cutscene
+    GameState = Fadeout
 	Play.scene = Play.Scenes[7]
 
 	SongList = {

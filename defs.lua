@@ -321,7 +321,8 @@ WORLD = 2
 Cutscene = 3
 SAVE = 4
 Fade = 5
-END = 6
+Fadeout = 6
+END = 7
 
 local tileTicker = ticker.new()
 -- tiles

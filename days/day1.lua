@@ -4,7 +4,9 @@ Days.newDay(1,function()
 	end
 	muted = true
 	Play.scene = Play.Scenes[math.random(1,3)]
-	Map = World.Map[1]
-	setPlr(1,12)
-	GameState = Cutscene
+	Play.scene.AfterEffect = function(self)
+		Map = World.Map[1]
+		setPlr(1,12)
+	end
+	GameState = Fadeout
 end)

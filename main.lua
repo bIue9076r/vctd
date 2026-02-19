@@ -35,6 +35,7 @@ require("/States/World")
 require("/States/Play")
 require("/States/Save")
 require("/States/Fade")
+require("/States/Fadeout")
 require("/States/End")
 
 SCREEN_X = love.graphics.getWidth()
@@ -102,6 +103,7 @@ STATE_KEYPRESSED = {
 	[Cutscene] = Play.Keypressed,
 	[SAVE] = Save_Keypressed,
 	[Fade] = Fade_Keypressed,
+	[Fadeout] = Fadeout_Keypressed,
 	[END] = End_Keypressed,
 }
 
@@ -112,6 +114,7 @@ STATE_UPDATE = {
 	[Cutscene] = Play.Update,
 	[SAVE] = Save_Update,
 	[Fade] = Fade_Update,
+	[Fadeout] = Fadeout_Update,
 	[END] = End_Update,
 }
 
@@ -122,6 +125,7 @@ STATE_DRAW = {
 	[Cutscene] = Play.Draw,
 	[SAVE] = Save_Draw,
 	[Fade] = Fade_Draw,
+	[Fadeout] = Fadeout_Draw,
 	[END] = End_Draw,
 }
 

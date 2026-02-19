@@ -82,6 +82,9 @@ function Scene.new(m,g,t)
 		transition = t or function(self,t)
 			GameState = "What? Broken Animation?"
 		end,
+		AfterEffect = function(self)
+	
+		end,
 	}
 	
 	local mt = {
@@ -229,4 +232,8 @@ end
 
 function Scene:transition(self,t)
 	GameState = "What? Broken Animation?"
+end
+
+function Scene:AfterEffect(self)
+	
 end

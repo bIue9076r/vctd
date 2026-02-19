@@ -153,11 +153,12 @@ Days.newDay(2,function()
 		end
 	end
 
-	Map = World.Map[25]
-	setPlr(1.7,8.7)
-	Time.setHour(Noon)
-	Mood.set(-4/2.5)
-
-	GameState = Cutscene
+	GameState = Fadeout
 	Play.scene = Play.Scenes[4]
+	Play.scene.AfterEffect = function(self)
+		Map = World.Map[25]
+		setPlr(1.7,8.7)
+		Time.setHour(Noon)
+		Mood.set(-4/2.5)
+	end
 end)

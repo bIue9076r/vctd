@@ -91,6 +91,10 @@ Play.Scenes[5].transition = function(self,t)
 			song_silence = false
 		end
 		GameState = self.Next
+		if self.AfterEffect then
+			self:AfterEffect()
+			self.AfterEffect = nil
+		end
 		Play.ticker:reset()
 	end
 end

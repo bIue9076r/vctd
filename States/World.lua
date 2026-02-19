@@ -99,7 +99,7 @@ function World.endTalk()
 	if World.AfterEffect then
 		World.AfterEffect(World.snpc)
 		World.AfterEffect = function(npc)
-				
+			
 		end
 	end
 end

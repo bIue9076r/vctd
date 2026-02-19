@@ -134,29 +134,31 @@ Days.newDay(3,function()
 			v.g = 0
 		end
 	end
-
-	for i,v in pairs(World.Map[10].npcs) do
-		if v.f == "Rachel" then
-			v.g = 0
-		elseif v.f == "Tracey" then
-			v.g = 0
-		end
-	end
-
-	for i,v in pairs(World.Map[10].props) do
-		if v.f == "Stuff_day3" then
-			v.g = 0
-		elseif v.f == "Stuff_day1" then
-			v.g = 1
-		end
-	end
-
-	Mood.darkSet(2)
-	Mood.set(-4/2.5)
-	Time.setHour(Day)
-    GameState = Cutscene
-	setPlr(18.6,10.7)
+	
 	Play.scene = Play.Scenes[5]
+	Play.scene.AfterEffect = function(self)
+		for i,v in pairs(World.Map[10].npcs) do
+			if v.f == "Rachel" then
+				v.g = 0
+			elseif v.f == "Tracey" then
+				v.g = 0
+			end
+		end
+	
+		for i,v in pairs(World.Map[10].props) do
+			if v.f == "Stuff_day3" then
+				v.g = 0
+			elseif v.f == "Stuff_day1" then
+				v.g = 1
+			end
+		end
+		Mood.darkSet(2)
+		Mood.set(-4/2.5)
+		Time.setHour(Day)
+		setPlr(18.6,10.7)
+	end
+	
+	GameState = Fadeout
 
 	Story.set("Power_Up_1",true)
 end)

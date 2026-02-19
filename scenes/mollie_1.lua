@@ -94,6 +94,10 @@ Play.Scenes[11].transition = function(self,t)
 		end
 		DialogueBuffer = Scene.LastDialogueBuffer
 		GameState = self.Next
+		if self.AfterEffect then
+			self:AfterEffect()
+			self.AfterEffect = nil
+		end
 		Play.ticker:reset()
 	end
 end
