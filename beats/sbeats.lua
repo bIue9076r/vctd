@@ -211,6 +211,10 @@ Story.setBeat("Power_Up_1", function(npc)
 	
 end)
 
+Story.setBeat("Power_Up_2", function(npc)
+	
+end)
+
 Story.setBeat("Jami_Experiment_2_1", function(npc)
 	if not Story.get("Jami_Experiment_1_1") then
 		Plr.inv:add(Item_WRayDetector)
