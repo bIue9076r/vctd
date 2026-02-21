@@ -878,3 +878,29 @@ World.Dialogue[English][73] = Dialogue.new({
 	Text.new("Maybe...",Varisa),
 	Text.new("...",Brian),
 },1)
+
+World.Dialogue[English][74] = Dialogue.new({
+	Text.new("Is pudding day. Ja.",Fredrick),
+	Text.new("Cool, but wasn't yesterday exercise day?",Varisa),
+	Text.new("It's a German thing, you would not understand.",Fredrick),
+	Text.new("Okay.",Varisa),
+	Text.new("I understand pudding.",Varisa),
+	Text.new("You seem too.",Fredrick),
+	Text.new("It never hurts to share.",Fredrick,nil,function()
+		Story.set("Fredrick_Pudding_1",true)
+		Story.set("Fredrick_Reconsider",true)
+	end),
+	Text.new("Wow? You're being nice to me for once.",Varisa),
+	Text.new("I suppose it's the least I can do.",Fredrick),
+	Text.new("And with your mother gone.",Fredrick),
+	Text.new("Enjoy the pudding.",Fredrick),
+},1)
+
+World.Dialogue[English][75] = Dialogue.new({
+	Text.new("Is pudding day. Ja.",Fredrick),
+	Text.new("Cool, but wasn't yesterday exercise day?",Varisa),
+	Text.new("It's a German thing, you would not understand.",Fredrick),
+	Text.new("Okay.",Varisa),
+	Text.new("I understand pudding.",Varisa),
+	Text.new("You seem too.",Fredrick),
+},1)
