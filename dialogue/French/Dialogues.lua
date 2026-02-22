@@ -906,5 +906,11 @@ World.Dialogue[French][75] = Dialogue.new({
 },1)
 
 World.Dialogue[French][76] = Dialogue.new({
-	Text.new("Help.",Karina),
+	Text.new("I need your help.",Karina),
+	Text.new("Even with the lights out?",Varisa),
+	Text.new("Yeah.",Karina),
+	Text.new("Alright what is it?",Varisa),
+	Text.new("Okay come on.",Karina,nil,function()
+		-- cutscene
+	end),
 },1)
