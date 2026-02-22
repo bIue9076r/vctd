@@ -904,3 +904,7 @@ World.Dialogue[English][75] = Dialogue.new({
 	Text.new("I understand pudding.",Varisa),
 	Text.new("You seem too.",Fredrick),
 },1)
+
+World.Dialogue[English][76] = Dialogue.new({
+	Text.new("Help.",Karina),
+},1)
