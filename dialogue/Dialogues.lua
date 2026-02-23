@@ -910,7 +910,19 @@ World.Dialogue[English][76] = Dialogue.new({
 	Text.new("Even with the lights out?",Varisa),
 	Text.new("Yeah.",Karina),
 	Text.new("Alright what is it?",Varisa),
-	Text.new("Okay come on.",Karina,nil,function()
+	Text.new("Okay come on.",Karina,nil,function(npc)
 		-- cutscene
+		for i,v in ipairs(House.house) do
+			if v.HouseHold == 3 then
+				v.isOpen = true
+				local I = Families.HouseMap[i]
+				World.nextMap(World.Map[I + 2])
+			end
+		end
+
+		World.AfterEffect = function()
+			npc.g = 1
+			setPlr(10.5,12.5)
+		end
 	end),
 },1)

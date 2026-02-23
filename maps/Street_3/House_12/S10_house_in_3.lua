@@ -51,12 +51,12 @@ World.Map[76]:addProp(Prop.new(20,4,Bed_1_5,1,1))
 World.Map[76]:addProp(Prop.new(21,4,Bed_1_6,1,1))
 
 World.Map[76]:addWall(Box.new(20,3.8,2,0.3))
+]]
 
 World.Map[76]:addWall(Box.new(0,0,8,14))
 World.Map[76]:addWall(Box.new(8,0,14,2))
 World.Map[76]:addWall(Box.new(10,4,0.1,6))
 World.Map[76]:addWall(Box.new(8,10,2,0.1))
-]]
 
 World.Map[76]:addWall(Box.new(8,6.5,1.8,0.1,1,1,function()
 	Map = World.Map[75]

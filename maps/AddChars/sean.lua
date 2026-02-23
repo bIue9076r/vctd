@@ -68,11 +68,6 @@ function addSeanIn3(Map)
 	World.Map[Map]:addProp(Prop.new(16.2,8.5,Box_1_2))
 	World.Map[Map]:addProp(Prop.new(15.2,9.5,Box_1_3))
 	World.Map[Map]:addProp(Prop.new(16.2,9.5,Box_1_4))
-	
-	World.Map[Map]:addWall(Box.new(0,0,8,14))
-	World.Map[Map]:addWall(Box.new(8,0,14,2))
-	World.Map[Map]:addWall(Box.new(10,4,0.1,6))
-	World.Map[Map]:addWall(Box.new(8,10,2,0.1))
 end
 
 function addSeanIn4(Map)
