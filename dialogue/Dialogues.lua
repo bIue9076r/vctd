@@ -917,6 +917,11 @@ World.Dialogue[English][76] = Dialogue.new({
 				v.isOpen = true
 				local I = Families.HouseMap[i]
 				World.nextMap(World.Map[I + 2])
+				for i,v in pairs(World.Map[I + 2].npcs) do
+					if v.f then
+						v.g = 0;
+					end
+				end
 			end
 		end
 

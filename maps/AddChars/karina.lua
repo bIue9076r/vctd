@@ -9,7 +9,9 @@ function addKarinaIn1(Map)
 end
 
 function addKarinaIn2(Map)
+	World.Map[Map]:addNpc(Npc.new(13.8,8.7,Karina,44,1,function()
 	
+	end,"Karina"))
 end
 
 function addKarinaIn3(Map)
