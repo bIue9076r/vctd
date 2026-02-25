@@ -919,7 +919,7 @@ World.Dialogue[English][76] = Dialogue.new({
 				World.nextMap(World.Map[I + 2])
 				for i,v in pairs(World.Map[I + 2].npcs) do
 					if v.f then
-						v.g = 0;
+						v.g = 0
 					end
 				end
 			end
@@ -930,4 +930,8 @@ World.Dialogue[English][76] = Dialogue.new({
 			setPlr(10.5,12.5)
 		end
 	end),
+},1)
+
+World.Dialogue[English][77] = Dialogue.new({
+	Text.new("Hello.",Karina),
 },1)
