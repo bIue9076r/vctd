@@ -39,6 +39,7 @@ Play.Scenes[1].transition = function(self,t)
 			self:AfterEffect()
 			self.AfterEffect = nil
 		end
+		self.dticker:reset()
 		Play.ticker:reset()
 	end
 end
