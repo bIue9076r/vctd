@@ -150,6 +150,33 @@ Days.newDay(3,function()
 	for i,v in pairs(World.Map[26].npcs) do
 		if v.f then
 			v.g = 0
+			if v.f == "Sean" then
+				
+			end
+
+			if v.f == "Vivian" then
+				
+			end
+
+			if v.f == "Mollie" then
+				
+			end
+
+			if v.f == "Brian" then
+				
+			end
+
+			if v.f == "Ella" then
+				
+			end
+
+			if v.f == "Lassie" then
+				
+			end
+
+			if v.f == "Zach" then
+				
+			end
 		end
 	end
 	
