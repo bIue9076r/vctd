@@ -811,6 +811,9 @@ World.Dialogue[English][65] = Dialogue.new({
 	Text.new("You should stay for the demonstration.",Zach),
 	Text.new("Maybe.",Varisa),
 	Text.new("...",Zach),
+	Text.new("Though, Karina's has something she wants to tell you.",Zach),
+	Text.new("She said I should tell you, if I saw you.",Zach),
+	Text.new("...",Zach),
 },1)
 
 World.Dialogue[English][66] = Dialogue.new({

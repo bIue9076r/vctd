@@ -46,30 +46,30 @@ World.Map[26]:addWall(Box.new(0,13.9,22,0.1,1,1,function()
 	setPlr(Plr.x,0.5)
 end))
 
-World.Map[26]:addNpc(Npc.new(2.0,2.1,Mollie,0,1,function()
+World.Map[26]:addNpc(Npc.new(2.0,2.1,Mollie,66,1,function()
 	
 end,"Mollie"))
 
-World.Map[26]:addNpc(Npc.new(14.4,1.0,Zach,0,1,function()
+World.Map[26]:addNpc(Npc.new(14.4,1.0,Zach,65,1,function()
 	
 end,"Zach"))
 
-World.Map[26]:addNpc(Npc.new(13.5,10.7,Vivian,0,1,function()
+World.Map[26]:addNpc(Npc.new(13.5,10.7,Vivian,70,1,function()
 	
 end,"Vivian"))
 
-World.Map[26]:addNpc(Npc.new(15.0,10.7,Brian,0,1,function()
+World.Map[26]:addNpc(Npc.new(15.0,10.7,Brian,69,1,function()
 	
 end,"Brian"))
 
-World.Map[26]:addNpc(Npc.new(1.2,10.1,Sean,0,1,function()
+World.Map[26]:addNpc(Npc.new(1.2,10.1,Sean,67,1,function()
 	
 end,"Sean"))
 
-World.Map[26]:addNpc(Npc.new(2.7,10.1,Ella,0,1,function()
+World.Map[26]:addNpc(Npc.new(2.7,10.1,Ella,68,1,function()
 	
 end,"Ella"))
 
-World.Map[26]:addNpc(Npc.new(6.5,5.6,Lassie,0,1,function()
+World.Map[26]:addNpc(Npc.new(6.5,5.6,Lassie,64,1,function()
 	
 end,"Lassie"))

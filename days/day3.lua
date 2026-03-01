@@ -44,6 +44,16 @@ Days.newDay(3,function()
 				for i,v in pairs(World.Map[I + 3].props) do
 					v.g = 0
 				end
+
+				for i,v in pairs(World.Map[26]) do
+					if v.f == "Vivian" then
+						v.i = 72
+					end
+
+					if v.f == "Brian" then
+						v.i = 73
+					end
+				end
 			end
 		end
 
@@ -90,6 +100,12 @@ Days.newDay(3,function()
 				
 				for i,v in pairs(World.Map[I + 3].props) do
 					v.g = 0
+				end
+
+				for i,v in pairs(World.Map[26]) do
+					if v.f == "Mollie" then
+						v.i = 72
+					end
 				end
 			end
 		end
@@ -150,33 +166,6 @@ Days.newDay(3,function()
 	for i,v in pairs(World.Map[26].npcs) do
 		if v.f then
 			v.g = 0
-			if v.f == "Sean" then
-				
-			end
-
-			if v.f == "Vivian" then
-				
-			end
-
-			if v.f == "Mollie" then
-				
-			end
-
-			if v.f == "Brian" then
-				
-			end
-
-			if v.f == "Ella" then
-				
-			end
-
-			if v.f == "Lassie" then
-				
-			end
-
-			if v.f == "Zach" then
-				
-			end
 		end
 	end
 	
