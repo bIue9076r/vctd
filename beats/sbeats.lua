@@ -241,11 +241,7 @@ Story.setBeat("Vivian_Show_1", function(npc)
 	
 end)
 
-Story.setBeat("Sean_1", function(npc)
-	
-end)
-
-Story.setBeat("Ella_1", function(npc)
+Story.setBeat("Sean_Response_1", function(npc)
 	
 end)
 
