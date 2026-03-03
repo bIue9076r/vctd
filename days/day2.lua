@@ -63,7 +63,10 @@ Days.newDay(2,function()
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f then
-					v.g = 0
+					v.g = 1
+					if v.f == "Karina" then
+						v.g = 0
+					end
 				end
 			end
 		end

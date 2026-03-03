@@ -935,3 +935,7 @@ World.Dialogue[French][76] = Dialogue.new({
 World.Dialogue[French][77] = Dialogue.new({
 	Text.new("Hello.",Karina),
 },1)
+
+World.Dialogue[French][100] = Dialogue.new({
+	Text.new("Hey, Varisa.", Zach),
+},1)
