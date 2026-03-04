@@ -929,6 +929,26 @@ World.Dialogue[English][76] = Dialogue.new({
 		end
 
 		World.AfterEffect = function()
+			muted = true
+			if bs then
+				bs:stop()
+			end
+			GameState = Cutscene
+			local n = 12
+			for i,v in ipairs(House.house) do
+				if v.isKiller then
+					if v.HouseHold == 4 then
+						n = 12
+					elseif v.HouseHold == 6 then
+						n = 13
+					elseif v.HouseHold == 7 then
+						n = 14
+					end
+				end
+			end
+			Play.scene = Play.Scenes[n]
+			Play.scene.Next = WORLD
+
 			npc.g = 1
 			setPlr(10.5,12.5)
 		end
