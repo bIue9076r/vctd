@@ -92,6 +92,7 @@ image.newImage("Couch_3","Assets/Couch_3.png")
 image.newImage("Couch_4","Assets/Couch_4.png")
 image.newImage("Couch_5","Assets/Couch_5.png")
 image.newImage("Couch_6","Assets/Couch_6.png")
+image.newImage("Unknown","Assets/Unknown.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")

@@ -102,6 +102,7 @@ Couch_3 = 0x5F
 Couch_4 = 0x60
 Couch_5 = 0x61
 Couch_6 = 0x62
+Unknown = 0x63
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -204,6 +205,7 @@ CtS = {
 	[Couch_4] = "Couch_4",
 	[Couch_5] = "Couch_5",
 	[Couch_6] = "Couch_6",
+	[Unknown] = "Unknown",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -304,6 +306,7 @@ Names = {
 	[Couch_4] = "Couch_4",
 	[Couch_5] = "Couch_5",
 	[Couch_6] = "Couch_6",
+	[Unknown] = "???",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }

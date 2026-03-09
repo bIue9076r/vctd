@@ -44,7 +44,7 @@ Play.Scenes[14].Actors[38] = Actor.new(Warning_M,17.1,12)
 Play.Scenes[14].Actors[39] = Actor.new(Warning_B,17.1,13)
 
 Play.Scenes[14].Actors[40] = Actor.new(Karina,11.0,8.4)
-Play.Scenes[14].Actors[41] = Actor.new(Fredrick,9.9,8.2)
+Play.Scenes[14].Actors[41] = Actor.new(Unknown,9.9,8.2)
 
 local sbs
 Play.Scenes[14].transition = function(self,t)
