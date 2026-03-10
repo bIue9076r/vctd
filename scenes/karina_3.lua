@@ -1,6 +1,6 @@
 Play.Scenes[14] = Scene.new(World.Map[25])
 Play.Scenes[14].tickGoal = 1220
-Play.Scenes[14].Next = WORLD
+Play.Scenes[14].Next = Fade
 Play.Scenes[14].Hour = Night
 
 Play.Scenes[14].Actors[1] = Actor.new(Sand_BR,10.8,2.9-1)
