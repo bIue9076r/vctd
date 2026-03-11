@@ -944,7 +944,7 @@ World.Dialogue[French][76] = Dialogue.new({
 				end
 			end
 			Play.scene = Play.Scenes[n]
-			Play.scene.Next = WORLD
+			Play.scene.Next = Fade
 
 			npc.g = 1
 			setPlr(10.5,12.5)
