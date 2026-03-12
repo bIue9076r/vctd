@@ -966,3 +966,7 @@ World.Dialogue[English][77] = Dialogue.new({
 World.Dialogue[English][78] = Dialogue.new({
 	Text.new("Hey, Varisa.", Zach),
 },1)
+
+World.Dialogue[English][79] = Dialogue.new({
+	Text.new("Hey, Varisa.", Sean),
+},1)
