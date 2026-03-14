@@ -968,5 +968,19 @@ World.Dialogue[English][78] = Dialogue.new({
 },1)
 
 World.Dialogue[English][79] = Dialogue.new({
-	Text.new("Hey, Varisa.", Sean),
+	Text.new("I'm so sick of Mollie.", Sean),
+	Text.new("Okay.", Varisa),
+	Text.new("That's all you have to say?", Sean),
+	Text.new("I mean.", Varisa),
+	Text.new("...", Sean),
+	Text.new("Okay...", Sean),
+},1)
+
+World.Dialogue[English][80] = Dialogue.new({
+	Text.new("I'm so sick of Mollie.", Sean),
+	Text.new("Okay.", Varisa),
+	Text.new("That's all you have to say?", Sean),
+	Text.new("I mean.", Varisa),
+	Text.new("...", Sean),
+	Text.new("Okay...", Sean),
 },1)
