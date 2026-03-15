@@ -970,14 +970,32 @@ World.Dialogue[French][79] = Dialogue.new({
 	Text.new("That's all you have to say?", Sean),
 	Text.new("I mean.", Varisa),
 	Text.new("...", Sean),
-	Text.new("Okay...", Sean),
+	Text.new("...", Sean),
+	Text.new("You wouldn't mind paying her back a bit?", Sean),
+	Text.new("I guess.", Varisa),
+	Text.new("Great.", Sean),
+	Text.new("I want you to spy on her.", Sean),
+	Text.new("Find out what she knows about me.", Sean, nil, function()
+		Story.set("Sean_Response_1", true)
+	end),
+	Text.new("Tell me what you find.", Sean),
+	Text.new("Got it?", Sean),
 },1)
 
 World.Dialogue[French][80] = Dialogue.new({
 	Text.new("I'm so sick of Mollie.", Sean),
 	Text.new("Okay.", Varisa),
-	Text.new("That's all you have to say?", Sean),
-	Text.new("I mean.", Varisa),
+	Text.new("Rich from the person working with her", Sean),
+	Text.new("I'm not.", Varisa),
+	Text.new("Right...", Sean),
 	Text.new("...", Sean),
-	Text.new("Okay...", Sean),
+	Text.new("You wouldn't mind paying her back a bit?", Sean),
+	Text.new("I guess.", Varisa),
+	Text.new("Great.", Sean),
+	Text.new("I want you to spy on her.", Sean),
+	Text.new("Find out what she knows about me.", Sean, nil, function()
+		Story.set("Sean_Response_1", true)
+	end),
+	Text.new("Tell me what you find.", Sean),
+	Text.new("Got it?", Sean),
 },1)
