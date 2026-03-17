@@ -999,3 +999,13 @@ World.Dialogue[French][80] = Dialogue.new({
 	Text.new("Tell me what you find.", Sean),
 	Text.new("Got it?", Sean),
 },1)
+
+World.Dialogue[French][81] = Dialogue.new({
+	Text.new("You got it?",Jami),
+	Text.new("Yeah.", Varisa),
+	Text.new("Great.",Jami, nil,function()
+		Story.set("Jami_Experiment_3_1",true)
+	end),
+	Text.new("So the power?", Varisa),
+	Text.new("Check it in a bit.", Jami),
+},1)

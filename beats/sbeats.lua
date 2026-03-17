@@ -229,26 +229,28 @@ Story.setBeat("Power_Up_1", function(npc)
 end)
 
 Story.setBeat("Power_Up_2", function(npc)
-	
-end)
-
-Story.setBeat("Power_Up_3", function(npc)
 	for i,v in pairs(World.Map[3].npcs) do
 		if v.c == TV_B then
-			--v.i = -20
+			v.i = 3
 		end
 	end
 	for i,v in pairs(World.Map[9].npcs) do
 		if v.c == TV_B then
-			--v.i = -20
+			v.i = 3
 		end
 	end
 	for i = 1,10 do
 		local I = Families.HouseMap[i]
 		for i,v in pairs(World.Map[I + 2].npcs) do
 			if v.c == TV_B then
-				--v.i = -20
+				v.i = 3
 			end
+		end
+	end
+
+	for i,v in pairs(World.Map[26].npcs) do
+		if v.f then
+			v.g = 1
 		end
 	end
 end)
@@ -264,7 +266,7 @@ Story.setBeat("Jami_Experiment_2_1", function(npc)
 end)
 
 Story.setBeat("Jami_Experiment_3_1", function(npc)
-	
+	Story.setBeat("Power_Up_2")
 end)
 
 Story.setBeat("Karina_Investigation_1", function(npc)
