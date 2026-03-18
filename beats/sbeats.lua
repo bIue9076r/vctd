@@ -265,8 +265,20 @@ Story.setBeat("Jami_Experiment_2_1", function(npc)
 	end
 end)
 
-Story.setBeat("Jami_Experiment_3_1", function(npc)
+Story.setBeat("Jami_Experiment_2_2", function(npc)
+	for i,v in pairs(World.Map[25].npcs) do
+		if v.f == "Jami" then
+			v.i = 81
+		end
+	end
+end)
+
+Story.setBeat("Jami_Experiment_2_3", function(npc)
 	Story.setBeat("Power_Up_2")
+end)
+
+Story.setBeat("Jami_Experiment_3_1", function(npc)
+	
 end)
 
 Story.setBeat("Karina_Investigation_1", function(npc)
