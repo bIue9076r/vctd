@@ -67,11 +67,11 @@ World.Map[69]:addWall(Box.new(8,1.9,0.1,2.2,1,1,function()
 end))
 
 if House.house[9].HouseTrait == "Neat" then
-	World.Map[69]:addProp(Prop.new(20.5,12.5,Vase))
-	World.Map[69]:addProp(Prop.new(20.5,11.5,Flowers,1))
+	World.Map[69]:addProp(Prop.new(20.5,12.5,Vase2))
+	World.Map[69]:addProp(Prop.new(20.5,11.5,Flowers_2,1))
 	
-	World.Map[69]:addProp(Prop.new(20.5,3,Vase))
-	World.Map[69]:addProp(Prop.new(20.5,2,Flowers,1))
+	World.Map[69]:addProp(Prop.new(20.5,3,Vase2))
+	World.Map[69]:addProp(Prop.new(20.5,2,Flowers_2,1))
 end
 
 if House.house[9].HouseTrait == "Messy" then

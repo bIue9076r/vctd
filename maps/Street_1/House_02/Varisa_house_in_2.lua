@@ -25,11 +25,11 @@ World.Map[9]:addNpc(Npc.new(18.75,8,TV_B,3,0,function()
 	
 end))
 
-World.Map[9]:addProp(Prop.new(20.5,12.5,Vase))
-World.Map[9]:addProp(Prop.new(20.5,11.5,Flowers,1))
+World.Map[9]:addProp(Prop.new(20.5,12.5,Vase2))
+World.Map[9]:addProp(Prop.new(20.5,11.5,Flowers_2,1))
 
-World.Map[9]:addProp(Prop.new(20.5,3,Vase))
-World.Map[9]:addProp(Prop.new(20.5,2,Flowers,1))
+World.Map[9]:addProp(Prop.new(20.5,3,Vase2))
+World.Map[9]:addProp(Prop.new(20.5,2,Flowers_2,1))
 
 World.Map[9]:addProp(Prop.new(15.7,9,Couch_6,1,1))
 World.Map[9]:addProp(Prop.new(15.7,8,Couch_4,1,1))

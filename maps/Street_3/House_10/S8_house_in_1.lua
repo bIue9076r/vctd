@@ -47,15 +47,15 @@ end))
 World.Map[62]:addProp(Prop.new(21,9.45,Computer))
 
 if House.house[8].HouseTrait == "Neat" then
-	World.Map[62]:addProp(Prop.new(8,12.5,Vase))
-	World.Map[62]:addProp(Prop.new(13,12.5,Vase))
-	World.Map[62]:addProp(Prop.new(8,11.5,Flowers,1))
-	World.Map[62]:addProp(Prop.new(13,11.5,Flowers,1))
+	World.Map[62]:addProp(Prop.new(8,12.5,Vase3))
+	World.Map[62]:addProp(Prop.new(13,12.5,Vase3))
+	World.Map[62]:addProp(Prop.new(8,11.5,Flowers_3,1))
+	World.Map[62]:addProp(Prop.new(13,11.5,Flowers_3,1))
 	
-	World.Map[62]:addProp(Prop.new(8,1.5,Vase))
-	World.Map[62]:addProp(Prop.new(13,1.5,Vase))
-	World.Map[62]:addProp(Prop.new(8,0.5,Flowers,1))
-	World.Map[62]:addProp(Prop.new(13,0.5,Flowers,1))
+	World.Map[62]:addProp(Prop.new(8,1.5,Vase3))
+	World.Map[62]:addProp(Prop.new(13,1.5,Vase3))
+	World.Map[62]:addProp(Prop.new(8,0.5,Flowers_3,1))
+	World.Map[62]:addProp(Prop.new(13,0.5,Flowers_3,1))
 	
 	World.Map[62]:addProp(Prop.new(4.75,8.75,Trash_Can))
 end
