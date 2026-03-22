@@ -90,8 +90,8 @@ if House.house[9].HouseTrait == "Messy" then
 	World.Map[69]:addProp(Prop.new(19.5,2.5,Trash_P))
 	World.Map[69]:addProp(Prop.new(19.0,2.5,Trash_P))
 	
-	World.Map[69]:addProp(Prop.new(20.5,12.5,Vase_C))
-	World.Map[69]:addProp(Prop.new(20.5,3,Vase_C))
+	World.Map[69]:addProp(Prop.new(20.5,12.5,Vase2_C))
+	World.Map[69]:addProp(Prop.new(20.5,3,Vase2_C))
 end
 
 if House.house[9].HouseTrait == "Fanatic" then
