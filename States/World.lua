@@ -233,7 +233,7 @@ function World.Update(dt)
 	end
 
 	if Story.get("Power_Up_1") then
-		if not(false) then -- Completed power up
+		if not(Story.get("Power_Up_2")) then -- Completed power up
 			local n = MaptoN()
 			if World.isOutdoors(n) then
 				Mood.darkSet(0)

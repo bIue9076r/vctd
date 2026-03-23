@@ -30,7 +30,7 @@ function Item_WRayDetector:act(key)
 		else
 			IsTalking = true
 			World.dtbl = {
-				s = "It says "..(Mood.str()),
+				s = "It says "..string.format("%0.2f",Mood.str()),
 				n = Varisa,
 				v = "Normal",
 			}
@@ -60,7 +60,7 @@ function Item_WRayDetector:act(key)
 	else
 		IsTalking = true
 		World.dtbl = {
-			s = "It says "..(Mood.str()),
+			s = "It says "..string.format("%0.2f",Mood.str()),
 			n = Varisa,
 			v = "Normal",
 		}

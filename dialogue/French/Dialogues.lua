@@ -709,7 +709,8 @@ World.Dialogue[French][57] = Dialogue.new({
 	Text.new("I need you to record 3 more samples.",Jami,nil,function()
 		Story.set("Jami_Experiment_2_1",true)
 	end),
-	Text.new("Come back with those samples and i'll fix the power.",Jami),
+	Text.new("Come back with those samples and...",Jami),
+	Text.new("Maybe i'll fix the power.",Jami),
 	Text.new("Fine....",Varisa),
 	Text.new("Tick tock.",Jami),
 },1)
@@ -727,7 +728,8 @@ World.Dialogue[French][58] = Dialogue.new({
 	end),
 	Text.new("I need you to record 3 samples.",Jami),
 	Text.new("Take samples far enough from each other.",Jami),
-	Text.new("Come back with those samples and i'll fix the power.",Jami),
+	Text.new("Come back with those samples and...",Jami),
+	Text.new("Maybe i'll fix the power.",Jami),
 	Text.new("Tick tock.",Jami),
 },1)
 
@@ -766,9 +768,10 @@ World.Dialogue[French][61] = Dialogue.new({
 	Text.new("............",Jami),
 	Text.new("Wow, intresting",Jami),
 	Text.new("It seems like that's not the variable.",Jami),
-	Text.new("Say, keep it with you and record anything else you find.",Jami,nil,function()
+	Text.new("Say, keep it with you.",Jami,nil,function()
 		Story.set("Jami_Experiment_1_3",true)
 	end),
+	Text.new("Record anything else you find.",Jami),
 	Text.new("Have fun, go nuts.",Jami),
 },1)
 
@@ -792,7 +795,8 @@ World.Dialogue[French][63] = Dialogue.new({
 	Text.new("I need you to actually record 3 more samples.",Jami,nil,function()
 		Story.set("Jami_Experiment_2_1",true)
 	end),
-	Text.new("Come back with those samples and i'll fix the power.",Jami),
+	Text.new("Come back with those samples and...",Jami),
+	Text.new("Maybe i'll fix the power.",Jami),
 	Text.new("Don't just leave like last time.",Jami),
 	Text.new("Fine....",Varisa),
 	Text.new("Tick tock.",Jami),
@@ -1004,7 +1008,7 @@ World.Dialogue[French][81] = Dialogue.new({
 	Text.new("You got it?",Jami),
 	Text.new("Yeah.", Varisa),
 	Text.new("Great.",Jami, nil,function()
-		Story.set("Jami_Experiment_3_1",true)
+		Story.set("Jami_Experiment_2_3",true)
 	end),
 	Text.new("So the power?", Varisa),
 	Text.new("Check it in a bit.", Jami),

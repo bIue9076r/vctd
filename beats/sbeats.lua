@@ -274,7 +274,7 @@ Story.setBeat("Jami_Experiment_2_2", function(npc)
 end)
 
 Story.setBeat("Jami_Experiment_2_3", function(npc)
-	Story.setBeat("Power_Up_2")
+	Story.set("Power_Up_2",true)
 end)
 
 Story.setBeat("Jami_Experiment_3_1", function(npc)
