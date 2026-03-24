@@ -229,6 +229,12 @@ Story.setBeat("Power_Up_1", function(npc)
 end)
 
 Story.setBeat("Power_Up_2", function(npc)
+	for i,v in pairs(World.Map[1].npcs) do
+		if v.f == "Zoey" then
+			v.c = 0
+		end
+	end
+
 	for i,v in pairs(World.Map[3].npcs) do
 		if v.c == TV_B then
 			v.i = 3
@@ -245,6 +251,9 @@ Story.setBeat("Power_Up_2", function(npc)
 			if v.c == TV_B then
 				v.i = 3
 			end
+		end
+		if not(House.house[i].HouseHold == 8) then
+			House.house[i].isOpen = false
 		end
 	end
 
