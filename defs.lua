@@ -109,6 +109,7 @@ Flowers_2 = 0x66
 Vase3 = 0x67
 Vase3_C = 0x68
 Flowers_3 = 0x69
+Wray = 0x6A
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -218,6 +219,7 @@ CtS = {
 	[Vase3] = "Vase3",
 	[Vase3_C] = "Vase3_C",
 	[Flowers_3] = "Flowers_3",
+	[Wray] = "Wray",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -325,6 +327,7 @@ Names = {
 	[Vase3] = "Vase",
 	[Vase3_C] = "Cracked Vase",
 	[Flowers_3] = "Flowers",
+	[Wray] = "W Ray",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }

@@ -1,4 +1,4 @@
-Item_WRayDetector = Item.new(Crucifix)
+Item_WRayDetector = Item.new(Wray)
 Item_WRayDetector.name = "W Ray Detector"
 Item_WRayDetector.save = "DAY2"
 

@@ -101,6 +101,7 @@ image.newImage("Vase3","Assets/vase3_flowers.png")
 image.newImage("Vase3_C","Assets/vase3_cracked_1.png")
 image.newImage("Vase3_C_2","Assets/vase3_cracked_2.png")
 image.newImage("Flowers_3","Assets/flowers_vase3top.png")
+image.newImage("Wray","Assets/wray.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")
