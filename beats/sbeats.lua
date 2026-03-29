@@ -322,10 +322,36 @@ Story.setBeat("Vivian_Show_1", function(npc)
 end)
 
 Story.setBeat("Sean_Response_1", function(npc)
+	for i = 1,10 do
+		local I = Families.HouseMap[i]
+		if House.house[i].HouseHold == 7 then
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Mollie" then
+					v.g = 1
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Sean_Response_2", function(npc)
 	
 end)
 
 Story.setBeat("Mollie_Vengeance_1", function(npc)
+	for i = 1,10 do
+		local I = Families.HouseMap[i]
+		if House.house[i].HouseHold == 2 then
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Sean" then
+					v.g = 1
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Mollie_Vengeance_2", function(npc)
 	
 end)
 

@@ -987,7 +987,9 @@ World.Dialogue[French][79] = Dialogue.new({
 },1)
 
 World.Dialogue[French][80] = Dialogue.new({
-	Text.new("I'm so sick of Mollie.", Sean),
+	Text.new("I'm so sick of Mollie.", Sean, nil, function()
+		Story.set("Sean_Response_1", true)
+	end),
 	Text.new("Okay.", Varisa),
 	Text.new("Rich from the person working with her", Sean),
 	Text.new("I'm not.", Varisa),
@@ -998,7 +1000,7 @@ World.Dialogue[French][80] = Dialogue.new({
 	Text.new("Great.", Sean),
 	Text.new("I want you to spy on her.", Sean),
 	Text.new("Find out what she knows about me.", Sean, nil, function()
-		Story.set("Sean_Response_1", true)
+		Story.set("Sean_Response_2", true)
 	end),
 	Text.new("Tell me what you find.", Sean),
 	Text.new("Got it?", Sean),
