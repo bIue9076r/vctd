@@ -1020,5 +1020,5 @@ World.Dialogue[French][81] = Dialogue.new({
 },1)
 
 World.Dialogue[French][82] = Dialogue.new({
-	
+	Text.new("...",Mollie),
 },1)
