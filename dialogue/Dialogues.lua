@@ -1018,3 +1018,7 @@ World.Dialogue[English][81] = Dialogue.new({
 	Text.new("So the power?", Varisa),
 	Text.new("Check it in a bit.", Jami),
 },1)
+
+World.Dialogue[English][82] = Dialogue.new({
+	
+},1)

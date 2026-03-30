@@ -815,6 +815,9 @@ World.Dialogue[French][65] = Dialogue.new({
 	Text.new("You should stay for the demonstration.",Zach),
 	Text.new("Maybe.",Varisa),
 	Text.new("...",Zach),
+	Text.new("Though, Karina's has something she wants to tell you.",Zach),
+	Text.new("She said I should tell you, if I saw you.",Zach),
+	Text.new("...",Zach),
 },1)
 
 World.Dialogue[French][66] = Dialogue.new({
@@ -1014,4 +1017,8 @@ World.Dialogue[French][81] = Dialogue.new({
 	end),
 	Text.new("So the power?", Varisa),
 	Text.new("Check it in a bit.", Jami),
+},1)
+
+World.Dialogue[French][82] = Dialogue.new({
+	
 },1)
