@@ -1024,4 +1024,15 @@ World.Dialogue[English][82] = Dialogue.new({
 		Story.set("Mollie_Vengeance_1", true)
 	end),
 	Text.new("Ugh, I guess.",Varisa),
+	Text.new("Great.",Mollie),
+	Text.new("So here's what I need you to do.",Mollie),
+},1)
+
+World.Dialogue[English][83] = Dialogue.new({
+	Text.new("I need your help again.",Mollie, nil, function()
+		Story.set("Mollie_Vengeance_1", true)
+	end),
+	Text.new("Ugh, I guess.",Varisa),
+	Text.new("Great.",Mollie),
+	Text.new("So here's what I need you to do.",Mollie),
 },1)
