@@ -1025,14 +1025,28 @@ World.Dialogue[French][82] = Dialogue.new({
 	end),
 	Text.new("Ugh, I guess.",Varisa),
 	Text.new("Great.",Mollie),
-	Text.new("So here's what I need you to do.",Mollie),
+	Text.new("I need you find something again.",Mollie),
+	Text.new("Wasn't that ring enough?",Varisa),
+	Text.new("I need more.",Mollie),
+	Text.new("I suppose.",Varisa),
+	Text.new("Great.",Mollie, nil, function()
+		Story.set("Mollie_Vengeance_2", true)
+	end),
+	Text.new("Thanks for the help.",Mollie),
 },1)
 
 World.Dialogue[French][83] = Dialogue.new({
-	Text.new("I need your help again.",Mollie, nil, function()
+	Text.new("I need your help.",Mollie, nil, function()
 		Story.set("Mollie_Vengeance_1", true)
 	end),
 	Text.new("Ugh, I guess.",Varisa),
 	Text.new("Great.",Mollie),
 	Text.new("So here's what I need you to do.",Mollie),
+	Text.new("You're going to sneak into Sean's house...",Mollie),
+	Text.new("Find something damning.",Mollie),
+	Text.new("Like what?",Varisa),
+	Text.new("You'll know when you see it.",Mollie, nil, function()
+		Story.set("Mollie_Vengeance_2", true)
+	end),
+	Text.new("Thanks for the help.",Mollie),
 },1)
