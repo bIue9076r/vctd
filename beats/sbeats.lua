@@ -248,12 +248,12 @@ Story.setBeat("Power_Up_2", function(npc)
 	for i = 1,10 do
 		local I = Families.HouseMap[i]
 		if House.house[i].HouseHold == 2 then
-			if Story.get("Mollie_Breakup_1") then
-				for i,v in pairs(World.Map[I].npcs) do
-					if v.f == "Sean" then
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Sean" then
+					if Story.get("Mollie_Breakup_1") then
 						v.i = 80
-						v.g = 0
 					end
+					v.g = 0
 				end
 			end
 		end
@@ -261,6 +261,9 @@ Story.setBeat("Power_Up_2", function(npc)
 		if House.house[i].HouseHold == 7 then
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f == "Mollie" then
+					if Story.get("Mollie_Breakup_4") then
+						v.i = 83
+					end
 					v.g = 0
 				end
 			end
