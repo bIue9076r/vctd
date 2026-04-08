@@ -43,8 +43,8 @@ Play.Scenes[12].Actors[37] = Actor.new(Warning_T,17.1,11)
 Play.Scenes[12].Actors[38] = Actor.new(Warning_M,17.1,12)
 Play.Scenes[12].Actors[39] = Actor.new(Warning_B,17.1,13)
 
-Play.Scenes[12].Actors[40] = Actor.new(Karina,11.0,8.4)
-Play.Scenes[12].Actors[41] = Actor.new(Unknown,9.9,8.2)
+Play.Scenes[12].Actors[40] = Actor.new(Karina,1.5,10.5)
+Play.Scenes[12].Actors[41] = Actor.new(Unknown,13.8,3.5)
 
 local sbs
 Play.Scenes[12].transition = function(self,t)
@@ -101,23 +101,32 @@ Play.Scenes[12].transition = function(self,t)
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(38),
-				n = Karina,
-				v = "Normal",
+				n = Unknown,
+				v = "Slow",
 			}
 		end
-	elseif(t < 1120) then
+	elseif(t < 1250) then
+		if t == 1001 then
+			self.IsTalking = true
+			self.dtbl = {
+				s = String.get(39),
+				n = Unknown,
+				v = "Slow",
+			}
+		end
+	elseif(t < 1500) then
 		
 	elseif(t < self.tickGoal) then
-		local _t = (t - 1120) / 100
-		Play.Scenes[12].Actors[3].x = Scene.lerp(16.6,18.2,_t)
-		Play.Scenes[12].Actors[4].x = Scene.lerp(18.3,18.7,_t)
+		local _t = (t - 1500) / 100
+		--Play.Scenes[12].Actors[3].x = Scene.lerp(16.6,18.2,_t)
+		--Play.Scenes[12].Actors[4].x = Scene.lerp(18.3,18.7,_t)
 
-		Play.Scenes[12].Actors[3].y = Scene.lerp(9.6,8.0,_t)
-		Play.Scenes[12].Actors[4].y = Scene.lerp(9.6,7.4,_t)
+		--Play.Scenes[12].Actors[3].y = Scene.lerp(9.6,8.0,_t)
+		--Play.Scenes[12].Actors[4].y = Scene.lerp(9.6,7.4,_t)
 	else
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
-		sbs:stop()
+		--sbs:stop()
 		if Play.unmuteAfter then
 			muted = false
 			plyed = false
