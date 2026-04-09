@@ -51,16 +51,11 @@ Play.Scenes[13].transition = function(self,t)
 	if(t < 250) then
 		if t == 1 then
 			Scene.LastDialogueBuffer = DialogueBuffer
-			sbs = sound.getSound("Breakup")
-			if Play.unmuteAfter then
-				sbs:seek(0)
-				sbs:play()
-			end
 			
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(14),
-				n = Ella,
+				s = String.get(33),
+				n = Karina,
 				v = "Normal",
 			}
 			DialogueBuffer = 100
@@ -69,8 +64,8 @@ Play.Scenes[13].transition = function(self,t)
 		if t == 251 then
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(15),
-				n = Ella,
+				s = String.get(34),
+				n = Karina,
 				v = "Normal",
 			}
 		end
@@ -78,8 +73,8 @@ Play.Scenes[13].transition = function(self,t)
 		if t == 401 then
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(16),
-				n = Sean,
+				s = String.get(35),
+				n = Karina,
 				v = "Normal",
 			}
 		end
@@ -87,8 +82,8 @@ Play.Scenes[13].transition = function(self,t)
 		if t == 551 then
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(17),
-				n = Ella,
+				s = String.get(36),
+				n = Karina,
 				v = "Normal",
 			}
 		end
@@ -96,8 +91,8 @@ Play.Scenes[13].transition = function(self,t)
 		if t == 701 then
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(18),
-				n = Ella,
+				s = String.get(37),
+				n = Karina,
 				v = "Normal",
 			}
 		end
@@ -105,12 +100,21 @@ Play.Scenes[13].transition = function(self,t)
 		if t == 851 then
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(19),
-				n = Sean,
-				v = "Normal",
+				s = String.get(40),
+				n = Unknown,
+				v = "Slow",
 			}
 		end
-	elseif(t < 1120) then
+	elseif(t < 1250) then
+		if t == 1001 then
+			self.IsTalking = true
+			self.dtbl = {
+				s = String.get(41),
+				n = Unknown,
+				v = "Slow",
+			}
+		end
+	elseif(t < 1500) then
 		
 	elseif(t < self.tickGoal) then
 		local _t = (t - 1120) / 100
