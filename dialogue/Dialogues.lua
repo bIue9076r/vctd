@@ -1050,3 +1050,7 @@ World.Dialogue[English][83] = Dialogue.new({
 	end),
 	Text.new("Thanks for the help.",Mollie),
 },1)
+
+World.Dialogue[English][84] = Dialogue.new({
+	Text.new("I need your help.",Karina),
+},1)
