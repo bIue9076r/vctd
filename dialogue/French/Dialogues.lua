@@ -695,7 +695,7 @@ World.Dialogue[French][56] = Dialogue.new({
 
 World.Dialogue[French][57] = Dialogue.new({
 	Text.new("Say, I need your help again",Jami),
-	Text.new("What the hell is wrong with you?", Varisa),
+	Text.new("What the hell is wrong with you?",Varisa),
 	Text.new("Huh?",Jami),
 	Text.new("It's just part of the method.",Jami),
 	Text.new("Turn the lights back on.",Varisa),
@@ -717,7 +717,7 @@ World.Dialogue[French][57] = Dialogue.new({
 
 World.Dialogue[French][58] = Dialogue.new({
 	Text.new("Say, I need your help",Jami),
-	Text.new("What the hell is wrong with you?", Varisa),
+	Text.new("What the hell is wrong with you?",Varisa),
 	Text.new("Huh?",Jami),
 	Text.new("You're insane.",Varisa),
 	Text.new("Turn the lights back on.",Varisa),
@@ -781,7 +781,7 @@ World.Dialogue[French][62] = Dialogue.new({
 
 World.Dialogue[French][63] = Dialogue.new({
 	Text.new("Say, I need your help again",Jami),
-	Text.new("What the hell is wrong with you?", Varisa),
+	Text.new("What the hell is wrong with you?",Varisa),
 	Text.new("Huh?",Jami),
 	Text.new("It's just part of the method.",Jami),
 	Text.new("Turn the lights back on.",Varisa),
@@ -968,55 +968,55 @@ World.Dialogue[French][77] = Dialogue.new({
 },1)
 
 World.Dialogue[French][78] = Dialogue.new({
-	Text.new("Hey, Varisa.", Zach),
+	Text.new("Hey, Varisa.",Zach),
 },1)
 
 World.Dialogue[French][79] = Dialogue.new({
-	Text.new("I'm so sick of Mollie.", Sean),
-	Text.new("Okay.", Varisa),
-	Text.new("That's all you have to say?", Sean),
-	Text.new("I mean.", Varisa),
-	Text.new("...", Sean),
-	Text.new("...", Sean),
-	Text.new("You wouldn't mind paying her back a bit?", Sean),
-	Text.new("I guess.", Varisa),
-	Text.new("Great.", Sean),
-	Text.new("I want you to spy on her.", Sean),
-	Text.new("Find out what she knows about me.", Sean, nil, function()
+	Text.new("I'm so sick of Mollie.",Sean),
+	Text.new("Okay.",Varisa),
+	Text.new("That's all you have to say?",Sean),
+	Text.new("I mean.",Varisa),
+	Text.new("...",Sean),
+	Text.new("...",Sean),
+	Text.new("You wouldn't mind paying her back a bit?",Sean),
+	Text.new("I guess.",Varisa),
+	Text.new("Great.",Sean),
+	Text.new("I want you to spy on her.",Sean),
+	Text.new("Find out what she knows about me.",Sean, nil, function()
 		Story.set("Sean_Response_1", true)
 	end),
-	Text.new("Tell me what you find.", Sean),
-	Text.new("Got it?", Sean),
+	Text.new("Tell me what you find.",Sean),
+	Text.new("Got it?",Sean),
 },1)
 
 World.Dialogue[French][80] = Dialogue.new({
-	Text.new("I'm so sick of Mollie.", Sean, nil, function()
+	Text.new("I'm so sick of Mollie.",Sean, nil, function()
 		Story.set("Sean_Response_1", true)
 	end),
-	Text.new("Okay.", Varisa),
-	Text.new("Rich from the person working with her", Sean),
-	Text.new("I'm not.", Varisa),
-	Text.new("Right...", Sean),
-	Text.new("...", Sean),
-	Text.new("You wouldn't mind paying her back a bit?", Sean),
-	Text.new("I guess.", Varisa),
-	Text.new("Great.", Sean),
-	Text.new("I want you to spy on her.", Sean),
-	Text.new("Find out what she knows about me.", Sean, nil, function()
+	Text.new("Okay.",Varisa),
+	Text.new("Rich from the person working with her",Sean),
+	Text.new("I'm not.",Varisa),
+	Text.new("Right...",Sean),
+	Text.new("...",Sean),
+	Text.new("You wouldn't mind paying her back a bit?",Sean),
+	Text.new("I guess.",Varisa),
+	Text.new("Great.",Sean),
+	Text.new("I want you to spy on her.",Sean),
+	Text.new("Find out what she knows about me.",Sean, nil, function()
 		Story.set("Sean_Response_2", true)
 	end),
-	Text.new("Tell me what you find.", Sean),
-	Text.new("Got it?", Sean),
+	Text.new("Tell me what you find.",Sean),
+	Text.new("Got it?",Sean),
 },1)
 
 World.Dialogue[French][81] = Dialogue.new({
 	Text.new("You got it?",Jami),
-	Text.new("Yeah.", Varisa),
+	Text.new("Yeah.",Varisa),
 	Text.new("Great.",Jami, nil,function()
 		Story.set("Jami_Experiment_2_3",true)
 	end),
-	Text.new("So the power?", Varisa),
-	Text.new("Check it in a bit.", Jami),
+	Text.new("So the power?",Varisa),
+	Text.new("Check it in a bit.",Jami),
 },1)
 
 World.Dialogue[French][82] = Dialogue.new({
@@ -1053,4 +1053,47 @@ World.Dialogue[French][83] = Dialogue.new({
 
 World.Dialogue[French][84] = Dialogue.new({
 	Text.new("I need your help.",Karina),
+	Text.new("I already turned on the lights.",Varisa),
+	Text.new("I know it's about something else.",Karina),
+	Text.new("Alright what is it?",Varisa),
+	Text.new("Okay come on.",Karina,nil,function(npc)
+		-- cutscene
+		for i,v in ipairs(House.house) do
+			if v.HouseHold == 3 then
+				v.isOpen = true
+				local I = Families.HouseMap[i]
+				World.nextMap(World.Map[I + 2])
+				for i,v in pairs(World.Map[I + 2].npcs) do
+					if v.f then
+						v.g = 0
+					end
+				end
+			end
+		end
+
+		World.AfterEffect = function()
+			muted = true
+			if bs then
+				bs:stop()
+			end
+			GameState = Cutscene
+			local n = 12
+			for i,v in ipairs(House.house) do
+				if v.isKiller then
+					if v.HouseHold == 4 then
+						n = 12
+					elseif v.HouseHold == 6 then
+						n = 13
+					elseif v.HouseHold == 7 then
+						n = 14
+					end
+				end
+			end
+			Play.scene = Play.Scenes[n]
+			Play.scene.Next = Fade
+
+			npc.g = 1
+			setPlr(10.5,12.5)
+		end
+	end),
 },1)
