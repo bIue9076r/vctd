@@ -258,6 +258,16 @@ Story.setBeat("Power_Up_2", function(npc)
 			end
 		end
 
+		if House.house[i].HouseHold == 3 then
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Karina" then
+					if v.i == 76 then
+						v.i = 84
+					end
+				end
+			end
+		end
+
 		if House.house[i].HouseHold == 7 then
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f == "Mollie" then
