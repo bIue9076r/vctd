@@ -1102,3 +1102,11 @@ World.Dialogue[French][85] = Dialogue.new({
 	Text.new("Weird...",Zoey),
 	Text.new("Thanks regardless.",Zoey),
 },1)
+
+World.Dialogue[French][86] = Dialogue.new({
+	Text.new("Oh you're done.",Tracey),
+	Text.new("And we just finished moving the stuff.",Tracey),
+	Text.new("Tomorow?",Tracey),
+	Text.new("I guess.",Varisa),
+	Text.new("See ya.",Tracey),
+},1)
