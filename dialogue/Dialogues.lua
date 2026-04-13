@@ -1097,3 +1097,8 @@ World.Dialogue[English][84] = Dialogue.new({
 		end
 	end),
 },1)
+
+World.Dialogue[English][85] = Dialogue.new({
+	Text.new("Weird...",Zoey),
+	Text.new("Thanks regardless.",Zoey),
+},1)

@@ -74,10 +74,11 @@ Days.newDay(3,function()
 		if v.HouseHold == 6 then
 			--v.isOpen = true
 			local I = Families.HouseMap[i]
+			local isKiller = v.isKiller
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f then
 					v.g = 0
-					if v.isKiller then
+					if isKiller then
 						v.i = 75
 					else
 						if math.random(1,2) == 2 then
@@ -116,16 +117,6 @@ Days.newDay(3,function()
 			for i,v in pairs(World.Map[I + 1].npcs) do
 				if v.f then
 					v.g = 1
-				end
-			end
-			
-			if v.isKiller then
-				for i,v in pairs(World.Map[I + 3].npcs) do
-					v.g = 0
-				end
-				
-				for i,v in pairs(World.Map[I + 3].props) do
-					v.g = 0
 				end
 			end
 		end
