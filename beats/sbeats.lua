@@ -321,6 +321,10 @@ Story.setBeat("Power_Up_2", function(npc)
 		end
 		if not(House.house[i].HouseHold == 8) then
 			House.house[i].isOpen = false
+		else
+			for i,v in pairs(World.Map[I + 2]) do
+				-- Show Rachel
+			end
 		end
 	end
 
