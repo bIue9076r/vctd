@@ -6,7 +6,11 @@ function addRachelIn1(Map)
 	World.Map[Map]:addNpc(Npc.new(1.3,6.9,Lassie,45,1,function()
 		
 	end,"Lassie"))
-
+	
+	World.Map[Map]:addNpc(Npc.new(1.3,6.9,Rachel,45,1,function()
+		
+	end,"Rachel"))
+	
 	World.Map[Map]:addNpc(Npc.new(2.5,0.0,Interaction,-14,0,function()
 		
 	end,"Fridge"))

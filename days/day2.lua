@@ -98,7 +98,7 @@ Days.newDay(2,function()
 			end
 
 			for i,v in pairs(World.Map[I + 1].npcs) do
-				if v.f then
+				if v.f == "Lassie" then
 					v.g = 0
 				end
 			end
