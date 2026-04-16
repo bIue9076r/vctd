@@ -92,7 +92,7 @@ Days.newDay(2,function()
 		if v.HouseHold == 8 then
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I + 2].npcs) do
-				if v.f then
+				if v.f == "Lassie" then
 					v.g = 1
 				end
 			end
