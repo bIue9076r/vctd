@@ -241,7 +241,7 @@ Story.setBeat("Power_Up_2", function(npc)
 	end
 
 	for i,v in pairs(World.Map[1].props) do
-		if v.f == "Stuff" then
+		if v.f == "Stuff" and not(v.c == R_Guitar_L) then
 			v.g = 0
 		end
 	end
@@ -323,7 +323,9 @@ Story.setBeat("Power_Up_2", function(npc)
 			House.house[i].isOpen = false
 		else
 			for i,v in pairs(World.Map[I + 2]) do
-				-- Show Rachel
+				if v.f == "Rachel" then
+					v.g = 0
+				end
 			end
 		end
 	end
