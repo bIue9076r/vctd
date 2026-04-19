@@ -1110,3 +1110,11 @@ World.Dialogue[English][86] = Dialogue.new({
 	Text.new("I guess.",Varisa),
 	Text.new("See ya.",Tracey),
 },1)
+
+World.Dialogue[English][87] = Dialogue.new({
+	Text.new("The power's back.",Rachel),
+	Text.new("Yeah.",Varisa),
+	Text.new("Thanks. I was worried it would take longer.",Rachel),
+	Text.new("I suppose.",Varisa),
+	Text.new("...",Rachel),
+},1)
