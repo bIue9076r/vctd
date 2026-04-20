@@ -918,7 +918,7 @@ World.Dialogue[French][76] = Dialogue.new({
 	Text.new("Yeah.",Karina),
 	Text.new("Alright what is it?",Varisa),
 	Text.new("Okay come on.",Karina,nil,function(npc)
-		-- cutscene
+		Story.set("Karina_Investigation_1", true)
 		for i,v in ipairs(House.house) do
 			if v.HouseHold == 3 then
 				v.isOpen = true
@@ -1057,7 +1057,7 @@ World.Dialogue[French][84] = Dialogue.new({
 	Text.new("I know it's about something else.",Karina),
 	Text.new("Alright what is it?",Varisa),
 	Text.new("Okay come on.",Karina,nil,function(npc)
-		-- cutscene
+		Story.set("Karina_Investigation_1", true)
 		for i,v in ipairs(House.house) do
 			if v.HouseHold == 3 then
 				v.isOpen = true
