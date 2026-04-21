@@ -54,3 +54,7 @@ end))
 World.Map[7]:addNpc(Npc.new(11.0,8.4,Mailbox,7,0,function()
 	
 end))
+
+World.Map[7]:addNpc(Npc.new(13.3,9.4,Vivian,0,1,function()
+	
+end,"Vivian"))
