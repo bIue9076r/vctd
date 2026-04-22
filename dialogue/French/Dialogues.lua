@@ -1118,3 +1118,23 @@ World.Dialogue[French][87] = Dialogue.new({
 	Text.new("I suppose.",Varisa),
 	Text.new("...",Rachel),
 },1)
+
+World.Dialogue[French][88] = Dialogue.new({
+	Text.new("I figured you'd be back.",Vivian),
+	Text.new("What?",Varisa),
+	Text.new("Well....",Vivian),
+	Text.new("I keep hearing Lassie talking about this one show.",Vivian),
+	Text.new("It's honestly a great show.",Vivian),
+	Text.new("Lassie seems like she keeps up with it pretty well.",Vivian),
+	Text.new("Anyway the power went out while I was watching.",Vivian),
+	Text.new("I need you to ask Lassie for her tape.",Vivian),
+	Text.new("I know she recorded it.",Vivian),
+	Text.new("Can't you ask her?",Varisa),
+	Text.new("Its a bit hard when she hates my guts.",Vivian),
+	Text.new("I suppose.",Varisa),
+	Text.new("I'll be so thankful if you did.",Vivian),
+	Text.new("Sure I guess.",Varisa,nil,function(npc)
+		Story.setBeat("Vivian_Show_1",true)
+	end),
+	Text.new("Great.",Vivian),
+},1)
