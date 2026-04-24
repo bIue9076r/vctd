@@ -334,8 +334,14 @@ Story.setBeat("Power_Up_2", function(npc)
 		if not(House.house[i].HouseHold == 8) then
 			House.house[i].isOpen = false
 		else
-			for i,v in pairs(World.Map[I + 2]) do
+			for i,v in pairs(World.Map[I + 1]) do
 				if v.f == "Rachel" then
+					v.g = 0
+				end
+			end
+
+			for i,v in pairs(World.Map[I + 2]) do
+				if v.f == "Lassie" then
 					v.g = 0
 				end
 			end
@@ -384,7 +390,16 @@ Story.setBeat("Zach_Gardening_1", function(npc)
 end)
 
 Story.setBeat("Vivian_Show_1", function(npc)
-	
+	for i = 1,10 do
+		local I = Families.HouseMap[i]
+		if House.house[i].HouseHold == 8 then
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Lassie" then
+					v.i = 0
+				end
+			end
+		end
+	end
 end)
 
 Story.setBeat("Vivian_Show_2", function(npc)
