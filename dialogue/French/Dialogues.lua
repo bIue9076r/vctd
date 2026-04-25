@@ -1138,3 +1138,7 @@ World.Dialogue[French][88] = Dialogue.new({
 	end),
 	Text.new("Great.",Vivian),
 },1)
+
+World.Dialogue[French][89] = Dialogue.new({
+	Text.new("",Lassie);
+},1)
