@@ -1140,5 +1140,13 @@ World.Dialogue[English][88] = Dialogue.new({
 },1)
 
 World.Dialogue[English][89] = Dialogue.new({
-	Text.new("",Lassie);
+	Text.new("Hey Varisa.",Lassie),
+	Text.new("Thanks for fixing the lights.",Lassie),
+	Text.new("Though, the weather was nice today.",Lassie),
+	Text.new("I think i'll stay out here.",Lassie),
+},1)
+
+World.Dialogue[English][90] = Dialogue.new({
+	Text.new("Hey.",Lassie),
+	Text.new("Hey, what sort of tapes do you have?",Varisa),
 },1)

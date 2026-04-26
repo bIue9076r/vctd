@@ -395,7 +395,7 @@ Story.setBeat("Vivian_Show_1", function(npc)
 		if House.house[i].HouseHold == 8 then
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f == "Lassie" then
-					v.i = 0
+					v.i = 90
 				end
 			end
 		end
