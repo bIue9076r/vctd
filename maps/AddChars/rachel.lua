@@ -1,5 +1,5 @@
 function addRachelOut1(Map)
-	World.Map[Map]:addNpc(Npc.new(12.0,10.3,Lassie,23,0,function()
+	World.Map[Map]:addNpc(Npc.new(12.0,10.3,Lassie,23,89,function()
 	
 	end,"Lassie"))
 end
