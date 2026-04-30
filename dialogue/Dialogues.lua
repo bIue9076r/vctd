@@ -1,5 +1,9 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-22] = Dialogue.new({
+	Text.new("This isn't my bed.",Varisa),
+},1)
+
 World.Dialogue[English][-21] = Dialogue.new({
 	Text.new("There's no power, the food is rotting.",Varisa),
 },1)

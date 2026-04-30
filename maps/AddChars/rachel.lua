@@ -1,5 +1,5 @@
 function addRachelOut1(Map)
-	World.Map[Map]:addNpc(Npc.new(12.0,10.3,Lassie,23,89,function()
+	World.Map[Map]:addNpc(Npc.new(12.0,10.3,Lassie,89,1,function()
 	
 	end,"Lassie"))
 end
@@ -34,6 +34,10 @@ function addRachelIn3(Map)
 	World.Map[Map]:addProp(Prop.new(21,4,Bed_1_6,1,1))
 	
 	World.Map[Map]:addWall(Box.new(20,3.8,2,0.3))
+
+	World.Map[Map]:addNpc(Npc.new(21.0,2.5,Interaction,-22,0,function()
+		
+	end))
 end
 
 function addRachelIn4(Map)
