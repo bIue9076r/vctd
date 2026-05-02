@@ -1153,4 +1153,15 @@ World.Dialogue[French][89] = Dialogue.new({
 World.Dialogue[French][90] = Dialogue.new({
 	Text.new("Hey.",Lassie),
 	Text.new("Hey, what sort of tapes do you have?",Varisa),
+	Text.new("You want my tapes?",Lassie),
+	Text.new("I don't recall watching anything you might like.",Lassie),
+	Text.new("My mom wouldn't want to miss her shows.",Varisa),
+	Text.new("Hmm, I could probably tape a few more too.",Lassie),
+	Text.new("Its terrible what that sicko did to her.",Lassie),
+	Text.new("I hope you find her soon.",Lassie),
+	Text.new("Take what you need in the meantime.",Lassie,nil,function(npc)
+		Story.setBeat("Vivian_Show_2",true)
+	end),
+	Text.new("Thanks.",Varisa),
+	Text.new("Good luck.",Lassie),
 },1)
