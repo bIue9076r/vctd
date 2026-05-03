@@ -410,6 +410,10 @@ Story.setBeat("Vivian_Show_3", function(npc)
 	
 end)
 
+Story.setBeat("Vivian_Show_4", function(npc)
+	
+end)
+
 Story.setBeat("Sean_Response_1", function(npc)
 	for i = 1,10 do
 		local I = Families.HouseMap[i]

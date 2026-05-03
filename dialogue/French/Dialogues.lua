@@ -1165,3 +1165,14 @@ World.Dialogue[French][90] = Dialogue.new({
 	Text.new("Thanks.",Varisa),
 	Text.new("Good luck.",Lassie),
 },1)
+
+World.Dialogue[French][91] = Dialogue.new({
+	Text.new("Have you got it yet?",Vivian),
+},1)
+
+World.Dialogue[French][92] = Dialogue.new({
+	Text.new("Nice, the exact episode too.",Vivian,nil,function(npc)
+		Story.setBeat("Vivian_Show_4",true)
+	end),
+	Text.new("Thanks so much.",Vivian),
+},1)
