@@ -180,7 +180,7 @@ end
 function drawDialogue()
 	if IsTalking then
 		local dt = World.dticker:get()
-		local sl = utf8.len(World.dtbl.s)
+		local sl = utf8.len(World.dtbl.s)/60
 		love.graphics.rectangle("fill",
 			(SCREEN_X/12),
 			(SCREEN_Y/8),
@@ -211,7 +211,7 @@ function drawDialogue()
 		end
 		
 		if dt < (sl + DialogueBuffer) then
-			World.dticker()
+			World.dticker(love.timer.getDelta())
 		else
 			-- End Voice
 			Voices[World.dtbl.v]:pause()

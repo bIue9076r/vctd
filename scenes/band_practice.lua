@@ -1,5 +1,5 @@
 Play.Scenes[2] = Scene.new(World.Map[5])
-Play.Scenes[2].tickGoal = 800--math.floor(9223372036854775807 / 10000000000000)
+Play.Scenes[2].tickGoal = 800/40--math.floor(9223372036854775807 / 10000000000000)
 Play.Scenes[2].Next = Intro
 Play.Scenes[2].Hour = Noon
 Play.Scenes[2].Min = 0
@@ -22,23 +22,26 @@ Play.Scenes[2].Actors[15] = Actor.new(Lassie,9.8,12.1)
 
 local sbs_1, sbs_2, sbs_3, sbs_4
 Play.Scenes[2].transition = function(self,t)
-	self.Actors[8].y = 4.7 + math.abs(math.sin(math.pi * ((t*4)/100))/6)
-	if(t < 2) then
-		local n = tostring(math.random(1,7))
-		sbs_1 = sound.getSound("EpT"..(n).."_B")
-		sbs_2 = sound.getSound("EpT"..(n).."_L")
-		sbs_3 = sound.getSound("EpT"..(n).."_G")
-		sbs_4 = sound.getSound("EpT"..(n).."_D")
-		if Play.unmuteAfter then
-			sbs_1:seek(15)
-			sbs_2:seek(15)
-			sbs_3:seek(15)
-			sbs_4:seek(15)
-			
-			sbs_1:play()
-			sbs_2:play()
-			sbs_3:play()
-			sbs_4:play()
+	self.Actors[8].y = 4.7 + math.abs(math.sin(math.pi * (t*3))/6)
+	if (t < self.tickGoal) then
+		if not self.vars["Once"] then
+			local n = tostring(math.random(1,7))
+			sbs_1 = sound.getSound("EpT"..(n).."_B")
+			sbs_2 = sound.getSound("EpT"..(n).."_L")
+			sbs_3 = sound.getSound("EpT"..(n).."_G")
+			sbs_4 = sound.getSound("EpT"..(n).."_D")
+			if Play.unmuteAfter then
+				sbs_1:seek(15)
+				sbs_2:seek(15)
+				sbs_3:seek(15)
+				sbs_4:seek(15)
+				
+				sbs_1:play()
+				sbs_2:play()
+				sbs_3:play()
+				sbs_4:play()
+			end
+			self.vars["Once"] = true
 		end
 	elseif(t < self.tickGoal) then
 		

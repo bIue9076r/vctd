@@ -1,8 +1,9 @@
 -- Fade out
 Fade_out_t = ticker.new()
+Fade_out_time = 1.25
 
 function Fadeout_Draw()
-	local t = ((50 - Fade_out_t:get())/50)
+	local t = ((Fade_out_time - Fade_out_t:get())/Fade_out_time)
 
 	local h1 = Time.getHour()
 	local h2 = h1 + 1
@@ -29,12 +30,12 @@ function Fadeout_Draw()
 end
 
 function Fadeout_Update(dt)
-	if Fade_out_t:get() >= 50 then
+	if Fade_out_t:get() >= Fade_out_time then
 		Fade_out_t:reset()
 		GameState = Cutscene
 	end
 
-	Fade_out_t()
+	Fade_out_t(dt)
 end
 
 function Fadeout_Keypressed(key)

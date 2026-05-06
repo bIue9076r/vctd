@@ -65,6 +65,7 @@ Scene.dticker = ticker.new()
 Scene.tickGoal = 0
 Scene.Next = 1
 Scene.LastDialogueBuffer = 50
+Scene.vars = {}
 
 function Scene.new(m,g,t)
 	local tbl = {
@@ -187,7 +188,7 @@ end
 function Scene:drawDialogue()
 	if self.IsTalking then
 		local dt = self.dticker:get()
-		local sl = utf8.len(self.dtbl.s)
+		local sl = utf8.len(self.dtbl.s)/60
 		love.graphics.rectangle("fill",
 			(SCREEN_X/12),
 			(SCREEN_Y/8),
@@ -218,7 +219,7 @@ function Scene:drawDialogue()
 		end
 		
 		if dt < (sl + DialogueBuffer) then
-			self.dticker()
+			self.dticker(love.timer.getDelta())
 		else
 			-- stop talking
 			Voices[self.dtbl.v]:pause()

@@ -13,7 +13,7 @@ end
 
 function Play.Update(dt)
 	if Play.ticker:get() < Play.scene.tickGoal then
-		Play.ticker()
+		Play.ticker(dt)
 	end
 	
 	Play.scene:transition(Play.ticker:get())

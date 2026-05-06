@@ -1,5 +1,5 @@
 Play.Scenes[3] = Scene.new(World.Map[4])
-Play.Scenes[3].tickGoal = 800
+Play.Scenes[3].tickGoal = 800/40
 Play.Scenes[3].Next = Intro
 Play.Scenes[3].Hour = Noon
 Play.Scenes[3].Min = 0
@@ -24,32 +24,40 @@ Play.Scenes[3].Actors[15] = Actor.new(Zoey,8.5,6.8)
 
 local sbs
 Play.Scenes[3].transition = function(self,t)
-	if(t < 2) then
-		self.Actors[15].x = -8.5
-		sbs = sound.getSound("EpT3_D")
-		if Play.unmuteAfter then
-			sbs:seek(15)
-			sbs:play()
+	if(t < 600/40) then
+		if not self.vars["Once1"] then
+			self.Actors[15].x = -8.5
+			sbs = sound.getSound("EpT3_D")
+			if Play.unmuteAfter then
+				sbs:seek(15)
+				sbs:play()
+			end
+			self.vars["Once1"] = true
 		end
-	elseif(t < 600) then
-		self.Actors[1].y = 6.9 + math.abs(math.sin(math.pi * ((t*4)/100))/6)
-	elseif(t == 600) then
-		sbs:stop()
-		self.Actors[15].x = 8.5
-		self.Actors[15].y = 6.8
-		self.IsTalking = true
-		self.dtbl = {
-			s = String.get(5),
-			n = Zoey,
-			v = "Normal",
-		}
-	elseif(t == 700) then
-		self.IsTalking = true
-		self.dtbl = {
-			s = String.get(6),
-			n = Rachel,
-			v = "Normal",
-		}
+		self.Actors[1].y = 6.9 + math.abs(math.sin(math.pi * (t*2))/6)
+	elseif(t < 700/40) then
+		if not self.vars["Once2"] then
+			sbs:stop()
+			self.Actors[15].x = 8.5
+			self.Actors[15].y = 6.8
+			self.IsTalking = true
+			self.dtbl = {
+				s = String.get(5),
+				n = Zoey,
+				v = "Normal",
+			}
+			self.vars["Once2"] = true
+		end
+	elseif(t < 800/40) then
+		if not self.vars["Once3"] then
+			self.IsTalking = true
+			self.dtbl = {
+				s = String.get(6),
+				n = Rachel,
+				v = "Normal",
+			}
+			self.vars["Once3"] = true
+		end
 	elseif(t < self.tickGoal) then
 		
 	else

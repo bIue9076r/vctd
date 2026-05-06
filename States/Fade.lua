@@ -1,8 +1,9 @@
 -- Fade in
 Fade_in_t = ticker.new()
+Fade_in_time = 1.25
 
 function Fade_Draw()
-	local t = (Fade_in_t:get()/50)
+	local t = (Fade_in_t:get()/Fade_in_time)
 
 	local h1 = Time.getHour()
 	local h2 = h1 + 1
@@ -29,12 +30,12 @@ function Fade_Draw()
 end
 
 function Fade_Update(dt)
-	if Fade_in_t:get() >= 50 then
+	if Fade_in_t:get() >= Fade_in_time then
 		Fade_in_t:reset()
 		GameState = WORLD
 	end
 
-	Fade_in_t()
+	Fade_in_t(dt)
 end
 
 function Fade_Keypressed(key)

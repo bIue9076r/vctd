@@ -348,7 +348,7 @@ Fade = 5
 Fadeout = 6
 END = 7
 
-local tileTicker = ticker.new()
+local tileTicker = tickerd.new()
 -- tiles
 Void = tileTicker:get(); tileTicker()
 AntiVoid = tileTicker:get(); tileTicker()

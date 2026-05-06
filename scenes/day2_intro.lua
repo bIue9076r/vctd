@@ -1,5 +1,5 @@
 Play.Scenes[4] = Scene.new(World.Map[25])
-Play.Scenes[4].tickGoal = 1200
+Play.Scenes[4].tickGoal = 1200/40
 Play.Scenes[4].Next = Fade
 Play.Scenes[4].Hour = Noon
 Play.Scenes[4].Min = 0
@@ -50,69 +50,76 @@ Play.Scenes[4].Actors[43] = Actor.new(Wilkie,14.5,10.2)
 Play.Scenes[4].Actors[44] = Actor.new(Mollie,13.5,5.0)
 
 Play.Scenes[4].transition = function(self,t)
-	self.Actors[44].y = 5.0 + (math.sin(math.pi * (t/100))/4)
-	if(t < 150) then
-		if t == 1 then
+	self.Actors[44].y = 5.0 + (math.sin(math.pi * t)/4)
+	if(t < 150/40) then
+		if not self.vars["Once0"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(7),
 				n = Tracey,
 				v = "Normal",
 			}
+			self.vars["Once0"] = true
 		end
-	elseif(t < 300) then
-		if t == 151 then
+	elseif(t < 300/40) then
+		if not self.vars["Once1"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(8),
 				n = Varisa,
 				v = "Normal",
 			}
+			self.vars["Once1"] = true
 		end
-	elseif(t < 450) then
-		if t == 301 then
+	elseif(t < 450/40) then
+		if not self.vars["Once2"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(9),
 				n = Tracey,
 				v = "Normal",
 			}
+			self.vars["Once2"] = true
 		end
-	elseif(t < 600) then
-		if t == 451 then
+	elseif(t < 600/40) then
+		if not self.vars["Once3"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(10),
 				n = Varisa,
 				v = "Normal",
 			}
+			self.vars["Once3"] = true
 		end
-	elseif(t < 750) then
-		if t == 601 then
+	elseif(t < 750/40) then
+		if not self.vars["Once4"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(11),
 				n = Varisa,
 				v = "Normal",
 			}
+			self.vars["Once4"] = true
 		end
-	elseif(t < 900) then
-		if t == 751 then
+	elseif(t < 900/40) then
+		if not self.vars["Once5"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(12),
 				n = Tracey,
 				v = "Normal",
 			}
+			self.vars["Once5"] = true
 		end
-	elseif(t < 1050) then
-		if t == 901 then
+	elseif(t < 1050/40) then
+		if not self.vars["Once6"] then
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(13),
+			s = String.get(13),
 				n = Tracey,
 				v = "Normal",
 			}
+			self.vars["Once6"] = true
 		end
 	elseif(t < self.tickGoal) then
 		

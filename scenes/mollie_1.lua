@@ -1,5 +1,5 @@
 Play.Scenes[11] = Scene.new(World.Map[19])
-Play.Scenes[11].tickGoal = 1220
+Play.Scenes[11].tickGoal = 1220/40
 Play.Scenes[11].Next = WORLD
 Play.Scenes[11].Hour = Evening
 
@@ -10,8 +10,8 @@ Play.Scenes[11].Actors[4] = Actor.new(Sean,18.3,9.6)
 
 local sbs
 Play.Scenes[11].transition = function(self,t)
-	if(t < 250) then
-		if t == 1 then
+	if(t < 250/40) then
+		if not self.vars["Once1"] then
 			Scene.LastDialogueBuffer = DialogueBuffer
 			sbs = sound.getSound("Breakup")
 			if Play.unmuteAfter then
@@ -25,57 +25,63 @@ Play.Scenes[11].transition = function(self,t)
 				n = Ella,
 				v = "Normal",
 			}
-			DialogueBuffer = 100
+			DialogueBuffer = 100/40
+			self.vars["Once1"] = true
 		end
-	elseif(t < 400) then
-		if t == 251 then
+	elseif(t < 400/40) then
+		if not self.vars["Once2"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(15),
 				n = Ella,
 				v = "Normal",
 			}
+			self.vars["Once2"] = true
 		end
-	elseif(t < 550) then
-		if t == 401 then
+	elseif(t < 550/40) then
+		if not self.vars["Once3"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(16),
 				n = Sean,
 				v = "Normal",
 			}
+			self.vars["Once3"] = true
 		end
-	elseif(t < 700) then
-		if t == 551 then
+	elseif(t < 700/40) then
+		if not self.vars["Once4"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(17),
 				n = Ella,
 				v = "Normal",
 			}
+			self.vars["Once4"] = true
 		end
-	elseif(t < 850) then
-		if t == 701 then
+	elseif(t < 850/40) then
+		if not self.vars["Once5"] then
 			self.IsTalking = true
 			self.dtbl = {
 				s = String.get(18),
 				n = Ella,
 				v = "Normal",
 			}
+			self.vars["Once5"] = true
 		end
-	elseif(t < 1000) then
-		if t == 851 then
+	elseif(t < 1000/40) then
+		if not self.vars["Once6"] then
 			self.IsTalking = true
 			self.dtbl = {
-				s = String.get(19),
+			s = String.get(19),
 				n = Sean,
 				v = "Normal",
 			}
+			self.vars["Once6"] = true
 		end
-	elseif(t < 1120) then
+	elseif(t < 1120/40) then
 		
 	elseif(t < self.tickGoal) then
-		local _t = (t - 1120) / 100
+		local _t = (t - (1120/40)) / (100/40)
 		Play.Scenes[11].Actors[3].x = Scene.lerp(16.6,18.2,_t)
 		Play.Scenes[11].Actors[4].x = Scene.lerp(18.3,18.7,_t)
 

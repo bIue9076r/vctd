@@ -1,5 +1,5 @@
 Play.Scenes[10] = Scene.new(World.Map[10])
-Play.Scenes[10].tickGoal = 800
+Play.Scenes[10].tickGoal = 800/40
 Play.Scenes[10].Next = Fade
 Play.Scenes[10].Hour = Night
 Play.Scenes[10].Min = 0
@@ -28,7 +28,7 @@ Play.Scenes[10].Actors[20] = Actor.new(Knife,1.7,2.8)
 
 Play.Scenes[10].transition = function(self,t)
 	if(t < self.tickGoal) then
-		if t == 1 then
+		if not self.vars["Once"] then
 			for i = 1,10 do
 				if House.house[i].isKiller then
 					local H = House.house[i].HouseHold
@@ -41,8 +41,9 @@ Play.Scenes[10].transition = function(self,t)
 					end
 				end
 			end
+			self.vars["Once"] = true
 		end
-		Play.Scenes[10].Actors[19].x = Scene.lerp(10.5,19.0,t/800)
+		Play.Scenes[10].Actors[19].x = Scene.lerp(10.5,19.0,t/(800/40))
 		Play.Scenes[10].Actors[20].x = Play.Scenes[10].Actors[19].x
 	else
 		Voices[self.dtbl.v]:pause()

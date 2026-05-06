@@ -85,7 +85,7 @@ Map = MapObj.new()
 -- globals
 GameState = Cutscene
 GameDay = 1
-DialogueBuffer = 50
+DialogueBuffer = 50/40
 Ending = 0	--	good ending
 IsTalking = false
 Language = English
@@ -161,12 +161,12 @@ function kctrlOps(key)
 		if key == "0" then
 			DialogueBuffer = 0
 		elseif key == "1" then
-			DialogueBuffer = 50
+			DialogueBuffer = 50/40
 		elseif key == "2" then
-			DialogueBuffer = 75
+			DialogueBuffer = 75/40
 		elseif key == "3" then
 			-- slow reader huh?
-			DialogueBuffer = 100
+			DialogueBuffer = 100/40
 		elseif key == "l" then
 			DrawCoords = not(DrawCoords)
 		elseif key == "y" then
@@ -365,8 +365,8 @@ function daudio()
 				song_silence = true
 			end
 		else
-			if soundTick:get() <= 4000 then
-				soundTick() -- Silence
+			if soundTick:get() <= 4000/40 then
+				soundTick(love.timer.getDelta()) -- Silence
 			else
 				soundTick:reset()
 				bs = sound.getSound(SongListSelect(SongList))
@@ -519,9 +519,6 @@ function love.update(dt)
 	local f = STATE_UPDATE[GameState]
 	if f then f(dt) end
 	files.update(dt)
-	if dt < 1/40 then
-		love.timer.sleep(1/40 - dt)
-	end
 end
 
 function love.keypressed(key)
