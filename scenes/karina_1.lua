@@ -1,5 +1,5 @@
 Play.Scenes[12] = Scene.new(World.Map[25])
-Play.Scenes[12].tickGoal = 2000/40--1220/40
+Play.Scenes[12].tickGoal = 25
 Play.Scenes[12].Next = Fade
 Play.Scenes[12].Hour = Night
 
@@ -48,83 +48,47 @@ Play.Scenes[12].Actors[41] = Actor.new(Unknown,13.8,3.5)
 
 local sbs
 Play.Scenes[12].transition = function(self,t)
-	if(t < 250/40) then
+	if(t < 3.125) then
 		if not self.vars["Once1"] then
 			Scene.LastDialogueBuffer = DialogueBuffer
-			
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(33),
-				n = Karina,
-				v = "Normal",
-			}
-			DialogueBuffer = 100/40
+			self:Say(String.get(33),Karina)
+			DialogueBuffer = 2.5
 			self.vars["Once1"] = true
 		end
-	elseif(t < 400/40) then
+	elseif(t < 5) then
 		if not self.vars["Once2"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(34),
-				n = Karina,
-				v = "Normal",
-			}
+			self:Say(String.get(34),Karina)
 			self.vars["Once2"] = true
 		end
-	elseif(t < 550/40) then
+	elseif(t < 6.875) then
 		if not self.vars["Once3"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(35),
-				n = Karina,
-				v = "Normal",
-			}
+			self:Say(String.get(35),Karina)
 			self.vars["Once3"] = true
 		end
-	elseif(t < 700/40) then
+	elseif(t < 8.75) then
 		if not self.vars["Once4"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(36),
-				n = Karina,
-				v = "Normal",
-			}
+			self:Say(String.get(36),Karina)
 			self.vars["Once4"] = true
 		end
-	elseif(t < 850/40) then
+	elseif(t < 10.625) then
 		if not self.vars["Once5"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(37),
-				n = Karina,
-				v = "Normal",
-			}
+			self:Say(String.get(37),Karina)
 			self.vars["Once5"] = true
 		end
-	elseif(t < 1000/40) then
+	elseif(t < 12.5) then
 		if not self.vars["Once6"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(38),
-				n = Unknown,
-				v = "Slow",
-			}
+			self:Say(String.get(38),Unknown,"Slow")
 			self.vars["Once6"] = true
 		end
-	elseif(t < 1250/40) then
+	elseif(t < 15.625) then
 		if not self.vars["Once7"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(39),
-				n = Unknown,
-				v = "Slow",
-			}
+			self:Say(String.get(39),Unknown,"Slow")
 			self.vars["Once7"] = true
 		end
-	elseif(t < 1500/40) then
+	elseif(t < 18.75) then
 		
 	elseif(t < self.tickGoal) then
-		local _t = (t - (1500/40)) / (100/40)
+		local _t = (t - (18.75)) / (1.25)
 		-- Play.Scenes[12].Actors[3].x = Scene.lerp(16.6,18.2,_t)
 		-- Play.Scenes[12].Actors[4].x = Scene.lerp(18.3,18.7,_t)
 
@@ -147,6 +111,7 @@ Play.Scenes[12].transition = function(self,t)
 			self:AfterEffect()
 			self.AfterEffect = nil
 		end
+		self:clearVars()
 		self.dticker:reset()
 		Play.ticker:reset()
 	end

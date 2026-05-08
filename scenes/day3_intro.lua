@@ -1,5 +1,5 @@
 Play.Scenes[5] = Scene.new(World.Map[10])
-Play.Scenes[5].tickGoal = 500/40
+Play.Scenes[5].tickGoal = 6.25
 Play.Scenes[5].Next = Fade
 Play.Scenes[5].Hour = Day
 Play.Scenes[5].Min = 0
@@ -42,17 +42,12 @@ Play.Scenes[5].Actors[28] = Actor.new(Bass_Drum,7.6 + 9,5.5 + 2)
 
 local sbs
 Play.Scenes[5].transition = function(self,t)
-	if(t < 100/40) then
+	if(t < 1.25) then
 		if not self.vars["Once1"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(20),
-				n = Varisa,
-				v = "Normal",
-			}
+			self:Say(String.get(20), Varisa)
 			self.vars["Once1"] = true
 		end
-	elseif (t < 300/40) then
+	elseif (t < 3.75) then
 		if not self.vars["Once2"] then
 			sbs = sound.getSound("EpT7")
 			if Play.unmuteAfter then
@@ -61,7 +56,7 @@ Play.Scenes[5].transition = function(self,t)
 			end
 			self.vars["Once2"] = true
 		end
-	elseif (t < 350/40) then
+	elseif (t < 4.375) then
 		if sbs then
 			sbs:stop()
 		end
@@ -69,14 +64,9 @@ Play.Scenes[5].transition = function(self,t)
 			self.darkness = 2
 			self.vars["Once3"] = true
 		end
-	elseif (t < 400/40) then
+	elseif (t < 5) then
 		if not self.vars["Once4"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(21),
-				n = Varisa,
-				v = "Normal",
-			}
+			self:Say(String.get(21), Varisa)
 			self.vars["Once4"] = true
 		end
 	elseif(t < self.tickGoal) then
@@ -99,6 +89,7 @@ Play.Scenes[5].transition = function(self,t)
 			self:AfterEffect()
 			self.AfterEffect = nil
 		end
+		self:clearVars()
 		self.dticker:reset()
 		Play.ticker:reset()
 	end

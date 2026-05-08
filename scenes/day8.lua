@@ -1,5 +1,5 @@
 Play.Scenes[10] = Scene.new(World.Map[10])
-Play.Scenes[10].tickGoal = 800/40
+Play.Scenes[10].tickGoal = 10
 Play.Scenes[10].Next = Fade
 Play.Scenes[10].Hour = Night
 Play.Scenes[10].Min = 0
@@ -43,7 +43,7 @@ Play.Scenes[10].transition = function(self,t)
 			end
 			self.vars["Once"] = true
 		end
-		Play.Scenes[10].Actors[19].x = Scene.lerp(10.5,19.0,t/(800/40))
+		Play.Scenes[10].Actors[19].x = Scene.lerp(10.5,19.0,t/(10))
 		Play.Scenes[10].Actors[20].x = Play.Scenes[10].Actors[19].x
 	else
 		Voices[self.dtbl.v]:pause()
@@ -60,6 +60,7 @@ Play.Scenes[10].transition = function(self,t)
 			self:AfterEffect()
 			self.AfterEffect = nil
 		end
+		self:clearVars()
 		self.dticker:reset()
 		Play.ticker:reset()
 	end

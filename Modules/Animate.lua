@@ -99,6 +99,12 @@ function Scene.lerp(a,b,t)
 	return b*t - a*(t - 1)
 end
 
+function Scene:clearVars()
+	for i, v in pairs(self.vars) do
+		self.vars[i] = nil
+	end
+end
+
 function Scene:skyTint()
 	local h1 = self.Hour
 	local h2 = h1 + 1
@@ -183,6 +189,16 @@ function Scene:drawActors()
 	for i,v in pairs(self.Actors) do
 		v:draw()
 	end
+end
+
+function Scene:Say(s,n,v)
+	self.IsTalking = true
+	self.dtbl = {
+		s = s or "",
+		n = n or 0,
+		v = v or "Normal",
+	}
+	self.dticker:reset()
 end
 
 function Scene:drawDialogue()

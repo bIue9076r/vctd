@@ -1,6 +1,6 @@
 -- Fade out
 Fade_out_t = ticker.new()
-Fade_out_time = 1.25
+Fade_out_time = 0.625
 
 function Fadeout_Draw()
 	local t = ((Fade_out_time - Fade_out_t:get())/Fade_out_time)

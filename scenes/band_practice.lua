@@ -1,5 +1,5 @@
 Play.Scenes[2] = Scene.new(World.Map[5])
-Play.Scenes[2].tickGoal = 800/40--math.floor(9223372036854775807 / 10000000000000)
+Play.Scenes[2].tickGoal = 10--math.floor(9223372036854775807 / 10000000000000)
 Play.Scenes[2].Next = Intro
 Play.Scenes[2].Hour = Noon
 Play.Scenes[2].Min = 0
@@ -43,8 +43,6 @@ Play.Scenes[2].transition = function(self,t)
 			end
 			self.vars["Once"] = true
 		end
-	elseif(t < self.tickGoal) then
-		
 	else
 		sbs_1:stop()
 		sbs_2:stop()
@@ -62,6 +60,7 @@ Play.Scenes[2].transition = function(self,t)
 			self:AfterEffect()
 			self.AfterEffect = nil
 		end
+		self:clearVars()
 		self.dticker:reset()
 		Play.ticker:reset()
 	end

@@ -85,7 +85,7 @@ Map = MapObj.new()
 -- globals
 GameState = Cutscene
 GameDay = 1
-DialogueBuffer = 50/40
+DialogueBuffer = 1.25
 Ending = 0	--	good ending
 IsTalking = false
 Language = English
@@ -161,12 +161,12 @@ function kctrlOps(key)
 		if key == "0" then
 			DialogueBuffer = 0
 		elseif key == "1" then
-			DialogueBuffer = 50/40
+			DialogueBuffer = 1.25
 		elseif key == "2" then
-			DialogueBuffer = 75/40
+			DialogueBuffer = 1.875
 		elseif key == "3" then
 			-- slow reader huh?
-			DialogueBuffer = 100/40
+			DialogueBuffer = 2.5
 		elseif key == "l" then
 			DrawCoords = not(DrawCoords)
 		elseif key == "y" then
@@ -365,7 +365,7 @@ function daudio()
 				song_silence = true
 			end
 		else
-			if soundTick:get() <= 4000/40 then
+			if soundTick:get() <= 100 then
 				soundTick(love.timer.getDelta()) -- Silence
 			else
 				soundTick:reset()
@@ -403,7 +403,7 @@ function love.load(arg)
 	require("/scenes/Scenes")
 	
 	muted = true
-	Play.scene = Play.Scenes[math.random(1,3)]
+	Play.scene = Play.Scenes[12]--math.random(1,3)]
 	
 	if Save then
 		Play.scene.Next = SAVE

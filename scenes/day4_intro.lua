@@ -1,5 +1,5 @@
 Play.Scenes[6] = Scene.new(World.Map[25])
-Play.Scenes[6].tickGoal = 1200/40
+Play.Scenes[6].tickGoal = 15
 Play.Scenes[6].Next = Fade
 Play.Scenes[6].Hour = Noon
 Play.Scenes[6].Min = 0
@@ -50,75 +50,40 @@ Play.Scenes[6].Actors[43] = Actor.new(Wilkie,14.5,10.2)
 Play.Scenes[6].Actors[44] = Actor.new(Mollie,13.5,5.0)
 
 Play.Scenes[6].transition = function(self,t)
-	self.Actors[44].y = 5.0 + (math.sin(math.pi * (t/(100/40)))/4)
-	if(t < 150/40) then
+	self.Actors[44].y = 5.0 + (math.sin(math.pi * (t/(2.5)))/4)
+	if(t < 1.875) then
 		if not self.vars["Once1"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(7),
-				n = Tracey,
-				v = "Normal",
-			}
+			self:Say(String.get(7),Tracey)
 			self.vars["Once1"] = true
 		end
-	elseif(t < 300/40) then
+	elseif(t < 3.75) then
 		if not self.vars["Once2"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(8),
-				n = Varisa,
-				v = "Normal",
-			}
+			self:Say(String.get(8),Varisa)
 			self.vars["Once2"] = true
 		end
-	elseif(t < 450/40) then
+	elseif(t < 5.625) then
 		if not self.vars["Once3"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(9),
-				n = Tracey,
-				v = "Normal",
-			}
+			self:Say(String.get(9),Tracey)
 			self.vars["Once3"] = true
 		end
-	elseif(t < 600/40) then
+	elseif(t < 7.5) then
 		if not self.vars["Once4"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(10),
-				n = Varisa,
-				v = "Normal",
-			}
+			self:Say(String.get(10),Varisa)
 			self.vars["Once4"] = true
 		end
-	elseif(t < 750/40) then
+	elseif(t < 9.375) then
 		if not self.vars["Once5"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(11),
-				n = Varisa,
-				v = "Normal",
-			}
+			self:Say(String.get(11),Varisa)
 			self.vars["Once5"] = true
 		end
-	elseif(t < 900/40) then
+	elseif(t < 11.25) then
 		if not self.vars["Once6"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(12),
-				n = Tracey,
-				v = "Normal",
-			}
+			self:Say(String.get(12),Tracey)
 			self.vars["Once6"] = true
 		end
-	elseif(t < 1050/40) then
+	elseif(t < 13.125) then
 		if not self.vars["Once7"] then
-			self.IsTalking = true
-			self.dtbl = {
-				s = String.get(13),
-				n = Tracey,
-				v = "Normal",
-			}
+			self:Say(String.get(13),Tracey)
 			self.vars["Once7"] = true
 		end
 	elseif(t < self.tickGoal) then
@@ -138,6 +103,7 @@ Play.Scenes[6].transition = function(self,t)
 			self:AfterEffect()
 			self.AfterEffect = nil
 		end
+		self:clearVars()
 		self.dticker:reset()
 		Play.ticker:reset()
 	end

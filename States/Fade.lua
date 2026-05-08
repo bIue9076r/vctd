@@ -1,6 +1,6 @@
 -- Fade in
 Fade_in_t = ticker.new()
-Fade_in_time = 1.25
+Fade_in_time = 0.625
 
 function Fade_Draw()
 	local t = (Fade_in_t:get()/Fade_in_time)
