@@ -47,9 +47,26 @@ Play.Scenes[12].Actors[40] = Actor.new(Karina,1.5,10.5)
 Play.Scenes[12].Actors[41] = Actor.new(Unknown,13.8,3.5)
 
 local sbs
+local dn1
+local dn2
 Play.Scenes[12].transition = function(self,t)
 	if(t < 3.125) then
 		if not self.vars["Once1"] then
+			for i = 1,10 do
+				if House.house[i].HouseHold == 4 and (House.house[i].isKiller) then
+					Scene.vars["dn1"] = 38
+					Scene.vars["dn2"] = 39
+				end
+				if House.house[i].HouseHold == 6 and (House.house[i].isKiller) then
+					Scene.vars["dn1"] = 42
+					Scene.vars["dn2"] = 43
+				end
+				if House.house[i].HouseHold == 7 and (House.house[i].isKiller) then
+					Scene.vars["dn1"] = 40
+					Scene.vars["dn2"] = 41
+				end
+			end
+
 			Scene.LastDialogueBuffer = DialogueBuffer
 			self:Say(String.get(33),Karina)
 			DialogueBuffer = 2.5
@@ -77,12 +94,12 @@ Play.Scenes[12].transition = function(self,t)
 		end
 	elseif(t < 12.5) then
 		if not self.vars["Once6"] then
-			self:Say(String.get(38),Unknown,"Slow")
+			self:Say(String.get(Scene.vars["dn1"]),Unknown,"Slow")
 			self.vars["Once6"] = true
 		end
 	elseif(t < 15.625) then
 		if not self.vars["Once7"] then
-			self:Say(String.get(39),Unknown,"Slow")
+			self:Say(String.get(Scene.vars["dn2"]),Unknown,"Slow")
 			self.vars["Once7"] = true
 		end
 	elseif(t < 18.75) then
@@ -95,6 +112,11 @@ Play.Scenes[12].transition = function(self,t)
 		-- Play.Scenes[12].Actors[3].y = Scene.lerp(9.6,8.0,_t)
 		-- Play.Scenes[12].Actors[4].y = Scene.lerp(9.6,7.4,_t)
 	else
+		if Story.get("Power_Up_1") then
+			if not(Story.get("Power_Up_2")) then
+				Mood.darkSet(2)
+			end
+		end
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
 		--sbs:stop()

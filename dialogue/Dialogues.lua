@@ -942,19 +942,7 @@ World.Dialogue[English][76] = Dialogue.new({
 				bs:stop()
 			end
 			GameState = Cutscene
-			local n = 12
-			for i,v in ipairs(House.house) do
-				if v.isKiller then
-					if v.HouseHold == 4 then
-						n = 12
-					elseif v.HouseHold == 6 then
-						n = 13
-					elseif v.HouseHold == 7 then
-						n = 14
-					end
-				end
-			end
-			Play.scene = Play.Scenes[n]
+			Play.scene = Play.Scenes[12]
 			Play.scene.Next = Fade
 
 			npc.g = 1
@@ -1081,19 +1069,7 @@ World.Dialogue[English][84] = Dialogue.new({
 				bs:stop()
 			end
 			GameState = Cutscene
-			local n = 12
-			for i,v in ipairs(House.house) do
-				if v.isKiller then
-					if v.HouseHold == 4 then
-						n = 12
-					elseif v.HouseHold == 6 then
-						n = 13
-					elseif v.HouseHold == 7 then
-						n = 14
-					end
-				end
-			end
-			Play.scene = Play.Scenes[n]
+			Play.scene = Play.Scenes[12]
 			Play.scene.Next = Fade
 
 			npc.g = 1
