@@ -1,92 +1,42 @@
-Play.Scenes[6] = Scene.new(World.Map[25])
-Play.Scenes[6].tickGoal = 15
+Play.Scenes[6] = Scene.new(World.Map[5])
+Play.Scenes[6].tickGoal = 1500
 Play.Scenes[6].Next = Fade
 Play.Scenes[6].Hour = Noon
 Play.Scenes[6].Min = 0
-Play.Scenes[6].Actors[1] = Actor.new(Sand_BR,10.8,2.9-1)
-Play.Scenes[6].Actors[2] = Actor.new(Sand_B,10.8+1,2.9-1)
-Play.Scenes[6].Actors[3] = Actor.new(Sand_B,10.8+2,2.9-1)
-Play.Scenes[6].Actors[4] = Actor.new(Sand_B,10.8+3,2.9-1)
-Play.Scenes[6].Actors[5] = Actor.new(Sand_B,10.8+4,2.9-1)
-Play.Scenes[6].Actors[6] = Actor.new(Sand_B,10.8+5,2.9-1)
-Play.Scenes[6].Actors[7] = Actor.new(Sand_BL,10.8+6,2.9-1)
-Play.Scenes[6].Actors[8] = Actor.new(Sand_R,10.8,2.9)
-Play.Scenes[6].Actors[9] = Actor.new(Sand,10.8+1,2.9)
-Play.Scenes[6].Actors[10] = Actor.new(Sand,10.8+2,2.9)
-Play.Scenes[6].Actors[11] = Actor.new(Sand,10.8+3,2.9)
-Play.Scenes[6].Actors[12] = Actor.new(Sand,10.8+4,2.9)
-Play.Scenes[6].Actors[13] = Actor.new(Sand,10.8+5,2.9)
-Play.Scenes[6].Actors[14] = Actor.new(Sand_L,10.8+6,2.9)
-Play.Scenes[6].Actors[15] = Actor.new(Sand_R,10.8,2.9+1)
-Play.Scenes[6].Actors[16] = Actor.new(Sand,10.8+1,2.9+1)
-Play.Scenes[6].Actors[17] = Actor.new(Sand,10.8+2,2.9+1)
-Play.Scenes[6].Actors[18] = Actor.new(Sand,10.8+3,2.9+1)
-Play.Scenes[6].Actors[19] = Actor.new(Sand,10.8+4,2.9+1)
-Play.Scenes[6].Actors[20] = Actor.new(Sand,10.8+5,2.9+1)
-Play.Scenes[6].Actors[21] = Actor.new(Sand_L,10.8+6,2.9+1)
-Play.Scenes[6].Actors[22] = Actor.new(Sand_R,10.8,2.9+2)
-Play.Scenes[6].Actors[23] = Actor.new(Sand,10.8+1,2.9+2)
-Play.Scenes[6].Actors[24] = Actor.new(Sand,10.8+2,2.9+2)
-Play.Scenes[6].Actors[25] = Actor.new(Sand,10.8+3,2.9+2)
-Play.Scenes[6].Actors[26] = Actor.new(Sand,10.8+4,2.9+2)
-Play.Scenes[6].Actors[27] = Actor.new(Sand,10.8+5,2.9+2)
-Play.Scenes[6].Actors[28] = Actor.new(Sand_L,10.8+6,2.9+2)
-Play.Scenes[6].Actors[29] = Actor.new(Sand_TR,10.8,2.9+3)
-Play.Scenes[6].Actors[30] = Actor.new(Sand_T,10.8+1,2.9+3)
-Play.Scenes[6].Actors[31] = Actor.new(Sand_T,10.8+2,2.9+3)
-Play.Scenes[6].Actors[32] = Actor.new(Sand_T,10.8+3,2.9+3)
-Play.Scenes[6].Actors[33] = Actor.new(Sand_T,10.8+4,2.9+3)
-Play.Scenes[6].Actors[34] = Actor.new(Sand_T,10.8+5,2.9+3)
-Play.Scenes[6].Actors[35] = Actor.new(Sand_TL,10.8+6,2.9+3)
-Play.Scenes[6].Actors[36] = Actor.new(Trash_Can,4.5,4.0)
-Play.Scenes[6].Actors[37] = Actor.new(Warning_T,17.1,11)
-Play.Scenes[6].Actors[38] = Actor.new(Warning_M,17.1,12)
-Play.Scenes[6].Actors[39] = Actor.new(Warning_B,17.1,13)
-
-Play.Scenes[6].Actors[40] = Actor.new(Tracey,1.7,7.2)
-Play.Scenes[6].Actors[41] = Actor.new(Varisa,1.7,8.7)
-Play.Scenes[6].Actors[42] = Actor.new(Fredrick,13.0,10.2)
-Play.Scenes[6].Actors[43] = Actor.new(Wilkie,14.5,10.2)
-Play.Scenes[6].Actors[44] = Actor.new(Mollie,13.5,5.0)
+Play.Scenes[6].Actors[1] = Actor.new(Vivian,10.8,2.9)
+Play.Scenes[6].Actors[2] = Actor.new(PartyHat,10.8,2.85)
+Play.Scenes[6].Actors[3] = Actor.new(Sean,14.6,9.7)
+Play.Scenes[6].Actors[4] = Actor.new(Ella,17.6,10.7)
+Play.Scenes[6].Actors[5] = Actor.new(Mollie,18.3,8.3)
+Play.Scenes[6].Actors[6] = Actor.new(Brian,18.8,3.4)
+Play.Scenes[6].Actors[7] = Actor.new(Lassie,6.8,11.8)
+Play.Scenes[6].Actors[8] = Actor.new(Zoey,4.2,11.8)
+Play.Scenes[6].Actors[9] = Actor.new(Karina,4.5,10.0)
+Play.Scenes[6].Actors[10] = Actor.new(Zach,16.8,3.4)
+Play.Scenes[6].Actors[11] = Actor.new(Jami,15.6,7.6)
+Play.Scenes[6].Actors[12] = Actor.new(Wilkie,8.8,7.7)
+Play.Scenes[6].Actors[13] = Actor.new(Fredrick,10.4,7.7)
+Play.Scenes[6].Actors[14] = Actor.new(Rachel,3.6,6.7)
+Play.Scenes[6].Actors[15] = Actor.new(R_Guitar_L,3.6,6.7)
+Play.Scenes[6].Actors[16] = Actor.new(Amp,2.6,5.7)
+Play.Scenes[6].Actors[17] = Actor.new(Varisa,7.4,3.1)
+Play.Scenes[6].Actors[18] = Actor.new(B_Guitar_L,7.4,3.1)
+Play.Scenes[6].Actors[19] = Actor.new(Mic,7.9,3.2)
+Play.Scenes[6].Actors[20] = Actor.new(Amp,6.4,2.1)
+Play.Scenes[6].Actors[21] = Actor.new(Tracey,3.4,2.7)
+Play.Scenes[6].Actors[22] = Actor.new(Ride_Cymbal,2.6,2.9)
+Play.Scenes[6].Actors[23] = Actor.new(Crash_Cymbal,4.2,2.9)
+Play.Scenes[6].Actors[24] = Actor.new(Snare_Drum,3.8,3.3)
+Play.Scenes[6].Actors[25] = Actor.new(Tom_Drum,3.0,3.3)
+Play.Scenes[6].Actors[26] = Actor.new(Bass_Drum,3.4,3.5)
 
 Play.Scenes[6].transition = function(self,t)
-	self.Actors[44].y = 5.0 + (math.sin(math.pi * (t/(2.5)))/4)
-	if(t < 1.875) then
-		if not self.vars["Once1"] then
-			self:Say(String.get(7),Tracey)
-			self.vars["Once1"] = true
-		end
-	elseif(t < 3.75) then
-		if not self.vars["Once2"] then
-			self:Say(String.get(8),Varisa)
-			self.vars["Once2"] = true
-		end
-	elseif(t < 5.625) then
-		if not self.vars["Once3"] then
-			self:Say(String.get(9),Tracey)
-			self.vars["Once3"] = true
-		end
-	elseif(t < 7.5) then
-		if not self.vars["Once4"] then
-			self:Say(String.get(10),Varisa)
-			self.vars["Once4"] = true
-		end
-	elseif(t < 9.375) then
-		if not self.vars["Once5"] then
-			self:Say(String.get(11),Varisa)
-			self.vars["Once5"] = true
-		end
-	elseif(t < 11.25) then
-		if not self.vars["Once6"] then
-			self:Say(String.get(12),Tracey)
-			self.vars["Once6"] = true
-		end
-	elseif(t < 13.125) then
-		if not self.vars["Once7"] then
-			self:Say(String.get(13),Tracey)
-			self.vars["Once7"] = true
-		end
-	elseif(t < self.tickGoal) then
+	-- if(t < 1.875) then
+	-- 	if not self.vars["Once1"] then
+	-- 		self:Say(String.get(7),Tracey)
+	-- 		self.vars["Once1"] = true
+	-- 	end
+	--[[ else]]if(t < self.tickGoal) then
 		
 	else
 		Voices[self.dtbl.v]:pause()

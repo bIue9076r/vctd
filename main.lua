@@ -403,7 +403,7 @@ function love.load(arg)
 	require("/scenes/Scenes")
 	
 	muted = true
-	Play.scene = Play.Scenes[math.random(1,3)]
+	Play.scene = Play.Scenes[6]--math.random(1,3)]
 	
 	if Save then
 		Play.scene.Next = SAVE

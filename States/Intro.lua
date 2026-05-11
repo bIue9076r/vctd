@@ -26,7 +26,7 @@ end
 function Intro_Update(dt)
 	-- stop ticking when string is complete
 	if introTick:get() < math.max(utf8.len(introSt1),utf8.len(introSt2),utf8.len(introSt3)) then
-		introTick()
+		introTick(dt)
 	end
 end
 

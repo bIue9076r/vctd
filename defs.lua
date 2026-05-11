@@ -110,6 +110,11 @@ Vase3 = 0x67
 Vase3_C = 0x68
 Flowers_3 = 0x69
 Wray = 0x6A
+PartyHat = 0x6B
+Present_W = 0x6C
+Present_Y = 0x6D
+Present_B = 0x6E
+Present_P = 0x6F
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -220,6 +225,11 @@ CtS = {
 	[Vase3_C] = "Vase3_C",
 	[Flowers_3] = "Flowers_3",
 	[Wray] = "Wray",
+	[PartyHat] = "PartyHat",
+	[Present_W] = "Present_W",
+	[Present_Y] = "Present_Y",
+	[Present_B] = "Present_B",
+	[Present_P] = "Present_P",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -328,6 +338,11 @@ Names = {
 	[Vase3_C] = "Cracked Vase",
 	[Flowers_3] = "Flowers",
 	[Wray] = "W Ray",
+	[PartyHat] = "Party Hat",
+	[Present_W] = "White Present",
+	[Present_Y] = "Yellow Present",
+	[Present_B] = "Blue Present",
+	[Present_P] = "Pink Present",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }
