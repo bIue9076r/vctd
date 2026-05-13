@@ -87,6 +87,12 @@ Days.newDay(2,function()
 					v.g = 1
 				end
 			end
+
+			for i,v in pairs(World.Map[I + 5].npcs) do
+				if v.f then
+					v.g = 1
+				end
+			end
 		end
 
 		if v.HouseHold == 8 then

@@ -1,5 +1,5 @@
 Play.Scenes[6] = Scene.new(World.Map[5])
-Play.Scenes[6].tickGoal = 1500
+Play.Scenes[6].tickGoal = 18.5
 Play.Scenes[6].Next = Fade
 Play.Scenes[6].Hour = Noon
 Play.Scenes[6].Min = 0
@@ -29,18 +29,45 @@ Play.Scenes[6].Actors[23] = Actor.new(Crash_Cymbal,4.2,2.9)
 Play.Scenes[6].Actors[24] = Actor.new(Snare_Drum,3.8,3.3)
 Play.Scenes[6].Actors[25] = Actor.new(Tom_Drum,3.0,3.3)
 Play.Scenes[6].Actors[26] = Actor.new(Bass_Drum,3.4,3.5)
+Play.Scenes[6].Actors[27] = Actor.new(Present_W,11.5,2.9)
+Play.Scenes[6].Actors[28] = Actor.new(Present_B,12.0,2.9)
+Play.Scenes[6].Actors[29] = Actor.new(Present_P,11.5,2.4)
+Play.Scenes[6].Actors[30] = Actor.new(Present_Y,12.0,2.4)
 
+local sbs
 Play.Scenes[6].transition = function(self,t)
-	-- if(t < 1.875) then
-	-- 	if not self.vars["Once1"] then
-	-- 		self:Say(String.get(7),Tracey)
-	-- 		self.vars["Once1"] = true
-	-- 	end
-	--[[ else]]if(t < self.tickGoal) then
+	if(t < 11) then
+		if not self.vars["Once1"] then
+			sbs = sound.getSound("EpT7")
+			if Play.unmuteAfter then
+				sbs:seek(113)
+				sbs:play()
+			end
+			self.vars["Once1"] = true
+		end
+	elseif(t < 14) then
+		if not self.vars["Once2"] then
+			self:Say(String.get(44),Vivian)
+			self.vars["Once2"] = true
+		end
+	elseif(t < 16) then
+		if not self.vars["Once3"] then
+			self:Say(String.get(45),Vivian)
+			self.vars["Once3"] = true
+		end
+	elseif(t < 18) then
+		if not self.vars["Once4"] then
+			self:Say(String.get(46),Vivian)
+			self.vars["Once4"] = true
+		end
+	elseif(t < self.tickGoal) then
 		
 	else
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
+		if sbs then
+			sbs:stop()
+		end
 		if Play.unmuteAfter then
 			muted = false
 			plyed = false

@@ -76,6 +76,119 @@ function addVivian(Map)
 	World.Map[Map]:addNpc(Npc.new(10.0,10.0,Trash_P,-11,0,function ()
 		
 	end,"trash"))
+
+	
+	World.Map[Map]:addProp(Prop.new(10.8,2.85,PartyHat,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(3.6,6.7,R_Guitar_L,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(2.6,5.7,Amp,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(7.9,3.2,Mic,1,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(6.4,2.1,Amp,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(2.6,2.9,Ride_Cymbal,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(4.2,2.9,Crash_Cymbal,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(3.8,3.3,Snare_Drum,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(3.0,3.3,Tom_Drum,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(3.4,3.5,Bass_Drum,0,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(11.5,2.9,Present_W,1,1,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(12.0,2.9,Present_B,1,1,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(11.5,2.4,Present_P,1,1,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addProp(Prop.new(12.0,2.4,Present_Y,1,1,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(10.8,2.9,Vivian,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(14.6,9.7,Sean,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(17.6,10.7,Ella,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(18.3,8.3,Mollie,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(18.8,3.4,Brian,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(6.8,11.8,Lassie,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(4.2,11.8,Zoey,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(4.5,10.0,Karina,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(16.8,3.4,Zach,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(15.6,7.6,Jami,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(8.8,7.7,Wilkie,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(10.4,7.7,Fredrick,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(3.6,6.7,Rachel,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(3.4,2.7,Tracey,0,1,function ()
+		
+	end,"party"))
 	
 	addVivianOut1(Map - 5)
 	addVivianIn1(Map - 4)
