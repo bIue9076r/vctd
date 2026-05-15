@@ -294,6 +294,7 @@ Story.setBeat("Power_Up_2", function(npc)
 
 	for i = 1,10 do
 		local I = Families.HouseMap[i]
+		House.house[i].isOpen = false
 		if House.house[i].HouseHold == 2 and not(Mollie_Killer) then
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f == "Sean" then
@@ -331,18 +332,20 @@ Story.setBeat("Power_Up_2", function(npc)
 				v.i = 3
 			end
 		end
-		if not(House.house[i].HouseHold == 8) then
-			House.house[i].isOpen = false
-		else
-			for i,v in pairs(World.Map[I + 1]) do
+
+		if House.house[i].HouseHold == 8 then
+			House.house[i].isOpen = true
+			for i,v in pairs(World.Map[I + 1].npcs) do
 				if v.f == "Rachel" then
 					v.g = 0
+					v.i = 87
 				end
 			end
 
-			for i,v in pairs(World.Map[I + 2]) do
+			for i,v in pairs(World.Map[I + 2].npcs) do
 				if v.f == "Lassie" then
 					v.g = 0
+					v.i = 89
 				end
 			end
 		end

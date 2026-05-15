@@ -1152,3 +1152,59 @@ World.Dialogue[French][92] = Dialogue.new({
 	end),
 	Text.new("Thanks so much.",Vivian),
 },1)
+
+World.Dialogue[French][93] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][94] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][95] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][96] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][97] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][98] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][99] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][100] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][101] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][102] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][103] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][104] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][105] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)
+
+World.Dialogue[French][106] = Dialogue.new({
+	Text.new("Hey.",Varisa),
+},1)

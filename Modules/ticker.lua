@@ -94,5 +94,5 @@ function tickerd:inc()
 	self.ticker.i = self.ticker.i + 1
 end
 
--- Ticker (Discrete)
+-- Ticker (Continuous)
 ticker = tickerc
