@@ -9,11 +9,43 @@ function addVivianOut1(Map)
 end
 
 function addVivianIn1(Map)
-	
+	World.Map[Map]:addNpc(Npc.new(17.8,6.1,Jami,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(1.5,3.1,Lassie,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(1.6,6.2,Zoey,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(12.7,7.27,Karina,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(12.7,3.8,Zach,0,1,function ()
+		
+	end,"party"))
 end
 
 function addVivianIn2(Map)
-	
+	World.Map[Map]:addNpc(Npc.new(15.4,7.2,Wilkie,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(15.4,8.2,Fredrick,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(17.4,2.2,Sean,0,1,function ()
+		
+	end,"party"))
+
+	World.Map[Map]:addNpc(Npc.new(14.8,2.0,Ella,0,1,function ()
+		
+	end,"party"))
 end
 
 function addVivianIn3(Map)
@@ -138,47 +170,11 @@ function addVivian(Map)
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(14.6,9.7,Sean,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(17.6,10.7,Ella,0,1,function ()
-		
-	end,"party"))
-
 	World.Map[Map]:addNpc(Npc.new(18.3,8.3,Mollie,0,1,function ()
 		
 	end,"party"))
 
 	World.Map[Map]:addNpc(Npc.new(18.8,3.4,Brian,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(6.8,11.8,Lassie,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(4.2,11.8,Zoey,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(4.5,10.0,Karina,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(16.8,3.4,Zach,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(15.6,7.6,Jami,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(8.8,7.7,Wilkie,0,1,function ()
-		
-	end,"party"))
-
-	World.Map[Map]:addNpc(Npc.new(10.4,7.7,Fredrick,0,1,function ()
 		
 	end,"party"))
 

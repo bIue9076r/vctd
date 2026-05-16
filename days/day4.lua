@@ -92,6 +92,16 @@ Days.newDay(4,function()
 		for i = 1,10 do
 			if House.house[i].HouseHold == 4 then
 				I = Families.HouseMap[i]
+				for i, v in pairs(World.Map[I + 1].npcs) do
+					if v.f == "party" then
+						v.g = 0
+					end
+				end
+				for i, v in pairs(World.Map[I + 2].npcs) do
+					if v.f == "party" then
+						v.g = 0
+					end
+				end
 				for i, v in pairs(World.Map[I + 5].npcs) do
 					if v.f == "party" then
 						v.g = 0
