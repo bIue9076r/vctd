@@ -9,41 +9,41 @@ function addVivianOut1(Map)
 end
 
 function addVivianIn1(Map)
-	World.Map[Map]:addNpc(Npc.new(17.8,6.1,Jami,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(17.8,6.1,Jami,102,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(1.5,3.1,Lassie,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(1.5,3.1,Lassie,101,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(1.6,6.2,Zoey,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(1.6,6.2,Zoey,100,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(12.7,7.27,Karina,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(12.7,7.27,Karina,99,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(12.7,3.8,Zach,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(12.7,3.8,Zach,98,1,function ()
 		
 	end,"party"))
 end
 
 function addVivianIn2(Map)
-	World.Map[Map]:addNpc(Npc.new(15.4,7.2,Wilkie,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(15.4,7.2,Wilkie,97,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(15.4,8.2,Fredrick,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(15.4,8.2,Fredrick,105,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(17.4,2.2,Sean,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(17.4,2.2,Sean,96,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(14.8,2.0,Ella,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(14.8,2.0,Ella,95,1,function ()
 		
 	end,"party"))
 end
@@ -166,23 +166,23 @@ function addVivian(Map)
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(10.8,2.9,Vivian,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(10.8,2.9,Vivian,106,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(18.3,8.3,Mollie,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(18.3,8.3,Mollie,104,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(18.8,3.4,Brian,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(18.8,3.4,Brian,103,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(3.6,6.7,Rachel,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(3.6,6.7,Rachel,94,1,function ()
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(3.4,2.7,Tracey,0,1,function ()
+	World.Map[Map]:addNpc(Npc.new(3.4,2.7,Tracey,93,1,function ()
 		
 	end,"party"))
 	
