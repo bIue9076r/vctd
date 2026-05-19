@@ -107,7 +107,7 @@ image.newImage("Present_W","Assets/present.png")
 image.newImage("Present_Y","Assets/present_yellow.png")
 image.newImage("Present_B","Assets/present_blue.png")
 image.newImage("Present_P","Assets/present_pink.png")
-image.newImage("Jumping_rope","Assets/jumping_rope.png")
+image.newImage("Jumping_rope_1","Assets/jumping_rope.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")
