@@ -69,6 +69,7 @@ require("items/screwdriver")
 require("items/toolbox")
 require("items/crucifix")
 require("items/wraydetector")
+require("items/jump_rope")
 -- Lock pick?
 Plr.inv:add(Guitar)
 Plr.inv:add(Item_WRayDetector)
