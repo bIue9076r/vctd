@@ -107,6 +107,23 @@ Story.setBeat("Brian_Trash_3", function(npc)
 end)
 
 Story.setBeat("Fredrick_Exercise_1", function(npc)
+	Plr.inv:add(Item_Jump_Rope)
+end)
+
+Story.setBeat("Fredrick_Exercise_2", function(npc)
+	for i = 1,10 do
+		if House.house[i].HouseHold == 6 then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Fredrick" then
+					v.i = 94
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Fredrick_Exercise_3", function(npc)
 	
 end)
 
