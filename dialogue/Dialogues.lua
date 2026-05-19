@@ -1154,7 +1154,15 @@ World.Dialogue[English][92] = Dialogue.new({
 },1)
 
 World.Dialogue[English][93] = Dialogue.new({
-	Text.new("Hey.",Varisa),
+	Text.new("That was a great show.",Tracey),
+	Text.new("We did pretty good.",Rachel),
+	Text.new("I'm glad it went pretty okay.",Varisa),
+	Text.new("I wonder when she's going to pay us.",Tracey),
+	Text.new("We should get something nice tomorow.",Varisa),
+	Text.new("Yeah.",Rachel),
+	Text.new("Yeah.",Tracey),
+	Text.new("Alright.",Varisa),
+	Text.new("...",Varisa),
 },1)
 
 World.Dialogue[English][94] = Dialogue.new({

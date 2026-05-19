@@ -178,7 +178,7 @@ function addVivian(Map)
 		
 	end,"party"))
 
-	World.Map[Map]:addNpc(Npc.new(3.6,6.7,Rachel,94,1,function ()
+	World.Map[Map]:addNpc(Npc.new(3.6,6.7,Rachel,93,1,function ()
 		
 	end,"party"))
 
