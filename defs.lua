@@ -115,6 +115,7 @@ Present_W = 0x6C
 Present_Y = 0x6D
 Present_B = 0x6E
 Present_P = 0x6F
+Jumping_rope = 0x70
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -232,6 +233,7 @@ CtS = {
 	[Present_P] = "Present_P",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
+	[Jumping_rope] = "Jumping_rope",
 }
 
 -- Names
@@ -345,6 +347,7 @@ Names = {
 	[Present_P] = "Pink Present",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
+	[Jumping_rope] = "Jumping Rope",
 }
 
 -- Character Range
