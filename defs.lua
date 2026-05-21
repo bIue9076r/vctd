@@ -115,7 +115,12 @@ Present_W = 0x6C
 Present_Y = 0x6D
 Present_B = 0x6E
 Present_P = 0x6F
-Jumping_rope_1 = 0x70
+Jump_rope_icon = 0x70
+Jump_rope_held = 0x71
+Pudding_icon = 0x72
+Pudding_held = 0x73
+Spoon_icon = 0x74
+Spoon_held = 0x75
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -231,7 +236,13 @@ CtS = {
 	[Present_Y] = "Present_Y",
 	[Present_B] = "Present_B",
 	[Present_P] = "Present_P",
-	[Jumping_rope_1] = "Jumping_rope_1",
+	[Jump_rope_icon] = "Jumping_rope_icon",
+	[Jump_rope_held] = "Jump_rope_held",
+	[Pudding_icon] = "Pudding_icon",
+	[Pudding_held] = "Pudding_held",
+	[Spoon_icon] = "Spoon_icon",
+	[Spoon_held] = "Spoon_held",
+
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
 }
@@ -345,7 +356,12 @@ Names = {
 	[Present_Y] = "Yellow Present",
 	[Present_B] = "Blue Present",
 	[Present_P] = "Pink Present",
-	[Jumping_rope_1] = "Jumping Rope_1",
+	[Jump_rope_icon] = "Jump rope",
+	[Jump_rope_held] = "Jump rope",
+	[Pudding_icon] = "Pudding",
+	[Pudding_held] = "Pudding",
+	[Spoon_icon] = "Spoon",
+	[Spoon_held] = "Spoon",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }
