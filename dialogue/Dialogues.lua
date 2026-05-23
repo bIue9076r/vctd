@@ -1169,7 +1169,9 @@ World.Dialogue[English][94] = Dialogue.new({
 	Text.new("Was that good enough?",Varisa),
 	Text.new("Precicely.",Fredrick),
 	Text.new("Okay.",Varisa),
-	Text.new("You can keep the jump rope.",Fredrick),
+	Text.new("You can keep the jump rope.",Fredrick,nil,function()
+		Story.set("Fredrick_Exercise_3",true)
+	end),
 	Text.new("Oh thanks.",Varisa),
 	Text.new("No worries.",Fredrick),
 },1)
