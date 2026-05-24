@@ -46,9 +46,6 @@ Play.Scenes[12].Actors[39] = Actor.new(Warning_B,17.1,13)
 Play.Scenes[12].Actors[40] = Actor.new(Karina,1.5,10.5)
 Play.Scenes[12].Actors[41] = Actor.new(Unknown,13.8,3.5)
 
-local sbs
-local dn1
-local dn2
 Play.Scenes[12].transition = function(self,t)
 	if(t < 3.125) then
 		if not self.vars["Once1"] then

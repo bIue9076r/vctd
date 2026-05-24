@@ -1223,3 +1223,23 @@ World.Dialogue[English][105] = Dialogue.new({
 World.Dialogue[English][106] = Dialogue.new({
 	Text.new("Hey.",Varisa),
 },1)
+
+World.Dialogue[English][107] = Dialogue.new({
+	Text.new("MOM!",Varisa),
+	Text.new("Mpfh...",Karly),
+	Text.new("Let me get that off you.",Varisa),
+	Text.new("Oh god...",Karly),
+	Text.new("Where are they?",Karly),
+	Text.new("Who are you talking about?",Varisa),
+	Text.new("Nevermind that just get me out of here.",Karly),
+},1)
+
+World.Dialogue[English][108] = Dialogue.new({
+	Text.new("MOM!",Varisa),
+	Text.new("Mpfh...",Karly),
+	Text.new("Oh god...",Karly),
+	Text.new("Vivian must have done this.",Varisa),
+	Text.new("You're a smart girl.",Karly),
+	Text.new("About time you figured it out.",Karly),
+	Text.new("Now get me out of here.",Karly),
+},1)
