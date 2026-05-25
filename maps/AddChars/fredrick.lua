@@ -31,7 +31,7 @@ function addFredrickIn3(Map)
 		
 	end))
 	
-	World.Map[Map]:addNpc(Npc.new(15,7,Karly,0,1,function()
+	World.Map[Map]:addNpc(Npc.new(15,7,Karly,107,1,function()
 		
 	end,"Karly"))
 	

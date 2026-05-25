@@ -102,6 +102,11 @@ Days.newDay(4,function()
 						v.g = 0
 					end
 				end
+				for i, v in pairs(World.Map[I + 3].npcs) do
+					if v.f == "Karly" then
+						v.i = 108
+					end
+				end
 				for i, v in pairs(World.Map[I + 5].npcs) do
 					if v.f == "party" then
 						v.g = 0
