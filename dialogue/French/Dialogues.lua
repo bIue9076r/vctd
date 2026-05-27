@@ -1231,7 +1231,11 @@ World.Dialogue[English][107] = Dialogue.new({
 	Text.new("Oh god...",Karly),
 	Text.new("Where are they?",Karly),
 	Text.new("Who are you talking about?",Varisa),
-	Text.new("Nevermind that just get me out of here.",Karly),
+	Text.new("Nevermind that just get me out of here.",Karly,nil,function()
+		World.AfterEffect = function(npc)
+			Story.set("Karly_Find_1")
+		end
+	end),
 },1)
 
 World.Dialogue[English][108] = Dialogue.new({
@@ -1241,5 +1245,9 @@ World.Dialogue[English][108] = Dialogue.new({
 	Text.new("Vivian must have done this.",Varisa),
 	Text.new("You're a smart girl.",Karly),
 	Text.new("About time you figured it out.",Karly),
-	Text.new("Now get me out of here.",Karly),
+	Text.new("Now get me out of here.",Karly,nil,function()
+		World.AfterEffect = function(npc)
+			Story.set("Karly_Find_2")
+		end
+	end),
 },1)

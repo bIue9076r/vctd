@@ -492,6 +492,15 @@ Story.setBeat("Jami_Suspicions_3_1", function(npc)
 	
 end)
 
+Story.setBeat("Karly_Find_1", function(npc)
+	-- End the game
+	GameState = END
+end)
+
+Story.setBeat("Karly_Find_2", function(npc)
+	-- End the game
+	GameState = END
+end)
 
 ---
 
