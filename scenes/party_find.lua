@@ -3,55 +3,29 @@ Play.Scenes[13].tickGoal = 14.5
 Play.Scenes[13].Next = Fade
 Play.Scenes[13].Hour = Noon
 
-Play.Scenes[13].Actors[1] = Actor.new(Tracey,15.2,6.9)
-Play.Scenes[13].Actors[2] = Actor.new(Ride_Cymbal,15.2-0.8,6.9+0.2)
-Play.Scenes[13].Actors[3] = Actor.new(Crash_Cymbal,15.2+0.8,6.9+0.2)
-Play.Scenes[13].Actors[4] = Actor.new(Snare_Drum,15.2+0.4,6.9+0.6)
-Play.Scenes[13].Actors[5] = Actor.new(Tom_Drum,15.2-0.4,6.9+0.6)
-Play.Scenes[13].Actors[6] = Actor.new(Bass_Drum,15.2+0.0,6.9+0.8)
+Play.Scenes[13].Actors[1] = Actor.new(Pentagram_Unlit_1,14.5,7.5)
+Play.Scenes[13].Actors[2] = Actor.new(Pentagram_Unlit_2,15.5,7.5)
+Play.Scenes[13].Actors[3] = Actor.new(Karly,15,7)
+Play.Scenes[13].Actors[4] = Actor.new(Pentagram_Unlit_1,12.5,6)
+Play.Scenes[13].Actors[5] = Actor.new(Pentagram_Unlit_2,13.5,6)
+Play.Scenes[13].Actors[6] = Actor.new(Pentagram_Unlit_1,16.5,6)
+Play.Scenes[13].Actors[7] = Actor.new(Pentagram_Unlit_2,17.5,6)
+Play.Scenes[13].Actors[8] = Actor.new(Pentagram_Unlit_1,12.5,9)
+Play.Scenes[13].Actors[9]  = Actor.new(Pentagram_Unlit_2,13.5,9)
+Play.Scenes[13].Actors[10] = Actor.new(Pentagram_Unlit_1,16.5,9)
+Play.Scenes[13].Actors[11] = Actor.new(Pentagram_Unlit_2,17.5,9)
 
-Play.Scenes[13].Actors[7] = Actor.new(Poster_Pu,12,0.5)
-Play.Scenes[13].Actors[8] = Actor.new(Poster_Wh,19,0.5)
+Play.Scenes[13].Actors[13] = Actor.new(Varisa,14,7)
 
-Play.Scenes[13].Actors[9] = Actor.new(Bed_1_1,20,2)
-Play.Scenes[13].Actors[10] = Actor.new(Bed_1_2,21,2)
-Play.Scenes[13].Actors[11] = Actor.new(Bed_1_3,20,3)
-Play.Scenes[13].Actors[12] = Actor.new(Bed_1_4,21,3)
-Play.Scenes[13].Actors[13] = Actor.new(Bed_1_5,20,4)
-Play.Scenes[13].Actors[14] = Actor.new(Bed_1_6,21,4)
-
-Play.Scenes[13].Actors[15] = Actor.new(Zoey,8.5,6.8)
-
-local sbs
 Play.Scenes[13].transition = function(self,t)
-	if(t < 8.5) then
+	if(t < 2.5) then
 		if not self.vars["Once1"] then
-			self.Actors[15].x = -8.5
-			sbs = sound.getSound("EpT3_D")
-			if Play.unmuteAfter then
-				sbs:seek(15)
-				sbs:play()
-			end
+			self:Say(String.get(47),Varisa)
 			self.vars["Once1"] = true
-		end
-		self.Actors[1].y = 6.9 + math.abs(math.sin(math.pi * (t*2))/6)
-	elseif(t < 11) then
-		if not self.vars["Once2"] then
-			sbs:stop()
-			self.Actors[15].x = 8.5
-			self.Actors[15].y = 6.8
-			self:Say(String.get(5), Zoey)
-			self.vars["Once2"] = true
-		end
-	elseif(t < 12.25) then
-		if not self.vars["Once3"] then
-			self:Say(String.get(6), Rachel)
-			self.vars["Once3"] = true
 		end
 	elseif(t < self.tickGoal) then
 		
 	else
-		sbs:stop()
 		if Play.unmuteAfter then
 			muted = false
 			plyed = false
