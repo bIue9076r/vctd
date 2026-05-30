@@ -502,6 +502,10 @@ Story.setBeat("Karly_Find_2", function(npc)
 	GameState = END
 end)
 
+Story.setBeat("Brian_Flyer_1", function(npc)
+	
+end)
+
 ---
 
 Story.setBeat("Find", function(npc)

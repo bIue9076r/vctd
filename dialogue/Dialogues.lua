@@ -562,7 +562,9 @@ World.Dialogue[English][42] = Dialogue.new({
 	Text.new("Take this check.",Brian,nil,function()
 		Story.set("Brian_Trash_4",true)
 	end),
-	Text.new("Thanks I guess",Varisa),
+	Text.new("Thanks I guess",Varisa,nil,function(npc)
+		npc.i = 109
+	end),
 },1)
 
 World.Dialogue[English][43] = Dialogue.new({
@@ -1250,4 +1252,8 @@ World.Dialogue[English][108] = Dialogue.new({
 			Story.set("Karly_Find_2")
 		end
 	end),
+},1)
+
+World.Dialogue[English][109] = Dialogue.new({
+	Text.new("You actually did it?",Brian),
 },1)
