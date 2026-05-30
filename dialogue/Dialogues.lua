@@ -1116,7 +1116,7 @@ World.Dialogue[English][88] = Dialogue.new({
 	Text.new("I suppose.",Varisa),
 	Text.new("I'll be so thankful if you did.",Vivian),
 	Text.new("Sure I guess.",Varisa,nil,function(npc)
-		Story.setBeat("Vivian_Show_1",true)
+		Story.set("Vivian_Show_1",true)
 	end),
 	Text.new("Great.",Vivian),
 },1)
@@ -1138,7 +1138,7 @@ World.Dialogue[English][90] = Dialogue.new({
 	Text.new("Its terrible what that sicko did to her.",Lassie),
 	Text.new("I hope you find her soon.",Lassie),
 	Text.new("Take what you need in the meantime.",Lassie,nil,function(npc)
-		Story.setBeat("Vivian_Show_2",true)
+		Story.set("Vivian_Show_2",true)
 	end),
 	Text.new("Thanks.",Varisa),
 	Text.new("Good luck.",Lassie),
@@ -1150,7 +1150,7 @@ World.Dialogue[English][91] = Dialogue.new({
 
 World.Dialogue[English][92] = Dialogue.new({
 	Text.new("Nice, the exact episode too.",Vivian,nil,function(npc)
-		Story.setBeat("Vivian_Show_4",true)
+		Story.set("Vivian_Show_4",true)
 	end),
 	Text.new("Thanks so much.",Vivian),
 },1)
@@ -1235,7 +1235,7 @@ World.Dialogue[English][107] = Dialogue.new({
 	Text.new("Who are you talking about?",Varisa),
 	Text.new("Nevermind that just get me out of here.",Karly,nil,function()
 		World.AfterEffect = function(npc)
-			Story.set("Karly_Find_1")
+			Story.set("Karly_Find_1",true)
 		end
 	end),
 },1)
@@ -1249,11 +1249,19 @@ World.Dialogue[English][108] = Dialogue.new({
 	Text.new("About time you figured it out.",Karly),
 	Text.new("Now get me out of here.",Karly,nil,function()
 		World.AfterEffect = function(npc)
-			Story.set("Karly_Find_2")
+			Story.set("Karly_Find_2",true)
 		end
 	end),
 },1)
 
 World.Dialogue[English][109] = Dialogue.new({
-	Text.new("You actually did it?",Brian),
+	Text.new("Say, I still have one more task.",Brian),
+	Text.new("I need to hand out a bunch of flyers.",Brian),
+	Text.new("For Vivian's birthday?",Varisa),
+	Text.new("Yeah.",Brian),
+	Text.new("Let me hand you some.",Brian,nil,function()
+		Story.set("Brian_Flyer_1",true)
+	end),
+	Text.new("Thanks.",Varisa),
+	Text.new("Try to get as much as possible.",Brian),
 },1)
