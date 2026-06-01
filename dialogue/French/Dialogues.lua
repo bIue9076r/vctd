@@ -1255,7 +1255,7 @@ World.Dialogue[English][108] = Dialogue.new({
 },1)
 
 World.Dialogue[English][109] = Dialogue.new({
-	Text.new("Say, I still have one more task.",Brian),
+	Text.new("Hey, I still have one more task.",Brian),
 	Text.new("I need to hand out a bunch of flyers.",Brian),
 	Text.new("For Vivian's birthday?",Varisa),
 	Text.new("Yeah.",Brian),
