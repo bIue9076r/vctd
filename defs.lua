@@ -121,6 +121,7 @@ Pudding_icon = 0x72
 Pudding_held = 0x73
 Spoon_icon = 0x74
 Spoon_held = 0x75
+Flyer = 0x76
 
 ERROBJ = 0xFF
 Interaction = 0x1FF
@@ -242,6 +243,7 @@ CtS = {
 	[Pudding_held] = "Pudding_held",
 	[Spoon_icon] = "Spoon_icon",
 	[Spoon_held] = "Spoon_held",
+	[Flyer] = "Flyer",
 
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "Interaction",
@@ -362,6 +364,7 @@ Names = {
 	[Pudding_held] = "Pudding",
 	[Spoon_icon] = "Spoon",
 	[Spoon_held] = "Spoon",
+	[Flyer] = "Flyer",
 	[ERROBJ] = "ERROBJ",
 	[Interaction] = "...",
 }

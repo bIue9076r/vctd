@@ -17,7 +17,7 @@ function Item_Jump_Rope:act(key)
 		end
 
 		if present then
-			if Item_Jump_Rope.count >= 5 then
+			if self.count >= 5 then
 				IsTalking = true
 				World.dtbl = {
 					s = "Okay I'm done",
@@ -32,7 +32,7 @@ function Item_Jump_Rope:act(key)
 					n = Varisa,
 					v = "Normal",
 				}
-				Item_Jump_Rope.count = Item_Jump_Rope.count + 1
+				self.count = self.count + 1
 			end
 		end
 	else

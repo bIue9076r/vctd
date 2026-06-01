@@ -19,7 +19,7 @@ function Item_WRayDetector:act(key)
 	-- Experiment 2
 	if Story.get("Jami_Experiment_2_1") then
 		local m = MaptoN()
-		if m == Item_WRayDetector.last then
+		if m == self.last then
 			IsTalking = true
 				
 			World.dtbl = {
@@ -35,12 +35,12 @@ function Item_WRayDetector:act(key)
 				v = "Normal",
 			}
 			
-			Item_WRayDetector.last = m
+			self.last = m
 			
-			if Item_WRayDetector.count < 2 then
-				Item_WRayDetector.count = Item_WRayDetector.count + 1
+			if self.count < 2 then
+				self.count = self.count + 1
 			else
-				Item_WRayDetector.count = 0
+				self.count = 0
 				Story.set("Jami_Experiment_2_2",true)
 			end
 		end
@@ -49,7 +49,7 @@ function Item_WRayDetector:act(key)
 
 	-- Experiment 1
 	local m = MaptoN()
-	if m == Item_WRayDetector.last then
+	if m == self.last then
 		IsTalking = true
 			
 		World.dtbl = {
@@ -64,12 +64,12 @@ function Item_WRayDetector:act(key)
 			n = Varisa,
 			v = "Normal",
 		}
-		Item_WRayDetector.last = m
+		self.last = m
 
-		if Item_WRayDetector.count < 2 then
-			Item_WRayDetector.count = Item_WRayDetector.count + 1
+		if self.count < 2 then
+			self.count = self.count + 1
 		else
-			Item_WRayDetector.count = 0
+			self.count = 0
 			Story.set("Jami_Experiment_1_2",true)
 		end
 	end

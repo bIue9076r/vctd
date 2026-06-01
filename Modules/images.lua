@@ -113,6 +113,7 @@ image.newImage("Pudding_icon","Assets/pudding_icon.png")
 image.newImage("Pudding_held","Assets/pudding_held.png")
 image.newImage("Spoon_icon","Assets/spoon_icon.png")
 image.newImage("Spoon_held","Assets/spoon_held.png")
+image.newImage("Flyer","Assets/error_obj.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")
