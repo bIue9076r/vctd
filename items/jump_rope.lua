@@ -19,28 +19,16 @@ function Item_Jump_Rope:act(key)
 		if present then
 			if self.count >= 5 then
 				IsTalking = true
-				World.dtbl = {
-					s = "Okay I'm done",
-					n = Varisa,
-					v = "Normal",
-				}
+				World.say("Okay I'm done", Varisa, "Normal")
 				Story.set("Fredrick_Exercise_2",true)
 			else
 				IsTalking = true
-				World.dtbl = {
-					s = "This is pretty tough...",
-					n = Varisa,
-					v = "Normal",
-				}
+				World.say("This is pretty tough...", Varisa, "Normal")
 				self.count = self.count + 1
 			end
 		end
 	else
 		IsTalking = true
-		World.dtbl = {
-			s = "I guess I could still do this...",
-			n = Varisa,
-			v = "Normal",
-		}
+		World.say("I guess I could still do this...", Varisa, "Normal")
 	end
 end

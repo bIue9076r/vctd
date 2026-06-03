@@ -179,5 +179,9 @@ image.newImage("Bar_TR","/Assets/Bar_TR.png")
 image.newImage("Bar_BL","/Assets/Bar_BL.png")
 image.newImage("Bar_BR","/Assets/Bar_BR.png")
 
+image.newImage("Dialogue","/Assets/Dialogue.png")
+image.newImage("Rachel_A_0","/Assets/Rachel_A_0.png")
+image.newImage("Rachel_A_1","/Assets/Rachel_A_1.png")
+
 image.newImage("Map","/Assets/map.png")
 image.newImage("Save","/Assets/Save_state.png")

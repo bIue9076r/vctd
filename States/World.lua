@@ -83,6 +83,26 @@ function World.playerBox(n)
 	return x, y
 end
 
+function World.say(s,n,v)
+	World.dtbl = {
+		s = s or "",
+		n = n or 0,
+		v = v or "Normal",
+		a = false,
+		t = 0,
+	}
+end
+
+function World.sayAnimated(s,n,v,t)
+	World.dtbl = {
+		s = s or "",
+		n = n or 0,
+		v = v or "Normal",
+		a = true,
+		t = t or 0,
+	}
+end
+
 function World.endTalk()
 	-- stop talking
 	Voices[World.dtbl.v]:pause()
@@ -250,10 +270,7 @@ function World.Keypressed(key)
 		if World.doTalk(key) then
 			IsTalking = true
 			
-			World.dtbl = {
-				s = "......",
-				n = World.snpc.c,
-			}
+			World.say("......", World.snpc.c)
 			
 			local wd = World.Dialogue[Language][World.snpc.i]
 			if not wd then

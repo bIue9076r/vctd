@@ -197,6 +197,20 @@ function Scene:Say(s,n,v)
 		s = s or "",
 		n = n or 0,
 		v = v or "Normal",
+		a = false,
+		t = 0,
+	}
+	self.dticker:reset()
+end
+
+function Scene:SayAnimated(s,n,v,t)
+	self.IsTalking = true
+	self.dtbl = {
+		s = s or "",
+		n = n or 0,
+		v = v or "Normal",
+		a = true,
+		t = t or 0,
 	}
 	self.dticker:reset()
 end
@@ -205,15 +219,40 @@ function Scene:drawDialogue()
 	if self.IsTalking then
 		local dt = self.dticker:get()
 		local sl = utf8.len(self.dtbl.s)/60
-		love.graphics.rectangle("fill",
-			(SCREEN_X/12),
-			(SCREEN_Y/8),
-			((SCREEN_X*5)/6),
-			(SCREEN_Y/4),
-		25)
+		-- love.graphics.rectangle("fill",
+		-- 	(SCREEN_X/12),
+		-- 	(SCREEN_Y/8),
+		-- 	((SCREEN_X*5)/6),
+		-- 	(SCREEN_Y/4),
+		-- 25)
+
+		local Tx = ((SCREEN_X * 55)/60)
+		local Ty = ((SCREEN_Y * 7)/8)
+
+		if self.dtbl.a then
+			love.graphics.setColor(0.7,0.7,0.7,0.5)
+			love.graphics.rectangle(
+				"fill",
+				SCREEN_X*(25/600),
+				SCREEN_Y*(25/400),
+				Tx,
+				Ty
+			)
+			love.graphics.setColor(1,1,1,1)
+		end
+
+		local img = image.getImage("Dialogue")
+		love.graphics.draw(
+			img,
+			SCREEN_X*(25/600),
+			SCREEN_Y*(25/400),
+			0,
+			Tx/img:getWidth(),
+			Ty/img:getHeight()
+		)
 		
 		love.graphics.print(
-			{{0,0,0},Names[self.dtbl.n]..":"},
+			{{0,0,0},tostring(Names[self.dtbl.n])..":"},
 			(SCREEN_X/8),
 			((SCREEN_Y*3)/20),
 			0,
@@ -227,6 +266,24 @@ function Scene:drawDialogue()
 			0,
 			SCREEN_X/600,SCREEN_Y/400
 		)
+
+		if self.dtbl.a then
+			local aname = tostring(Names[self.dtbl.n]).."_A_"..tostring(self.dtbl.t)
+			local aimg = image.getImage(aname)
+			if aimg then
+				local t = math.max(0,math.min(dt,0.1))
+				love.graphics.setColor(1,1,1,t/0.1)
+				love.graphics.draw(
+					aimg,
+					SCREEN_X*(25/600),
+					SCREEN_Y*(25/400),
+					0,
+					Tx/aimg:getWidth(),
+					Ty/aimg:getHeight()
+				)
+				love.graphics.setColor(1,1,1,1)
+			end
+		end
 		
 		Voices[self.dtbl.v]:play()
 		if dt > sl then

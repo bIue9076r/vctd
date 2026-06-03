@@ -166,17 +166,17 @@ World.Dialogue[English][4] = Dialogue.new({
 },1)
 
 World.Dialogue[English][5] = Dialogue.new({
-	Text.new("Hi Var!",Rachel),
+	Text.newAnimated("Hi Var!",Rachel,1),
 	Text.new("Hey",Varisa),
-	Text.new("You think you could stop by my house?",Rachel),
+	Text.newAnimated("You think you could stop by my house?",Rachel,1),
 	Text.new("Yeah, I could stop by.",Varisa),
-	Text.new("Great.",Rachel),
-	Text.new("I need you to ask my mom for the toolbox.",Rachel),
+	Text.newAnimated("Great.",Rachel,1),
+	Text.newAnimated("I need you to ask my mom for the toolbox.",Rachel,1),
 	Text.new("Alright.",Varisa),
-	Text.new("You got it?",Rachel,nil,function()
+	Text.newAnimated("You got it?",Rachel,1,nil,function()
 		Story.set("Toolbox_Wilkie_1",true)
 	end),
-	Text.new("You got it?",Rachel),
+	Text.newAnimated("You got it?",Rachel,1),
 },1)
 
 require("/dialogue/general/mailboxes")
@@ -309,68 +309,68 @@ World.Dialogue[English][28] = Dialogue.new({
 },1)
 
 World.Dialogue[English][29] = Dialogue.new({
-	Text.new("Did you get the toolbox?",Rachel),
+	Text.newAnimated("Did you get the toolbox?",Rachel,1),
 	Text.new("Wilkie's still using it.",Varisa),
 	Text.new("But he'll let us borrow the tool you need.",Varisa),
-	Text.new("Okay.",Rachel),
-	Text.new("Ask him for the screwdriver.",Rachel),
-	Text.new("Or better yet, take my guitar.",Rachel,nil,function()
+	Text.newAnimated("Okay.",Rachel,1),
+	Text.newAnimated("Ask him for the screwdriver.",Rachel,1),
+	Text.newAnimated("Or better yet, take my guitar.",Rachel,1,nil,function()
 		Story.set("Rachel_Guitar_1",true)
 	end),
-	Text.new("You're the one that's gonna fix it anyway.",Rachel),
-	Text.new("I'm counting on you.",Rachel),
+	Text.newAnimated("You're the one that's gonna fix it anyway.",Rachel,0),
+	Text.newAnimated("I'm counting on you.",Rachel,0),
 },1)
 
 World.Dialogue[English][30] = Dialogue.new({
-	Text.new("Did you get the toolbox?",Rachel),
+	Text.newAnimated("Did you get the toolbox?",Rachel,1),
 	Text.new("No but our old math teacher gave me this.",Varisa),
-	Text.new("No way!",Rachel),
-	Text.new("That's exactly what I need!",Rachel),
+	Text.newAnimated("No way!",Rachel,1),
+	Text.newAnimated("That's exactly what I need!",Rachel,1),
 	Text.new("Well, that works I guess.",Varisa),
-	Text.new("Here, take my guitar.",Rachel,nil,function()
+	Text.newAnimated("Here, take my guitar.",Rachel,1,nil,function()
 		Story.set("Rachel_Guitar_1",true)
 	end),
-	Text.new("Now you can fix it.",Rachel),
-	Text.new("I'm counting on you.",Rachel),
+	Text.newAnimated("Now you can fix it.",Rachel,0),
+	Text.newAnimated("I'm counting on you.",Rachel,0),
 },1)
 
 World.Dialogue[English][31] = Dialogue.new({
-	Text.new("Did you get the toolbox?",Rachel),
+	Text.newAnimated("Did you get the toolbox?",Rachel,1),
 	Text.new("Wilkie's still using it.",Varisa),
 	Text.new("But he'll let us borrow the tool you need.",Varisa),
-	Text.new("Okay.",Rachel),
-	Text.new("Ask him for the screwdriver.",Rachel),
+	Text.newAnimated("Okay.",Rachel,1),
+	Text.newAnimated("Ask him for the screwdriver.",Rachel,1),
 	Text.new("Screwdriver?",Varisa),
 	Text.new("Yeah?",Varisa),
 	Text.new("Look what our old math teacher gave me.",Varisa),
-	Text.new("No way!",Rachel),
-	Text.new("That's exactly what I need!",Rachel),
+	Text.newAnimated("No way!",Rachel,1),
+	Text.newAnimated("That's exactly what I need!",Rachel,1),
 	Text.new("Well, that works I guess.",Varisa),
-	Text.new("Here, take my guitar.",Rachel,nil,function()
+	Text.newAnimated("Here, take my guitar.",Rachel,1,nil,function()
 		Story.set("Rachel_Guitar_1",true)
 	end),
-	Text.new("Now you can fix it.",Rachel),
-	Text.new("I'm counting on you.",Rachel),
+	Text.newAnimated("Now you can fix it.",Rachel,0),
+	Text.newAnimated("I'm counting on you.",Rachel,0),
 },1)
 
 World.Dialogue[English][32] = Dialogue.new({
-	Text.new("Hi Var!",Rachel),
+	Text.newAnimated("Hi Var!",Rachel,1),
 	Text.new("Hey",Varisa),
-	Text.new("You think you could stop by my house?",Rachel),
+	Text.newAnimated("You think you could stop by my house?",Rachel,1),
 	Text.new("Yeah, I could stop by.",Varisa),
-	Text.new("Great.",Rachel),
-	Text.new("I need you to ask my mom for the toolbox.",Rachel),
+	Text.newAnimated("Great.",Rachel,1),
+	Text.newAnimated("I need you to ask my mom for the toolbox.",Rachel,1),
 	Text.new("Wait, what do you need from it?",Varisa),
-	Text.new("A screwdriver?",Rachel),
+	Text.newAnimated("A screwdriver?",Rachel,1),
 	Text.new("Look what our old math teacher gave me.",Varisa),
-	Text.new("No way!",Rachel),
-	Text.new("That's exactly what I need!",Rachel),
+	Text.newAnimated("No way!",Rachel,1),
+	Text.newAnimated("That's exactly what I need!",Rachel,1),
 	Text.new("Well, that works I guess.",Varisa),
-	Text.new("Here, take my guitar.",Rachel,nil,function()
+	Text.newAnimated("Here, take my guitar.",Rachel,1,nil,function()
 		Story.set("Rachel_Guitar_1",true)
 	end),
-	Text.new("Now you can fix it.",Rachel),
-	Text.new("I'm counting on you.",Rachel),
+	Text.newAnimated("Now you can fix it.",Rachel,0),
+	Text.newAnimated("I'm counting on you.",Rachel,0),
 },1)
 
 World.Dialogue[English][33] = Dialogue.new({
@@ -679,9 +679,9 @@ World.Dialogue[English][53] = Dialogue.new({
 },1)
 
 World.Dialogue[English][54] = Dialogue.new({
-	Text.new("Damn, always on a Tuesday, huh",Rachel),
-	Text.new("I'd suggest you check what's going on outside",Rachel),
-	Text.new("...",Rachel),
+	Text.newAnimated("Damn, always on a Tuesday, huh",Rachel,1),
+	Text.newAnimated("I'd suggest you check what's going on outside",Rachel,1),
+	Text.newAnimated("...",Rachel,1),
 },1)
 
 World.Dialogue[English][55] = Dialogue.new({
@@ -1094,11 +1094,11 @@ World.Dialogue[English][86] = Dialogue.new({
 },1)
 
 World.Dialogue[English][87] = Dialogue.new({
-	Text.new("The power's back.",Rachel),
+	Text.newAnimated("The power's back.",Rachel,0),
 	Text.new("Yeah.",Varisa),
-	Text.new("Thanks. I was worried it would take longer.",Rachel),
+	Text.newAnimated("Thanks. I was worried it would take longer.",Rachel,0),
 	Text.new("I suppose.",Varisa),
-	Text.new("...",Rachel),
+	Text.newAnimated("...",Rachel,0),
 },1)
 
 World.Dialogue[English][88] = Dialogue.new({
@@ -1157,11 +1157,11 @@ World.Dialogue[English][92] = Dialogue.new({
 
 World.Dialogue[English][93] = Dialogue.new({
 	Text.new("That was a great show.",Tracey),
-	Text.new("We did pretty good.",Rachel),
+	Text.newAnimated("We did pretty good.",Rachel,1),
 	Text.new("I'm glad it went pretty okay.",Varisa),
 	Text.new("I wonder when she's going to pay us.",Tracey),
 	Text.new("We should get something nice tomorow.",Varisa),
-	Text.new("Yeah.",Rachel),
+	Text.newAnimated("Yeah.",Rachel,1),
 	Text.new("Yeah.",Tracey),
 	Text.new("Alright.",Varisa),
 	Text.new("...",Varisa),

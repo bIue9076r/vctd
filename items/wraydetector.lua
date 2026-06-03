@@ -21,20 +21,10 @@ function Item_WRayDetector:act(key)
 		local m = MaptoN()
 		if m == self.last then
 			IsTalking = true
-				
-			World.dtbl = {
-				s = "I've used this here",
-				n = Varisa,
-				v = "Normal",
-			}
+			World.say("I've used this here", Varisa, "Normal")
 		else
 			IsTalking = true
-			World.dtbl = {
-				s = "It says "..string.format("%0.2f",Mood.str()),
-				n = Varisa,
-				v = "Normal",
-			}
-			
+			World.say("It says "..string.format("%0.2f",Mood.str()), Varisa, "Normal")
 			self.last = m
 			
 			if self.count < 2 then
@@ -51,19 +41,10 @@ function Item_WRayDetector:act(key)
 	local m = MaptoN()
 	if m == self.last then
 		IsTalking = true
-			
-		World.dtbl = {
-			s = "I've used this here",
-			n = Varisa,
-			v = "Normal",
-		}
+		World.say("I've used this here", Varisa, "Normal")
 	else
 		IsTalking = true
-		World.dtbl = {
-			s = "It says "..string.format("%0.2f",Mood.str()),
-			n = Varisa,
-			v = "Normal",
-		}
+		World.say("t says "..string.format("%0.2f",Mood.str()), Varisa, "Normal")
 		self.last = m
 
 		if self.count < 2 then

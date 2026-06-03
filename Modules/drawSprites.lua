@@ -181,15 +181,39 @@ function drawDialogue()
 	if IsTalking then
 		local dt = World.dticker:get()
 		local sl = utf8.len(World.dtbl.s)/60
-		love.graphics.rectangle("fill",
-			(SCREEN_X/12),
-			(SCREEN_Y/8),
-			((SCREEN_X*5)/6),
-			(SCREEN_Y/4),
-		25)
+		-- love.graphics.rectangle("fill",
+		-- 	(SCREEN_X/12),
+		-- 	(SCREEN_Y/8),
+		-- 	((SCREEN_X*5)/6),
+		-- 	(SCREEN_Y/4),
+		-- 25)
+		local Tx = ((SCREEN_X * 55)/60)
+		local Ty = ((SCREEN_Y * 7)/8)
+
+		if World.dtbl.a then
+			love.graphics.setColor(0.7,0.7,0.7,0.5)
+			love.graphics.rectangle(
+				"fill",
+				SCREEN_X*(25/600),
+				SCREEN_Y*(25/400),
+				Tx,
+				Ty
+			)
+			love.graphics.setColor(1,1,1,1)
+		end
+
+		local img = image.getImage("Dialogue")
+		love.graphics.draw(
+			img,
+			SCREEN_X*(25/600),
+			SCREEN_Y*(25/400),
+			0,
+			Tx/img:getWidth(),
+			Ty/img:getHeight()
+		)
 		
 		love.graphics.print(
-			{{0,0,0},Names[World.dtbl.n]..":"},
+			{{0,0,0},tostring(Names[World.dtbl.n])..":"},
 			(SCREEN_X/8),
 			((SCREEN_Y*3)/20),
 			0,
@@ -203,6 +227,24 @@ function drawDialogue()
 			0,
 			SCREEN_X/600,SCREEN_Y/400
 		)
+
+		if World.dtbl.a then
+			local aname = tostring(Names[World.dtbl.n]).."_A_"..tostring(World.dtbl.t)
+			local aimg = image.getImage(aname)
+			if aimg then
+				local t = math.max(0,math.min(dt,0.1))
+				love.graphics.setColor(1,1,1,t/0.1)
+				love.graphics.draw(
+					aimg,
+					SCREEN_X*(25/600),
+					SCREEN_Y*(25/400),
+					0,
+					Tx/aimg:getWidth(),
+					Ty/aimg:getHeight()
+				)
+				love.graphics.setColor(1,1,1,1)
+			end
+		end
 		
 		Voices[World.dtbl.v]:play()
 		if dt > sl then

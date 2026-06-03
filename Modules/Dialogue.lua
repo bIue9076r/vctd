@@ -2,12 +2,36 @@ Text = {}
 Text.s = "......"
 Text.c = -1
 Text.v = "Normal"
+Text.a = false
+Text.n = 0
 
 function Text.new(s,c,v,e)
 	local tbl = {
 		s = s or "......",	-- String
 		c = c or -1,		-- Char
 		v = v or "Normal",	-- Voice
+		a = false,			-- Animated
+		n = 0,				-- Number
+		e = e or function()	-- Effect
+			
+		end,
+	}
+	
+	local mt = {
+		__index = Text,
+		__call = Text.get,
+	}
+	
+	return setmetatable(tbl,mt)
+end
+
+function Text.newAnimated(s,c,n,v,e)
+	local tbl = {
+		s = s or "......",	-- String
+		c = c or -1,		-- Char
+		v = v or "Normal",	-- Voice
+		a = true,			-- Animated
+		n = n or 0,			-- Number
 		e = e or function()	-- Effect
 			
 		end,
@@ -25,21 +49,16 @@ function Text:get(npc)
 	local rs = self.s
 	local rc = self.c
 	local rv = self.v
+	local ra = self.a
+	local rn = self.n
 	self.e(npc)
-	return rs, rc, rv
+	return rs, rc, rv, ra, rn
 end
 
 Dialogue = {}
 Dialogue.text = {Text.new("......")}
 Dialogue.index = 1
 Dialogue.cycle = 0
-
---{
---	s="......",
---	n=house_npc.c,
---	v="Normal"
---	t=ticker.new()
---}
 
 function Dialogue.new(ttbl,c,e)
 	local tbl = {
@@ -60,7 +79,7 @@ function Dialogue.new(ttbl,c,e)
 end
 
 function Dialogue:get(npc)
-	local rs, rc, rv = self.text[self.index](npc)
+	local rs, rc, rv, ra, rn = self.text[self.index](npc)
 	self.index = self.index + 1
 	if self.index > #self.text then
 		if self.cycle == 0 then
@@ -70,5 +89,5 @@ function Dialogue:get(npc)
 		end
 		self.effect(npc)
 	end
-	return {s=rs, n=rc, v=rv}
+	return {s=rs, n=rc, v=rv, a=ra, t=rn}
 end

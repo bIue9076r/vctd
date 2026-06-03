@@ -1,4 +1,4 @@
-Guitar = Item.new(B_Guitar_L)
+Guitar = Item.new(B_Guitar_R)
 Guitar.name = "Varisa's Guitar"
 Guitar.sound = sound.getSound("noodle_1")
 

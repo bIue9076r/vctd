@@ -44,11 +44,7 @@ World.Map[61]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
 		-- Door is locked
 		IsTalking = true
 			
-		World.dtbl = {
-			s = "*The Door is Locked*",
-			n = Varisa,
-			v = "Normal",
-		}
+		World.say("*The Door is Locked*", Varisa, "Normal")
 	end
 end))
 

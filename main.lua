@@ -206,7 +206,7 @@ function kctrlOps(key)
 					"y = "..Plr.y..",\n\t"..
 					"tx = "..Plr.tx..",\n\t"..
 					"ty = "..Plr.ty..",\n\t"..
-					"c = "..Plr.c.."("..Names[Plr.c]..")\n}"
+					"c = "..Plr.c.."("..tostring(Names[Plr.c])..")\n}"
 			)
 		elseif key == "f" then
 			FmovePlr = not(FmovePlr)

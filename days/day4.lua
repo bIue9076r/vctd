@@ -34,7 +34,7 @@ Days.newDay(4,function()
 
 		if v.HouseHold == 7 then
 			local I = Families.HouseMap[i]
-			for i,v in pairs(World.Map[I + 1].npcs) do
+			for i,v in pairs(World.Map[I].npcs) do
 				if v.f == "Mollie" then
 					v.g = 1
 				end

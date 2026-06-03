@@ -29,7 +29,7 @@ Play.Scenes[5].Actors[17] = Actor.new(R_Guitar_L,5.6 + 9,7.7 + 2)
 Play.Scenes[5].Actors[18] = Actor.new(Amp,4.6 + 9,6.7 + 2)
 
 Play.Scenes[5].Actors[19] = Actor.new(Varisa,9.6 + 9,8.7 + 2)
-Play.Scenes[5].Actors[20] = Actor.new(B_Guitar_L,9.6 + 9,8.7 + 2)
+Play.Scenes[5].Actors[20] = Actor.new(B_Guitar_R,9.6 + 9,8.7 + 2)
 Play.Scenes[5].Actors[21] = Actor.new(Mic,10.1 + 9,9 + 2)
 Play.Scenes[5].Actors[22] = Actor.new(Amp,10.6 + 9,7.7 + 2)
 
