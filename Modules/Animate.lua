@@ -198,18 +198,33 @@ function Scene:Say(s,n,v)
 		n = n or 0,
 		v = v or "Normal",
 		a = false,
+		l = false,
 		t = 0,
 	}
 	self.dticker:reset()
 end
 
-function Scene:SayAnimated(s,n,v,t)
+function Scene:SayAnimated(s,n,t,v)
 	self.IsTalking = true
 	self.dtbl = {
 		s = s or "",
 		n = n or 0,
 		v = v or "Normal",
 		a = true,
+		l = false,
+		t = t or 0,
+	}
+	self.dticker:reset()
+end
+
+function Scene:SayAnimatedLeft(s,n,t,v)
+	self.IsTalking = true
+	self.dtbl = {
+		s = s or "",
+		n = n or 0,
+		v = v or "Normal",
+		a = true,
+		l = true,
 		t = t or 0,
 	}
 	self.dticker:reset()
@@ -242,6 +257,19 @@ function Scene:drawDialogue()
 		end
 
 		local img = image.getImage("Dialogue")
+		local nx = (SCREEN_X*60)/600
+		local ny = (SCREEN_Y*50)/400
+		local sx = nx
+		local sy = (SCREEN_Y*80)/400
+
+		if self.dtbl.l then
+			img = image.getImage("Dialogue_Left")
+			nx = (SCREEN_X*185)/600
+			ny = (SCREEN_Y*50)/400
+			sx = nx
+			sy = (SCREEN_Y*80)/400
+		end
+
 		love.graphics.draw(
 			img,
 			SCREEN_X*(25/600),
@@ -250,23 +278,23 @@ function Scene:drawDialogue()
 			Tx/img:getWidth(),
 			Ty/img:getHeight()
 		)
-		
+
 		love.graphics.print(
 			{{0,0,0},tostring(Names[self.dtbl.n])..":"},
-			(SCREEN_X/8),
-			((SCREEN_Y*3)/20),
+			nx, ny,
 			0,
 			SCREEN_X/600,SCREEN_Y/400
 		)
 		
-		love.graphics.print(
+		love.graphics.printf(
 			{{0,0,0},spString(self.dtbl.s,1,self.dticker)},
-			(SCREEN_X/8),
-			((SCREEN_Y*9)/40),
+			sx, sy,
+			(SCREEN_X*350)/600,
+			"left",
 			0,
 			SCREEN_X/600,SCREEN_Y/400
 		)
-
+		
 		if self.dtbl.a then
 			local aname = tostring(Names[self.dtbl.n]).."_A_"..tostring(self.dtbl.t)
 			local aimg = image.getImage(aname)

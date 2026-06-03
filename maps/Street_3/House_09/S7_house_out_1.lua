@@ -44,7 +44,7 @@ World.Map[55]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
 		-- Door is locked
 		IsTalking = true
 			
-		World.say("*The Door is Locked*", Varisa, "Normal")
+		World.say(String.get(51), Varisa, "Normal")
 	end
 end))
 

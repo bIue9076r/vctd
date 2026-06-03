@@ -11,6 +11,7 @@ function Text.new(s,c,v,e)
 		c = c or -1,		-- Char
 		v = v or "Normal",	-- Voice
 		a = false,			-- Animated
+		l = false,			-- Left Dialogue
 		n = 0,				-- Number
 		e = e or function()	-- Effect
 			
@@ -31,6 +32,28 @@ function Text.newAnimated(s,c,n,v,e)
 		c = c or -1,		-- Char
 		v = v or "Normal",	-- Voice
 		a = true,			-- Animated
+		l = false,			-- Left Dialogue
+		n = n or 0,			-- Number
+		e = e or function()	-- Effect
+			
+		end,
+	}
+	
+	local mt = {
+		__index = Text,
+		__call = Text.get,
+	}
+	
+	return setmetatable(tbl,mt)
+end
+
+function Text.newAnimatedLeft(s,c,n,v,e)
+	local tbl = {
+		s = s or "......",	-- String
+		c = c or -1,		-- Char
+		v = v or "Normal",	-- Voice
+		a = true,			-- Animated
+		l = true,			-- Left Dialogue
 		n = n or 0,			-- Number
 		e = e or function()	-- Effect
 			
@@ -50,9 +73,10 @@ function Text:get(npc)
 	local rc = self.c
 	local rv = self.v
 	local ra = self.a
+	local rl = self.l
 	local rn = self.n
 	self.e(npc)
-	return rs, rc, rv, ra, rn
+	return rs, rc, rv, ra, rl, rn
 end
 
 Dialogue = {}
@@ -79,7 +103,7 @@ function Dialogue.new(ttbl,c,e)
 end
 
 function Dialogue:get(npc)
-	local rs, rc, rv, ra, rn = self.text[self.index](npc)
+	local rs, rc, rv, ra, rl, rn = self.text[self.index](npc)
 	self.index = self.index + 1
 	if self.index > #self.text then
 		if self.cycle == 0 then
@@ -89,5 +113,5 @@ function Dialogue:get(npc)
 		end
 		self.effect(npc)
 	end
-	return {s=rs, n=rc, v=rv, a=ra, t=rn}
+	return {s=rs, n=rc, v=rv, a=ra, l=rl, t=rn}
 end

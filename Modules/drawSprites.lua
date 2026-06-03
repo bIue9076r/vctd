@@ -161,14 +161,14 @@ function drawBackgound()
 	end
 	
 	if not(HideControls) and (GameState == WORLD) then
-		love.graphics.print({{1,1,1},"Day "..GameDay},
+		love.graphics.print({{1,1,1},String.get(49)..GameDay},
 			SCREEN_X/60,
 			0,
 			0,
 			SCREEN_X/600,SCREEN_Y/400
 		)
 		
-		love.graphics.print({{1,1,1},"Controls: [E] - talk, [I] - bag, [U] - map, [O] - unequip"},
+		love.graphics.print({{1,1,1},String.get(50)},
 			SCREEN_X/60,
 			(SCREEN_Y*37)/40,
 			0,
@@ -203,6 +203,19 @@ function drawDialogue()
 		end
 
 		local img = image.getImage("Dialogue")
+		local nx = (SCREEN_X*60)/600
+		local ny = (SCREEN_Y*50)/400
+		local sx = nx
+		local sy = (SCREEN_Y*80)/400
+
+		if World.dtbl.l then
+			img = image.getImage("Dialogue_Left")
+			nx = (SCREEN_X*185)/600
+			ny = (SCREEN_Y*50)/400
+			sx = nx
+			sy = (SCREEN_Y*80)/400
+		end
+
 		love.graphics.draw(
 			img,
 			SCREEN_X*(25/600),
@@ -211,23 +224,23 @@ function drawDialogue()
 			Tx/img:getWidth(),
 			Ty/img:getHeight()
 		)
-		
+
 		love.graphics.print(
 			{{0,0,0},tostring(Names[World.dtbl.n])..":"},
-			(SCREEN_X/8),
-			((SCREEN_Y*3)/20),
+			nx, ny,
 			0,
 			SCREEN_X/600,SCREEN_Y/400
 		)
 		
-		love.graphics.print(
+		love.graphics.printf(
 			{{0,0,0},spString(World.dtbl.s,1,World.dticker)},
-			(SCREEN_X/8),
-			((SCREEN_Y*9)/40),
+			sx, sy,
+			(SCREEN_X*350)/600,
+			"left",
 			0,
 			SCREEN_X/600,SCREEN_Y/400
 		)
-
+		
 		if World.dtbl.a then
 			local aname = tostring(Names[World.dtbl.n]).."_A_"..tostring(World.dtbl.t)
 			local aimg = image.getImage(aname)

@@ -45,7 +45,7 @@ Play.Scenes[3].transition = function(self,t)
 		end
 	elseif(t < 12.25) then
 		if not self.vars["Once3"] then
-			self:Say(String.get(6), Rachel)
+			self:SayAnimatedLeft(String.get(6), Rachel,1)
 			self.vars["Once3"] = true
 		end
 	elseif(t < self.tickGoal) then

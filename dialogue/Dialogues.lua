@@ -129,9 +129,9 @@ World.Dialogue[English][0] = Dialogue.new({
 
 World.Dialogue[English][1] = Dialogue.new({
 	Text.new("Hey",Varisa),
-	Text.new("Hey Var!",Tracey),
+	Text.newAnimatedLeft("Hey Var!",Tracey,1),
 	Text.new("Does your mom still have any cookies?",Varisa),
-	Text.new("Should be some inside",Tracey),
+	Text.newAnimatedLeft("Should be some inside",Tracey,1),
 	Text.new("Sweet!",Varisa),
 },0,function()
 	World.nextMap(World.Map[2])
@@ -374,17 +374,17 @@ World.Dialogue[English][32] = Dialogue.new({
 },1)
 
 World.Dialogue[English][33] = Dialogue.new({
-	Text.new("There's a lot more people than usual.",Tracey),
+	Text.newAnimated("There's a lot more people than usual.",Tracey,0),
 	Text.new("You could say.",Varisa),
-	Text.new("What's Mollie doing at the park",Tracey),
+	Text.newAnimated("What's Mollie doing at the park",Tracey,0),
 	Text.new("Playing in the sand?",Varisa),
-	Text.new("Isn't she like what, 82?",Tracey),
+	Text.newAnimated("Isn't she like what, 82?",Tracey,0),
 	Text.new("27.",Varisa),
-	Text.new("Wouldn't books be more her style?",Tracey),
+	Text.newAnimated("Wouldn't books be more her style?",Tracey,0),
 	Text.new("English teachers can do other things...",Varisa),
-	Text.new("Like?",Tracey),
+	Text.newAnimated("Like?",Tracey,0),
 	Text.new("Playing in the sand.",Varisa),
-	Text.new("...",Tracey),
+	Text.newAnimated("...",Tracey,0),
 },1)
 
 World.Dialogue[English][34] = Dialogue.new({
@@ -685,9 +685,9 @@ World.Dialogue[English][54] = Dialogue.new({
 },1)
 
 World.Dialogue[English][55] = Dialogue.new({
-	Text.new("If only you played acoustic",Tracey),
-	Text.new("You should probably check what's going on outside",Tracey),
-	Text.new("...",Tracey),
+	Text.newAnimatedLeft("If only you played acoustic",Tracey,1),
+	Text.newAnimatedLeft("You should probably check what's going on outside",Tracey,1),
+	Text.newAnimatedLeft("...",Tracey,1),
 },1)
 
 World.Dialogue[English][56] = Dialogue.new({
@@ -1086,11 +1086,11 @@ World.Dialogue[English][85] = Dialogue.new({
 },1)
 
 World.Dialogue[English][86] = Dialogue.new({
-	Text.new("Oh you're done.",Tracey),
-	Text.new("And we just finished moving the stuff.",Tracey),
-	Text.new("Tomorow?",Tracey),
+	Text.newAnimatedLeft("Oh you're done.",Tracey,1),
+	Text.newAnimatedLeft("And we just finished moving the stuff.",Tracey,1),
+	Text.newAnimatedLeft("Tomorow?",Tracey,1),
 	Text.new("I guess.",Varisa),
-	Text.new("See ya.",Tracey),
+	Text.newAnimatedLeft("See ya.",Tracey,1),
 },1)
 
 World.Dialogue[English][87] = Dialogue.new({
@@ -1156,13 +1156,13 @@ World.Dialogue[English][92] = Dialogue.new({
 },1)
 
 World.Dialogue[English][93] = Dialogue.new({
-	Text.new("That was a great show.",Tracey),
+	Text.newAnimatedLeft("That was a great show.",Tracey,1),
 	Text.newAnimated("We did pretty good.",Rachel,1),
 	Text.new("I'm glad it went pretty okay.",Varisa),
-	Text.new("I wonder when she's going to pay us.",Tracey),
+	Text.newAnimatedLeft("I wonder when she's going to pay us.",Tracey,1),
 	Text.new("We should get something nice tomorow.",Varisa),
 	Text.newAnimated("Yeah.",Rachel,1),
-	Text.new("Yeah.",Tracey),
+	Text.newAnimatedLeft("Yeah.",Tracey,1),
 	Text.new("Alright.",Varisa),
 	Text.new("...",Varisa),
 },1)

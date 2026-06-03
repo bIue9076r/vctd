@@ -53,7 +53,7 @@ Play.Scenes[4].transition = function(self,t)
 	self.Actors[44].y = 5.0 + (math.sin(math.pi * t)/4)
 	if(t < 1.875) then
 		if not self.vars["Once0"] then
-			self:Say(String.get(7),Tracey)
+			self:SayAnimated(String.get(7),Tracey,0)
 			self.vars["Once0"] = true
 		end
 	elseif(t < 3.75) then
@@ -63,7 +63,7 @@ Play.Scenes[4].transition = function(self,t)
 		end
 	elseif(t < 5.625) then
 		if not self.vars["Once2"] then
-			self:Say(String.get(9),Tracey)
+			self:SayAnimated(String.get(9),Tracey,0)
 			self.vars["Once2"] = true
 		end
 	elseif(t < 7.5) then
@@ -78,12 +78,12 @@ Play.Scenes[4].transition = function(self,t)
 		end
 	elseif(t < 11.25) then
 		if not self.vars["Once5"] then
-			self:Say(String.get(12),Tracey)
+			self:SayAnimated(String.get(12),Tracey,0)
 			self.vars["Once5"] = true
 		end
 	elseif(t < 13.125) then
 		if not self.vars["Once6"] then
-		self:Say(String.get(13),Tracey)
+		self:SayAnimated(String.get(13),Tracey,0)
 			self.vars["Once6"] = true
 		end
 	elseif(t < self.tickGoal) then
