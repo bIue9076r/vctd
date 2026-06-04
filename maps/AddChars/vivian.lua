@@ -3,7 +3,7 @@ function addVivianOut1(Map)
 	
 	end,"Brian"))
 
-	World.Map[Map]:addNpc(Npc.new(0.5,8.5,Wastecan,-12,0,function()
+	World.Map[Map]:addNpc(Npc.new(1.60,8.5,Wastecan,-12,0,function()
 	
 	end,"Waste"))
 end

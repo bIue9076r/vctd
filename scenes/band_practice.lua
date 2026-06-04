@@ -44,10 +44,13 @@ Play.Scenes[2].transition = function(self,t)
 			self.vars["Once"] = true
 		end
 	else
-		sbs_1:stop()
-		sbs_2:stop()
-		sbs_3:stop()
-		sbs_4:stop()
+		if sbs_1 then
+			sbs_1:stop()
+			sbs_2:stop()
+			sbs_3:stop()
+			sbs_4:stop()
+		end
+		
 		if Play.unmuteAfter then
 			muted = false
 			plyed = false
