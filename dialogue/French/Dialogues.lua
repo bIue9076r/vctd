@@ -231,7 +231,7 @@ World.Dialogue[French][21] = Dialogue.new({
 },1)
 
 World.Dialogue[French][22] = Dialogue.new({
-	Text.new("Salut Varisa.",Mollie),
+	Text.newAnimated("Salut Varisa.",Mollie,0),
 },1)
 
 World.Dialogue[French][23] = Dialogue.new({
@@ -406,41 +406,41 @@ World.Dialogue[French][35] = Dialogue.new({
 },1)
 
 World.Dialogue[French][36] = Dialogue.new({
-	Text.new("Eww...",Mollie),
+	Text.newAnimated("Eww...",Mollie,0),
 	Text.new("What?",Varisa),
-	Text.new("You and your stupid friend are at park.",Mollie),
+	Text.newAnimated("You and your stupid friend are at park.",Mollie,0),
 	Text.new("We just got here...",Varisa),
-	Text.new("I know.",Mollie),
-	Text.new("Don't you have a mother to be looking for?",Mollie),
+	Text.newAnimated("I know.",Mollie,0),
+	Text.newAnimated("Don't you have a mother to be looking for?",Mollie,0),
 	Text.new("Yeah why?",Varisa),
-	Text.new("So you can quit bothering me, twerp.",Mollie),
+	Text.newAnimated("So you can quit bothering me, twerp.",Mollie,0),
 	Text.new("Why do you hate me so much?",Varisa),
-	Text.new("Well, isn't it obvious? You suck!",Mollie),
-	Text.new("You're a terrible student!",Mollie),
-	Text.new("You and that punk friend of yours!",Mollie),
-	Text.new("I'm surprised you even graduated!",Mollie),
-	Text.new("You never paid attention in my class!",Mollie),
-	Text.new("You always...",Mollie),
-	Text.new("Well now you've got me rambling.",Mollie),
+	Text.newAnimated("Well, isn't it obvious? You suck!",Mollie,0),
+	Text.newAnimated("You're a terrible student!",Mollie,0),
+	Text.newAnimated("You and that punk friend of yours!",Mollie,0),
+	Text.newAnimated("I'm surprised you even graduated!",Mollie,0),
+	Text.newAnimated("You never paid attention in my class!",Mollie,0),
+	Text.newAnimated("You always...",Mollie,0),
+	Text.newAnimated("Well now you've got me rambling.",Mollie,0),
 	Text.new("But you don't even teach me anymore?",Varisa),
-	Text.new("So why are you bothering me right now?",Mollie),
+	Text.newAnimated("So why are you bothering me right now?",Mollie,0),
 	Text.new("Cause I need your help.",Varisa),
-	Text.new("You need my help?",Mollie),
-	Text.new("Out of everyone in town?",Mollie),
-	Text.new("I suppose I could help you...",Mollie),
-	Text.new("But you owe me big time after this.",Mollie),
+	Text.newAnimated("You need my help?",Mollie,1),
+	Text.newAnimated("Out of everyone in town?",Mollie,1),
+	Text.newAnimated("I suppose I could help you...",Mollie,1),
+	Text.newAnimated("But you owe me big time after this.",Mollie,0),
 	Text.new("Sure.",Varisa),
 	Text.new("So what are you doing in the sand?",Varisa),
-	Text.new("I dunno, something distract me from them...",Mollie),
+	Text.newAnimated("I dunno, something distract me from them...",Mollie,0),
 	Text.new("Who?",Varisa),
-	Text.new("Sean and that... bitch.",Mollie),
+	Text.newAnimated("Sean and that... bitch.",Mollie,0),
 	Text.new("You have to be specific, I know several.",Varisa),
-	Text.new("You know that one with the pink hair?",Mollie),
+	Text.newAnimated("You know that one with the pink hair?",Mollie,0),
 	Text.new("Yeah, I think?",Varisa),
 	Text.new("Isn't she a teacher?",Varisa),
-	Text.new("She couldn't teach even if she wanted to.",Mollie),
+	Text.newAnimated("She couldn't teach even if she wanted to.",Mollie,0),
 	Text.new("Intresting...",Varisa),
-	Text.new("It just makes me so angry seeing them together.",Mollie,nil,function()
+	Text.newAnimated("It just makes me so angry seeing them together.",Mollie,0,nil,function()
 		World.AfterEffect = function ()
 			muted = true
 			if bs then
@@ -452,64 +452,64 @@ World.Dialogue[French][36] = Dialogue.new({
 		end
 	end),
 	Text.new("Uh...",Varisa),
-	Text.new("What?",Mollie),
+	Text.newAnimated("What?",Mollie,0),
 	Text.new("Don't tell me you watched them the WHOLE time.",Varisa),
-	Text.new("Well how else would I have found out?",Mollie),
+	Text.newAnimated("Well how else would I have found out?",Mollie,0),
 	Text.new("So, lets get this straight.",Varisa),
 	Text.new("He dumped you to get with your best friend.",Varisa),
-	Text.new("FORMER!",Mollie),
+	Text.newAnimated("FORMER!",Mollie,0),
 	Text.new("Okay, former best friend.",Varisa),
-	Text.new("And you're going to help me break them up.",Mollie),
+	Text.newAnimated("And you're going to help me break them up.",Mollie,1),
 	Text.new("What?",Varisa),
-	Text.new("Yes, what's the matter?",Mollie),
+	Text.newAnimated("Yes, what's the matter?",Mollie,0),
 	Text.new("I dunno, that seems like quite a leap.",Varisa),
-	Text.new("You just said you'd help me earlier",Mollie),
+	Text.newAnimated("You just said you'd help me earlier",Mollie,0),
 	Text.new("How am I supposed to do that?",Varisa),
-	Text.new("Well they're not home right now.",Mollie),
-	Text.new("Sean's definitly cheating on her.",Mollie),
+	Text.newAnimated("Well they're not home right now.",Mollie,0),
+	Text.newAnimated("Sean's definitly cheating on her.",Mollie,0),
 	Text.new("Or she's cheating on him.",Mollie),
-	Text.new("Now, I still have one of his spare keys.",Mollie),
-	Text.new("So you're going find proof in his house.",Mollie),
-	Text.new("Then bring it back to me.",Mollie),
+	Text.newAnimated("Now, I still have one of his spare keys.",Mollie,1),
+	Text.newAnimated("So you're going find proof in his house.",Mollie,1),
+	Text.newAnimated("Then bring it back to me.",Mollie,1),
 	Text.new("I guess, I'll do it.",Varisa,nil,function()
 		Story.set("Mollie_Breakup_1",true)
 	end),
-	Text.new("Great, now get on with it, twerp",Mollie),
-	Text.new("You done, twerp?",Mollie),
+	Text.newAnimated("Great, now get on with it, twerp",Mollie,1),
+	Text.newAnimated("You done, twerp?",Mollie,0),
 },1)
 
 World.Dialogue[French][37] = Dialogue.new({
-	Text.new("Eww...",Mollie),
+	Text.newAnimated("Eww...",Mollie,0),
 	Text.new("What?",Varisa),
-	Text.new("You and your stupid friend are at park.",Mollie),
+	Text.newAnimated("You and your stupid friend are at park.",Mollie,0),
 	Text.new("We just got here...",Varisa),
-	Text.new("I know.",Mollie),
-	Text.new("Don't you have a dead mother to be looking for?",Mollie),
+	Text.newAnimated("I know.",Mollie,0),
+	Text.newAnimated("Don't you have a dead mother to be looking for?",Mollie,0),
 	Text.new("Yeah............",Varisa),
 	Text.new("Wait?",Varisa),
 	Text.new("What did you say?",Varisa),
-	Text.new("It's been like what, 2 days.",Mollie),
-	Text.new("There's a killer on the loose.",Mollie),
-	Text.new("Put two and two, together.",Mollie),
+	Text.newAnimated("It's been like what, 2 days.",Mollie,0),
+	Text.newAnimated("There's a killer on the loose.",Mollie,0),
+	Text.newAnimated("Put two and two, together.",Mollie,0),
 	Text.new("What the fuck is wrong with you?!",Varisa),
-	Text.new("I'm just telling you the truth.",Mollie),
+	Text.newAnimated("I'm just telling you the truth.",Mollie,0),
 	Text.new("Maybe being an asshole is just natural to you.",Varisa),
-	Text.new("Fuck off.",Mollie),
+	Text.newAnimated("Fuck off.",Mollie,0),
 },1)
 
 World.Dialogue[French][38] = Dialogue.new({
-	Text.new("You done, twerp?",Mollie),
+	Text.newAnimated("You done, twerp?",Mollie,0),
 	Text.new("Yep.",Varisa),
-	Text.new("What did you find?",Mollie),
+	Text.newAnimated("What did you find?",Mollie,0),
 	Text.new("An engagement ring.",Varisa),
-	Text.new("Seriously?",Mollie),
+	Text.newAnimated("Seriously?",Mollie,0),
 	Text.new("Yeah.",Varisa),
-	Text.new("Screw me I guess.",Mollie),
+	Text.newAnimated("Screw me I guess.",Mollie,0),
 	Text.new("You could try therapy.",Varisa),
-	Text.new("...",Mollie,nil,function()
+	Text.newAnimated("...",Mollie,0,nil,function()
 		Story.set("Mollie_Breakup_5",true)
 	end),
-	Text.new("I guess...",Mollie),
+	Text.newAnimated("I guess...",Mollie,0),
 },1)
 
 World.Dialogue[French][39] = Dialogue.new({
@@ -827,15 +827,15 @@ World.Dialogue[French][65] = Dialogue.new({
 },1)
 
 World.Dialogue[French][66] = Dialogue.new({
-	Text.new("I hate those two.",Mollie),
+	Text.newAnimated("I hate those two.",Mollie,0),
 	Text.new("Nothing about the power?",Varisa),
-	Text.new("Huh, what?",Mollie),
+	Text.newAnimated("Huh, what?",Mollie,0),
 	Text.new("The reason why we're outside?",Varisa),
-	Text.new("Oh the power.",Mollie),
+	Text.newAnimated("Oh the power.",Mollie,0),
 	Text.new("...",Varisa),
-	Text.new("...",Mollie),
-	Text.new("I mean, just look at them.",Mollie),
-	Text.new("...",Mollie),
+	Text.newAnimated("...",Mollie,0),
+	Text.newAnimated("I mean, just look at them.",Mollie,0),
+	Text.newAnimated("...",Mollie,0),
 },1)
 
 World.Dialogue[French][67] = Dialogue.new({
@@ -846,7 +846,7 @@ World.Dialogue[French][67] = Dialogue.new({
 
 World.Dialogue[French][68] = Dialogue.new({
 	Text.new("God, I hate that bitch.",Ella),
-	Text.new("I HEARD THAT!",Mollie),
+	Text.newAnimated("I HEARD THAT!",Mollie,0),
 	Text.new("The power?",Varisa),
 	Text.new("What about the power?",Ella),
 	Text.new("Okay...",Varisa),
@@ -865,13 +865,13 @@ World.Dialogue[French][70] = Dialogue.new({
 },1)
 
 World.Dialogue[French][71] = Dialogue.new({
-	Text.new("I hate those two.",Mollie),
+	Text.newAnimated("I hate those two.",Mollie,0),
 	Text.new("Nothing about the power?",Varisa),
-	Text.new("It ruined my plans too.",Mollie),
+	Text.newAnimated("It ruined my plans too.",Mollie,0),
 	Text.new("What plans?",Varisa),
-	Text.new("Nothing that concerns you...",Mollie),
+	Text.newAnimated("Nothing that concerns you...",Mollie,0),
 	Text.new("...",Varisa),
-	Text.new("...",Mollie),
+	Text.newAnimated("...",Mollie,0),
 },1)
 
 World.Dialogue[French][72] = Dialogue.new({
@@ -1014,35 +1014,35 @@ World.Dialogue[French][81] = Dialogue.new({
 },1)
 
 World.Dialogue[French][82] = Dialogue.new({
-	Text.new("I need your help.",Mollie, nil, function()
+	Text.newAnimated("I need your help.",Mollie, 1, nil, function()
 		Story.set("Mollie_Vengeance_1", true)
 	end),
 	Text.new("Ugh, I guess.",Varisa),
-	Text.new("Great.",Mollie),
-	Text.new("So here's what I need you to do.",Mollie),
-	Text.new("You're going to sneak into Sean's house...",Mollie),
-	Text.new("Find something damning.",Mollie),
+	Text.newAnimated("Great.",Mollie,1),
+	Text.newAnimated("So here's what I need you to do.",Mollie,1),
+	Text.newAnimated("You're going to sneak into Sean's house...",Mollie,1),
+	Text.newAnimated("Find something damning.",Mollie,1),
 	Text.new("Like what?",Varisa),
-	Text.new("You'll know when you see it.",Mollie, nil, function()
+	Text.newAnimated("You'll know when you see it.",Mollie,1, nil, function()
 		Story.set("Mollie_Vengeance_2", true)
 	end),
-	Text.new("Thanks for the help.",Mollie),
+	Text.newAnimated("Thanks for the help.",Mollie,1),
 },1)
 
 World.Dialogue[French][83] = Dialogue.new({
-	Text.new("I need your help again.",Mollie, nil, function()
+	Text.newAnimated("I need your help again.",Mollie,1, nil, function()
 		Story.set("Mollie_Vengeance_1", true)
 	end),
 	Text.new("Ugh, I guess.",Varisa),
-	Text.new("Great.",Mollie),
-	Text.new("I need you find something again.",Mollie),
+	Text.newAnimated("Great.",Mollie,1),
+	Text.newAnimated("I need you find something again.",Mollie,1),
 	Text.new("Wasn't that ring enough?",Varisa),
-	Text.new("I need more.",Mollie),
+	Text.newAnimated("I need more.",Mollie,1),
 	Text.new("I suppose.",Varisa),
-	Text.new("Great.",Mollie, nil, function()
+	Text.newAnimated("Great.",Mollie,1, nil, function()
 		Story.set("Mollie_Vengeance_2", true)
 	end),
-	Text.new("Thanks for the help.",Mollie),
+	Text.newAnimated("Thanks for the help.",Mollie,1),
 },1)
 
 World.Dialogue[French][84] = Dialogue.new({

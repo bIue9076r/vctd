@@ -186,6 +186,8 @@ image.newImage("Rachel_A_0","/Assets/Rachel_A_0.png")
 image.newImage("Rachel_A_1","/Assets/Rachel_A_1.png")
 image.newImage("Tracey_A_0","/Assets/Tracey_A_0.png")
 image.newImage("Tracey_A_1","/Assets/Tracey_A_1.png")
+image.newImage("Mollie_A_0","/Assets/Mollie_A_0.png")
+image.newImage("Mollie_A_1","/Assets/Mollie_A_1.png")
 
 image.newImage("Map","/Assets/map.png")
 image.newImage("Save","/Assets/Save_state.png")

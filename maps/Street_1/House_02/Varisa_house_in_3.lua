@@ -34,7 +34,6 @@ World.Map[10]:addProp(Prop.new(15,12,Table_BL))
 World.Map[10]:addProp(Prop.new(16,12,Table_BR))
 
 World.Map[10]:addProp(Prop.new(20.5,5,Amp,0,0,0,nil,"Stuff_day1"))
-World.Map[10]:addProp(Prop.new(20,5,B_Guitar_R,0,0,0,nil,"Stuff_day1"))
 
 World.Map[10]:addWall(Box.new(0,0,8,14))
 World.Map[10]:addWall(Box.new(8,0,14,2))

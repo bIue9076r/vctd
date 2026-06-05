@@ -44,7 +44,7 @@ function Item_WRayDetector:act(key)
 		World.say("I've used this here", Varisa, "Normal")
 	else
 		IsTalking = true
-		World.say("t says "..string.format("%0.2f",Mood.str()), Varisa, "Normal")
+		World.say("It says "..string.format("%0.2f",Mood.str()), Varisa, "Normal")
 		self.last = m
 
 		if self.count < 2 then
