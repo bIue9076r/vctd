@@ -1,9 +1,17 @@
 Story.setBeat("Toolbox_Wilkie_1",function(npc)
-	--World.Map[1].npcs[2].i = 29
+	for i = 1,10 do
+		if House.house[i].HouseHold == Families.HouseHold["Rachel"] then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I + 2].npcs) do
+				if v.f == "Lassie" then
+					v.i = 23
+				end
+			end
+		end
+	end
 end)
 
 Story.setBeat("Toolbox_Wilkie_2",function(npc)
-	World.Map[1].npcs[2].i = 29
 	for i = 1,10 do
 		if House.house[i].HouseHold == Families.HouseHold["Rachel"] then
 			local I = Families.HouseMap[i]
@@ -16,24 +24,46 @@ Story.setBeat("Toolbox_Wilkie_2",function(npc)
 	end
 end)
 
+Story.setBeat("Toolbox_Wilkie_3",function(npc)
+	for i,v in pairs(World.Map[1].npcs) do
+		if v.f == "Rachel" then
+			v.i = 29
+		end
+	end
+end)
 
 Story.setBeat("Screw_Drive_Jami",function(npc)
 	if Story.get("Toolbox_Wilkie_2") then
-		World.Map[1].npcs[2].i = 31
+		for i,v in pairs(World.Map[1].npcs) do
+			if v.f == "Rachel" then
+				v.i = 31
+			end
+		end
 		Plr.inv:add(Item_Screwdriver)
 	elseif Story.get("Toolbox_Wilkie_1") then
-		World.Map[1].npcs[2].i = 30
+		for i,v in pairs(World.Map[1].npcs) do
+			if v.f == "Rachel" then
+				v.i = 30
+			end
+		end
 		Plr.inv:add(Item_Screwdriver)
 	elseif not Story.get("Rachel_Guitar_1") then
-		World.Map[1].npcs[2].i = 32
+		for i,v in pairs(World.Map[1].npcs) do
+			if v.f == "Rachel" then
+				v.i = 32
+			end
+		end
 		Plr.inv:add(Item_Screwdriver)
 	end
 end)
 
 Story.setBeat("Rachel_Guitar_1",function(npc)
-	World.Map[1].props[1].g = 1
+	for i,v in pairs(World.Map[1].props) do
+		if v.f == "Stuff" and v.c == R_Guitar_L then
+			v.g = 1
+		end
+	end
 	Plr.inv:add(Rachel_Guitar_Broke)
-	--World.Map[1].npcs[2].i = 29
 end)
 
 Story.setBeat("Mollie_Breakup_1",function(npc)
@@ -48,7 +78,11 @@ Story.setBeat("Mollie_Breakup_2",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 2 then
 			local I = Families.HouseMap[i]
-			World.Map[I + 1].npcs[1].i = -8
+			for i,v in pairs(World.Map[I + 1].npcs) do
+				if v.f == "Computer" then
+					v.i = -8
+				end
+			end
 		end
 	end
 end)
@@ -57,7 +91,11 @@ Story.setBeat("Mollie_Breakup_3",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 2 then
 			local I = Families.HouseMap[i]
-			World.Map[I + 1].npcs[3].i = -9
+			for i,v in pairs(World.Map[I + 1].npcs) do
+				if v.f == "Books" then
+					v.i = -9
+				end
+			end
 		end
 	end
 end)
@@ -90,9 +128,17 @@ Story.setBeat("Brian_Trash_2", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 4 then
 			local I = Families.HouseMap[i]
-			World.Map[I + 5].npcs[1].g = 1
-			-- change to "npc.g = 1" later
-			World.Map[I].npcs[3].i = -13
+			for i,v in pairs(World.Map[I + 5].npcs) do
+				if v.f == "trash" then
+					v.g = 1
+				end
+			end
+			
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Waste" then
+					v.i = -13
+				end
+			end
 		end
 	end
 end)
@@ -101,7 +147,11 @@ Story.setBeat("Brian_Trash_3", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 4 then
 			local I = Families.HouseMap[i]
-			World.Map[I].npcs[2].i = 42
+			for i,v in pairs(World.Map[I].npcs) do
+				if v.f == "Brian" then
+					v.i = 42
+				end
+			end
 		end
 	end
 end)

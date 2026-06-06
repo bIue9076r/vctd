@@ -108,7 +108,6 @@ function addVivian(Map)
 	World.Map[Map]:addNpc(Npc.new(10.0,10.0,Trash_P,-11,0,function ()
 		
 	end,"trash"))
-
 	
 	World.Map[Map]:addProp(Prop.new(10.8,2.85,PartyHat,0,0,1,function ()
 		

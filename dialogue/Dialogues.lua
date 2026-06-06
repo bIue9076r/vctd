@@ -194,7 +194,7 @@ World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Uhh....",Varisa),
 	Text.new("Can I get back to you?",Varisa),
 	Text.new("Sure, take your time",Wilkie,nil,function()
-		Story.set("Toolbox_Wilkie_2",true)
+		Story.set("Toolbox_Wilkie_3",true)
 	end),
 	Text.new("Sure, take your time",Wilkie),
 },1)
