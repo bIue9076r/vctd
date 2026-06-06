@@ -17,7 +17,9 @@ function addWilkieIn3(Map)
 end
 
 function addWilkieIn4(Map)
-	
+	World.Map[Map]:addNpc(Npc.new(20.52,8.9,Toolbox,-23,0,function()
+		
+	end,"toolbox"))
 end
 
 function addWilkie(Map)

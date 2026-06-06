@@ -1,5 +1,11 @@
 World.Dialogue[French] = {}
 
+World.Dialogue[French][-23] = Dialogue.new({
+	Text.new("C'est la boîte à outils.",Varisa,nil,function(npc)
+		Story.set("Toolbox_Wilkie_3",true)
+	end),
+},1)
+
 World.Dialogue[French][-22] = Dialogue.new({
 	Text.new("Ce n'est pas mon lit.",Varisa),
 },1)
@@ -186,17 +192,14 @@ World.Dialogue[French][18] = Dialogue.new({
 	Text.new("Salut.",Varisa),
 	Text.new("Quoi t'amène ici aujourd'hui?",Wilkie),
 	Text.new("Mme. Fisher a dit que vous avez sa boîte à outils.",Varisa),
-	Text.new("Elle en a besoin?",Wilkie),
-	Text.new("Non non non.",Varisa),
+	Text.new("Oui, c'est dans ma chambre.",Wilkie),
+	Text.new("Oh, super.",Varisa),
 	Text.new("Je juste as besoin de quelques chose de lui.",Varisa),
 	Text.new("Ah, Ouais.",Wilkie),
-	Text.new("De quoi as-tu besoin alors?",Wilkie),
-	Text.new("Euhh....",Varisa),
-	Text.new("Peux-je revenir à toi?",Varisa),
-	Text.new("Ouais, prend ton temps",Wilkie,nil,function()
-		Story.set("Toolbox_Wilkie_2",true)
+	Text.new("Gardez-le loin du danger",Wilkie,nil,function()
+		Story.set("Toolbox_Wilkie_3",true)
 	end),
-	Text.new("Ouais, prend ton temps",Wilkie),
+	Text.new("Gardez-le loin du danger",Wilkie),
 },1)
 
 -- Todo: Story Flow chart / Dialogue but in French
@@ -310,10 +313,9 @@ World.Dialogue[French][28] = Dialogue.new({
 
 World.Dialogue[French][29] = Dialogue.new({
 	Text.newAnimated("As-tu obtenu la boîte à outils?",Rachel,1),
-	Text.new("Wilkie est en utiliser encore.",Varisa),
-	Text.new("Mais, il nous laissera emprunter l'outil tu as besoin.",Varisa),
+	Text.new("Ouais, c'est ici.",Varisa),
 	Text.newAnimated("Ouais.",Rachel,1),
-	Text.newAnimated("Demande-lui le tournevis.",Rachel,1),
+	Text.newAnimated("Le tournevis.",Rachel,1),
 	Text.newAnimated("Ou mieux encore, prends ma guitare.",Rachel,1,nil,function()
 		Story.set("Rachel_Guitar_1",true)
 	end),
@@ -1226,7 +1228,7 @@ World.Dialogue[French][106] = Dialogue.new({
 	Text.new("Hey.",Varisa),
 },1)
 
-World.Dialogue[English][107] = Dialogue.new({
+World.Dialogue[French][107] = Dialogue.new({
 	Text.new("MOM!",Varisa),
 	Text.new("Mpfh...",Karly),
 	Text.new("Let me get that off you.",Varisa),
@@ -1240,7 +1242,7 @@ World.Dialogue[English][107] = Dialogue.new({
 	end),
 },1)
 
-World.Dialogue[English][108] = Dialogue.new({
+World.Dialogue[French][108] = Dialogue.new({
 	Text.new("MOM!",Varisa),
 	Text.new("Mpfh...",Karly),
 	Text.new("Oh god...",Karly),
@@ -1254,7 +1256,7 @@ World.Dialogue[English][108] = Dialogue.new({
 	end),
 },1)
 
-World.Dialogue[English][109] = Dialogue.new({
+World.Dialogue[French][109] = Dialogue.new({
 	Text.new("Hey, I still have one more task.",Brian),
 	Text.new("I need to hand out a bunch of flyers.",Brian),
 	Text.new("For Vivian's birthday?",Varisa),
@@ -1264,4 +1266,13 @@ World.Dialogue[English][109] = Dialogue.new({
 	end),
 	Text.new("Thanks.",Varisa),
 	Text.new("Try to get as much as possible.",Brian),
+},1)
+
+World.Dialogue[French][110] = Dialogue.new({
+	Text.new("Rachel your guitar isn't broken.",Varisa),
+	Text.newAnimated("Really?",Rachel,0),
+	Text.new("It's just out of tune.",Varisa),
+	Text.newAnimated("Well at least you fixed it.",Rachel,0),
+	Text.new("No problem, let's keep practising.",Varisa),
+	Text.newAnimated("...",Rachel,0),
 },1)

@@ -30,6 +30,17 @@ Story.setBeat("Toolbox_Wilkie_3",function(npc)
 			v.i = 29
 		end
 	end
+
+	for i = 1,10 do
+		if House.house[i].HouseHold == Families.HouseHold["Wilkie"] then
+			local I = Families.HouseMap[i]
+			for i,v in pairs(World.Map[I + 4].npcs) do
+				if v.f == "toolbox" then
+					v.g = 1
+				end
+			end
+		end 
+	end
 end)
 
 Story.setBeat("Screw_Drive_Jami",function(npc)
@@ -64,6 +75,14 @@ Story.setBeat("Rachel_Guitar_1",function(npc)
 		end
 	end
 	Plr.inv:add(Rachel_Guitar_Broke)
+end)
+
+Story.setBeat("Rachel_Guitar_2",function(npc)
+	for i,v in pairs(World.Map[1].npcs) do
+		if v.f == "Rachel" then
+			v.i = 110
+		end
+	end
 end)
 
 Story.setBeat("Mollie_Breakup_1",function(npc)

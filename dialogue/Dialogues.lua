@@ -1,5 +1,11 @@
 World.Dialogue[English] = {}
 
+World.Dialogue[English][-23] = Dialogue.new({
+	Text.new("It's the toolbox.",Varisa,nil,function(npc)
+		Story.set("Toolbox_Wilkie_3",true)
+	end),
+},1)
+
 World.Dialogue[English][-22] = Dialogue.new({
 	Text.new("This isn't my bed.",Varisa),
 },1)
@@ -186,17 +192,14 @@ World.Dialogue[English][18] = Dialogue.new({
 	Text.new("Hey.",Varisa),
 	Text.new("What brings you over here today?",Wilkie),
 	Text.new("Mrs. Fisher said you had her toolbox.",Varisa),
-	Text.new("She needs it back?",Wilkie),
-	Text.new("No no no.",Varisa),
+	Text.new("Yes, it's in my room",Wilkie),
+	Text.new("Oh great.",Varisa),
 	Text.new("I just need something from it.",Varisa),
 	Text.new("Oh, Okay.",Wilkie),
-	Text.new("What do you need then?",Wilkie),
-	Text.new("Uhh....",Varisa),
-	Text.new("Can I get back to you?",Varisa),
-	Text.new("Sure, take your time",Wilkie,nil,function()
-		Story.set("Toolbox_Wilkie_3",true)
+	Text.new("Keep it safe",Wilkie,nil,function()
+		Story.set("Toolbox_Wilkie_2",true)
 	end),
-	Text.new("Sure, take your time",Wilkie),
+	Text.new("Keep it safe",Wilkie),
 },1)
 
 -- Todo: Story Flow chart / Dialogue
@@ -310,10 +313,9 @@ World.Dialogue[English][28] = Dialogue.new({
 
 World.Dialogue[English][29] = Dialogue.new({
 	Text.newAnimated("Did you get the toolbox?",Rachel,1),
-	Text.new("Wilkie's still using it.",Varisa),
-	Text.new("But he'll let us borrow the tool you need.",Varisa),
+	Text.new("Yeah, it's right here.",Varisa),
 	Text.newAnimated("Okay.",Rachel,1),
-	Text.newAnimated("Ask him for the screwdriver.",Rachel,1),
+	Text.newAnimated("Get the screwdriver.",Rachel,1),
 	Text.newAnimated("Or better yet, take my guitar.",Rachel,1,nil,function()
 		Story.set("Rachel_Guitar_1",true)
 	end),
@@ -1264,4 +1266,13 @@ World.Dialogue[English][109] = Dialogue.new({
 	end),
 	Text.new("Thanks.",Varisa),
 	Text.new("Try to get as much as possible.",Brian),
+},1)
+
+World.Dialogue[English][110] = Dialogue.new({
+	Text.new("Rachel your guitar isn't broken.",Varisa),
+	Text.newAnimated("Really?",Rachel,0),
+	Text.new("It's just out of tune.",Varisa),
+	Text.newAnimated("Well at least you fixed it.",Rachel,0),
+	Text.new("No problem, let's keep practising.",Varisa),
+	Text.newAnimated("...",Rachel,0),
 },1)
