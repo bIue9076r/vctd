@@ -540,18 +540,18 @@ World.Dialogue[French][40] = Dialogue.new({
 
 World.Dialogue[French][41] = Dialogue.new({
 	Text.new("Hey.",Varisa),
-	Text.new("I don't like the way you look at us.",Ella),
+	Text.newAnimated("I don't like the way you look at us.",Ella,0),
 	Text.new("Uhh I'm not looking at you weird?",Varisa),
-	Text.new("I'd appreciate it if you left.",Ella),
+	Text.newAnimated("I'd appreciate it if you left.",Ella,0),
 	Text.new("Alright I guess.",Varisa),
-	Text.new("Go on.",Ella,nil, function()
+	Text.newAnimated("Go on.",Ella,1,nil, function()
 		for i,v in pairs(World.Map[25].npcs) do
 			if v.f == "Sean" then
 				v.i = 47
 			end
 		end
 	end),
-	Text.new("Go on.",Ella),
+	Text.newAnimated("Go on.",Ella,1),
 },1)
 
 World.Dialogue[French][42] = Dialogue.new({
@@ -626,8 +626,8 @@ World.Dialogue[French][47] = Dialogue.new({
 
 World.Dialogue[French][48] = Dialogue.new({
 	Text.new("Hey.",Varisa),
-	Text.new("I'm not much help too.",Ella),
-	Text.new("I don't know anything.",Ella),
+	Text.newAnimated("I'm not much help too.",Ella,0),
+	Text.newAnimated("I don't know anything.",Ella,0),
 },1)
 
 World.Dialogue[French][49] = Dialogue.new({
@@ -847,12 +847,12 @@ World.Dialogue[French][67] = Dialogue.new({
 },1)
 
 World.Dialogue[French][68] = Dialogue.new({
-	Text.new("God, I hate that bitch.",Ella),
+	Text.newAnimated("God, I hate that bitch.",Ella,1),
 	Text.newAnimated("I HEARD THAT!",Mollie,0),
 	Text.new("The power?",Varisa),
-	Text.new("What about the power?",Ella),
+	Text.newAnimated("What about the power?",Ella,1),
 	Text.new("Okay...",Varisa),
-	Text.new("...",Ella),
+	Text.newAnimated("...",Ella,0),
 },1)
 
 World.Dialogue[French][69] = Dialogue.new({
