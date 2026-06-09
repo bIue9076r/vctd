@@ -314,6 +314,7 @@ function World.Keypressed(key)
 			end
 		elseif key == "h" then
 			HideControls = not(HideControls)
+			World.showHint = not(World.showHint)
 		end
 	else
 		if key == "e" then
