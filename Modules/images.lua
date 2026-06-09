@@ -118,6 +118,7 @@ image.newImage("Flyer","Assets/error_obj.png")
 
 image.newImage("ERROBJ","Assets/error_obj.png")
 image.newImage("Interaction","Assets/interact.png")
+image.newImage("Hint","Assets/hint.png")
 image.newImage(1,"Assets/error_obj.png")
 
 image.newImage("Void","/Assets/void.png")

@@ -124,6 +124,7 @@ Spoon_held = 0x75
 Flyer = 0x76
 
 ERROBJ = 0xFF
+Hint = 0x1FE
 Interaction = 0x1FF
 
 LastChar = Ella_sand
@@ -246,6 +247,7 @@ CtS = {
 	[Flyer] = "Flyer",
 
 	[ERROBJ] = "ERROBJ",
+	[Hint] = "Hint",
 	[Interaction] = "Interaction",
 }
 
@@ -366,6 +368,7 @@ Names = {
 	[Spoon_held] = "Spoon",
 	[Flyer] = "Flyer",
 	[ERROBJ] = "ERROBJ",
+	[Hint] = "Hint",
 	[Interaction] = "...",
 }
 

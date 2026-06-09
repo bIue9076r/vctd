@@ -2,6 +2,8 @@ World = {}
 World.movespeed = 7
 World.snpc = nil
 World.sdbox = nil
+World.showHint = true
+World.hintTicker = ticker.new()
 World.dtbl = nil
 World.dticker = ticker.new()
 
@@ -223,6 +225,13 @@ function World.Draw()
 	drawSprites()
 	Plr.inv:drawInv()
 	World.drawMap()
+	if World.showHint and World.snpc then
+		local t = math.max(0,math.min(0.1,World.hintTicker:get()))
+		love.graphics.setColor(1,1,1,t/0.1)
+		local img = image.getImage(CtS[Hint])
+		World.drawMapIcon(img,World.snpc.x,World.snpc.y)
+		love.graphics.setColor(1,1,1,1)
+	end
 	
 	-- if talking
 	drawDialogue()
@@ -235,6 +244,12 @@ function World.Update(dt)
 		World.setDbox(rdbox)
 		
 		Plr.inv:update(dt)
+	end
+	
+	if World.showHint and World.snpc then
+		World.hintTicker(dt)
+	else
+		World.hintTicker:reset()
 	end
 	
 	if World.sdbox then
