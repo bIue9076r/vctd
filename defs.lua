@@ -386,7 +386,8 @@ Cutscene = 3
 SAVE = 4
 Fade = 5
 Fadeout = 6
-END = 7
+Pause = 7
+END = 8
 
 local tileTicker = tickerd.new()
 -- tiles

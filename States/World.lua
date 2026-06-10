@@ -315,6 +315,8 @@ function World.Keypressed(key)
 		elseif key == "h" then
 			HideControls = not(HideControls)
 			World.showHint = not(World.showHint)
+		elseif key == "escape" then
+			GameState = Pause
 		end
 	else
 		if key == "e" then
