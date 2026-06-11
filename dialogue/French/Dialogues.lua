@@ -913,7 +913,7 @@ World.Dialogue[French][74] = Dialogue.new({
 
 World.Dialogue[French][75] = Dialogue.new({
 	Text.new("Is pudding day. Ja.",Fredrick),
-	Text.new("Cool, but wasn't yesterday exercise day?",Varisa),
+	Text.new("What?",Varisa),
 	Text.new("It's a German thing, you would not understand.",Fredrick),
 	Text.new("Okay.",Varisa),
 	Text.new("I understand pudding.",Varisa),

@@ -14,6 +14,7 @@ require("/Modules/spString")
 --require("/Modules/house")
 require("/Locales/English")
 require("/Locales/French")
+require("/Modules/jukebox")
 require("/Modules/Dialogue")
 require("/Modules/npc")
 require("/Modules/prop")
@@ -186,13 +187,9 @@ function kctrlOps(key)
 		elseif key == "h" then
 			HitBoxes = not(HitBoxes)
 		elseif key == "m" and not (GameState == Cutscene) then
-			muted = not(muted)
-			Play.unmuteAfter = false
-			if bs then
-				bs:stop()
-			end
+			Jukebox_mute()
 		elseif key == "=" and not (GameState == Cutscene) and not (GameState == SAVE) then
-			love.audio.stop()
+			Jukebox_forceStop()
 			Save_LastState = GameState
 			GameState = SAVE
 		elseif key == "z" then
@@ -353,35 +350,7 @@ function derror()
 end
 
 function daudio()
-	if not muted then
-		if not song_silence then
-			if bs then
-				if not bs:isPlaying() then
-					plyed = not plyed
-					if not plyed then
-						song_silence = true
-						bs = nil
-					else
-						bs = sound.getSound(SongListSelect(SongList))
-						if bs then
-							bs:seek(0)
-							bs:play()
-						end
-					end
-				end
-			else
-				song_silence = true
-			end
-		else
-			if soundTick:get() <= 100 then
-				soundTick(love.timer.getDelta()) -- Silence
-			else
-				soundTick:reset()
-				bs = sound.getSound(SongListSelect(SongList))
-				song_silence = false
-			end
-		end
-	end
+	Jukebox_draw()
 end
 
 function love.load(arg)
