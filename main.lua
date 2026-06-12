@@ -91,6 +91,10 @@ Map = MapObj.new()
 -- globals
 GameState = Cutscene
 GameDay = 1
+Game_MainVolume = 1
+Game_MusicVolume = 1
+Game_CutsceneVolume = 1
+Game_SfxVolume = 1
 DialogueBuffer = 1.25
 Ending = 0	--	good ending
 IsTalking = false
@@ -350,7 +354,13 @@ function derror()
 end
 
 function daudio()
-	Jukebox_draw()
+	if Jukebox_canPlay() then
+		Jukebox_draw()
+	end
+
+	-- if pause_menu then
+	--	
+	-- end
 end
 
 function love.load(arg)
@@ -379,7 +389,6 @@ function love.load(arg)
 	require("/maps/Maps")
 	require("/scenes/Scenes")
 	
-	muted = true
 	Play.scene = Play.Scenes[math.random(1,3)]
 	
 	if Save then
@@ -505,9 +514,7 @@ function love.keypressed(key)
 end
 
 function love.draw()
-	if not (GameState == SAVE) then
-		daudio()
-	end
+	daudio()
 	local f = STATE_DRAW[GameState] or derror
 	if f then f() end
 	files.draw()

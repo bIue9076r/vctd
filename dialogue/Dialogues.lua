@@ -72,9 +72,7 @@ World.Dialogue[English][-10] = Dialogue.new({
 	Text.new("Are you sure?",Varisa),
 	Text.new("Zzzz...",Varisa,nil,function()
 		World.AfterEffect = function()
-			if bs then
-				bs:stop()
-			end
+			Jukebox_stop()
 			Days.loadDay(GameDay + 1)
 		end
 	end),
@@ -444,10 +442,7 @@ World.Dialogue[English][36] = Dialogue.new({
 	Text.new("Intresting...",Varisa),
 	Text.newAnimated("It just makes me so angry seeing them together.",Mollie,0,nil,function()
 		World.AfterEffect = function ()
-			muted = true
-			if bs then
-				bs:stop()
-			end
+			Jukebox_stop()
 			GameState = Cutscene
 			Play.scene = Play.Scenes[5]
 			Play.scene.Next = WORLD
@@ -941,10 +936,7 @@ World.Dialogue[English][76] = Dialogue.new({
 		end
 
 		World.AfterEffect = function()
-			muted = true
-			if bs then
-				bs:stop()
-			end
+			Jukebox_stop()
 			GameState = Cutscene
 			Play.scene = Play.Scenes[12]
 			Play.scene.Next = Fade
@@ -1068,10 +1060,7 @@ World.Dialogue[English][84] = Dialogue.new({
 		end
 
 		World.AfterEffect = function()
-			muted = true
-			if bs then
-				bs:stop()
-			end
+			Jukebox_stop()
 			GameState = Cutscene
 			Play.scene = Play.Scenes[12]
 			Play.scene.Next = Fade

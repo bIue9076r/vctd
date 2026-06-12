@@ -117,13 +117,7 @@ Play.Scenes[12].transition = function(self,t)
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
 		--sbs:stop()
-		if Play.unmuteAfter then
-			muted = false
-			plyed = false
-			soundTick:reset()
-			bs = sound.getSound(SongListSelect(SongList))
-			song_silence = false
-		end
+		Jukebox_next()
 		DialogueBuffer = Scene.LastDialogueBuffer
 		GameState = self.Next
 		if self.AfterEffect then

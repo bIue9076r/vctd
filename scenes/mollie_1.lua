@@ -14,10 +14,9 @@ Play.Scenes[11].transition = function(self,t)
 		if not self.vars["Once1"] then
 			Scene.LastDialogueBuffer = DialogueBuffer
 			sbs = sound.getSound("Breakup")
-			if Play.unmuteAfter then
-				sbs:seek(0)
-				sbs:play()
-			end
+			sbs:seek(0)
+			sbs:setVolume(Game_CutsceneVolume)
+			sbs:play()
 			
 			self:Say(String.get(14),Ella)
 			DialogueBuffer = 2.5
@@ -61,13 +60,7 @@ Play.Scenes[11].transition = function(self,t)
 		Voices[self.dtbl.v]:pause()
 		Voices[self.dtbl.v]:seek(0)
 		sbs:stop()
-		if Play.unmuteAfter then
-			muted = false
-			plyed = false
-			soundTick:reset()
-			bs = sound.getSound(SongListSelect(SongList))
-			song_silence = false
-		end
+		Jukebox_next()
 		DialogueBuffer = Scene.LastDialogueBuffer
 		GameState = self.Next
 		if self.AfterEffect then

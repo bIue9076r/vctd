@@ -259,6 +259,7 @@ function drawDialogue()
 			end
 		end
 		
+		Voices[World.dtbl.v]:setVolume(Game_SfxVolume)
 		Voices[World.dtbl.v]:play()
 		if dt > sl then
 			Voices[World.dtbl.v]:pause()

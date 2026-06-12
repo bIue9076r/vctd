@@ -4,7 +4,7 @@ Rachel_Guitar_Broke.name = "Rachel's Busted Guitar"
 Rachel_Guitar_Broke.save = "DAY1"
 
 function Rachel_Guitar_Broke:act(key)
-	if self.sound and (not muted) then
+	if self.sound then
 		if key == "e" then
 			local fixable = false
 
@@ -13,6 +13,7 @@ function Rachel_Guitar_Broke:act(key)
 			else
 				self.sound:stop()
 				self.sound:seek(0)
+				self.sound:setVolume(Game_SfxVolume)
 				self.sound:play()
 			end
 		end

@@ -313,6 +313,7 @@ function Scene:drawDialogue()
 			end
 		end
 		
+		Voices[self.dtbl.v]:setVolume(Game_CutsceneVolume * Game_SfxVolume)
 		Voices[self.dtbl.v]:play()
 		if dt > sl then
 			Voices[self.dtbl.v]:pause()

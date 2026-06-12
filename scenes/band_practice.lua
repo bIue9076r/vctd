@@ -30,17 +30,20 @@ Play.Scenes[2].transition = function(self,t)
 			sbs_2 = sound.getSound("EpT"..(n).."_L")
 			sbs_3 = sound.getSound("EpT"..(n).."_G")
 			sbs_4 = sound.getSound("EpT"..(n).."_D")
-			if Play.unmuteAfter then
-				sbs_1:seek(15)
-				sbs_2:seek(15)
-				sbs_3:seek(15)
-				sbs_4:seek(15)
-				
-				sbs_1:play()
-				sbs_2:play()
-				sbs_3:play()
-				sbs_4:play()
-			end
+
+			sbs_1:seek(15)
+			sbs_2:seek(15)
+			sbs_3:seek(15)
+			sbs_4:seek(15)
+			
+			sbs_1:setVolume(Game_CutsceneVolume)
+			sbs_1:play();
+			sbs_2:setVolume(Game_CutsceneVolume)
+			sbs_2:play();
+			sbs_3:setVolume(Game_CutsceneVolume)
+			sbs_3:play();
+			sbs_4:setVolume(Game_CutsceneVolume)
+			sbs_4:play();
 			self.vars["Once"] = true
 		end
 	else
@@ -51,13 +54,7 @@ Play.Scenes[2].transition = function(self,t)
 			sbs_4:stop()
 		end
 		
-		if Play.unmuteAfter then
-			muted = false
-			plyed = false
-			soundTick:reset()
-			bs = sound.getSound(SongListSelect(SongList))
-			song_silence = false
-		end
+		Jukebox_next()
 		GameState = self.Next
 		if self.AfterEffect then
 			self:AfterEffect()

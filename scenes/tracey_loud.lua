@@ -28,10 +28,9 @@ Play.Scenes[3].transition = function(self,t)
 		if not self.vars["Once1"] then
 			self.Actors[15].x = -8.5
 			sbs = sound.getSound("EpT3_D")
-			if Play.unmuteAfter then
-				sbs:seek(15)
-				sbs:play()
-			end
+			sbs:seek(15)
+			sbs:setVolume(Game_CutsceneVolume)
+			sbs:play()
 			self.vars["Once1"] = true
 		end
 		self.Actors[1].y = 6.9 + math.abs(math.sin(math.pi * (t*2))/6)
@@ -52,13 +51,7 @@ Play.Scenes[3].transition = function(self,t)
 		
 	else
 		sbs:stop()
-		if Play.unmuteAfter then
-			muted = false
-			plyed = false
-			soundTick:reset()
-			bs = sound.getSound(SongListSelect(SongList))
-			song_silence = false
-		end
+		Jukebox_next()
 		GameState = self.Next
 		if self.AfterEffect then
 			self:AfterEffect()

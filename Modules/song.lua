@@ -30,6 +30,10 @@ function SongListSelect(List)
 			table.insert(okTbl,v.Name)
 		end
 	end
+
+	if #okTbl == 0 then
+		return nil
+	end
 	
 	return okTbl[math.random(1,#okTbl)]
 end

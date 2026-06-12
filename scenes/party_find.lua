@@ -26,13 +26,7 @@ Play.Scenes[13].transition = function(self,t)
 	elseif(t < self.tickGoal) then
 		
 	else
-		if Play.unmuteAfter then
-			muted = false
-			plyed = false
-			soundTick:reset()
-			bs = sound.getSound(SongListSelect(SongList))
-			song_silence = false
-		end
+		Jukebox_next()
 		GameState = self.Next
 		if self.AfterEffect then
 			self:AfterEffect()

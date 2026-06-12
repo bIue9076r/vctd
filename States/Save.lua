@@ -68,7 +68,6 @@ function Game_Load(file)
 		math.randomseed(Seed)
 		print(string.format("Seed: 0x%07X",Seed))
 
-		muted = true
 		Savesong:stop()
 		
 		for i,v in pairs(package.loaded) do
@@ -135,14 +134,8 @@ function Game_Delete(file)
 end
 
 function Save_Draw()
-	if not muted then
-		if not Savesong:isPlaying() then
-			Savesong:seek(0)
-			Savesong:play()
-		end
-	else
-		Savesong:stop()
-	end
+	Savesong:setVolume(Game_MusicVolume)
+	Savesong:play()
 	
 	-- draw background
 	drawBackgound()

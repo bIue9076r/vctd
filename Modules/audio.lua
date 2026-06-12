@@ -61,7 +61,3 @@ sound.new("noodle_4","/Assets/noodle_4.mp3","static")
 sound.new("noodle_5","/Assets/noodle_5.mp3","static")
 sound.new("noodle_6","/Assets/noodle_6.mp3","static")
 sound.new("noodle_7","/Assets/noodle_7.mp3","static")
-
-bs = sound.getSound("Main")
-soundTick = ticker.new()
-muted = false

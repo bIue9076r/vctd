@@ -16,19 +16,43 @@ Pause_Modes = {
 		Keypressed = function(key)
 			if key == "escape" then
 				GameState = WORLD
+			elseif key == "return" then
+				Pause_Mode = 2
+			end
+		end,
+	},
+
+	[2] = {
+		Draw = function()
+			drawBackgound()
+			love.graphics.setColor(0.0,0.2,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+		end,
+
+		Update = function(dt)
+			
+		end,
+
+		Keypressed = function(key)
+			if key == "escape" then
+				Pause_Mode = 1
 			end
 		end,
 	}
 }
 
 function Pause_Draw()
-	Pause_Modes[Pause_Mode].Draw()
+	local f = Pause_Modes[Pause_Mode].Draw
+	if f then f() end
 end
 
 function Pause_Update(dt)
-	Pause_Modes[Pause_Mode].Update(dt)
+	local f = Pause_Modes[Pause_Mode].Update
+	if f then f(dt) end
 end
 
 function Pause_Keypressed(key)
-	Pause_Modes[Pause_Mode].Keypressed(key)
+	local f = Pause_Modes[Pause_Mode].Keypressed
+	if f then f(key) end
 end

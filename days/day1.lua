@@ -1,8 +1,5 @@
 Days.newDay(1,function()
-	if bs then
-		bs:stop()
-	end
-	muted = true
+	Jukebox_stop()
 	Play.scene = Play.Scenes[math.random(1,3)]
 	Play.scene.AfterEffect = function(self)
 		Map = World.Map[1]
