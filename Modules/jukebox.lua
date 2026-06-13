@@ -80,7 +80,7 @@ function Jukebox_draw()
 				Jukebox_silence = true
 			end
 		else
-			if Jukebox_Tick:get() <= 1 then --300 then
+			if Jukebox_Tick:get() <= 300 then
 				Jukebox_Tick(love.timer.getDelta())
 			else
 				Jukebox_next()
