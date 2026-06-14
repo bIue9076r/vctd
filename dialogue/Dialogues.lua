@@ -569,25 +569,25 @@ World.Dialogue[English][43] = Dialogue.new({
 },1)
 
 World.Dialogue[English][44] = Dialogue.new({
-	Text.new("You, there.",Karina),
-	Text.new("Don't you roll your eyes at me.",Karina),
-	Text.new("I have something important to say.",Karina),
+	Text.newAnimated("You, there.",Karina,0),
+	Text.newAnimated("Don't you roll your eyes at me.",Karina,0),
+	Text.newAnimated("I have something important to say.",Karina,0),
 	Text.new("More fire and brimstone?",Varisa),
-	Text.new("Not necessarily, but...",Karina),
-	Text.new("Everyone here is a sicko.",Karina),
+	Text.newAnimated("Not necessarily, but...",Karina,0),
+	Text.newAnimated("Everyone here is a sicko.",Karina,0),
 	Text.new("And you wonder why people hate you.",Varisa),
-	Text.new("It's persecution I say.",Karina),
+	Text.newAnimated("It's persecution I say.",Karina,0),
 	Text.new("Anything else new to say?",Varisa),
-	Text.new("What more is there to say?",Karina),
+	Text.newAnimated("What more is there to say?",Karina,0),
 	Text.new("What's that.",Varisa),
-	Text.new("My crucifix?",Karina),
-	Text.new("You can have it if you want.",Karina),
-	Text.new("I have a bunch lying around.",Karina),
+	Text.newAnimated("My crucifix?",Karina,0),
+	Text.newAnimated("You can have it if you want.",Karina,1),
+	Text.newAnimated("I have a bunch lying around.",Karina,1),
 	Text.new("I guess.",Varisa,nil,function()
 		Story.set("Karina_1",true)
 	end),
-	Text.new("Save your soul",Karina),
-	Text.new("I'll be waiting.",Karina),
+	Text.newAnimated("Save your soul",Karina,1),
+	Text.newAnimated("I'll be waiting.",Karina,1),
 },1)
 
 World.Dialogue[English][45] = Dialogue.new({
@@ -916,11 +916,11 @@ World.Dialogue[English][75] = Dialogue.new({
 },1)
 
 World.Dialogue[English][76] = Dialogue.new({
-	Text.new("I need your help.",Karina),
+	Text.newAnimated("I need your help.",Karina,0),
 	Text.new("Even with the lights out?",Varisa),
-	Text.new("Yeah.",Karina),
+	Text.newAnimated("Yeah.",Karina,0),
 	Text.new("Alright what is it?",Varisa),
-	Text.new("Okay come on.",Karina,nil,function(npc)
+	Text.newAnimated("Okay come on.",Karina,0,nil,function(npc)
 		Story.set("Karina_Investigation_1", true)
 		for i,v in ipairs(House.house) do
 			if v.HouseHold == 3 then
@@ -948,11 +948,11 @@ World.Dialogue[English][76] = Dialogue.new({
 },1)
 
 World.Dialogue[English][77] = Dialogue.new({
-	Text.new("So, that's pretty much it.",Karina),
+	Text.newAnimated("So, that's pretty much it.",Karina,0),
 	Text.new("Thank you so much for the help.",Varisa),
 	Text.new("You don't know how much this means to me.",Varisa),
-	Text.new("I suppose it makes up for all my troubles.",Karina),
-	Text.new("Good Luck.",Karina),
+	Text.newAnimated("I suppose it makes up for all my troubles.",Karina,0),
+	Text.newAnimated("Good Luck.",Karina,1),
 },1)
 
 World.Dialogue[English][78] = Dialogue.new({
@@ -1040,11 +1040,11 @@ World.Dialogue[English][83] = Dialogue.new({
 },1)
 
 World.Dialogue[English][84] = Dialogue.new({
-	Text.new("I need your help.",Karina),
+	Text.newAnimated("I need your help.",Karina,0),
 	Text.new("I already turned on the lights.",Varisa),
-	Text.new("I know it's about something else.",Karina),
+	Text.newAnimated("I know it's about something else.",Karina,0),
 	Text.new("Alright what is it?",Varisa),
-	Text.new("Okay come on.",Karina,nil,function(npc)
+	Text.newAnimated("Okay come on.",Karina,0,nil,function(npc)
 		Story.set("Karina_Investigation_1", true)
 		for i,v in ipairs(House.house) do
 			if v.HouseHold == 3 then
