@@ -65,28 +65,28 @@ Play.Scenes[12].transition = function(self,t)
 			end
 
 			Scene.LastDialogueBuffer = DialogueBuffer
-			self:Say(String.get(33),Karina)
+			self:SayAnimated(String.get(33),Karina,0)
 			DialogueBuffer = 2.5
 			self.vars["Once1"] = true
 		end
 	elseif(t < 5) then
 		if not self.vars["Once2"] then
-			self:Say(String.get(34),Karina)
+			self:SayAnimated(String.get(34),Karina,0)
 			self.vars["Once2"] = true
 		end
 	elseif(t < 6.875) then
 		if not self.vars["Once3"] then
-			self:Say(String.get(35),Karina)
+			self:SayAnimated(String.get(35),Karina,0)
 			self.vars["Once3"] = true
 		end
 	elseif(t < 8.75) then
 		if not self.vars["Once4"] then
-			self:Say(String.get(36),Karina)
+			self:SayAnimated(String.get(36),Karina,0)
 			self.vars["Once4"] = true
 		end
 	elseif(t < 10.625) then
 		if not self.vars["Once5"] then
-			self:Say(String.get(37),Karina)
+			self:SayAnimated(String.get(37),Karina,0)
 			self.vars["Once5"] = true
 		end
 	elseif(t < 12.5) then
