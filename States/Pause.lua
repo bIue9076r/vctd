@@ -15,6 +15,7 @@ Pause_Modes = {
 
 		Keypressed = function(key)
 			if key == "escape" then
+				Jukebox_play()
 				GameState = WORLD
 			elseif key == "return" then
 				Pause_Mode = 2

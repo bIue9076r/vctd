@@ -327,8 +327,8 @@ function dctrlOps()
 		local x = love.mouse.getX()
 		local y = love.mouse.getY()
 
-		local wx = ((x/SCREEN_X)*600 - 25)/25
-		local wy = ((y/SCREEN_Y)*400 - 25)/25
+		local wx = ((x/C_SCREEN_X)*SCREEN_X - 25)/25
+		local wy = ((y/C_SCREEN_Y)*SCREEN_Y - 25)/25
 
 		setPlr(wx,wy)
 	end

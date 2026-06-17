@@ -316,6 +316,7 @@ function World.Keypressed(key)
 			HideControls = not(HideControls)
 			World.showHint = not(World.showHint)
 		elseif key == "escape" then
+			Jukebox_pause()
 			GameState = Pause
 		end
 	else
