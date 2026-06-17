@@ -42,7 +42,11 @@ require("/States/End")
 
 SCREEN_X = love.graphics.getWidth()
 SCREEN_Y = love.graphics.getHeight()
-ASPECT = (SCREEN_X/SCREEN_Y)
+C_SCREEN_X = SCREEN_X
+C_SCREEN_Y = SCREEN_Y
+ASPECT = (SCREEN_X/SCREEN_Y) 
+ASPECT_INDEX = 1
+CANVAS = love.graphics.newCanvas()
 
 image.newImage("backtile","/Assets/huh.png")
 files.assets.Fonts.newFont("comic","/Assets/ComicSansMS3.ttf",20)
@@ -496,9 +500,14 @@ function love.load(arg)
 end
 
 function love.resize()
-	SCREEN_X = love.graphics.getWidth()
-	SCREEN_Y = love.graphics.getHeight()
+	C_SCREEN_X = love.graphics.getWidth()
+	C_SCREEN_Y = love.graphics.getHeight()
 	ASPECT = (SCREEN_X/SCREEN_Y) 
+	
+	ASPECT_INDEX = 1
+	while ((SCREEN_X * (ASPECT_INDEX + 1)) <= C_SCREEN_X) and ((SCREEN_Y * (ASPECT_INDEX + 1)) <= C_SCREEN_Y) do
+		ASPECT_INDEX = ASPECT_INDEX + 1
+	end
 end
 
 function love.update(dt)
@@ -514,11 +523,19 @@ function love.keypressed(key)
 end
 
 function love.draw()
+	love.graphics.setCanvas(CANVAS)
+	love.graphics.clear()
+
 	daudio()
 	local f = STATE_DRAW[GameState] or derror
 	if f then f() end
 	files.draw()
 	dctrlOps()
+
+	love.graphics.setCanvas()
+	local cx = (C_SCREEN_X - (ASPECT_INDEX * SCREEN_X))/2
+	local cy = (C_SCREEN_Y - (ASPECT_INDEX * SCREEN_Y))/2
+	love.graphics.draw(CANVAS,cx,cy,0,ASPECT_INDEX,ASPECT_INDEX)
 end
 
 function love.quit()
