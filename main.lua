@@ -11,6 +11,7 @@ require("/Modules/box")
 require("/Modules/ticker")
 require("/Modules/string")
 require("/Modules/spString")
+require("/Modules/normMouse")
 --require("/Modules/house")
 require("/Locales/English")
 require("/Locales/French")
@@ -326,9 +327,10 @@ function dctrlOps()
 	if FmovePlr then
 		local x = love.mouse.getX()
 		local y = love.mouse.getY()
+		x,y = NormalizeMouse(x,y)
 
-		local wx = ((x/C_SCREEN_X)*SCREEN_X - 25)/25
-		local wy = ((y/C_SCREEN_Y)*SCREEN_Y - 25)/25
+		local wx = (x - 25)/25
+		local wy = (y - 25)/25
 
 		setPlr(wx,wy)
 	end

@@ -84,8 +84,7 @@ end
 function ItemBag:update(dt)
 	if self.visible then
 		local x,y = love.mouse.getPosition()
-		x = SCREEN_X*(x / C_SCREEN_X)
-		y = SCREEN_Y*(y / C_SCREEN_Y)
+		x,y = NormalizeMouse(x,y)
 		
 		if not(self.ly == y) and not(self.lx == x) then
 			if x >= 55 and x <= (490 + 55) then
