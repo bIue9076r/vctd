@@ -49,13 +49,12 @@ function Jukebox_next()
 	Jukebox_Tick:reset()
 end
 
-function Jukebox_setvolume(n)
-	Game_MusicVolume = (math.min(0,math.max(n,1)))
-end
-
 function Jukebox_mute()
-	Jukebox_pause() -- Pause your music for later
-	Jukebox_setvolume(0)
+	if not Game_Mute_Toggle then
+		Jukebox_pause() -- Pause your music for later
+	else
+		Jukebox_play()
+	end
 end
 
 function Jukebox_forceStop()

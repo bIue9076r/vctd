@@ -100,6 +100,10 @@ Game_MainVolume = 1
 Game_MusicVolume = 1
 Game_CutsceneVolume = 1
 Game_SfxVolume = 1
+Game_L_MainVolume = 1
+Game_L_MusicVolume = 1
+Game_L_CutsceneVolume = 1
+Game_L_SfxVolume = 1
 DialogueBuffer = 1.25
 Ending = 0	--	good ending
 IsTalking = false
@@ -196,7 +200,19 @@ function kctrlOps(key)
 		elseif key == "h" then
 			HitBoxes = not(HitBoxes)
 		elseif key == "m" and not (GameState == Cutscene) then
+			if not Game_Mute_Toggle then
+				Game_MainVolume = 0
+				Game_MusicVolume = 0
+				Game_CutsceneVolume = 0
+				Game_SfxVolume = 0
+			else
+				Game_MainVolume = Game_L_MainVolume
+				Game_MusicVolume = Game_L_MusicVolume
+				Game_CutsceneVolume = Game_L_CutsceneVolume
+				Game_SfxVolume = Game_L_SfxVolume
+			end
 			Jukebox_mute()
+			Game_Mute_Toggle = not Game_Mute_Toggle
 		elseif key == "=" and not (GameState == Cutscene) and not (GameState == SAVE) then
 			Jukebox_forceStop()
 			Save_LastState = GameState
