@@ -27,6 +27,16 @@ function World.doTalk(key)
 	)
 end
 
+function World.doTalkMouse(x,y,button)
+	return (
+		(World.snpc)
+		and (not (World.snpc.g == 1))
+		and (button == 2)
+		-- and (x inside?)
+		-- and (y inside?)
+	)
+end
+
 function World.isOutdoors(n)
 	return (
 		(n == 1) or (n == 5) or (n == 7) or (n == 12) or
@@ -327,5 +337,33 @@ function World.Keypressed(key)
 end
 
 function World.Mousepressed(x,y,button)
-
+	if not IsTalking then
+		if World.doTalkMouse(x,y,button) then
+			IsTalking = true
+			
+			World.say("......", World.snpc.c)
+			
+			local wd = World.Dialogue[Language][World.snpc.i]
+			if not wd then
+				World.snpc.i = 0
+				wd = World.Dialogue[Language][World.snpc.i]
+			end
+			if wd then
+				World.dtbl = wd:get(World.snpc)
+				
+				if World.Dialogue[Language][World.snpc.i] then
+					if World.Dialogue[English][World.snpc.i] then
+						World.Dialogue[English][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
+					end
+					if World.Dialogue[French][World.snpc.i] then
+						World.Dialogue[French][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
+					end
+				end
+			end
+		end
+	else
+		if button == 2 then
+			World.endTalk()
+		end
+	end
 end
