@@ -25,3 +25,7 @@ function Play.Keypressed(key)
 		Play.ticker:set(Play.scene.tickGoal)
 	end
 end
+
+function Play.Mousepressed(x,y,button)
+	
+end

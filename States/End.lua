@@ -23,3 +23,7 @@ end
 function End_Keypressed(key)
 	
 end
+
+function End_Mousepressed(x,y,button)
+	
+end

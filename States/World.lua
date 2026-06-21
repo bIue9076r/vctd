@@ -325,3 +325,7 @@ function World.Keypressed(key)
 		end
 	end
 end
+
+function World.Mousepressed(x,y,button)
+
+end

@@ -41,3 +41,7 @@ end
 function Fade_Keypressed(key)
 	
 end
+
+function Fade_Mousepressed(x,y,button)
+	
+end

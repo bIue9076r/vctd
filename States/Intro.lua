@@ -35,3 +35,7 @@ function Intro_Keypressed(key)
 		GameState = Fade
 	end
 end
+
+function Intro_Mousepressed(x,y,button)
+	
+end

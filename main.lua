@@ -128,6 +128,18 @@ STATE_KEYPRESSED = {
 	[END] = End_Keypressed,
 }
 
+STATE_MOUSEPRESSED = {
+	[Intro] = Intro_Mousepressed,
+	--[Load] = Load_Mousepressed,
+	[WORLD] = World.Mousepressed,
+	[Cutscene] = Play.Mousepressed,
+	[SAVE] = Save_Mousepressed,
+	[Fade] = Fade_Mousepressed,
+	[Fadeout] = Fadeout_Mousepressed,
+	[Pause] = Pause_Mousepressed,
+	[END] = End_Mousepressed,
+}
+
 STATE_UPDATE = {
 	[Intro] = Intro_Update,
 	--[Load] = Load_Update,
@@ -538,6 +550,12 @@ function love.keypressed(key)
 	local f = STATE_KEYPRESSED[GameState] or kerror
 	if f then f(key) end
 	kctrlOps(key)
+end
+
+function love.mousepressed(x,y,button)
+	x,y = NormalizeMouse(x,y)
+	local f = STATE_MOUSEPRESSED[GameState]
+	if f then f(x,y,button) end
 end
 
 function love.draw()

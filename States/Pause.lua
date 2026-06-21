@@ -21,6 +21,10 @@ Pause_Modes = {
 				Pause_Mode = 2
 			end
 		end,
+
+		Mousepressed = function(x,y,button)
+			
+		end,
 	},
 
 	[2] = {
@@ -40,20 +44,33 @@ Pause_Modes = {
 				Pause_Mode = 1
 			end
 		end,
+
+		Mousepressed = function(x,y,button)
+			
+		end,
 	}
 }
 
 function Pause_Draw()
-	local f = Pause_Modes[Pause_Mode].Draw
-	if f then f() end
+	if Pause_Modes[Pause_Mode] and Pause_Modes[Pause_Mode].Draw then
+		Pause_Modes[Pause_Mode].Draw()
+	end
 end
 
 function Pause_Update(dt)
-	local f = Pause_Modes[Pause_Mode].Update
-	if f then f(dt) end
+	if Pause_Modes[Pause_Mode] and Pause_Modes[Pause_Mode].Update then
+		Pause_Modes[Pause_Mode].Update(dt)
+	end
 end
 
 function Pause_Keypressed(key)
-	local f = Pause_Modes[Pause_Mode].Keypressed
-	if f then f(key) end
+	if Pause_Modes[Pause_Mode] and Pause_Modes[Pause_Mode].Keypressed then
+		Pause_Modes[Pause_Mode].Keypressed(key)
+	end
+end
+
+function Pause_Mousepressed(x,y,button)
+	if Pause_Modes[Pause_Mode] and Pause_Modes[Pause_Mode].Mousepressed then
+		Pause_Modes[Pause_Mode].Mousepressed(x,y,button)
+	end
 end

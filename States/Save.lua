@@ -274,3 +274,7 @@ function Save_Keypressed(key)
 		DeleCon = false
 	end
 end
+
+function Save_Mousepressed(x,y,button)
+	
+end
