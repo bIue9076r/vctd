@@ -518,19 +518,19 @@ World.Dialogue[French][39] = Dialogue.new({
 
 World.Dialogue[French][40] = Dialogue.new({
 	Text.new("Hey.",Varisa),
-	Text.new("We're kinda in the middle of something.",Sean),
+	Text.newAnimated("We're kinda in the middle of something.",Sean,0),
 	Text.new("So? I need help.",Varisa),
-	Text.new("Why do you keep bothering me?",Sean),
-	Text.new("You graduated so long ago already?",Sean),
+	Text.newAnimated("Why do you keep bothering me?",Sean,1),
+	Text.newAnimated("You graduated so long ago already?",Sean,1),
 	Text.new("My mom is still missing.",Varisa),
-	Text.new("I'm sorry but I don't know anything.",Sean,nil, function()
+	Text.newAnimated("I'm sorry but I don't know anything.",Sean,1,nil, function()
 		for i,v in pairs(World.Map[25].npcs) do
 			if v.f == "Ella" then
 				v.i = 48
 			end
 		end
 	end),
-	Text.new("I'm sorry but I don't know anything.",Sean),
+	Text.newAnimated("I'm sorry but I don't know anything.",Sean,1),
 },1)
 
 World.Dialogue[French][41] = Dialogue.new({
@@ -614,9 +614,9 @@ World.Dialogue[French][46] = Dialogue.new({
 
 World.Dialogue[French][47] = Dialogue.new({
 	Text.new("Hey.",Varisa),
-	Text.new("You heard what she said.",Sean),
-	Text.new("Now if you don't mind, we're busy.",Sean),
-	Text.new("Go on scram.",Sean),
+	Text.newAnimated("You heard what she said.",Sean,0),
+	Text.newAnimated("Now if you don't mind, we're busy.",Sean,1),
+	Text.newAnimated("Go on scram.",Sean,0),
 },1)
 
 World.Dialogue[French][48] = Dialogue.new({
@@ -836,9 +836,9 @@ World.Dialogue[French][66] = Dialogue.new({
 },1)
 
 World.Dialogue[French][67] = Dialogue.new({
-	Text.new("What a day.",Sean),
+	Text.newAnimated("What a day.",Sean,0),
 	Text.new("A day alright.",Varisa),
-	Text.new("...",Sean),
+	Text.newAnimated("...",Sean,0),
 },1)
 
 World.Dialogue[French][68] = Dialogue.new({
@@ -960,41 +960,41 @@ World.Dialogue[French][78] = Dialogue.new({
 },1)
 
 World.Dialogue[French][79] = Dialogue.new({
-	Text.new("I'm so sick of Mollie.",Sean),
+	Text.newAnimated("I'm so sick of Mollie.",Sean,0),
 	Text.new("Okay.",Varisa),
-	Text.new("That's all you have to say?",Sean),
+	Text.newAnimated("That's all you have to say?",Sean,1),
 	Text.new("I mean.",Varisa),
-	Text.new("...",Sean),
-	Text.new("...",Sean),
-	Text.new("You wouldn't mind paying her back a bit?",Sean),
+	Text.newAnimated("...",Sean,0),
+	Text.newAnimated("...",Sean,0),
+	Text.newAnimated("You wouldn't mind paying her back a bit?",Sean,1),
 	Text.new("I guess.",Varisa),
-	Text.new("Great.",Sean),
-	Text.new("I want you to spy on her.",Sean),
-	Text.new("Find out what she knows about me.",Sean, nil, function()
+	Text.newAnimated("Great.",Sean,0),
+	Text.newAnimated("I want you to spy on her.",Sean,0),
+	Text.newAnimated("Find out what she knows about me.",Sean,0, nil, function()
 		Story.set("Sean_Response_1", true)
 	end),
-	Text.new("Tell me what you find.",Sean),
-	Text.new("Got it?",Sean),
+	Text.newAnimated("Tell me what you find.",Sean,0),
+	Text.newAnimated("Got it?",Sean,1),
 },1)
 
 World.Dialogue[French][80] = Dialogue.new({
-	Text.new("I'm so sick of Mollie.",Sean, nil, function()
+	Text.newAnimated("I'm so sick of Mollie.",Sean,0, nil, function()
 		Story.set("Sean_Response_1", true)
 	end),
 	Text.new("Okay.",Varisa),
-	Text.new("Rich from the person working with her",Sean),
+	Text.newAnimated("Rich from the person working with her",Sean,1),
 	Text.new("I'm not.",Varisa),
-	Text.new("Right...",Sean),
-	Text.new("...",Sean),
-	Text.new("You wouldn't mind paying her back a bit?",Sean),
+	Text.newAnimated("Right...",Sean,1),
+	Text.newAnimated("...",Sean,1),
+	Text.newAnimated("You wouldn't mind paying her back a bit?",Sean,1),
 	Text.new("I guess.",Varisa),
-	Text.new("Great.",Sean),
-	Text.new("I want you to spy on her.",Sean),
-	Text.new("Find out what she knows about me.",Sean, nil, function()
+	Text.newAnimated("Great.",Sean,0),
+	Text.newAnimated("I want you to spy on her.",Sean,0),
+	Text.newAnimated("Find out what she knows about me.",Sean,0, nil, function()
 		Story.set("Sean_Response_2", true)
 	end),
-	Text.new("Tell me what you find.",Sean),
-	Text.new("Got it?",Sean),
+	Text.newAnimated("Tell me what you find.",Sean,0),
+	Text.newAnimated("Got it?",Sean,1),
 },1)
 
 World.Dialogue[French][81] = Dialogue.new({

@@ -193,6 +193,8 @@ image.newImage("Ella_A_0","/Assets/Ella_A_0.png")
 image.newImage("Ella_A_1","/Assets/Ella_A_1.png")
 image.newImage("Karina_A_0","/Assets/Karina_A_0.png")
 image.newImage("Karina_A_1","/Assets/Karina_A_1.png")
+image.newImage("Sean_A_0","/Assets/Sean_A_0.png")
+image.newImage("Sean_A_1","/Assets/Sean_A_1.png")
 
 image.newImage("Map","/Assets/map.png")
 image.newImage("Save","/Assets/Save_state.png")

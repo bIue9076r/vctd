@@ -115,6 +115,26 @@ function World.sayAnimated(s,n,v,t)
 	}
 end
 
+function World.DialogueSay()
+	local wd = World.Dialogue[Language][World.snpc.i]
+	if not wd then
+		World.snpc.i = 0
+		wd = World.Dialogue[Language][World.snpc.i]
+	end
+	if wd then
+		World.dtbl = wd:get(World.snpc)
+		
+		if World.Dialogue[Language][World.snpc.i] then
+			if World.Dialogue[English][World.snpc.i] then
+				World.Dialogue[English][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
+			end
+			if World.Dialogue[French][World.snpc.i] then
+				World.Dialogue[French][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
+			end
+		end
+	end
+end
+
 function World.endTalk()
 	-- stop talking
 	Voices[World.dtbl.v]:pause()
@@ -294,26 +314,8 @@ function World.Keypressed(key)
 	if not IsTalking then
 		if World.doTalk(key) then
 			IsTalking = true
-			
 			World.say("......", World.snpc.c)
-			
-			local wd = World.Dialogue[Language][World.snpc.i]
-			if not wd then
-				World.snpc.i = 0
-				wd = World.Dialogue[Language][World.snpc.i]
-			end
-			if wd then
-				World.dtbl = wd:get(World.snpc)
-				
-				if World.Dialogue[Language][World.snpc.i] then
-					if World.Dialogue[English][World.snpc.i] then
-						World.Dialogue[English][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
-					end
-					if World.Dialogue[French][World.snpc.i] then
-						World.Dialogue[French][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
-					end
-				end
-			end
+			World.DialogueSay()
 		end
 		Plr.inv:Keypressed(key)
 		if key == "u" then
@@ -332,6 +334,27 @@ function World.Keypressed(key)
 	else
 		if key == "e" then
 			World.endTalk()
+		elseif key == "return" then
+			World.dticker:set(utf8.len(World.dtbl.s)/60)
+		elseif key == "space" then
+			World.dticker:reset()
+		-- Note: may be an issue with dialogue that changes it's own state
+		-- elseif key == "backspace" then
+		-- 	if World.Dialogue[Language][World.snpc.i].cycle == 1 then
+		-- 		World.Dialogue[Language][World.snpc.i].index = math.max(1,math.min(World.Dialogue[Language][World.snpc.i].index - 2,#World.Dialogue[Language][World.snpc.i].text))
+		-- 	else
+		-- 		-- World.Dialogue[Language][World.snpc.i].index = ((World.Dialogue[Language][World.snpc.i].index - 3) % 5) + 1
+		-- 		if World.Dialogue[Language][World.snpc.i].index == 1 then
+		-- 			World.Dialogue[Language][World.snpc.i].index = #World.Dialogue[Language][World.snpc.i].text - 1
+		-- 		else
+		-- 			World.Dialogue[Language][World.snpc.i].index = math.max(1,math.min(World.Dialogue[Language][World.snpc.i].index - 2,#World.Dialogue[Language][World.snpc.i].text))
+		-- 		end
+		-- 	end
+			
+		-- 	World.dticker:reset()
+		-- 	World.DialogueSay()
+		-- 	World.AfterEffect = nil
+		-- 	World.ChangeMap = false
 		end
 	end
 end
@@ -362,7 +385,9 @@ function World.Mousepressed(x,y,button)
 			end
 		end
 	else
-		if button == 2 then
+		if button == 1 then
+			World.dticker:set(utf8.len(World.dtbl.s)/60)
+		elseif button == 2 then
 			World.endTalk()
 		end
 	end
