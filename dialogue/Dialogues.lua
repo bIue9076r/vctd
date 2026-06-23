@@ -210,25 +210,25 @@ World.Dialogue[English][20] = Dialogue.new({
 },1)
 
 World.Dialogue[English][21] = Dialogue.new({
-	Text.new("It's been days.",Jami),
-	Text.new("I can't take this any longer.",Jami),
+	Text.newAnimated("It's been days.",Jami,0),
+	Text.newAnimated("I can't take this any longer.",Jami,0),
 	Text.new("For what?",Varisa),
-	Text.new("It's none of your buisness.",Jami),
+	Text.newAnimated("It's none of your buisness.",Jami,0),
 	Text.new("Okay, I guess...",Varisa),
 	Text.new("Though, have you seen Karly around?",Varisa),
-	Text.new("She's still missing?",Jami),
-	Text.new("And still no leads?",Jami),
+	Text.newAnimated("She's still missing?",Jami,0),
+	Text.newAnimated("And still no leads?",Jami,0),
 	Text.new("yeah...",Varisa),
-	Text.new("Are you in her will?",Jami),
+	Text.newAnimated("Are you in her will?",Jami,0),
 	Text.new("what?",Varisa),
 	Text.new("What the fuck is wrong with you?!",Varisa),
-	Text.new("Sorry",Jami),
-	Text.new("I see that was a bit insensitive",Jami),
+	Text.newAnimated("Sorry",Jami,0),
+	Text.newAnimated("I see that was a bit insensitive",Jami,0),
 	Text.new("You think?",Varisa),
-	Text.new("Here take this.",Jami,nil,function()
+	Text.newAnimated("Here take this.",Jami,0,nil,function()
 		Story.set("Screw_Drive_Jami",true)
 	end), -- She gives some side quest item
-	Text.new("My appologies again.",Jami),
+	Text.newAnimated("My appologies again.",Jami,0),
 },1)
 
 World.Dialogue[English][22] = Dialogue.new({
@@ -651,26 +651,26 @@ World.Dialogue[English][50] = Dialogue.new({
 },1)
 
 World.Dialogue[English][51] = Dialogue.new({
-	Text.new("Who's package is that?",Jami,nil,function(npc)
+	Text.newAnimated("Who's package is that?",Jami,0,nil,function(npc)
 		npc.i = 59
 	end),
 },1)
 
 World.Dialogue[English][52] = Dialogue.new({
-	Text.new("Who's package is that?",Jami),
+	Text.newAnimated("Who's package is that?",Jami,0),
 	Text.new("Zoey's",Varisa),
-	Text.new("Hmm... Intresting.",Jami),
+	Text.newAnimated("Hmm... Intresting.",Jami,0),
 	Text.new("So i'm gonna take it now...",Varisa),
-	Text.new("Sure it's not my package.",Jami,nil,function(npc)
+	Text.newAnimated("Sure it's not my package.",Jami,0,nil,function(npc)
 		npc.i = 60
 	end),
 },1)
 
 World.Dialogue[English][53] = Dialogue.new({
-	Text.new("Who's package was that?",Jami),
+	Text.newAnimated("Who's package was that?",Jami,0),
 	Text.new("Zoey's",Varisa),
-	Text.new("Hmm... Intresting.",Jami),
-	Text.new("Tell her I appologize for the inconvenience.",Jami,nil,function(npc)
+	Text.newAnimated("Hmm... Intresting.",Jami,0),
+	Text.newAnimated("Tell her I appologize for the inconvenience.",Jami,0,nil,function(npc)
 		npc.i = 60
 	end),
 },1)
@@ -697,85 +697,85 @@ World.Dialogue[English][56] = Dialogue.new({
 },1)
 
 World.Dialogue[English][57] = Dialogue.new({
-	Text.new("Say, I need your help again",Jami),
+	Text.newAnimated("Say, I need your help again",Jami,1),
 	Text.new("What the hell is wrong with you?",Varisa),
-	Text.new("Huh?",Jami),
-	Text.new("It's just part of the method.",Jami),
+	Text.newAnimated("Huh?",Jami,1),
+	Text.newAnimated("It's just part of the method.",Jami,1),
 	Text.new("Turn the lights back on.",Varisa),
-	Text.new("In a bit, I need you to measure in the dark.",Jami),
+	Text.newAnimated("In a bit, I need you to measure in the dark.",Jami,1),
 	Text.new("What?",Varisa),
-	Text.new("Take that Wray and use it in the dark.",Jami),
+	Text.newAnimated("Take that Wray and use it in the dark.",Jami,1),
 	Text.new("Is this why you had to cut the power?",Varisa),
-	Text.new("Yes.",Jami),
+	Text.newAnimated("Yes.",Jami,1),
 	Text.new("You're insane.",Varisa),
-	Text.new("Every genius is.",Jami),
-	Text.new("I need you to record 3 more samples.",Jami,nil,function()
+	Text.newAnimated("Every genius is.",Jami,1),
+	Text.newAnimated("I need you to record 3 more samples.",Jami,1,nil,function()
 		Story.set("Jami_Experiment_2_1",true)
 	end),
-	Text.new("Come back with those samples and...",Jami),
-	Text.new("Maybe i'll fix the power.",Jami),
+	Text.newAnimated("Come back with those samples and...",Jami,1),
+	Text.newAnimated("Maybe i'll fix the power.",Jami,1),
 	Text.new("Fine....",Varisa),
-	Text.new("Tick tock.",Jami),
+	Text.newAnimated("Tick tock.",Jami,1),
 },1)
 
 World.Dialogue[English][58] = Dialogue.new({
-	Text.new("Say, I need your help",Jami),
+	Text.newAnimated("Say, I need your help",Jami,1),
 	Text.new("What the hell is wrong with you?",Varisa),
-	Text.new("Huh?",Jami),
+	Text.newAnimated("Huh?",Jami,1),
 	Text.new("You're insane.",Varisa),
 	Text.new("Turn the lights back on.",Varisa),
-	Text.new("In a bit.",Jami),
+	Text.newAnimated("In a bit.",Jami,1),
 	Text.new("I don't have a 'bit'",Varisa),
-	Text.new("Here, this tool will explain everything.",Jami,nil,function()
+	Text.newAnimated("Here, this tool will explain everything.",Jami,1,nil,function()
 		Story.set("Jami_Experiment_2_1",true)
 	end),
-	Text.new("I need you to record 3 samples.",Jami),
-	Text.new("Take samples far enough from each other.",Jami),
-	Text.new("Come back with those samples and...",Jami),
-	Text.new("Maybe i'll fix the power.",Jami),
-	Text.new("Tick tock.",Jami),
+	Text.newAnimated("I need you to record 3 samples.",Jami,1),
+	Text.newAnimated("Take samples far enough from each other.",Jami,1),
+	Text.newAnimated("Come back with those samples and...",Jami,1),
+	Text.newAnimated("Maybe i'll fix the power.",Jami,1),
+	Text.newAnimated("Tick tock.",Jami,1),
 },1)
 
 World.Dialogue[English][59] = Dialogue.new({
 	Text.new("I dunno.",Varisa),
-	Text.new("It just showed up today for some reason.",Jami),
+	Text.newAnimated("It just showed up today for some reason.",Jami,0),
 	Text.new("Odd.",Varisa),
-	Text.new("Indeed.",Jami,nil,function(npc)
+	Text.newAnimated("Indeed.",Jami,0,nil,function(npc)
 		npc.i = 60
 	end),
 },1)
 
 World.Dialogue[English][60] = Dialogue.new({
-	Text.new("Say...",Jami),
-	Text.new("If you don't mind, I need some help.",Jami),
+	Text.newAnimated("Say...",Jami,1),
+	Text.newAnimated("If you don't mind, I need some help.",Jami,1),
 	Text.new("Sure....",Varisa),
-	Text.new("Uhhh.... i'm pretty sure you barely passed physics?",Jami),
+	Text.newAnimated("Uhhh.... i'm pretty sure you barely passed physics?",Jami,1),
 	Text.new("Yeah.",Varisa),
-	Text.new("Okay...",Jami),
-	Text.new("So, there's this energy",Jami),
-	Text.new("And I've made a detector for it",Jami),
-	Text.new("Here",Jami,nil,function()
+	Text.newAnimated("Okay...",Jami,1),
+	Text.newAnimated("So, there's this energy",Jami,1),
+	Text.newAnimated("And I've made a detector for it",Jami,1),
+	Text.newAnimated("Here",Jami,1,nil,function()
 		Story.set("Jami_Experiment_1_1",true)
 	end),
-	Text.new("I need you to record 3 samples.",Jami),
-	Text.new("I have a feeling it's based on...",Jami),
-	Text.new("the number of people around.",Jami),
-	Text.new("Take samples far enough from each other.",Jami),
-	Text.new("Thanks for the help.",Jami),
+	Text.newAnimated("I need you to record 3 samples.",Jami,1),
+	Text.newAnimated("I have a feeling it's based on...",Jami,1),
+	Text.newAnimated("the number of people around.",Jami,1),
+	Text.newAnimated("Take samples far enough from each other.",Jami,1),
+	Text.newAnimated("Thanks for the help.",Jami,1),
 },1)
 
 World.Dialogue[English][61] = Dialogue.new({
-	Text.new("You're done?",Jami),
+	Text.newAnimated("You're done?",Jami,0),
 	Text.new("Yep.",Varisa),
-	Text.new("Great, let me look at what you recorded.",Jami),
-	Text.new("............",Jami),
-	Text.new("Wow, intresting",Jami),
-	Text.new("It seems like that's not the variable.",Jami),
-	Text.new("Say, keep it with you.",Jami,nil,function()
+	Text.newAnimated("Great, let me look at what you recorded.",Jami,0),
+	Text.newAnimated("............",Jami,0),
+	Text.newAnimated("Wow, intresting",Jami,0),
+	Text.newAnimated("It seems like that's not the variable.",Jami,0),
+	Text.newAnimated("Say, keep it with you.",Jami,1,nil,function()
 		Story.set("Jami_Experiment_1_3",true)
 	end),
-	Text.new("Record anything else you find.",Jami),
-	Text.new("Have fun, go nuts.",Jami),
+	Text.newAnimated("Record anything else you find.",Jami,1),
+	Text.newAnimated("Have fun, go nuts.",Jami,1),
 },1)
 
 World.Dialogue[English][62] = Dialogue.new({
@@ -783,26 +783,26 @@ World.Dialogue[English][62] = Dialogue.new({
 },1)
 
 World.Dialogue[English][63] = Dialogue.new({
-	Text.new("Say, I need your help again",Jami),
+	Text.newAnimated("Say, I need your help again",Jami,1),
 	Text.new("What the hell is wrong with you?",Varisa),
-	Text.new("Huh?",Jami),
-	Text.new("It's just part of the method.",Jami),
+	Text.newAnimated("Huh?",Jami,1),
+	Text.newAnimated("It's just part of the method.",Jami,1),
 	Text.new("Turn the lights back on.",Varisa),
-	Text.new("In a bit, I need you to measure in the dark.",Jami),
+	Text.newAnimated("In a bit, I need you to measure in the dark.",Jami,1),
 	Text.new("What?",Varisa),
-	Text.new("Take that Wray and use it in the dark.",Jami),
+	Text.newAnimated("Take that Wray and use it in the dark.",Jami,1),
 	Text.new("Is this why you had to cut the power?",Varisa),
-	Text.new("Yes.",Jami),
+	Text.newAnimated("Yes.",Jami,1),
 	Text.new("You're insane.",Varisa),
-	Text.new("Every genius is.",Jami),
-	Text.new("I need you to actually record 3 more samples.",Jami,nil,function()
+	Text.newAnimated("Every genius is.",Jami,1),
+	Text.newAnimated("I need you to actually record 3 more samples.",Jami,1,nil,function()
 		Story.set("Jami_Experiment_2_1",true)
 	end),
-	Text.new("Come back with those samples and...",Jami),
-	Text.new("Maybe i'll fix the power.",Jami),
-	Text.new("Don't just leave like last time.",Jami),
+	Text.newAnimated("Come back with those samples and...",Jami,1),
+	Text.newAnimated("Maybe i'll fix the power.",Jami,1),
+	Text.newAnimated("Don't just leave like last time.",Jami,1),
 	Text.new("Fine....",Varisa),
-	Text.new("Tick tock.",Jami),
+	Text.newAnimated("Tick tock.",Jami,1),
 },1)
 
 World.Dialogue[English][64] = Dialogue.new({
@@ -998,13 +998,13 @@ World.Dialogue[English][80] = Dialogue.new({
 },1)
 
 World.Dialogue[English][81] = Dialogue.new({
-	Text.new("You got it?",Jami),
+	Text.newAnimated("You got it?",Jami,1),
 	Text.new("Yeah.",Varisa),
-	Text.new("Great.",Jami, nil,function()
+	Text.newAnimated("Great.",Jami,1, nil,function()
 		Story.set("Jami_Experiment_2_3",true)
 	end),
 	Text.new("So the power?",Varisa),
-	Text.new("Check it in a bit.",Jami),
+	Text.newAnimated("Check it in a bit.",Jami,1),
 },1)
 
 World.Dialogue[English][82] = Dialogue.new({

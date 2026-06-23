@@ -282,7 +282,7 @@ Story.setBeat("Jami_Experiment_1_2", function(npc)
 			local I = Families.HouseMap[i]
 			for i,v in pairs(World.Map[I].npcs) do
 				if v.f == "Jami_2" then
-					v.i = 52
+					v.i = 61
 				end
 			end
 		end
