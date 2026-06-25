@@ -197,6 +197,8 @@ image.newImage("Sean_A_0","/Assets/Sean_A_0.png")
 image.newImage("Sean_A_1","/Assets/Sean_A_1.png")
 image.newImage("Jami_A_0","/Assets/Jami_A_0.png")
 image.newImage("Jami_A_1","/Assets/Jami_A_1.png")
+image.newImage("Lassie_A_0","/Assets/Lassie_A_0.png")
+image.newImage("Lassie_A_1","/Assets/Lassie_A_1.png")
 
 image.newImage("Map","/Assets/map.png")
 image.newImage("Save","/Assets/Save_state.png")

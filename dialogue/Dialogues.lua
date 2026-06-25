@@ -236,13 +236,13 @@ World.Dialogue[English][22] = Dialogue.new({
 },1)
 
 World.Dialogue[English][23] = Dialogue.new({
-	Text.new("Hey Varisa.",Lassie),
+	Text.newAnimated("Hey Varisa.",Lassie,0),
 	Text.new("Hey.",Varisa),
 	Text.new("Do you know where the toolbox is?",Varisa),
-	Text.new("I think i gave it to Wilkie a few days ago...",Lassie),
+	Text.newAnimated("I think i gave it to Wilkie a few days ago...",Lassie,1),
 	Text.new("Oh.",Varisa),
-	Text.new("Yeah, sorry.",Lassie),
-	Text.new("They should still have it.",Lassie),
+	Text.newAnimated("Yeah, sorry.",Lassie,1),
+	Text.newAnimated("They should still have it.",Lassie,1),
 },1)
 
 World.Dialogue[English][24] = Dialogue.new({
@@ -591,24 +591,24 @@ World.Dialogue[English][44] = Dialogue.new({
 },1)
 
 World.Dialogue[English][45] = Dialogue.new({
-	Text.new("Hey.",Lassie),
+	Text.newAnimated("Hey.",Lassie,0),
 	Text.new("Hey",Varisa),
-	Text.new("I need your help baking.",Lassie),
+	Text.newAnimated("I need your help baking.",Lassie,0),
 	Text.new("What do you need?",Varisa),
-	Text.new("Uhh...",Lassie),
-	Text.new("Rachel always knew were everything was...",Lassie),
-	Text.new("Let me try to remember...",Lassie),
-	Text.new("I need a cup of milk.",Lassie),
-	Text.new("It should be in the fridge.",Lassie,nil,function ()
+	Text.newAnimated("Uhh...",Lassie,1),
+	Text.newAnimated("Rachel always knew were everything was...",Lassie,1),
+	Text.newAnimated("Let me try to remember...",Lassie,1),
+	Text.newAnimated("I need a cup of milk.",Lassie,1),
+	Text.newAnimated("It should be in the fridge.",Lassie,1,nil,function ()
 		Story.set("Lassie_Baking_1",true)
 	end),
 	Text.new("Sure.",Varisa),
-	Text.new("Alright.",Lassie),
-	Text.new("You got it?",Lassie),
+	Text.newAnimated("Alright.",Lassie,1),
+	Text.newAnimated("You got it?",Lassie,1),
 },1)
 
 World.Dialogue[English][46] = Dialogue.new({
-	Text.new("Hey.",Lassie),
+	Text.newAnimated("Hey.",Lassie,0),
 	Text.new("Hey",Varisa),
 },1)
 
@@ -779,7 +779,7 @@ World.Dialogue[English][61] = Dialogue.new({
 },1)
 
 World.Dialogue[English][62] = Dialogue.new({
-	Text.new("They still had it?",Lassie),
+	Text.newAnimated("They still had it?",Lassie,1),
 },1)
 
 World.Dialogue[English][63] = Dialogue.new({
@@ -806,10 +806,10 @@ World.Dialogue[English][63] = Dialogue.new({
 },1)
 
 World.Dialogue[English][64] = Dialogue.new({
-	Text.new("What the hell is going on?",Lassie),
-	Text.new("I just saw everyone here trying to call for help.",Lassie),
+	Text.newAnimated("What the hell is going on?",Lassie,1),
+	Text.newAnimated("I just saw everyone here trying to call for help.",Lassie,0),
 	Text.new("Cool.",Varisa),
-	Text.new("...",Lassie),
+	Text.newAnimated("...",Lassie,0),
 },1)
 
 World.Dialogue[English][65] = Dialogue.new({
@@ -1113,26 +1113,26 @@ World.Dialogue[English][88] = Dialogue.new({
 },1)
 
 World.Dialogue[English][89] = Dialogue.new({
-	Text.new("Hey Varisa.",Lassie),
-	Text.new("Thanks for fixing the lights.",Lassie),
-	Text.new("Though, the weather was nice today.",Lassie),
-	Text.new("I think i'll stay out here.",Lassie),
+	Text.newAnimated("Hey Varisa.",Lassie,1),
+	Text.newAnimated("Thanks for fixing the lights.",Lassie,1),
+	Text.newAnimated("Though, the weather was nice today.",Lassie,1),
+	Text.newAnimated("I think i'll stay out here.",Lassie,1),
 },1)
 
 World.Dialogue[English][90] = Dialogue.new({
-	Text.new("Hey.",Lassie),
+	Text.newAnimated("Hey.",Lassie,0),
 	Text.new("Hey, what sort of tapes do you have?",Varisa),
-	Text.new("You want my tapes?",Lassie),
-	Text.new("I don't recall watching anything you might like.",Lassie),
+	Text.newAnimated("You want my tapes?",Lassie,1),
+	Text.newAnimated("I don't recall watching anything you might like.",Lassie,1),
 	Text.new("My mom wouldn't want to miss her shows.",Varisa),
-	Text.new("Hmm, I could probably tape a few more too.",Lassie),
-	Text.new("Its terrible what that sicko did to her.",Lassie),
-	Text.new("I hope you find her soon.",Lassie),
-	Text.new("Take what you need in the meantime.",Lassie,nil,function(npc)
+	Text.newAnimated("Hmm, I could probably tape a few more too.",Lassie,1),
+	Text.newAnimated("Its terrible what that sicko did to her.",Lassie,1),
+	Text.newAnimated("I hope you find her soon.",Lassie,1),
+	Text.newAnimated("Take what you need in the meantime.",Lassie,1,nil,function(npc)
 		Story.set("Vivian_Show_2",true)
 	end),
 	Text.new("Thanks.",Varisa),
-	Text.new("Good luck.",Lassie),
+	Text.newAnimated("Good luck.",Lassie,1),
 },1)
 
 World.Dialogue[English][91] = Dialogue.new({
