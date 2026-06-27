@@ -1171,50 +1171,62 @@ World.Dialogue[English][94] = Dialogue.new({
 
 World.Dialogue[English][95] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Ella),
 },1)
 
 World.Dialogue[English][96] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Sean),
 },1)
 
 World.Dialogue[English][97] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Wilkie),
 },1)
 
 World.Dialogue[English][98] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Zach),
 },1)
 
 World.Dialogue[English][99] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Karina),
 },1)
 
 World.Dialogue[English][100] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Zoey),
 },1)
 
 World.Dialogue[English][101] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Lassie),
 },1)
 
 World.Dialogue[English][102] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Jami),
 },1)
 
 World.Dialogue[English][103] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Brian),
 },1)
 
 World.Dialogue[English][104] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Mollie),
 },1)
 
 World.Dialogue[English][105] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Fredrick),
 },1)
 
 World.Dialogue[English][106] = Dialogue.new({
 	Text.new("Hey.",Varisa),
+	Text.new("Hey.",Vivian),
 },1)
 
 World.Dialogue[English][107] = Dialogue.new({
