@@ -126,7 +126,7 @@ function Game_clearData()
 	ConfSeed = nil
 	ConfLang = nil
 	ConfDay = nil
-	ConfVer = VERSION
+	ConfVer = nil
 end
 
 function Game_Delete(file)
@@ -143,43 +143,83 @@ Save_Modes = {
 			-- draw background
 			drawBackgound()
 			
-			local img = image.getImage("Save")
+			-- local img = image.getImage("Save")
 			
-			love.graphics.draw(
-				img,0,0,0,
-				SCREEN_X/img:getWidth(),
-				SCREEN_Y/img:getHeight()
-			)
+			-- love.graphics.draw(
+			-- 	img,0,0,0,
+			-- 	SCREEN_X/img:getWidth(),
+			-- 	SCREEN_Y/img:getHeight()
+			-- )
+
+			love.graphics.rectangle("fill",25,25,550,350)
 			
 			love.graphics.print(
 				{{0,0,0},String.get(22)},
-				((3*SCREEN_X)/5),(SCREEN_Y/4),
+				(SCREEN_X/10),(SCREEN_Y/4),
 				0,SCREEN_X/600,SCREEN_Y/400
 			)
 			
 			love.graphics.print(
-				{{0,0,0},String.get(23)..(ConfVer or CVERSION)},
-				((3*SCREEN_X)/5),((5*SCREEN_Y)/16),
+				{{0,0,0},String.get(23)..(CVERSION)},
+				(SCREEN_X/10),((5*SCREEN_Y)/16),
 				0,SCREEN_X/600,SCREEN_Y/400
 			)
 			
 				love.graphics.print(
-				{{0,0,0},string.format(String.get(24),ConfSeed or Seed)},
-				((3*SCREEN_X)/5),((3*SCREEN_Y)/8),
+				{{0,0,0},string.format(String.get(24),Seed)},
+				(SCREEN_X/10),((3*SCREEN_Y)/8),
 				0,SCREEN_X/600,SCREEN_Y/400
 			)
 			
 			love.graphics.print(
-				{{0,0,0},String.get(25)..tostring(ConfLang or SaveLang[Language])},
-				((3*SCREEN_X)/5),((7*SCREEN_Y)/16),
+				{{0,0,0},String.get(25)..tostring(SaveLang[Language])},
+				(SCREEN_X/10),((7*SCREEN_Y)/16),
 				0,SCREEN_X/600,SCREEN_Y/400
 			)
 			
 			love.graphics.print(
-				{{0,0,0},String.get(26)..tostring(ConfDay or GameDay)},
-				((3*SCREEN_X)/5),(SCREEN_Y/2),
+				{{0,0,0},String.get(26)..tostring(GameDay)},
+				(SCREEN_X/10),(SCREEN_Y/2),
 				0,SCREEN_X/600,SCREEN_Y/400
 			)
+			
+			love.graphics.print(
+				{{0,0,0},String.get(52)},
+				((3*SCREEN_X)/5),(SCREEN_Y/4),
+				0,SCREEN_X/600,SCREEN_Y/400
+			)
+			
+			if ConfVer and not(SaveCon) then
+				love.graphics.print(
+					{{0,0,0},String.get(23)..(ConfVer)},
+					((3*SCREEN_X)/5),((5*SCREEN_Y)/16),
+					0,SCREEN_X/600,SCREEN_Y/400
+				)
+			end
+			
+			if ConfSeed and not(SaveCon) then
+				love.graphics.print(
+					{{0,0,0},string.format(String.get(24),ConfSeed)},
+					((3*SCREEN_X)/5),((3*SCREEN_Y)/8),
+					0,SCREEN_X/600,SCREEN_Y/400
+				)
+			end
+			
+			if ConfLang and not(SaveCon) then
+				love.graphics.print(
+					{{0,0,0},String.get(25)..tostring(ConfLang)},
+					((3*SCREEN_X)/5),((7*SCREEN_Y)/16),
+					0,SCREEN_X/600,SCREEN_Y/400
+				)
+			end
+			
+			if ConfDay and not(SaveCon) then
+				love.graphics.print(
+					{{0,0,0},String.get(26)..tostring(ConfDay)},
+					((3*SCREEN_X)/5),(SCREEN_Y/2),
+					0,SCREEN_X/600,SCREEN_Y/400
+				)
+			end
 			
 			love.graphics.print(
 				{{1,0,0},SaveConfirm_1},
