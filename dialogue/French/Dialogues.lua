@@ -857,7 +857,7 @@ World.Dialogue[French][69] = Dialogue.new({
 },1)
 
 World.Dialogue[French][70] = Dialogue.new({
-	Text.new("It never hurts to leave the house.",Vivian),
+	Text.newAnimated("It never hurts to leave the house.",Vivian,1),
 	Text.new("Yeah, but the power coming back would be nice.",Varisa),
 },1)
 
@@ -872,10 +872,10 @@ World.Dialogue[French][71] = Dialogue.new({
 },1)
 
 World.Dialogue[French][72] = Dialogue.new({
-	Text.new("It really hurts to leave the house.",Vivian),
+	Text.newAnimated("It really hurts to leave the house.",Vivian,1),
 	Text.new("Yeah, the power coming back would be nice.",Varisa),
-	Text.new("Just a few more minutes and I would have been done.",Vivian),
-	Text.new("...",Vivian),
+	Text.newAnimated("Just a few more minutes and I would have been done.",Vivian,1),
+	Text.newAnimated("...",Vivian,1),
 },1)
 
 World.Dialogue[French][73] = Dialogue.new({
@@ -1093,23 +1093,23 @@ World.Dialogue[French][87] = Dialogue.new({
 },1)
 
 World.Dialogue[French][88] = Dialogue.new({
-	Text.new("I figured you'd be back.",Vivian),
+	Text.newAnimated("I figured you'd be back.",Vivian,0),
 	Text.new("What?",Varisa),
-	Text.new("Well....",Vivian),
-	Text.new("I keep hearing Lassie talking about this one show.",Vivian),
-	Text.new("It's honestly a great show.",Vivian),
-	Text.new("Lassie seems like she keeps up with it pretty well.",Vivian),
-	Text.new("Anyway the power went out while I was watching.",Vivian),
-	Text.new("I need you to ask Lassie for her tape.",Vivian),
-	Text.new("I know she recorded it.",Vivian),
+	Text.newAnimated("Well....",Vivian,1),
+	Text.newAnimated("I keep hearing Lassie talking about this one show.",Vivian,1),
+	Text.newAnimated("It's honestly a great show.",Vivian,1),
+	Text.newAnimated("Lassie seems like she keeps up with it pretty well.",Vivian,1),
+	Text.newAnimated("Anyway the power went out while I was watching.",Vivian,1),
+	Text.newAnimated("I need you to ask Lassie for her tape.",Vivian,1),
+	Text.newAnimated("I know she recorded it.",Vivian,1),
 	Text.new("Can't you ask her?",Varisa),
-	Text.new("Its a bit hard when she hates my guts.",Vivian),
+	Text.newAnimated("Its a bit hard when she hates my guts.",Vivian,1),
 	Text.new("I suppose.",Varisa),
-	Text.new("I'll be so thankful if you did.",Vivian),
+	Text.newAnimated("I'll be so thankful if you did.",Vivian,1),
 	Text.new("Sure I guess.",Varisa,nil,function(npc)
 		Story.set("Vivian_Show_1",true)
 	end),
-	Text.new("Great.",Vivian),
+	Text.newAnimated("Great.",Vivian,0),
 },1)
 
 World.Dialogue[French][89] = Dialogue.new({
@@ -1136,14 +1136,14 @@ World.Dialogue[French][90] = Dialogue.new({
 },1)
 
 World.Dialogue[French][91] = Dialogue.new({
-	Text.new("Have you got it yet?",Vivian),
+	Text.newAnimated("Have you got it yet?",Vivian,0),
 },1)
 
 World.Dialogue[French][92] = Dialogue.new({
-	Text.new("Nice, the exact episode too.",Vivian,nil,function(npc)
+	Text.newAnimated("Nice, the exact episode too.",Vivian,0,nil,function(npc)
 		Story.set("Vivian_Show_4",true)
 	end),
-	Text.new("Thanks so much.",Vivian),
+	Text.newAnimated("Thanks so much.",Vivian,0),
 },1)
 
 World.Dialogue[French][93] = Dialogue.new({
