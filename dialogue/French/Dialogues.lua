@@ -444,7 +444,7 @@ World.Dialogue[French][36] = Dialogue.new({
 		World.AfterEffect = function ()
 			Jukebox_stop()
 			GameState = Cutscene
-			Play.scene = Play.Scenes[5]
+			Play.scene = Play.Scenes[11]
 			Play.scene.Next = WORLD
 		end
 	end),
