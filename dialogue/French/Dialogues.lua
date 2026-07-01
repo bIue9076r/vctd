@@ -464,7 +464,7 @@ World.Dialogue[French][36] = Dialogue.new({
 	Text.new("How am I supposed to do that?",Varisa),
 	Text.newAnimated("Well they're not home right now.",Mollie,0),
 	Text.newAnimated("Sean's definitly cheating on her.",Mollie,0),
-	Text.new("Or she's cheating on him.",Mollie),
+	Text.newAnimated("Or she's cheating on him.",Mollie,0),
 	Text.newAnimated("Now, I still have one of his spare keys.",Mollie,1),
 	Text.newAnimated("So you're going find proof in his house.",Mollie,1),
 	Text.newAnimated("Then bring it back to me.",Mollie,1),
