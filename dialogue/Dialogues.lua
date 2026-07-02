@@ -292,19 +292,19 @@ World.Dialogue[English][27] = Dialogue.new({
 },1)
 
 World.Dialogue[English][28] = Dialogue.new({
-	Text.new("Hey Varisa...",Brian),
+	Text.newAnimated("Hey Varisa...",Brian,0),
 	Text.new("Uhh... Yeah.",Varisa),
-	Text.new("I'm very busy right now...",Brian),
-	Text.new("And uhh, Vivian told me to take out the trash.",Brian),
-	Text.new("You wouldn't mind taking it out for me?",Brian),
+	Text.newAnimated("I'm very busy right now...",Brian,0),
+	Text.newAnimated("And uhh, Vivian told me to take out the trash.",Brian,0),
+	Text.newAnimated("You wouldn't mind taking it out for me?",Brian,0),
 	Text.new("But aren't you just standing around?",Varisa),
-	Text.new("I'm very busy, you wouldn't understand.",Brian),
+	Text.newAnimated("I'm very busy, you wouldn't understand.",Brian,0),
 	Text.new("Yeah me too.",Varisa),
-	Text.new("Too busy for 150?",Brian),
+	Text.newAnimated("Too busy for 150?",Brian,1),
 	Text.new("You're bluffing.",Varisa),
-	Text.new("Your loss, I guess.",Brian),
+	Text.newAnimated("Your loss, I guess.",Brian,0),
 	Text.new("Where's the trash?",Varisa),
-	Text.new("Backyard, and make it quick.",Brian,nil,function()
+	Text.newAnimated("Backyard, and make it quick.",Brian,0,nil,function()
 		Story.set("Brian_Trash_1",true)
 	end),
 },1)
@@ -550,13 +550,13 @@ World.Dialogue[English][41] = Dialogue.new({
 },1)
 
 World.Dialogue[English][42] = Dialogue.new({
-	Text.new("You actually did it?",Brian),
+	Text.newAnimated("You actually did it?",Brian,1),
 	Text.new("Wait...",Varisa),
-	Text.new("I suppose I should pay you.",Brian),
+	Text.newAnimated("I suppose I should pay you.",Brian,0),
 	Text.new("You weren't before?",Varisa),
-	Text.new("I'm a better person than that.",Brian),
+	Text.newAnimated("I'm a better person than that.",Brian,0),
 	Text.new("Okay",Varisa),
-	Text.new("Take this check.",Brian,nil,function()
+	Text.newAnimated("Take this check.",Brian,1,nil,function()
 		Story.set("Brian_Trash_4",true)
 	end),
 	Text.new("Thanks I guess",Varisa,nil,function(npc)
@@ -851,9 +851,9 @@ World.Dialogue[English][68] = Dialogue.new({
 },1)
 
 World.Dialogue[English][69] = Dialogue.new({
-	Text.new("They really gotta upgrade the power here.",Brian),
+	Text.newAnimated("They really gotta upgrade the power here.",Brian,0),
 	Text.new("Yes.",Varisa),
-	Text.new("...",Brian),
+	Text.newAnimated("...",Brian,0),
 },1)
 
 World.Dialogue[English][70] = Dialogue.new({
@@ -879,14 +879,14 @@ World.Dialogue[English][72] = Dialogue.new({
 },1)
 
 World.Dialogue[English][73] = Dialogue.new({
-	Text.new("The house reeked of something recently.",Brian),
-	Text.new("I could have sworn the trash was taken out.",Brian),
+	Text.newAnimated("The house reeked of something recently.",Brian,0),
+	Text.newAnimated("I could have sworn the trash was taken out.",Brian,0),
 	Text.new("Odd. Anything else out of the ordinary.",Varisa),
-	Text.new("Muffuled voices almost pleading for help.",Brian),
-	Text.new("I think its from the crime shows Vivian watches alot.",Brian),
-	Text.new("Maybe she could help you with that mystery of yours.",Brian),
+	Text.newAnimated("Muffuled voices almost pleading for help.",Brian,0),
+	Text.newAnimated("I think its from the crime shows Vivian watches alot.",Brian,0),
+	Text.newAnimated("Maybe she could help you with that mystery of yours.",Brian,1),
 	Text.new("Maybe...",Varisa),
-	Text.new("...",Brian),
+	Text.newAnimated("...",Brian,0),
 },1)
 
 World.Dialogue[English][74] = Dialogue.new({
@@ -1258,15 +1258,15 @@ World.Dialogue[English][108] = Dialogue.new({
 },1)
 
 World.Dialogue[English][109] = Dialogue.new({
-	Text.new("Hey, I still have one more task.",Brian),
-	Text.new("I need to hand out a bunch of flyers.",Brian),
+	Text.newAnimated("Hey, I still have one more task.",Brian,1),
+	Text.newAnimated("I need to hand out a bunch of flyers.",Brian,1),
 	Text.new("For Vivian's birthday?",Varisa),
-	Text.new("Yeah.",Brian),
-	Text.new("Let me hand you some.",Brian,nil,function()
+	Text.newAnimated("Yeah.",Brian,1),
+	Text.newAnimated("Let me hand you some.",Brian,1,nil,function()
 		Story.set("Brian_Flyer_1",true)
 	end),
 	Text.new("Thanks.",Varisa),
-	Text.new("Try to get as much as possible.",Brian),
+	Text.newAnimated("Try to get as much as possible.",Brian,1),
 },1)
 
 World.Dialogue[English][110] = Dialogue.new({
