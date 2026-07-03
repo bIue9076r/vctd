@@ -27,8 +27,7 @@ Pause_Modes = {
 			self.Anim_t(dt)
 
 			if self.Anim_t:get() >= self.Amax then
-				Pause_Mode = 2
-				Pause_Modes[Pause_Mode]:Load()
+				Pause_SwitchMode(2)
 			end
 		end,
 
@@ -64,7 +63,7 @@ Pause_Modes = {
 				Jukebox_play()
 				GameState = WORLD
 			elseif key == "return" then
-				Pause_Mode = 2
+				Pause_SwitchMode(3)
 			end
 		end,
 
@@ -74,6 +73,92 @@ Pause_Modes = {
 	},
 
 	[3] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",50,50,500,300)
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(500,2,self.Anim_t:get()/self.Amax),
+				300
+			)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(5)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set()
+		end,
+	},
+
+	[4] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",50,50,500,300)
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(2,500,self.Anim_t:get()/self.Amax),
+				300
+			)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(2)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set()
+		end,
+	},
+
+	[5] = {
 		Load = function(self)
 			
 		end,
@@ -83,6 +168,10 @@ Pause_Modes = {
 			love.graphics.setColor(0.0,0.2,0.5)
 			drawSpritesNoTint()
 			love.graphics.setColor(1,1,1)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",50,50,500,300)
+			love.graphics.setColor(1,1,1)
 		end,
 
 		Update = function(self,dt)
@@ -91,8 +180,7 @@ Pause_Modes = {
 
 		Keypressed = function(self,key)
 			if key == "escape" then
-				Pause_Mode = 1
-				Pause_Modes[Pause_Mode]:Load()
+				Pause_SwitchMode(4)
 			end
 		end,
 
@@ -101,6 +189,11 @@ Pause_Modes = {
 		end,
 	}
 }
+
+function Pause_SwitchMode(n)
+	Pause_Mode = n
+	Pause_Modes[Pause_Mode]:Load()
+end
 
 function Pause_Draw()
 	if Pause_Modes[Pause_Mode] and Pause_Modes[Pause_Mode].Draw then

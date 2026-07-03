@@ -329,8 +329,9 @@ function World.Keypressed(key)
 			World.showHint = not(World.showHint)
 		elseif key == "escape" then
 			Jukebox_pause()
-			Pause_Mode = 1
-			Pause_Modes[Pause_Mode]:Load()
+			-- Pause_Mode = 1
+			-- Pause_Modes[Pause_Mode]:Load()
+			Pause_SwitchMode(1)
 			GameState = Pause
 		end
 	else
