@@ -203,6 +203,8 @@ image.newImage("Vivian_A_0","/Assets/Vivian_A_0.png")
 image.newImage("Vivian_A_1","/Assets/Vivian_A_1.png")
 image.newImage("Brian_A_0","/Assets/Brian_A_0.png")
 image.newImage("Brian_A_1","/Assets/Brian_A_1.png")
+image.newImage("Zoey_A_0","/Assets/Zoey_A_0.png")
+image.newImage("Zoey_A_1","/Assets/Zoey_A_1.png")
 
 image.newImage("Map","/Assets/map.png")
 image.newImage("Save","/Assets/Save_state.png")

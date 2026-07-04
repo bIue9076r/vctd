@@ -146,13 +146,13 @@ end)
 
 World.Dialogue[French][2] = Dialogue.new({
 	Text.new("Bonjour Mademoiselle Drew",Varisa),
-	Text.new("Salut Varisa",Zoey),
-	Text.new("Est ce que ta mère est encore ici?",Zoey),
+	Text.newAnimated("Salut Varisa",Zoey,0),
+	Text.newAnimated("Est ce que ta mère est encore ici?",Zoey,0),
 	Text.new("Non, Je n'ai pas elle vu",Varisa),
-	Text.new("Ce n'est pas comme elle",Zoey),
-	Text.new("J'éspere elle est bien",Zoey),
+	Text.newAnimated("Ce n'est pas comme elle",Zoey,0),
+	Text.newAnimated("J'éspere elle est bien",Zoey,0),
 	Text.new("ouais...",Varisa),
-	Text.new("....",Zoey),
+	Text.newAnimated("....",Zoey,0),
 },1)
 
 World.Dialogue[French][3] = Dialogue.new({
@@ -626,28 +626,28 @@ World.Dialogue[French][48] = Dialogue.new({
 },1)
 
 World.Dialogue[French][49] = Dialogue.new({
-	Text.new("Hey Varisa.",Zoey),
+	Text.newAnimated("Hey Varisa.",Zoey,0),
 	Text.new("Hey Ms. Drew.",Varisa),
-	Text.new("If you're not too busy I need some help.",Zoey),
+	Text.newAnimated("If you're not too busy I need some help.",Zoey,1),
 	Text.new("Help with what?",Varisa),
-	Text.new("I ordered something about a month ago...",Zoey),
-	Text.new("I checked the postal office two days ago...",Zoey),
-	Text.new("They say it's been delivered, but I haven't seen it.",Zoey),
-	Text.new("Please do help me look around for it.",Zoey),
+	Text.newAnimated("I ordered something about a month ago...",Zoey,1),
+	Text.newAnimated("I checked the postal office two days ago...",Zoey,1),
+	Text.newAnimated("They say it's been delivered, but I haven't seen it.",Zoey,1),
+	Text.newAnimated("Please do help me look around for it.",Zoey,1),
 	Text.new("Alright, i'll keep an eye out",Varisa,nil,function()
 		Story.set("Zoey_Errands_1",true)
 	end),
-	Text.new("Thank you so much.",Zoey),
-	Text.new("This means so much to me.",Zoey),
+	Text.newAnimated("Thank you so much.",Zoey,0),
+	Text.newAnimated("This means so much to me.",Zoey,0),
 },1)
 
 World.Dialogue[French][50] = Dialogue.new({
-	Text.new("You found it!",Zoey),
-	Text.new("Where was it?",Zoey),
+	Text.newAnimated("You found it!",Zoey,1),
+	Text.newAnimated("Where was it?",Zoey,1),
 	Text.new("It was out by Jami's house.",Varisa),
-	Text.new("That's strange...",Zoey),
-	Text.new("But at least I have my package.",Zoey),
-	Text.new("You and Tracey stay safe now.",Zoey),
+	Text.newAnimated("That's strange...",Zoey,1),
+	Text.newAnimated("But at least I have my package.",Zoey,0),
+	Text.newAnimated("You and Tracey stay safe now.",Zoey,0),
 },1)
 
 World.Dialogue[French][51] = Dialogue.new({
@@ -688,11 +688,11 @@ World.Dialogue[French][55] = Dialogue.new({
 },1)
 
 World.Dialogue[French][56] = Dialogue.new({
-	Text.new("What's going on Varisa?",Zoey),
+	Text.newAnimated("What's going on Varisa?",Zoey,0),
 	Text.new("I have no idea.",Varisa),
-	Text.new("Just stay CALM OKAY!",Zoey),
+	Text.newAnimated("Just stay CALM OKAY!",Zoey,0),
 	Text.new("uhh..........",Varisa),
-	Text.new("EVERYTHING will be alright.",Zoey),
+	Text.newAnimated("EVERYTHING will be alright.",Zoey,0),
 	Text.new("okay..........",Varisa),
 },1)
 
@@ -1072,8 +1072,8 @@ World.Dialogue[French][84] = Dialogue.new({
 },1)
 
 World.Dialogue[French][85] = Dialogue.new({
-	Text.new("Weird...",Zoey),
-	Text.new("Thanks regardless.",Zoey),
+	Text.newAnimated("Weird...",Zoey,0),
+	Text.newAnimated("Thanks regardless.",Zoey,1),
 },1)
 
 World.Dialogue[French][86] = Dialogue.new({
