@@ -36,7 +36,7 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			self.Anim_t:set()
+			self.Anim_t:set(self.Anim_t)
 		end,
 	},
 
@@ -68,7 +68,12 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			
+			if button == 1 then
+				Pause_SwitchMode(3)
+			elseif button == 2 then
+				Jukebox_play()
+				GameState = WORLD
+			end
 		end,
 	},
 
@@ -111,7 +116,7 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			self.Anim_t:set()
+			self.Anim_t:set(self.Anim_t)
 		end,
 	},
 
@@ -154,7 +159,7 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			self.Anim_t:set()
+			self.Anim_t:set(self.Anim_t)
 		end,
 	},
 
@@ -185,7 +190,9 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			
+			if button == 2 then
+				Pause_SwitchMode(4)
+			end
 		end,
 	}
 }
