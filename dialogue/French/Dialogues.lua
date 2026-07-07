@@ -186,18 +186,18 @@ World.Dialogue[French][5] = Dialogue.new({
 require("/dialogue/French/general/mailboxes")
 
 World.Dialogue[French][18] = Dialogue.new({
-	Text.new("Bonjour Varisa.",Wilkie),
+	Text.newAnimatedLeft("Bonjour Varisa.",Wilkie,0),
 	Text.new("Salut.",Varisa),
-	Text.new("Quoi t'amène ici aujourd'hui?",Wilkie),
+	Text.newAnimatedLeft("Quoi t'amène ici aujourd'hui?",Wilkie,0),
 	Text.new("Mme. Fisher a dit que vous avez sa boîte à outils.",Varisa),
-	Text.new("Oui, c'est dans ma chambre.",Wilkie),
+	Text.newAnimatedLeft("Oui, c'est dans ma chambre.",Wilkie,0),
 	Text.new("Oh, super.",Varisa),
 	Text.new("Je juste as besoin de quelques chose de lui.",Varisa),
-	Text.new("Ah, Ouais.",Wilkie),
-	Text.new("Gardez-le loin du danger",Wilkie,nil,function()
+	Text.newAnimatedLeft("Ah, Ouais.",Wilkie,0),
+	Text.newAnimatedLeft("Gardez-le loin du danger",Wilkie,0,nil,function()
 		Story.set("Toolbox_Wilkie_3",true)
 	end),
-	Text.new("Gardez-le loin du danger",Wilkie),
+	Text.newAnimatedLeft("Gardez-le loin du danger",Wilkie,0),
 },1)
 
 -- Todo: Story Flow chart / Dialogue but in French
@@ -394,15 +394,15 @@ World.Dialogue[French][34] = Dialogue.new({
 },1)
 
 World.Dialogue[French][35] = Dialogue.new({
-	Text.new("Hey Varisa",Wilkie),
+	Text.newAnimatedLeft("Hey Varisa",Wilkie,0),
 	Text.new("Hey.",Varisa),
-	Text.new("What are you doing at the park today?",Wilkie),
+	Text.newAnimatedLeft("What are you doing at the park today?",Wilkie,0),
 	Text.new("Looking for my mother.",Varisa),
-	Text.new("Oh dear, she's still missing?",Wilkie),
+	Text.newAnimatedLeft("Oh dear, she's still missing?",Wilkie,0),
 	Text.new("Yeah...",Varisa),
-	Text.new("I hope you find her soon.",Wilkie),
+	Text.newAnimatedLeft("I hope you find her soon.",Wilkie,0),
 	Text.new("I'm trying...",Varisa),
-	Text.new("If you need anything, I'm right here.",Wilkie),
+	Text.newAnimatedLeft("If you need anything, I'm right here.",Wilkie,0),
 },1)
 
 World.Dialogue[French][36] = Dialogue.new({

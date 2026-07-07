@@ -186,18 +186,18 @@ World.Dialogue[English][5] = Dialogue.new({
 require("/dialogue/general/mailboxes")
 
 World.Dialogue[English][18] = Dialogue.new({
-	Text.new("Hello Varisa.",Wilkie),
+	Text.newAnimatedLeft("Hello Varisa.",Wilkie,0),
 	Text.new("Hey.",Varisa),
-	Text.new("What brings you over here today?",Wilkie),
+	Text.newAnimatedLeft("What brings you over here today?",Wilkie,0),
 	Text.new("Mrs. Fisher said you had her toolbox.",Varisa),
-	Text.new("Yes, it's in my room",Wilkie),
+	Text.newAnimatedLeft("Yes, it's in my room",Wilkie,1),
 	Text.new("Oh great.",Varisa),
 	Text.new("I just need something from it.",Varisa),
-	Text.new("Oh, Okay.",Wilkie),
-	Text.new("Keep it safe",Wilkie,nil,function()
+	Text.newAnimatedLeft("Oh, Okay.",Wilkie,0),
+	Text.newAnimatedLeft("Keep it safe",Wilkie,0,nil,function()
 		Story.set("Toolbox_Wilkie_2",true)
 	end),
-	Text.new("Keep it safe",Wilkie),
+	Text.newAnimatedLeft("Keep it safe",Wilkie,0),
 },1)
 
 -- Todo: Story Flow chart / Dialogue
@@ -394,15 +394,15 @@ World.Dialogue[English][34] = Dialogue.new({
 },1)
 
 World.Dialogue[English][35] = Dialogue.new({
-	Text.new("Hey Varisa",Wilkie),
+	Text.newAnimatedLeft("Hey Varisa",Wilkie,0),
 	Text.new("Hey.",Varisa),
-	Text.new("What are you doing at the park today?",Wilkie),
+	Text.newAnimatedLeft("What are you doing at the park today?",Wilkie,0),
 	Text.new("Looking for my mother.",Varisa),
-	Text.new("Oh dear, she's still missing?",Wilkie),
+	Text.newAnimatedLeft("Oh dear, she's still missing?",Wilkie,0),
 	Text.new("Yeah...",Varisa),
-	Text.new("I hope you find her soon.",Wilkie),
+	Text.newAnimatedLeft("I hope you find her soon.",Wilkie,0),
 	Text.new("I'm trying...",Varisa),
-	Text.new("If you need anything, I'm right here.",Wilkie),
+	Text.newAnimatedLeft("If you need anything, I'm right here.",Wilkie,0),
 },1)
 
 World.Dialogue[English][36] = Dialogue.new({
