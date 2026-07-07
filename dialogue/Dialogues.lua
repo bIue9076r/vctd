@@ -1141,7 +1141,7 @@ World.Dialogue[English][91] = Dialogue.new({
 
 World.Dialogue[English][92] = Dialogue.new({
 	Text.newAnimated("Nice, the exact episode too.",Vivian,0,nil,function(npc)
-		Story.set("Vivian_Show_4",true)
+		Story.set("Vivian_Show_3",true)
 	end),
 	Text.newAnimated("Thanks so much.",Vivian,0),
 },1)

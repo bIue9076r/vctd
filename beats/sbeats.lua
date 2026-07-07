@@ -492,16 +492,20 @@ Story.setBeat("Vivian_Show_1", function(npc)
 end)
 
 Story.setBeat("Vivian_Show_2", function(npc)
-	
+	for i,v in pairs(World.Map[I].npcs) do
+		if v.f == "Vivian" then
+			v.i = 92
+		end
+	end
 end)
 
 Story.setBeat("Vivian_Show_3", function(npc)
 	
 end)
 
-Story.setBeat("Vivian_Show_4", function(npc)
+-- Story.setBeat("Vivian_Show_4", function(npc)
 	
-end)
+-- end)
 
 Story.setBeat("Sean_Response_1", function(npc)
 	for i = 1,10 do
