@@ -52,6 +52,7 @@ Pause_Modes = {
 			love.graphics.setColor(1,1,1)
 			
 			love.graphics.rectangle("fill",50,50,500,300)
+			love.graphics.print({{0,0,0},"Menu"},(SCREEN_X/12),(SCREEN_Y/8),0,SCREEN_X/600,SCREEN_Y/400)
 		end,
 
 		Update = function(self,dt)
