@@ -206,7 +206,7 @@ World.Dialogue[English][19] = Dialogue.new({
 },1)
 
 World.Dialogue[English][20] = Dialogue.new({
-	Text.new("Hello Varisa.",Zach),
+	Text.newAnimated("Hello Varisa.",Zach,0),
 },1)
 
 World.Dialogue[English][21] = Dialogue.new({
@@ -813,14 +813,14 @@ World.Dialogue[English][64] = Dialogue.new({
 },1)
 
 World.Dialogue[English][65] = Dialogue.new({
-	Text.new("I wish the power company would come sooner.",Zach),
+	Text.newAnimated("I wish the power company would come sooner.",Zach,0),
 	Text.new("Same.",Varisa),
-	Text.new("You should stay for the demonstration.",Zach),
+	Text.newAnimated("You should stay for the demonstration.",Zach,0),
 	Text.new("Maybe.",Varisa),
-	Text.new("...",Zach),
-	Text.new("Though, Karina's has something she wants to tell you.",Zach),
-	Text.new("She said I should tell you, if I saw you.",Zach),
-	Text.new("...",Zach),
+	Text.newAnimated("...",Zach,0),
+	Text.newAnimated("Though, Karina's has something she wants to tell you.",Zach,1),
+	Text.newAnimated("She said I should tell you, if I saw you.",Zach,1),
+	Text.newAnimated("...",Zach,0),
 },1)
 
 World.Dialogue[English][66] = Dialogue.new({
@@ -956,7 +956,7 @@ World.Dialogue[English][77] = Dialogue.new({
 },1)
 
 World.Dialogue[English][78] = Dialogue.new({
-	Text.new("Hey, Varisa.",Zach),
+	Text.newAnimated("Hey, Varisa.",Zach,0),
 },1)
 
 World.Dialogue[English][79] = Dialogue.new({

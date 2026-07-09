@@ -207,6 +207,8 @@ image.newImage("Zoey_A_0","/Assets/Zoey_A_0.png")
 image.newImage("Zoey_A_1","/Assets/Zoey_A_1.png")
 image.newImage("Wilkie_A_0","/Assets/Wilkie_A_0.png")
 image.newImage("Wilkie_A_1","/Assets/Wilkie_A_1.png")
+image.newImage("Zach_A_0","/Assets/Zach_A_0.png")
+image.newImage("Zach_A_1","/Assets/Zach_A_1.png")
 
 image.newImage("Map","/Assets/map.png")
 image.newImage("Save","/Assets/Save_state.png")
