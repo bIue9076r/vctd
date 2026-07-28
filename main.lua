@@ -41,10 +41,10 @@ require("/States/Fadeout")
 require("/States/Pause")
 require("/States/End")
 
-SCREEN_X = love.graphics.getWidth()
-SCREEN_Y = love.graphics.getHeight()
-C_SCREEN_X = SCREEN_X
-C_SCREEN_Y = SCREEN_Y
+SCREEN_X = 600
+SCREEN_Y = 400
+C_SCREEN_X = love.graphics.getWidth()
+C_SCREEN_Y = love.graphics.getHeight()
 ASPECT = (SCREEN_X/SCREEN_Y) 
 ASPECT_INDEX = 1
 CANVAS = love.graphics.newCanvas()
@@ -381,9 +381,7 @@ function derror()
 	love.graphics.print(
 		{{0,0,0},"You're out of bounds^tm\nPress enter to go back to the intro"},
 		(SCREEN_X/8),
-		((SCREEN_Y*3)/20),
-		0,
-		SCREEN_X/600,SCREEN_Y/400
+		((SCREEN_Y*3)/20)
 	)
 end
 
@@ -561,6 +559,7 @@ end
 function love.draw()
 	love.graphics.setCanvas(CANVAS)
 	love.graphics.clear()
+	love.graphics.setScissor(0,0,SCREEN_X,SCREEN_Y)
 
 	daudio()
 	local f = STATE_DRAW[GameState] or derror
@@ -569,6 +568,7 @@ function love.draw()
 	dctrlOps()
 
 	love.graphics.setCanvas()
+	love.graphics.setScissor()
 	local cx = (C_SCREEN_X - (ASPECT_INDEX * SCREEN_X))/2
 	local cy = (C_SCREEN_Y - (ASPECT_INDEX * SCREEN_Y))/2
 	love.graphics.draw(CANVAS,cx,cy,0,ASPECT_INDEX,ASPECT_INDEX)

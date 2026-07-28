@@ -18,9 +18,9 @@ function Intro_Draw()
 	introSt3 = String.get(3)
 	
 	-- stagger print text
-	love.graphics.print({{1,1,1},spString(introSt1,1,introTick)},(SCREEN_X/12),(SCREEN_Y/8),0,SCREEN_X/600,SCREEN_Y/400)
-	love.graphics.print({{1,1,1},spString(introSt2,1,introTick)},((SCREEN_X*5)/24),((SCREEN_Y*5)/8),0,SCREEN_X/600,SCREEN_Y/400)
-	love.graphics.print({{1,1,1},spString(introSt3,1,introTick)},((SCREEN_X*3)/24),(SCREEN_Y/4),0,SCREEN_X/600,SCREEN_Y/400)
+	love.graphics.print({{1,1,1},spString(introSt1,1,introTick)},(SCREEN_X/12),(SCREEN_Y/8))
+	love.graphics.print({{1,1,1},spString(introSt2,1,introTick)},((SCREEN_X*5)/24),((SCREEN_Y*5)/8))
+	love.graphics.print({{1,1,1},spString(introSt3,1,introTick)},((SCREEN_X*3)/24),(SCREEN_Y/4))
 end
 
 function Intro_Update(dt)

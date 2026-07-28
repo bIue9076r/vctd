@@ -281,18 +281,14 @@ function Scene:drawDialogue()
 
 		love.graphics.print(
 			{{0,0,0},tostring(Names[self.dtbl.n])..":"},
-			nx, ny,
-			0,
-			SCREEN_X/600,SCREEN_Y/400
+			nx, ny
 		)
 		
 		love.graphics.printf(
 			{{0,0,0},spString(self.dtbl.s,1,self.dticker)},
 			sx, sy,
 			(SCREEN_X*350)/600,
-			"left",
-			0,
-			SCREEN_X/600,SCREEN_Y/400
+			"left"
 		)
 		
 		if self.dtbl.a then

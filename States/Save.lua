@@ -155,100 +155,85 @@ Save_Modes = {
 			
 			love.graphics.print(
 				{{0,0,0},String.get(22)},
-				(SCREEN_X/10),(SCREEN_Y/4),
-				0,SCREEN_X/600,SCREEN_Y/400
+				(SCREEN_X/10),(SCREEN_Y/4)
 			)
 			
 			love.graphics.print(
 				{{0,0,0},String.get(23)..(CVERSION)},
-				(SCREEN_X/10),((5*SCREEN_Y)/16),
-				0,SCREEN_X/600,SCREEN_Y/400
+				(SCREEN_X/10),((5*SCREEN_Y)/16)
 			)
 			
 				love.graphics.print(
 				{{0,0,0},string.format(String.get(24),Seed)},
-				(SCREEN_X/10),((3*SCREEN_Y)/8),
-				0,SCREEN_X/600,SCREEN_Y/400
+				(SCREEN_X/10),((3*SCREEN_Y)/8)
 			)
 			
 			love.graphics.print(
 				{{0,0,0},String.get(25)..tostring(SaveLang[Language])},
-				(SCREEN_X/10),((7*SCREEN_Y)/16),
-				0,SCREEN_X/600,SCREEN_Y/400
+				(SCREEN_X/10),((7*SCREEN_Y)/16)
 			)
 			
 			love.graphics.print(
 				{{0,0,0},String.get(26)..tostring(GameDay)},
-				(SCREEN_X/10),(SCREEN_Y/2),
-				0,SCREEN_X/600,SCREEN_Y/400
+				(SCREEN_X/10),(SCREEN_Y/2)
 			)
 			
 			love.graphics.print(
 				{{0,0,0},String.get(52)},
-				((3*SCREEN_X)/5),(SCREEN_Y/4),
-				0,SCREEN_X/600,SCREEN_Y/400
+				((3*SCREEN_X)/5),(SCREEN_Y/4)
 			)
 			
 			if ConfVer and not(SaveCon) then
 				love.graphics.print(
 					{{0,0,0},String.get(23)..(ConfVer)},
-					((3*SCREEN_X)/5),((5*SCREEN_Y)/16),
-					0,SCREEN_X/600,SCREEN_Y/400
+					((3*SCREEN_X)/5),((5*SCREEN_Y)/16)
 				)
 			end
 			
 			if ConfSeed and not(SaveCon) then
 				love.graphics.print(
 					{{0,0,0},string.format(String.get(24),ConfSeed)},
-					((3*SCREEN_X)/5),((3*SCREEN_Y)/8),
-					0,SCREEN_X/600,SCREEN_Y/400
+					((3*SCREEN_X)/5),((3*SCREEN_Y)/8)
 				)
 			end
 			
 			if ConfLang and not(SaveCon) then
 				love.graphics.print(
 					{{0,0,0},String.get(25)..tostring(ConfLang)},
-					((3*SCREEN_X)/5),((7*SCREEN_Y)/16),
-					0,SCREEN_X/600,SCREEN_Y/400
+					((3*SCREEN_X)/5),((7*SCREEN_Y)/16)
 				)
 			end
 			
 			if ConfDay and not(SaveCon) then
 				love.graphics.print(
 					{{0,0,0},String.get(26)..tostring(ConfDay)},
-					((3*SCREEN_X)/5),(SCREEN_Y/2),
-					0,SCREEN_X/600,SCREEN_Y/400
+					((3*SCREEN_X)/5),(SCREEN_Y/2)
 				)
 			end
 			
 			love.graphics.print(
 				{{1,0,0},SaveConfirm_1},
-				((3*SCREEN_X)/5),((9*SCREEN_Y)/16),
-				0,SCREEN_X/600,SCREEN_Y/400
+				((3*SCREEN_X)/5),((9*SCREEN_Y)/16)
 			)
 			
 			love.graphics.print(
 				{{1,0,0},SaveConfirm_2},
-				((3*SCREEN_X)/5),((5*SCREEN_Y)/8),
-				0,SCREEN_X/600,SCREEN_Y/400
+				((3*SCREEN_X)/5),((5*SCREEN_Y)/8)
 			)
 			
 			love.graphics.print(
 				{{0,0,0}," "},
-				((3*SCREEN_X)/5),((11*SCREEN_Y)/16),
-				0,SCREEN_X/600,SCREEN_Y/400
+				((3*SCREEN_X)/5),((11*SCREEN_Y)/16)
 			)
 			
 			love.graphics.print(
 				{{0,0,0},String.get(27)},
-				((3*SCREEN_X)/5),((3*SCREEN_Y)/4),
-				0,SCREEN_X/600,SCREEN_Y/400
+				((3*SCREEN_X)/5),((3*SCREEN_Y)/4)
 			)
 			
 			love.graphics.print(
 				{{0,0,0},String.get(28)},
-				((3*SCREEN_X)/5),((13*SCREEN_Y)/16),
-				0,SCREEN_X/600,SCREEN_Y/400
+				((3*SCREEN_X)/5),((13*SCREEN_Y)/16)
 			)
 		end,
 

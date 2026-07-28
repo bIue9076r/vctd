@@ -124,9 +124,7 @@ function ItemBag:drawInv()
 		
 		love.graphics.print({{0,0,0},"Inventory - Page "..self.page},
 			(SCREEN_X/10),
-			((SCREEN_Y*3)/20),
-			0,
-			SCREEN_X/600,SCREEN_Y/400
+			((SCREEN_Y*3)/20)
 		)
 		
 		love.graphics.setColor(1,0,0)
@@ -160,9 +158,7 @@ function ItemBag:drawInv()
 					psy = ((105+(60 * (y-1)))/400)
 					love.graphics.print({{0,0,0},self.items[i].name},
 						SCREEN_X*psx,
-						SCREEN_Y*psy,
-						0,
-						SCREEN_X/600,SCREEN_Y/400
+						SCREEN_Y*psy
 					)
 				end
 			end

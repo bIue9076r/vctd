@@ -163,16 +163,12 @@ function drawBackgound()
 	if not(HideControls) and (GameState == WORLD) then
 		love.graphics.print({{1,1,1},String.get(49)..GameDay},
 			SCREEN_X/60,
-			0,
-			0,
-			SCREEN_X/600,SCREEN_Y/400
+			0
 		)
 		
 		love.graphics.print({{1,1,1},String.get(50)},
 			SCREEN_X/60,
-			(SCREEN_Y*37)/40,
-			0,
-			SCREEN_X/600,SCREEN_Y/400
+			(SCREEN_Y*37)/40
 		)
 	end
 end
@@ -227,18 +223,14 @@ function drawDialogue()
 
 		love.graphics.print(
 			{{0,0,0},tostring(Names[World.dtbl.n])..":"},
-			nx, ny,
-			0,
-			SCREEN_X/600,SCREEN_Y/400
+			nx, ny
 		)
 		
 		love.graphics.printf(
 			{{0,0,0},spString(World.dtbl.s,1,World.dticker)},
 			sx, sy,
 			(SCREEN_X*350)/600,
-			"left",
-			0,
-			SCREEN_X/600,SCREEN_Y/400
+			"left"
 		)
 		
 		if World.dtbl.a then
