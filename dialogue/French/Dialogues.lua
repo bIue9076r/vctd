@@ -272,7 +272,7 @@ World.Dialogue[French][24] = Dialogue.new({
 	Text.new("What?",Varisa),
 	Text.new("You know, moving around.",Fredrick),
 	Text.new("It helps keep the body in shape.",Fredrick),
-	Text.new("I guess...",Varisa,nil,function()
+	Text.newAnimatedLeft("I guess...",Varisa,1,nil,function()
 		Story.set("Fredrick_Exercise_1",true)
 	end),
 	Text.new("At least pretend to use the jump rope I gave you.",Fredrick),
@@ -468,7 +468,7 @@ World.Dialogue[French][36] = Dialogue.new({
 	Text.newAnimated("Now, I still have one of his spare keys.",Mollie,1),
 	Text.newAnimated("So you're going find proof in his house.",Mollie,1),
 	Text.newAnimated("Then bring it back to me.",Mollie,1),
-	Text.new("I guess, I'll do it.",Varisa,nil,function()
+	Text.newAnimatedLeft("I guess, I'll do it.",Varisa,0,nil,function()
 		Story.set("Mollie_Breakup_1",true)
 	end),
 	Text.newAnimated("Great, now get on with it, twerp",Mollie,1),
@@ -559,7 +559,7 @@ World.Dialogue[French][42] = Dialogue.new({
 	Text.newAnimated("Take this check.",Brian,1,nil,function()
 		Story.set("Brian_Trash_4",true)
 	end),
-	Text.new("Thanks I guess",Varisa,nil,function(npc)
+	Text.newAnimatedLeft("Thanks I guess",Varisa,0,nil,function(npc)
 		npc.i = 109
 	end),
 },1)
@@ -583,7 +583,7 @@ World.Dialogue[French][44] = Dialogue.new({
 	Text.newAnimated("My crucifix?",Karina,0),
 	Text.newAnimated("You can have it if you want.",Karina,1),
 	Text.newAnimated("I have a bunch lying around.",Karina,1),
-	Text.new("I guess.",Varisa,nil,function()
+	Text.newAnimatedLeft("I guess.",Varisa,1,nil,function()
 		Story.set("Karina_1",true)
 	end),
 	Text.newAnimated("Save your soul",Karina,1),
@@ -634,7 +634,7 @@ World.Dialogue[French][49] = Dialogue.new({
 	Text.newAnimated("I checked the postal office two days ago...",Zoey,1),
 	Text.newAnimated("They say it's been delivered, but I haven't seen it.",Zoey,1),
 	Text.newAnimated("Please do help me look around for it.",Zoey,1),
-	Text.new("Alright, i'll keep an eye out",Varisa,nil,function()
+	Text.newAnimatedLeft("Alright, i'll keep an eye out",Varisa,1,nil,function()
 		Story.set("Zoey_Errands_1",true)
 	end),
 	Text.newAnimated("Thank you so much.",Zoey,0),
@@ -1106,7 +1106,7 @@ World.Dialogue[French][88] = Dialogue.new({
 	Text.newAnimated("Its a bit hard when she hates my guts.",Vivian,1),
 	Text.new("I suppose.",Varisa),
 	Text.newAnimated("I'll be so thankful if you did.",Vivian,1),
-	Text.new("Sure I guess.",Varisa,nil,function(npc)
+	Text.newAnimatedLeft("Sure I guess.",Varisa,0,nil,function(npc)
 		Story.set("Vivian_Show_1",true)
 	end),
 	Text.newAnimated("Great.",Vivian,0),
