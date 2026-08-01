@@ -53,6 +53,10 @@ Pause_Modes = {
 			
 			love.graphics.rectangle("fill",50,50,500,300)
 			love.graphics.print({{0,0,0},"Menu"},60,60)
+
+			love.graphics.print({{0,0,0},"Settings"},60,120)
+			love.graphics.print({{0,0,0},"Save"},60,180)
+			love.graphics.print({{0,0,0},"Resume"},60,240)
 		end,
 
 		Update = function(self,dt)
