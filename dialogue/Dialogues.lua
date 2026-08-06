@@ -262,7 +262,7 @@ World.Dialogue[English][24] = Dialogue.new({
 	Text.newAnimated("But Farisa does that.",Fredrick),
 	Text.newAnimatedLeft("What does they look like...",Varisa),
 	Text.newAnimated("...",Fredrick),
-	Text.newAnimated("You I suppose...",Fredrick,nil,function()
+	Text.newAnimated("You I suppose...",Fredrick,0,nil,function()
 		Story.set("Fredrick_Reconsider",true)
 	end),
 	Text.newAnimatedLeft("Peculiar.",Varisa),
@@ -896,7 +896,7 @@ World.Dialogue[English][74] = Dialogue.new({
 	Text.newAnimatedLeft("Okay.",Varisa),
 	Text.newAnimatedLeft("I understand pudding.",Varisa),
 	Text.newAnimated("You seem too.",Fredrick),
-	Text.newAnimated("It never hurts to share.",Fredrick,nil,function()
+	Text.newAnimated("It never hurts to share.",Fredrick,0,nil,function()
 		Story.set("Fredrick_Pudding_1",true)
 		Story.set("Fredrick_Reconsider",true)
 	end),
@@ -1162,7 +1162,7 @@ World.Dialogue[English][94] = Dialogue.new({
 	Text.newAnimatedLeft("Was that good enough?",Varisa),
 	Text.newAnimated("Precicely.",Fredrick),
 	Text.newAnimatedLeft("Okay.",Varisa),
-	Text.newAnimated("You can keep the jump rope.",Fredrick,nil,function()
+	Text.newAnimated("You can keep the jump rope.",Fredrick,0,nil,function()
 		Story.set("Fredrick_Exercise_3",true)
 	end),
 	Text.newAnimatedLeft("Oh thanks.",Varisa),
