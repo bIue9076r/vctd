@@ -1210,8 +1210,13 @@ World.Dialogue[English][102] = Dialogue.new({
 },1)
 
 World.Dialogue[English][103] = Dialogue.new({
-	Text.newAnimatedLeft("Hey.",Varisa),
-	Text.newAnimated("Hey.",Brian),
+	Text.newAnimated("Thanks so much for playing.",Brian,0),
+	Text.newAnimatedLeft("No problem.",Varisa,0),
+	Text.newAnimated("Vivian's going to pay you all soon.",Brian,0),
+	Text.newAnimatedLeft("I would hope so.",Varisa,0),
+	Text.newAnimated("Don't forget to try the cake, I made it.",Brian,0),
+	Text.newAnimatedLeft("Sure.",Varisa,0),
+	Text.newAnimated("...",Brian,0),
 },1)
 
 World.Dialogue[English][104] = Dialogue.new({
@@ -1225,8 +1230,13 @@ World.Dialogue[English][105] = Dialogue.new({
 },1)
 
 World.Dialogue[English][106] = Dialogue.new({
-	Text.newAnimatedLeft("Hey.",Varisa),
-	Text.newAnimated("Hey.",Vivian),
+	Text.newAnimated("Huh.",Vivian,1),
+	Text.newAnimated("Do you have another present for me?",Vivian,1),
+	Text.newAnimatedLeft("Not really.",Varisa,0),
+	Text.newAnimated("Oh...",Vivian,1),
+	Text.newAnimated("I'm sure they'll find her soon.",Vivian,1),
+	Text.newAnimated("Everyone's here, Brian made sure of it.",Vivian,1),
+	Text.newAnimatedLeft("Thanks?",Varisa,0),
 },1)
 
 World.Dialogue[English][107] = Dialogue.new({
@@ -1270,10 +1280,10 @@ World.Dialogue[English][109] = Dialogue.new({
 },1)
 
 World.Dialogue[English][110] = Dialogue.new({
-	Text.newAnimatedLeft("Rachel your guitar isn't broken.",Varisa),
+	Text.newAnimatedLeft("Rachel your guitar isn't broken.",Varisa,0),
 	Text.newAnimated("Really?",Rachel,0),
-	Text.newAnimatedLeft("It's just out of tune.",Varisa),
+	Text.newAnimatedLeft("It's just out of tune.",Varisa,0),
 	Text.newAnimated("Well at least you fixed it.",Rachel,0),
-	Text.newAnimatedLeft("No problem, let's keep practising.",Varisa),
+	Text.newAnimatedLeft("No problem, let's keep practising.",Varisa,0),
 	Text.newAnimated("...",Rachel,0),
 },1)

@@ -1210,12 +1210,17 @@ World.Dialogue[French][102] = Dialogue.new({
 },1)
 
 World.Dialogue[French][103] = Dialogue.new({
-	Text.new("Hey.",Varisa),
-	Text.new("Hey.",Brian),
+	Text.newAnimated("Thanks so much for playing.",Brian,0),
+	Text.newAnimatedLeft("No problem.",Varisa,0),
+	Text.newAnimated("Vivian's going to pay you all soon.",Brian,0),
+	Text.newAnimatedLeft("I would hope so.",Varisa,0),
+	Text.newAnimated("Don't forget to try the cake, I made it.",Brian,0),
+	Text.newAnimatedLeft("Sure.",Varisa,0),
+	Text.newAnimated("...",Brian,0),
 },1)
 
 World.Dialogue[French][104] = Dialogue.new({
-Text.new("Hey.",Varisa),
+	Text.new("Hey.",Varisa),
 	Text.new("Hey.",Mollie),
 },1)
 
@@ -1225,8 +1230,13 @@ World.Dialogue[French][105] = Dialogue.new({
 },1)
 
 World.Dialogue[French][106] = Dialogue.new({
-	Text.new("Hey.",Varisa),
-	Text.new("Hey.",Vivian),
+	Text.newAnimated("Huh.",Vivian,1),
+	Text.newAnimated("Do you have another present for me?",Vivian,1),
+	Text.newAnimatedLeft("Not really.",Varisa,0),
+	Text.newAnimated("Oh...",Vivian,1),
+	Text.newAnimated("I'm sure they'll find her soon.",Vivian,1),
+	Text.newAnimated("Everyone's here, Brian made sure of it.",Vivian,1),
+	Text.newAnimatedLeft("Thanks?",Varisa,0),
 },1)
 
 World.Dialogue[French][107] = Dialogue.new({
@@ -1260,20 +1270,20 @@ World.Dialogue[French][108] = Dialogue.new({
 World.Dialogue[French][109] = Dialogue.new({
 	Text.newAnimated("Hey, I still have one more task.",Brian,1),
 	Text.newAnimated("I need to hand out a bunch of flyers.",Brian,1),
-	Text.new("For Vivian's birthday?",Varisa),
+	Text.newAnimatedLeft("For Vivian's birthday?",Varisa,0),
 	Text.newAnimated("Yeah.",Brian,1),
 	Text.newAnimated("Let me hand you some.",Brian,1,nil,function()
 		Story.set("Brian_Flyer_1",true)
 	end),
-	Text.new("Thanks.",Varisa),
+	Text.newAnimatedLeft("Thanks.",Varisa,0),
 	Text.newAnimated("Try to get as much as possible.",Brian,1),
 },1)
 
 World.Dialogue[French][110] = Dialogue.new({
-	Text.new("Rachel your guitar isn't broken.",Varisa),
+	Text.newAnimatedLeft("Rachel your guitar isn't broken.",Varisa,0),
 	Text.newAnimated("Really?",Rachel,0),
-	Text.new("It's just out of tune.",Varisa),
+	Text.newAnimatedLeft("It's just out of tune.",Varisa,0),
 	Text.newAnimated("Well at least you fixed it.",Rachel,0),
-	Text.new("No problem, let's keep practising.",Varisa),
+	Text.newAnimatedLeft("No problem, let's keep practising.",Varisa,0),
 	Text.newAnimated("...",Rachel,0),
 },1)
