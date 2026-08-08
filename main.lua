@@ -400,8 +400,9 @@ function love.load(arg)
 		love.filesystem.createDirectory("/Save")
 	end
 	
-	love.window.setMode(600, 400, {resizable = true, minwidth = 600, minheight = 400})
+	love.window.setMode(800, 400, {resizable = true, minwidth = 600, minheight = 400})
 	love.window.setTitle(String.get(3))
+	love.resize()
 	
 	Save = love.filesystem.getInfo("/Save/.SaveFile")
 	--if not Save then

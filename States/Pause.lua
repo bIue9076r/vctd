@@ -54,6 +54,16 @@ Pause_Modes = {
 			love.graphics.rectangle("fill",50,50,500,300)
 			love.graphics.print({{0,0,0},"Menu"},60,60)
 
+			love.graphics.setColor(1,0,1)
+			love.graphics.rectangle("fill",60,120,140-60,150-120)
+
+			love.graphics.setColor(0,1,1)
+			love.graphics.rectangle("fill",60,180,110-60,210-180)
+
+			love.graphics.setColor(1,1,0)
+			love.graphics.rectangle("fill",60,240,140-60,270-240)
+			love.graphics.setColor(1,1,1)
+
 			love.graphics.print({{0,0,0},"Settings"},60,120)
 			love.graphics.print({{0,0,0},"Save"},60,180)
 			love.graphics.print({{0,0,0},"Resume"},60,240)
@@ -74,7 +84,15 @@ Pause_Modes = {
 
 		Mousepressed = function(self,x,y,button)
 			if button == 1 then
-				Pause_SwitchMode(3)
+				if x >= 60 and x <= 140 and y >= 120 and y <= 150 then
+					Pause_SwitchMode(3)
+				elseif x >= 60 and x <= 110 and y >= 180 and y <= 210 then
+					Save_LastState = GameState
+					GameState = SAVE
+				elseif x >= 60 and x <= 140 and y >= 240 and y <= 270 then
+					Jukebox_play()
+					GameState = WORLD
+				end
 			elseif button == 2 then
 				Jukebox_play()
 				GameState = WORLD
