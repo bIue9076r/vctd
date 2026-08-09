@@ -46,17 +46,17 @@ Play.Scenes[6].transition = function(self,t)
 		end
 	elseif(t < 14) then
 		if not self.vars["Once2"] then
-			self:Say(String.get(44),Vivian)
+			self:SayAnimated(String.get(44),Vivian,0)
 			self.vars["Once2"] = true
 		end
 	elseif(t < 16) then
 		if not self.vars["Once3"] then
-			self:Say(String.get(45),Vivian)
+			self:SayAnimated(String.get(45),Vivian,0)
 			self.vars["Once3"] = true
 		end
 	elseif(t < 18) then
 		if not self.vars["Once4"] then
-			self:Say(String.get(46),Vivian)
+			self:SayAnimated(String.get(46),Vivian,0)
 			self.vars["Once4"] = true
 		end
 	elseif(t < self.tickGoal) then

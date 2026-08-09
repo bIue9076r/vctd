@@ -58,7 +58,7 @@ Play.Scenes[4].transition = function(self,t)
 		end
 	elseif(t < 3.75) then
 		if not self.vars["Once1"] then
-			self:Say(String.get(8),Varisa)
+			self:SayAnimatedLeft(String.get(8),Varisa,0)
 			self.vars["Once1"] = true
 		end
 	elseif(t < 5.625) then
@@ -68,12 +68,12 @@ Play.Scenes[4].transition = function(self,t)
 		end
 	elseif(t < 7.5) then
 		if not self.vars["Once3"] then
-			self:Say(String.get(10),Varisa)
+			self:SayAnimatedLeft(String.get(10),Varisa,0)
 			self.vars["Once3"] = true
 		end
 	elseif(t < 9.375) then
 		if not self.vars["Once4"] then
-			self:Say(String.get(11),Varisa)
+			self:SayAnimatedLeft(String.get(11),Varisa,0)
 			self.vars["Once4"] = true
 		end
 	elseif(t < 11.25) then
