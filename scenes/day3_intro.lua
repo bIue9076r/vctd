@@ -44,7 +44,7 @@ local sbs
 Play.Scenes[5].transition = function(self,t)
 	if(t < 1.25) then
 		if not self.vars["Once1"] then
-			self:Say(String.get(20), Varisa)
+			self:SayAnimatedLeft(String.get(20), Varisa,0)
 			self.vars["Once1"] = true
 		end
 	elseif (t < 3.75) then
