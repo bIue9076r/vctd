@@ -159,6 +159,12 @@ House.house[7] = House.new()
 House.house[8] = House.new()
 House.house[9] = House.new()
 House.house[10] = House.new()
+House.house[11] = {
+	isKiller = false,
+	HouseTrait = "Neat",
+	isOpen = true,
+	HouseHold = "Tracey",
+}
 
 for i = 1,10 do
 	if House.house[i].HouseHold == 4 or House.house[i].HouseHold == 6 or House.house[i].HouseHold == 7 then

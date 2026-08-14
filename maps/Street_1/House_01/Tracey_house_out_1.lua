@@ -39,8 +39,15 @@ World.Map[1]:addWall(Box.new(0,8,2,0.1))
 World.Map[1]:addWall(Box.new(10,8,2,0.1))
 
 World.Map[1]:addWall(Box.new(17.9,7,2.2,0.1,1,1,function()
-	Map = World.Map[2]
-	setPlr(10.5,12.5)
+	if House.house[11].isOpen then
+		Map = World.Map[2]
+		setPlr(10.5,12.5)
+	else
+		-- Door is locked
+		IsTalking = true
+			
+		World.say(String.get(51), Varisa, "Normal")
+	end
 end))
 
 World.Map[1]:addWall(Box.new(0,9,0.1,5,1,1,function()
