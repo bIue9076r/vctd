@@ -1,5 +1,5 @@
 Play.Scenes[7] = Scene.new(World.Map[1])
-Play.Scenes[7].tickGoal = 15
+Play.Scenes[7].tickGoal = 18
 Play.Scenes[7].Next = Fade
 Play.Scenes[7].Hour = Noon
 Play.Scenes[7].Min = 0
@@ -28,6 +28,11 @@ Play.Scenes[7].transition = function(self,t)
 		if not self.vars["Once4"] then
 			self:Say(String.get(56),Tracey)
 			self.vars["Once4"] = true
+		end
+	elseif(t < 15) then
+		if not self.vars["Once5"] then
+			self:Say(String.get(57),Tracey)
+			self.vars["Once5"] = true
 		end
 	elseif(t < self.tickGoal) then
 		
