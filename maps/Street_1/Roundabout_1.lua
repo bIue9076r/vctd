@@ -4,16 +4,23 @@ World.Map[25]:setTile(1,7,Road_N_T)
 World.Map[25]:setTile(2,7,Road_T)
 World.Map[25]:setTile(3,7,Road_N_T)
 World.Map[25]:setTile(4,7,Road_T)
-World.Map[25]:setTile(5,7,Road_N_T)
-World.Map[25]:setTile(6,7,Road_T)
-World.Map[25]:setTile(7,7,Road_N_T)
 
-World.Map[25]:setLineH(1,6,8,Concrete)
-World.Map[25]:setTile(8,7,Concrete)
+World.Map[25]:setLineH(1,6,5,Concrete)
+World.Map[25]:setTile(5,7,Concrete)
 
 World.Map[25]:addWall(Box.new(0,9.1,0.1,4.9,1,1,function()
 	Map = World.Map[1]
 	setPlr(20.5,Plr.y)
+end))
+
+World.Map[25]:addWall(Box.new(2,13.9,7.5,0.1,1,1,function()
+	Map = World.Map[79]
+	setPlr(Plr.x,0.5)
+end))
+
+World.Map[25]:addWall(Box.new(12.5,13.9,11.5,0.1,1,1,function()
+	Map = World.Map[79]
+	setPlr(Plr.x,0.5)
 end))
 
 World.Map[25]:addProp(Prop.new(10.8,2.9-1,Sand_BR,1,1))
@@ -58,9 +65,9 @@ World.Map[25]:addProp(Prop.new(10.8+6,2.9+3,Sand_TL,1,1))
 
 World.Map[25]:addProp(Prop.new(4.5,4.0,Trash_Can))
 
-World.Map[25]:addProp(Prop.new(17.1,11,Warning_T))
-World.Map[25]:addProp(Prop.new(17.1,12,Warning_M))
-World.Map[25]:addProp(Prop.new(17.1,13,Warning_B))
+World.Map[25]:addProp(Prop.new(10.5,11,Warning_T))
+World.Map[25]:addProp(Prop.new(10.5,12,Warning_M))
+World.Map[25]:addProp(Prop.new(10.5,13,Warning_B))
 
 -- Day 1
 
