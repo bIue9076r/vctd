@@ -1,3 +1,4 @@
+-- Benches
 World.Map[80] = MapObj.new(Grass_1)
 
 World.Map[80]:setTile(1,7,Road_N_T)
