@@ -200,6 +200,10 @@ Pause_Modes = {
 			love.graphics.setColor(0.5,0.5,0.5)
 			love.graphics.rectangle("fill",50,50,500,300)
 			love.graphics.setColor(1,1,1)
+			love.graphics.print({{0,0,0},"Settings"},60,60)
+			-- video
+			-- language
+			-- audio
 		end,
 
 		Update = function(self,dt)
