@@ -201,9 +201,10 @@ Pause_Modes = {
 			love.graphics.rectangle("fill",50,50,500,300)
 			love.graphics.setColor(1,1,1)
 			love.graphics.print({{0,0,0},"Settings"},60,60)
-			-- video
-			-- language
-			-- audio
+
+			love.graphics.print({{0,0,0},"Video"},60,120)
+			love.graphics.print({{0,0,0},"Language"},60,180)
+			love.graphics.print({{0,0,0},"Audio"},60,240)
 		end,
 
 		Update = function(self,dt)
@@ -217,11 +218,377 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			if button == 2 then
+			if button == 1 then
+				if x >= 60 and x <= 140 and y >= 120 and y <= 150 then
+					Pause_SwitchMode(6)
+				elseif x >= 60 and x <= 110 and y >= 180 and y <= 210 then
+					Pause_SwitchMode(9)
+				elseif x >= 60 and x <= 140 and y >= 240 and y <= 270 then
+					Pause_SwitchMode(12)
+				end
+			elseif button == 2 then
 				Pause_SwitchMode(4)
 			end
 		end,
-	}
+	},
+
+	[6] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(500,2,self.Anim_t:get()/self.Amax),
+				300
+			)
+			love.graphics.setColor(1,1,1)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(8)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set(self.Anim_t)
+		end,
+	},
+
+	[7] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(2,500,self.Anim_t:get()/self.Amax),
+				300
+			)
+			love.graphics.setColor(1,1,1)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(5)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set(self.Anim_t)
+		end,
+	},
+
+	[8] = {
+		Load = function(self)
+			
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+			love.graphics.setColor(1,1,1)
+			love.graphics.print({{0,0,0},"Video"},60,60)
+		end,
+
+		Update = function(self,dt)
+			
+		end,
+
+		Keypressed = function(self,key)
+			if key == "escape" then
+				Pause_SwitchMode(7)
+			end
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			if button == 2 then
+				Pause_SwitchMode(7)
+			end
+		end,
+	},
+
+	[9] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(500,2,self.Anim_t:get()/self.Amax),
+				300
+			)
+			love.graphics.setColor(1,1,1)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(11)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set(self.Anim_t)
+		end,
+	},
+
+	[10] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(2,500,self.Anim_t:get()/self.Amax),
+				300
+			)
+			love.graphics.setColor(1,1,1)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(5)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set(self.Anim_t)
+		end,
+	},
+
+	[11] = {
+		Load = function(self)
+			
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+			love.graphics.setColor(1,1,1)
+			love.graphics.print({{0,0,0},"Language"},60,60)
+		end,
+
+		Update = function(self,dt)
+			
+		end,
+
+		Keypressed = function(self,key)
+			if key == "escape" then
+				Pause_SwitchMode(10)
+			end
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			if button == 2 then
+				Pause_SwitchMode(10)
+			end
+		end,
+	},
+
+	[12] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(500,2,self.Anim_t:get()/self.Amax),
+				300
+			)
+			love.graphics.setColor(1,1,1)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(14)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set(self.Anim_t)
+		end,
+	},
+
+	[13] = {
+		Anim_t = ticker.new(),
+		Amax = 0.25,
+
+		Load = function(self)
+			self.Anim_t:reset()
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.rectangle("fill",50,50,500,300)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",
+				50,
+				50,
+				lerp(2,500,self.Anim_t:get()/self.Amax),
+				300
+			)
+			love.graphics.setColor(1,1,1)
+		end,
+
+		Update = function(self,dt)
+			self.Anim_t(dt)
+
+			if self.Anim_t:get() >= self.Amax then
+				Pause_SwitchMode(5)
+			end
+		end,
+
+		Keypressed = function(self,key)
+			
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			self.Anim_t:set(self.Anim_t)
+		end,
+	},
+
+	[14] = {
+		Load = function(self)
+			
+		end,
+
+		Draw = function(self)
+			drawBackgound()
+			love.graphics.setColor(0.5,0.5,0.5)
+			drawSpritesNoTint()
+			love.graphics.setColor(1,1,1)
+
+			love.graphics.setColor(0.5,0.5,0.5)
+			love.graphics.rectangle("fill",50,50,500,300)
+			love.graphics.setColor(1,1,1)
+			love.graphics.print({{0,0,0},"Audio"},60,60)
+		end,
+
+		Update = function(self,dt)
+			
+		end,
+
+		Keypressed = function(self,key)
+			if key == "escape" then
+				Pause_SwitchMode(13)
+			end
+		end,
+
+		Mousepressed = function(self,x,y,button)
+			if button == 2 then
+				Pause_SwitchMode(13)
+			end
+		end,
+	},
 }
 
 function Pause_SwitchMode(n)
