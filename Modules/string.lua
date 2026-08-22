@@ -9,6 +9,15 @@ French = 2
 -- German = 4 (Neither is my German)
 -- Czech = 5 (Or my Czech)
 
+String.locale_string = {
+	[English] = "English",
+	[French] = "French",
+	-- [Spanish] = "Spanish",
+	-- [German] = "German",
+	-- [Czech] = "Czech",
+}
+String.locale = English
+
 String.strings[English] = {}
 String.strings[French] = {}
 --String.strings[Spanish] = {}
@@ -24,5 +33,11 @@ function String.get(ind)
 end
 
 function String.NewLocale(l)
-	String.Strings = String.strings[l or English]
+	local L = l or English
+	String.Strings = String.strings[L]
+	String.locale = L
+end
+
+function LocaleString()
+	return String.locale_string[String.locale]
 end

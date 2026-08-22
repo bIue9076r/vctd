@@ -332,6 +332,8 @@ Pause_Modes = {
 			love.graphics.rectangle("fill",50,50,500,300)
 			love.graphics.setColor(1,1,1)
 			love.graphics.print({{0,0,0},"Video"},60,60)
+
+			love.graphics.print({{0,0,0},"Fullscreen"},60,120)
 		end,
 
 		Update = function(self,dt)
@@ -451,6 +453,8 @@ Pause_Modes = {
 			love.graphics.rectangle("fill",50,50,500,300)
 			love.graphics.setColor(1,1,1)
 			love.graphics.print({{0,0,0},"Language"},60,60)
+
+			love.graphics.print({{0,0,0},"Locale: "..LocaleString()},60,120)
 		end,
 
 		Update = function(self,dt)
@@ -571,6 +575,10 @@ Pause_Modes = {
 			love.graphics.rectangle("fill",50,50,500,300)
 			love.graphics.setColor(1,1,1)
 			love.graphics.print({{0,0,0},"Audio"},60,60)
+
+			love.graphics.print({{0,0,0},"Main Volume"},60,120)
+			love.graphics.print({{0,0,0},"Music Volume"},60,180)
+			love.graphics.print({{0,0,0},"SFX Volume"},60,240)
 		end,
 
 		Update = function(self,dt)
