@@ -576,9 +576,9 @@ Pause_Modes = {
 			love.graphics.setColor(1,1,1)
 			love.graphics.print({{0,0,0},"Audio"},60,60)
 
-			love.graphics.print({{0,0,0},"Main Volume"},60,120)
-			love.graphics.print({{0,0,0},"Music Volume"},60,180)
-			love.graphics.print({{0,0,0},"SFX Volume"},60,240)
+			love.graphics.print({{0,0,0},"Main Volume: "..string.format("%d%%",100*Game_MusicVolume)},60,120)
+			love.graphics.print({{0,0,0},"Music Volume: "..string.format("%d%%",100*Game_MainVolume)},60,180)
+			love.graphics.print({{0,0,0},"SFX Volume: "..string.format("%d%%",100*Game_SfxVolume)},60,240)
 		end,
 
 		Update = function(self,dt)
