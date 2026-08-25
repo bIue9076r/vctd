@@ -576,11 +576,11 @@ Pause_Modes = {
 			love.graphics.setColor(1,1,1)
 			love.graphics.print({{0,0,0},"Audio"},60,60)
 
-			love.graphics.print({{0,0,0},"Main Volume: "..string.format("%d%%",100*Game_MusicVolume)},60,120)
+			love.graphics.print({{0,0,0},"Main Volume: "..string.format("%d%%",100*Game_MainVolume)},60,120)
 			love.graphics.print({{0,0,0},"+"},300,120)
 			love.graphics.print({{0,0,0},"-"},350,120)
 			love.graphics.print({{0,0,0},"0"},400,120)
-			love.graphics.print({{0,0,0},"Music Volume: "..string.format("%d%%",100*Game_MainVolume)},60,180)
+			love.graphics.print({{0,0,0},"Music Volume: "..string.format("%d%%",100*Game_MusicVolume)},60,180)
 			love.graphics.print({{0,0,0},"+"},300,180)
 			love.graphics.print({{0,0,0},"-"},350,180)
 			love.graphics.print({{0,0,0},"0"},400,180)
@@ -601,7 +601,27 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			if button == 2 then
+			if button == 1 then
+				if x >= 300 and x <= (300+40) and y >= 120 and y <= (120+40) then
+					Game_MainVolume = math.max(0,math.min(Game_MainVolume + 1,1))
+				elseif x >= 350 and x <= (350+40) and y >= 120 and y <= (120+40) then
+					Game_MainVolume = math.max(0,math.min(Game_MainVolume - 1,1))
+				elseif x >= 400 and x <= (400+40) and y >= 120 and y <= (120+40) then
+					Game_MainVolume = 0
+				elseif x >= 300 and x <= (300+40) and y >= 180 and y <= (180+40) then
+					Game_MusicVolume = math.max(0,math.min(Game_MusicVolume + 1,1))
+				elseif x >= 350 and x <= (350+40) and y >= 180 and y <= (180+40) then
+					Game_MusicVolume = math.max(0,math.min(Game_MusicVolume - 1,1))
+				elseif x >= 400 and x <= (400+40) and y >= 180 and y <= (180+40) then
+					Game_MusicVolume = 0
+				elseif x >= 300 and x <= (300+40) and y >= 240 and y <= (240+40) then
+					Game_SfxVolume = math.max(0,math.min(Game_SfxVolume + 1,1))
+				elseif x >= 350 and x <= (350+40) and y >= 240 and y <= (240+40) then
+					Game_SfxVolume = math.max(0,math.min(Game_SfxVolume - 1,1))
+				elseif x >= 400 and x <= (400+40) and y >= 240 and y <= (240+40) then
+					Game_SfxVolume = 0
+				end
+			elseif button == 2 then
 				Pause_SwitchMode(13)
 			end
 		end,
