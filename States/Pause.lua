@@ -468,7 +468,15 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			if button == 2 then
+			if button == 1 then
+				if x >= 60 and x <= (60+72) and y >= 120 and y <= (120+40) then
+					Language = Language + 1
+					if Language > French then
+						Language = English
+					end
+					LocaleChange()
+				end
+			elseif button == 2 then
 				Pause_SwitchMode(10)
 			end
 		end,
