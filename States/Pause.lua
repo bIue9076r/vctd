@@ -347,7 +347,12 @@ Pause_Modes = {
 		end,
 
 		Mousepressed = function(self,x,y,button)
-			if button == 2 then
+			if button == 1 then
+				if x >= 60 and x <= (60+125) and y >= 120 and y <= (120+40) then
+					love.window.setMode(600, 400, {fullscreen = not(love.window.getFullscreen()), minwidth = 600, minheight = 400})
+					love.resize()
+				end
+			elseif button == 2 then
 				Pause_SwitchMode(7)
 			end
 		end,
