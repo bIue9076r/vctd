@@ -1,3 +1,10 @@
+-- Specific to Timeline 1
+
+-- Specific to Timeline 2
+
+-- Specific to Timeline 3
+
+-- General
 Story.setBeat("Toolbox_Wilkie_1",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == Families.HouseHold["Rachel"] then
