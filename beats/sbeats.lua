@@ -1,3 +1,7 @@
+-- Quest
+-- Offered by
+-- How to complete
+
 -- Specific to Timeline 1
 
 -- Specific to Timeline 2
@@ -5,6 +9,10 @@
 -- Specific to Timeline 3
 
 -- General
+
+-- Quest: Fix Rachel's Guitar
+-- Offered by: Rachel
+-- How to complete: Fix Rachel's Guitar with a Screwdriver
 Story.setBeat("Toolbox_Wilkie_1",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == Families.HouseHold["Rachel"] then
@@ -92,6 +100,9 @@ Story.setBeat("Rachel_Guitar_2",function(npc)
 	end
 end)
 
+-- Quest: Spying for Mollie
+-- Offered by: Mollie 
+-- How to complete: Find something in Sean's house
 Story.setBeat("Mollie_Breakup_1",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 2 then
@@ -138,10 +149,16 @@ Story.setBeat("Mollie_Breakup_4",function(npc)
 	end
 end)
 
+-- Quest: Talk to Karina
+-- Offered by: Karina
+-- How to complete: Talk to Karina
 Story.setBeat("Karina_1",function(npc)
 	Plr.inv:add(Item_Crucifix)
 end)
 
+-- Quest: Brian's Trash
+-- Offered by: Brian
+-- How to complete: Throw out Brian's Trash
 Story.setBeat("Brian_Trash_1", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 4 then
@@ -182,6 +199,9 @@ Story.setBeat("Brian_Trash_3", function(npc)
 	end
 end)
 
+-- Quest: Exercise
+-- Offered by: Fredrick
+-- How to complete: Exercise with Fredrick
 Story.setBeat("Fredrick_Exercise_1", function(npc)
 	Plr.inv:add(Item_Jump_Rope)
 end)
@@ -203,6 +223,9 @@ Story.setBeat("Fredrick_Exercise_3", function(npc)
 	
 end)
 
+-- Quest: Bake a Cake
+-- Offered by: Lassie
+-- How to complete: Help Lassie bake a cake
 Story.setBeat("Lassie_Baking_1", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 8 then
@@ -233,6 +256,9 @@ Story.setBeat("Lassie_Baking_3", function(npc)
 	
 end)
 
+-- Quest: Zoey's Errand
+-- Offered by: Zoey
+-- How to complete: Help Zoey find her package
 Story.setBeat("Zoey_Errands_1", function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == 5 then
@@ -279,6 +305,9 @@ Story.setBeat("Zoey_Errands_3", function(npc)
 
 end)
 
+-- Quest: Jami's Experiment 1
+-- Offered by: Jami
+-- How to complete: Help Jami collect data
 Story.setBeat("Jami_Experiment_1_1", function(npc)
 	Plr.inv:add(Item_WRayDetector)
 end)
@@ -300,6 +329,9 @@ Story.setBeat("Jami_Experiment_1_3", function(npc)
 	
 end)
 
+-- Quest: Power Up
+-- Offered by: Circumstances
+-- How to complete: Fix the Power
 Story.setBeat("Power_Up_1", function(npc)
 	for i,v in pairs(World.Map[3].npcs) do
 		if v.c == TV_B then
@@ -451,10 +483,16 @@ Story.setBeat("Power_Up_2", function(npc)
 	end
 end)
 
+-- Quest: Fix Fredrick's Pudding
+-- Offered by: Fredrick
+-- How to complete: Eat Pudding with Fredrick
 Story.setBeat("Fredrick_Pudding_1", function(npc)
 	
 end)
 
+-- Quest: Jami's Experiment 2
+-- Offered by: Jami
+-- How to complete: Help Jami collect data
 Story.setBeat("Jami_Experiment_2_1", function(npc)
 	if not Story.get("Jami_Experiment_1_1") then
 		Plr.inv:add(Item_WRayDetector)
