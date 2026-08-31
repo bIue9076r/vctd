@@ -1,6 +1,6 @@
--- Quest
--- Offered by
--- How to complete
+-- Quest:
+-- Offered by:
+-- How to complete:
 
 -- Specific to Timeline 1
 
@@ -523,6 +523,9 @@ Story.setBeat("Zach_Gardening_1", function(npc)
 	
 end)
 
+-- Quest: True Crime with Vivian
+-- Offered by: Vivian
+-- How to complete: Vivian wants the recordings of a show
 Story.setBeat("Vivian_Show_1", function(npc)
 	for i = 1,10 do
 		local I = Families.HouseMap[i]
@@ -569,6 +572,9 @@ Story.setBeat("Sean_Response_2", function(npc)
 	
 end)
 
+-- Quest: Mollie's Vengeance
+-- Offered by: Mollie 
+-- How to complete: Keep spying on Sean
 Story.setBeat("Mollie_Vengeance_1", function(npc)
 	for i = 1,10 do
 		local I = Families.HouseMap[i]
@@ -598,6 +604,9 @@ Story.setBeat("Wilkie_Details_1", function(npc)
 	
 end)
 
+-- Quest: Jami's Suspicions
+-- Offered by: Jami
+-- How to complete: Jami narrowed down the possible killers
 Story.setBeat("Jami_Suspicions_1_1", function(npc)
 	
 end)
@@ -620,6 +629,9 @@ Story.setBeat("Karly_Find_2", function(npc)
 	GameState = END
 end)
 
+-- Quest: Advertizing for Vivian
+-- Offered by: Brian
+-- How to complete: Brian needs to put up flyers for Vivian
 Story.setBeat("Brian_Flyer_1", function(npc)
 	
 end)
