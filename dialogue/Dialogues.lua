@@ -1287,3 +1287,7 @@ World.Dialogue[English][110] = Dialogue.new({
 	Text.newAnimatedLeft("No problem, let's keep practising.",Varisa,0),
 	Text.newAnimated("...",Rachel,0),
 },1)
+
+World.Dialogue[English][110] = Dialogue.new({
+	Text.new("Put a flyer inside",Varisa),
+},1)
