@@ -633,7 +633,29 @@ end)
 -- Offered by: Brian
 -- How to complete: Brian needs to put up flyers for Vivian
 Story.setBeat("Brian_Flyer_1", function(npc)
-	
+	for i = 1,10 do
+		local I = Families.HouseMap[i]
+		if not((House.house[i].HouseHold == 9) or (House.house[i].HouseHold == 10)) then
+			for _,v in pairs(World.Map[I].npcs) do
+				if v.c == Mailbox then
+					v.i = 110
+				end
+			end
+		end
+	end
+end)
+
+Story.setBeat("Brian_Flyer_2", function(npc)
+	for i = 1,10 do
+		local I = Families.HouseMap[i]
+		if not((House.house[i].HouseHold == 9) or (House.house[i].HouseHold == 10)) then
+			for _,v in pairs(World.Map[I].npcs) do
+				if v.c == Mailbox then
+					v.i = Families.mail[Families[House.house[i].HouseHold]]
+				end
+			end
+		end
+	end
 end)
 
 ---
