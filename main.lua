@@ -386,6 +386,7 @@ function derror()
 end
 
 function daudio()
+	love.audio.setVolume(Game_MainVolume)
 	if Jukebox_canPlay() then
 		Jukebox_draw()
 	end

@@ -616,21 +616,21 @@ Pause_Modes = {
 		Mousepressed = function(self,x,y,button)
 			if button == 1 then
 				if x >= 300 and x <= (300+40) and y >= 120 and y <= (120+40) then
-					Game_MainVolume = math.max(0,math.min(Game_MainVolume + 1,1))
+					Game_MainVolume = math.max(0,math.min(Game_MainVolume + 0.1,1))
 				elseif x >= 350 and x <= (350+40) and y >= 120 and y <= (120+40) then
-					Game_MainVolume = math.max(0,math.min(Game_MainVolume - 1,1))
+					Game_MainVolume = math.max(0,math.min(Game_MainVolume - 0.1,1))
 				elseif x >= 400 and x <= (400+40) and y >= 120 and y <= (120+40) then
 					Game_MainVolume = 0
 				elseif x >= 300 and x <= (300+40) and y >= 180 and y <= (180+40) then
-					Game_MusicVolume = math.max(0,math.min(Game_MusicVolume + 1,1))
+					Game_MusicVolume = math.max(0,math.min(Game_MusicVolume + 0.1,1))
 				elseif x >= 350 and x <= (350+40) and y >= 180 and y <= (180+40) then
-					Game_MusicVolume = math.max(0,math.min(Game_MusicVolume - 1,1))
+					Game_MusicVolume = math.max(0,math.min(Game_MusicVolume - 0.1,1))
 				elseif x >= 400 and x <= (400+40) and y >= 180 and y <= (180+40) then
 					Game_MusicVolume = 0
 				elseif x >= 300 and x <= (300+40) and y >= 240 and y <= (240+40) then
-					Game_SfxVolume = math.max(0,math.min(Game_SfxVolume + 1,1))
+					Game_SfxVolume = math.max(0,math.min(Game_SfxVolume + 0.1,1))
 				elseif x >= 350 and x <= (350+40) and y >= 240 and y <= (240+40) then
-					Game_SfxVolume = math.max(0,math.min(Game_SfxVolume - 1,1))
+					Game_SfxVolume = math.max(0,math.min(Game_SfxVolume - 0.1,1))
 				elseif x >= 400 and x <= (400+40) and y >= 240 and y <= (240+40) then
 					Game_SfxVolume = 0
 				end
