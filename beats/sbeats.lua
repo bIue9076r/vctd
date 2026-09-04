@@ -519,6 +519,9 @@ Story.setBeat("Karina_Investigation_1", function(npc)
 	
 end)
 
+-- Quest: Zach's Garden
+-- Offered by: Zach
+-- How to complete: Help Zach fetch supplies from his shed
 Story.setBeat("Zach_Gardening_1", function(npc)
 	
 end)
