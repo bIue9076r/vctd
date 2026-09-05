@@ -81,6 +81,10 @@ function ItemBag:draw()
 	end
 end
 
+function ItemBag.drawOver()
+
+end
+
 function ItemBag:update(dt)
 	if self.visible then
 		local x,y = love.mouse.getPosition()
@@ -111,6 +115,11 @@ function ItemBag:update(dt)
 end
 
 function ItemBag:drawInv()
+	if self.drawOver then
+		self:drawOver()
+		self.drawOver = nil
+	end
+
 	if self.visible then
 		-- draw inventory
 		-- pause game to be safe
