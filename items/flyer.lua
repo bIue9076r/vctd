@@ -5,6 +5,15 @@ Item_Flyer.save = "DAY1"
 Item_Flyer.show = true
 
 -- custom display
+function Item_Flyer:drawOver()
+	love.graphics.draw(
+		img,
+		35,35,
+		0,
+		2,2
+	)
+end
+
 function Item_Flyer:draw(x,y)
 	local x = x or Plr.x
 	local y = y or Plr.y
@@ -24,14 +33,7 @@ function Item_Flyer:draw(x,y)
 	)
 	
 	if self.show then
-		Plr.inv.drawOver = function()
-			love.graphics.draw(
-				img,
-				35,35,
-				0,
-				2,2
-			)
-		end
+		Plr.inv.drawOver = self.drawOver();
 	end
 end
 
