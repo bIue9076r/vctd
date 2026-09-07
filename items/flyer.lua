@@ -6,11 +6,10 @@ Item_Flyer.show = true
 
 -- custom display
 function Item_Flyer:drawOver()
-	love.graphics.draw(
-		img,
+	love.graphics.rectangle(
+		"fill",
 		35,35,
-		0,
-		2,2
+		250,250
 	)
 end
 
@@ -33,7 +32,7 @@ function Item_Flyer:draw(x,y)
 	)
 	
 	if self.show then
-		Plr.inv.drawOver = self.drawOver();
+		Plr.inv.drawOver = self.drawOver;
 	end
 end
 
