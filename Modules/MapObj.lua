@@ -157,3 +157,53 @@ end
 function MapObj:getDboxs()
 	return self.dboxs
 end
+
+function MapObj:clone(mobj)
+	for i,v in pairs(mobj.sector) do
+		for j,w in pairs(mobj.sector[i]) do
+			self.sector[i][j].bt = mobj.sector[i][j].bt
+			self.sector[i][j].ft = mobj.sector[i][j].ft
+		end
+	end
+
+	for i,v in pairs(mobj.walls) do
+		self.walls[i].x = mobj.walls[i].x
+		self.walls[i].y = mobj.walls[i].y
+		self.walls[i].w = mobj.walls[i].w
+		self.walls[i].h = mobj.walls[i].h
+		self.walls[i].c = mobj.walls[i].c
+		self.walls[i].t = mobj.walls[i].t
+		self.walls[i].e = mobj.walls[i].e
+	end
+
+	for i,v in pairs(mobj.npcs) do
+		self.walls[i].x = mobj.walls[i].x
+		self.walls[i].y = mobj.walls[i].y
+		self.walls[i].c = mobj.walls[i].c
+		self.walls[i].i = mobj.walls[i].i
+		self.walls[i].g = mobj.walls[i].g
+		self.walls[i].f = mobj.walls[i].f
+		self.walls[i].onTimeChange = mobj.walls[i].onTimeChange
+	end
+
+	for i,v in pairs(mobj.props) do
+		self.walls[i].x = mobj.walls[i].x
+		self.walls[i].y = mobj.walls[i].y
+		self.walls[i].c = mobj.walls[i].c
+		self.walls[i].p = mobj.walls[i].p
+		self.walls[i].b = mobj.walls[i].b
+		self.walls[i].g = mobj.walls[i].g
+		self.walls[i].f = mobj.walls[i].f
+		self.walls[i].onTimeChange = mobj.walls[i].onTimeChange
+	end
+	
+	for i,v in pairs(mobj.dboxs) do
+		self.walls[i].x = mobj.walls[i].x
+		self.walls[i].y = mobj.walls[i].y
+		self.walls[i].w = mobj.walls[i].w
+		self.walls[i].h = mobj.walls[i].h
+		self.walls[i].c = mobj.walls[i].c
+		self.walls[i].t = mobj.walls[i].t
+		self.walls[i].e = mobj.walls[i].e
+	end
+end
