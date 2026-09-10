@@ -78,3 +78,5 @@ require("maps/Street_3/House_12/S10_house_in_4")
 require("maps/Street_3/House_12/S10_house_out_2")
 require("maps/Street_2/Roundabout_2")
 require("maps/Street_3/Roundabout_3")
+
+require("maps/breakaway")

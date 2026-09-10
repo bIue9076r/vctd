@@ -238,7 +238,16 @@ Save_Modes = {
 		end,
 
 		Update = function(dt)
-			
+			if Breakaway_Engaged then
+				Game_clearData()
+				Savesong:stop()
+				SaveConfirm_1 = ""
+				SaveConfirm_2 = ""
+				LoadCon = false
+				SaveCon = false
+				DeleCon = false
+				GameState = Save_LastState
+			end
 		end,
 
 		Keypressed = function(key)
