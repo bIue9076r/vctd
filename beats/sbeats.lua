@@ -661,6 +661,17 @@ Story.setBeat("Brian_Flyer_2", function(npc)
 	end
 end)
 
+Story.setBeat("Into_Breakaway_1", function(npc)
+	Breakaway_Engaged = true
+	Breakaway_Last = MaptoN()
+	Map = Breakaway_1
+end)
+
+Story.setBeat("Exit_Breakaway_1", function(npc)
+	Breakaway_Engaged = false
+	Map = World.Map[Breakaway_Last]
+end)
+
 ---
 
 Story.setBeat("Find", function(npc)
