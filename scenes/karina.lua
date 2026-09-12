@@ -1,5 +1,5 @@
 Play.Scenes[12] = Scene.new(World.Map[25])
-Play.Scenes[12].tickGoal = 25
+Play.Scenes[12].tickGoal = 1000--25
 Play.Scenes[12].Next = Fade
 Play.Scenes[12].Hour = Night
 
@@ -43,7 +43,7 @@ Play.Scenes[12].Actors[37] = Actor.new(Warning_T,17.1,11)
 Play.Scenes[12].Actors[38] = Actor.new(Warning_M,17.1,12)
 Play.Scenes[12].Actors[39] = Actor.new(Warning_B,17.1,13)
 
-Play.Scenes[12].Actors[40] = Actor.new(Karina,1.5,10.5)
+Play.Scenes[12].Actors[40] = Actor.new(Karina,0,10.5)
 Play.Scenes[12].Actors[41] = Actor.new(Unknown,13.8,3.5)
 
 Play.Scenes[12].transition = function(self,t)
@@ -69,7 +69,10 @@ Play.Scenes[12].transition = function(self,t)
 			DialogueBuffer = 2.5
 			self.vars["Once1"] = true
 		end
+		
 	elseif(t < 5) then
+		local _t = (t/3.125)
+		Play.Scenes[12].Actors[40].x = Scene.lerp(0,6,_t)
 		if not self.vars["Once2"] then
 			self:SayAnimated(String.get(34),Karina,0)
 			self.vars["Once2"] = true
