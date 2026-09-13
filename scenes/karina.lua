@@ -69,43 +69,43 @@ Play.Scenes[12].transition = function(self,t)
 			DialogueBuffer = 2.5
 			self.vars["Once1"] = true
 		end
-		
 	elseif(t < 5) then
-		local _t = (t/3.125)
+		local _t = ((t - 3.125)/5)
 		Play.Scenes[12].Actors[40].x = Scene.lerp(0,6,_t)
+	elseif (t < 10) then
 		if not self.vars["Once2"] then
 			self:SayAnimated(String.get(34),Karina,0)
 			self.vars["Once2"] = true
 		end
-	elseif(t < 6.875) then
+	elseif(t < 11.875) then
 		if not self.vars["Once3"] then
 			self:SayAnimated(String.get(35),Karina,0)
 			self.vars["Once3"] = true
 		end
-	elseif(t < 8.75) then
+	elseif(t < 13.75) then
 		if not self.vars["Once4"] then
 			self:SayAnimated(String.get(36),Karina,0)
 			self.vars["Once4"] = true
 		end
-	elseif(t < 10.625) then
+	elseif(t < 16.625) then
 		if not self.vars["Once5"] then
 			self:SayAnimated(String.get(37),Karina,0)
 			self.vars["Once5"] = true
 		end
-	elseif(t < 12.5) then
+	elseif(t < 18.5) then
 		if not self.vars["Once6"] then
 			self:Say(String.get(Scene.vars["dn1"]),Unknown,"Slow")
 			self.vars["Once6"] = true
 		end
-	elseif(t < 15.625) then
+	elseif(t < 20.625) then
 		if not self.vars["Once7"] then
 			self:Say(String.get(Scene.vars["dn2"]),Unknown,"Slow")
 			self.vars["Once7"] = true
 		end
-	elseif(t < 18.75) then
+	elseif(t < 22.75) then
 		
 	elseif(t < self.tickGoal) then
-		local _t = (t - (18.75)) / (1.25)
+		-- local _t = (t - (18.75)) / (1.25)
 		-- Play.Scenes[12].Actors[3].x = Scene.lerp(16.6,18.2,_t)
 		-- Play.Scenes[12].Actors[4].x = Scene.lerp(18.3,18.7,_t)
 
