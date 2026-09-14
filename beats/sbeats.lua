@@ -636,6 +636,7 @@ end)
 -- Offered by: Brian
 -- How to complete: Brian needs to put up flyers for Vivian
 Story.setBeat("Brian_Flyer_1", function(npc)
+	Plr.inv:add(Item_Flyer)
 	for i = 1,10 do
 		local I = Families.HouseMap[i]
 		if not((House.house[i].HouseHold == 9) or (House.house[i].HouseHold == 10)) then
