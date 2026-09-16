@@ -1,6 +1,4 @@
--- ending ticker
-endTick = ticker.new()
-
+-- End State
 
 function End_Draw()
 	-- draw background
