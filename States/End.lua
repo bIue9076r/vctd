@@ -1,8 +1,6 @@
 -- End State
 
 function End_Draw()
-	-- draw background
-	drawBackgound()
 	
 end
 
