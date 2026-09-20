@@ -1,5 +1,5 @@
-Item_Pudding = Item.new()
-Item_Pudding.name = "Jump Rope"
+Item_Pudding = Item.new(Pudding_held)
+Item_Pudding.name = "Pudding"
 Item_Pudding.save = "DAY1"
 
 Item_Pudding.count = 0

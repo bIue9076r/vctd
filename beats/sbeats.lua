@@ -487,7 +487,7 @@ end)
 -- Offered by: Fredrick
 -- How to complete: Eat Pudding with Fredrick
 Story.setBeat("Fredrick_Pudding_1", function(npc)
-	
+	Plr.inv:add(Item_Pudding)
 end)
 
 -- Quest: Jami's Experiment 2
