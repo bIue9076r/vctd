@@ -101,6 +101,7 @@ function World.say(s,n,v)
 		n = n or 0,
 		v = v or "Normal",
 		a = false,
+		l = false,
 		t = 0,
 	}
 end
@@ -111,6 +112,18 @@ function World.sayAnimated(s,n,v,t)
 		n = n or 0,
 		v = v or "Normal",
 		a = true,
+		l = false,
+		t = t or 0,
+	}
+end
+
+function World.sayAnimatedLeft(s,n,v,t)
+	World.dtbl = {
+		s = s or "",
+		n = n or 0,
+		v = v or "Normal",
+		a = true,
+		l = true,
 		t = t or 0,
 	}
 end

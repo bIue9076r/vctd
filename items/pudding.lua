@@ -5,6 +5,7 @@ Item_Pudding.save = "DAY1"
 Item_Pudding.count = 0
 
 function Item_Pudding:act(key)
-	-- Quest Item
-	
+	if key == "q" then
+		World.say("mmm", Varisa, "Normal")
+	end
 end
