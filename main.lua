@@ -84,6 +84,7 @@ require("items/pudding")
 Plr.inv:add(Guitar)
 Plr.inv:add(Item_WRayDetector)
 -- Plr.inv:add(Item_Flyer)
+Plr.inv:add(Item_Pudding)
 
 function setPlr(x,y)
 	Plr.x = x
