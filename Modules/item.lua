@@ -189,3 +189,15 @@ function ItemBag:Keypressed(key)
 		self.items[self.index]:act(key)
 	end
 end
+
+function ItemBag:Remove(obj)
+	for i,v in pairs(self.items) do
+		if (obj == v) then
+			self.items[i] = nil
+			for I = i + 1,#self.items do
+				self.items[I - 1] = self.items[I]
+				self.items[I] = nil
+			end
+		end
+	end
+end

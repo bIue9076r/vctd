@@ -9,8 +9,8 @@ function Item_Pudding:act(key)
 		World.say("mmm", Varisa, "Normal")
 		IsTalking = true
 		self.count = self.count + 1
-		if self.count >= 5 then
-			-- Plr.inv:remove(self)
+		if self.count >= 1 then
+			Plr.inv:Remove(self)
 		end
 	end
 end
