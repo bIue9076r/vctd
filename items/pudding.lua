@@ -5,12 +5,14 @@ Item_Pudding.save = "DAY1"
 Item_Pudding.count = 0
 
 function Item_Pudding:act(key)
-	if key == "q" then
-		World.say("mmm", Varisa, "Normal")
-		IsTalking = true
-		self.count = self.count + 1
-		if self.count >= 5 then
-			Plr.inv:Remove(self)
-		end
+	if not((key == "return") or (key == "e")) then
+		return
+	end
+	
+	World.say("mmm", Varisa, "Normal")
+	IsTalking = true
+	self.count = self.count + 1
+	if self.count >= 5 then
+		Plr.inv:Remove(self)
 	end
 end
