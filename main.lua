@@ -1,5 +1,7 @@
 math.randomseed(os.time())
-jit.off()
+if jit then
+	jit.off()
+end
 love.graphics.setDefaultFilter("nearest", "nearest")
 utf8 = require("utf8")
 require("/Engine/filesConfig")
