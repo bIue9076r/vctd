@@ -68,3 +68,7 @@ function Story.Load(file)
 		end
 	end
 end
+
+Quest = {}
+Quest.beats = {}
+Quest.complete = false
