@@ -72,3 +72,7 @@ end
 Quest = {}
 Quest.beats = {}
 Quest.complete = false
+
+function Quest.new(beats)
+	
+end
