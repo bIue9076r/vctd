@@ -74,5 +74,11 @@ Quest.beats = {}
 Quest.complete = false
 
 function Quest.new(beats)
-	
+	local tbl = {}
+
+	local mt = {
+		__index = Quest
+	}
+
+	return setmetatable(tbl,mt)
 end
