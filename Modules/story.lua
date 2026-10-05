@@ -74,11 +74,17 @@ Quest.beats = {}
 Quest.complete = false
 
 function Quest.new(beats)
-	local tbl = {}
+	local tbl = {
+		beats = beats or {},
+	}
 
 	local mt = {
 		__index = Quest
 	}
 
 	return setmetatable(tbl,mt)
+end
+
+function Quest:setComplete()
+	self.complete = true
 end
