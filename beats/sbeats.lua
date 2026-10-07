@@ -558,6 +558,9 @@ end)
 	
 -- end)
 
+-- Quest: Sean Response
+-- Offered by: Sean 
+-- How to complete: Spy on Mollie
 Story.setBeat("Sean_Response_1", function(npc)
 	for i = 1,10 do
 		local I = Families.HouseMap[i]
