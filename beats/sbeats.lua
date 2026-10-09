@@ -13,6 +13,8 @@
 -- Quest: Fix Rachel's Guitar
 -- Offered by: Rachel
 -- How to complete: Fix Rachel's Guitar with a Screwdriver
+Quests = {}
+Quests[1] = Quest.new()
 Story.setBeat("Toolbox_Wilkie_1",function(npc)
 	for i = 1,10 do
 		if House.house[i].HouseHold == Families.HouseHold["Rachel"] then
