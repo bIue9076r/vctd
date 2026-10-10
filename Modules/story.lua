@@ -71,6 +71,7 @@ end
 
 Quest = {}
 Quest.beats = {}
+Quest.progress = 0
 Quest.complete = false
 
 function Quest.new(beats)
@@ -87,4 +88,17 @@ end
 
 function Quest:setComplete()
 	self.complete = true
+end
+
+function Quest.Load(file)
+	local tbl, e = file:Read()
+	print("Todo: Story Load")
+	if not e then
+		for i,v in pairs(tbl) do
+			if i:sub(1,6) == "story_" then
+				i = i:sub(7)
+				print(i,v)
+			end
+		end
+	end
 end
