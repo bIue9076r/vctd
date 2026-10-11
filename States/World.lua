@@ -268,7 +268,7 @@ function World.Draw()
 	drawSprites()
 	Plr.inv:drawInv()
 	World.drawMap()
-	if World.showHint and World.snpc then
+	if World.showHint and World.snpc and not(World.showMap) and not(Plr.inv.visible) then
 		local t = math.max(0,math.min(0.1,World.hintTicker:get()))
 		love.graphics.setColor(1,1,1,t/0.1)
 		local img = image.getImage(CtS[Hint])
