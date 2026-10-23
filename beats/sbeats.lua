@@ -492,6 +492,10 @@ Story.setBeat("Fredrick_Pudding_1", function(npc)
 	Plr.inv:add(Item_Pudding)
 end)
 
+Story.setBeat("Fredrick_Pudding_2", function(npc)
+
+end)
+
 -- Quest: Jami's Experiment 2
 -- Offered by: Jami
 -- How to complete: Help Jami collect data
