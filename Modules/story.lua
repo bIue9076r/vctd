@@ -91,14 +91,5 @@ function Quest:setComplete()
 end
 
 function Quest.Load(file)
-	local tbl, e = file:Read()
-	print("Todo: Story Load")
-	if not e then
-		for i,v in pairs(tbl) do
-			if i:sub(1,6) == "story_" then
-				i = i:sub(7)
-				print(i,v)
-			end
-		end
-	end
+	
 end
