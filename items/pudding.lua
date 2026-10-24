@@ -13,6 +13,7 @@ function Item_Pudding:act(key)
 	IsTalking = true
 	self.count = self.count + 1
 	if self.count >= 5 then
+		Story.set("Fredrick_Pudding_2",true)
 		Plr.inv:Remove(self)
 	end
 end
