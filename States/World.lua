@@ -129,22 +129,24 @@ function World.sayAnimatedLeft(s,n,v,t)
 end
 
 function World.DialogueSay()
-	local wd = World.Dialogue[Language][World.snpc.i]
-	if not wd then
-		World.snpc.i = 0
-		wd = World.Dialogue[Language][World.snpc.i]
-	end
+	local wd = World.Dialogue[Language]
 	if wd then
-		World.dtbl = wd:get(World.snpc)
-		
-		if World.Dialogue[Language][World.snpc.i] then
-			if World.Dialogue[English][World.snpc.i] then
-				World.Dialogue[English][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
-			end
-			if World.Dialogue[French][World.snpc.i] then
-				World.Dialogue[French][World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
+		wd = wd[World.snpc.i]
+		if not wd then
+			World.snpc.i = 0
+			wd = World.Dialogue[Language][World.snpc.i]
+		end
+		if wd then
+			World.dtbl = wd:get(World.snpc)
+			
+			if World.Dialogue[Language][World.snpc.i] then
+				for i,v in pairs(World.Dialogue) do
+					v[World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
+				end
 			end
 		end
+	else
+		Language = English
 	end
 end
 
@@ -179,7 +181,7 @@ end
 World.Dialogue = {}
 -- Include Dialogue File
 require("dialogue/Dialogues")
-require("dialogue/French/Dialogues")
+-- require("dialogue/French/Dialogues")
 --
 
 World.showMap = false
