@@ -2,6 +2,12 @@ World.Dialogue[English] = {}
 
 require("/dialogue/English/Interactions/g")
 
+for i = 1,7 do
+	require("/dialogue/English/Day"..(i).."/m")
+	require("/dialogue/English/Day"..(i).."/d")
+	require("/dialogue/English/Day"..(i).."/e")
+end
+
 World.Dialogue[English][1] = Dialogue.new({
 	Text.newAnimated("Hey",Varisa,3),
 	Text.newAnimatedLeft("Hey Var!",Tracey,1),
