@@ -1,6 +1,10 @@
 -- Band Practice
 World.Dialogue[English][1] = Dialogue.new({
-	Text.new("...",Varisa),
+	Text.new("Hey guys.",Varisa),
+	Text.new("Hey Varisa.",Tracey),
+	Text.new("Hey.",Rachel),
+	Text.new("I'm sorry i'm late, but you understand?.",Varisa),
+	Text.new("Yeah it's no big deal.",Tracey),
 },1)
 
 -- Brian Trash
