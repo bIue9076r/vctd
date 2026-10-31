@@ -3,8 +3,21 @@ World.Dialogue[English][1] = Dialogue.new({
 	Text.new("Hey guys.",Varisa),
 	Text.new("Hey Varisa.",Tracey),
 	Text.new("Hey.",Rachel),
-	Text.new("I'm sorry i'm late, but you understand?.",Varisa),
-	Text.new("Yeah it's no big deal.",Tracey),
+	Text.new("Varisa, you're not going to beleive who came over.",Tracey),
+	Text.new("What?",Varisa),
+	Text.new("Someone finnaly booked us for a gig!",Tracey),
+	Text.new("I'm so excited!",Tracey),
+	Text.new("EEEEEEEEEE!",Tracey),
+	Text.new("Chill out, we still gotta practice.",Rachel),
+	Text.new("Yeah.",Varisa),
+	Text.new("When is the gig?",Varisa),
+	Text.new("This Thursday.",Tracey),
+	Text.new("Intresting.",Varisa),
+	Text.new("What kind of event is this?",Varisa),
+	Text.new("A birthday party.",Tracey),
+	Text.new("Really?",Varisa),
+	Text.new("A gig is a gig.",Varisa),
+	Text.new("We'll be here when you're ready to practice.",Rachel),
 },1)
 
 -- Brian Trash
