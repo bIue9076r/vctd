@@ -20,23 +20,50 @@ World.Dialogue[English][1] = Dialogue.new({
 	Text.new("We'll be here when you're ready to practice.",Rachel),
 },1)
 
+World.Dialogue[English][2] = Dialogue.new({
+	Text.new("Hey Ms. Drew.",Varisa),
+	Text.new("Oh, hi Varisa!",Zoey),
+	Text.new("How's it going?",Zoey),
+	Text.new("Nothing much..",Varisa, nil, function(npc)
+		if Story.get("Know_Gig") then
+			npc.i = 2
+		else
+			npc.i = 3
+		end
+	end),
+},1)
+
+World.Dialogue[English][2] = Dialogue.new({
+	Text.new("Did Tracey already tell you about our next show?",Varisa),
+	Text.new("That's so cool! You guys are a real band now.",Zoey, nil, function(npc)
+		npc.i = 4
+	end),
+},1)
+
+World.Dialogue[English][3] = Dialogue.new({
+	Text.new("Well, that's alright. You gotta have fun while you're not in college yet.",Zoey, nil, function(npc)
+		npc.i = 4
+	end),
+},1)
+
+World.Dialogue[English][4] = Dialogue.new({
+	Text.new("Yeah hehe.",Varisa),
+},1)
+
 -- Brian Trash
 World.Dialogue[English][1] = Dialogue.new({
-	Text.newAnimated("Hey Varisa...",Brian,0),
-	Text.newAnimatedLeft("Uhh... Yeah.",Varisa),
-	Text.newAnimated("I'm very busy right now...",Brian,0),
-	Text.newAnimated("And uhh, Vivian told me to take out the trash.",Brian,0),
-	Text.newAnimated("You wouldn't mind taking it out for me?",Brian,0),
-	Text.newAnimatedLeft("But aren't you just standing around?",Varisa),
-	Text.newAnimated("I'm very busy, you wouldn't understand.",Brian,0),
-	Text.newAnimatedLeft("Yeah me too.",Varisa),
-	Text.newAnimated("Too busy for 150?",Brian,1),
-	Text.newAnimatedLeft("You're bluffing.",Varisa),
-	Text.newAnimated("Your loss, I guess.",Brian,0),
-	Text.newAnimatedLeft("Where's the trash?",Varisa),
-	Text.newAnimated("Backyard, and make it quick.",Brian,0,nil,function()
+	Text.new("Yo uh...",Brian),
+	Text.new("Uhh... Yeah?",Varisa),
+	Text.new("I need your help with something.",Brian),
+	Text.new("What?",Varisa),
+	Text.new("I want you to take out the trash in the back.",Brian),
+	Text.new("I'll pay you if you're intrested. Don't ask any questions.",Brian),
+	Text.new("Hmm..(Seems kinda sketchy. I'd like some quick buck, though.)",Varisa), -- make a choice 
+	Text.new("I guess.",Varisa,nil,function()
 		Story.set("Brian_Trash_1",true)
-	end),
+	end), -- if yes
+	Text.new("No.",Varisa), -- if no
+	Text.new("Okay.",Brian),
 },1)
 
 -- Fredrick Excersise
