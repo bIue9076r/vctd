@@ -51,19 +51,25 @@ World.Dialogue[English][4] = Dialogue.new({
 },1)
 
 -- Brian Trash
-World.Dialogue[English][1] = Dialogue.new({
+World.Dialogue[English][5] = Dialogue.new({
 	Text.new("Yo uh...",Brian),
 	Text.new("Uhh... Yeah?",Varisa),
 	Text.new("I need your help with something.",Brian),
 	Text.new("What?",Varisa),
 	Text.new("I want you to take out the trash in the back.",Brian),
 	Text.new("I'll pay you if you're intrested. Don't ask any questions.",Brian),
-	Text.new("Hmm..(Seems kinda sketchy. I'd like some quick buck, though.)",Varisa), -- make a choice 
+	Text.new("Hmm..(Seems kinda sketchy. I'd like some quick buck, though.)",Varisa),
 	Text.new("I guess.",Varisa,nil,function()
 		Story.set("Brian_Trash_1",true)
-	end), -- if yes
-	Text.new("No.",Varisa), -- if no
+	end),
 	Text.new("Okay.",Brian),
+},1)
+
+World.Dialogue[English][6] = Dialogue.new({
+	Text.new("Take this check.",Brian,nil,function()
+		Story.set("Brian_Trash_4",true)
+	end),
+	Text.new("...",Brian),
 },1)
 
 -- Fredrick Excersise
