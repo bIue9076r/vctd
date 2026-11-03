@@ -5,7 +5,9 @@ World.Dialogue[English][1] = Dialogue.new({
 	Text.new("Hey.",Rachel),
 	Text.new("Varisa, you're not going to beleive who came over.",Tracey),
 	Text.new("What?",Varisa),
-	Text.new("Someone finnaly booked us for a gig!",Tracey),
+	Text.new("Someone finnaly booked us for a gig!",Tracey,nil,function()
+		Story.set("Know_Gig",true)
+	end),
 	Text.new("I'm so excited!",Tracey),
 	Text.new("EEEEEEEEEE!",Tracey),
 	Text.new("Chill out, we still gotta practice.",Rachel),
