@@ -28,32 +28,32 @@ World.Dialogue[English][2] = Dialogue.new({
 	Text.new("How's it going?",Zoey),
 	Text.new("Nothing much..",Varisa, nil, function(npc)
 		if Story.get("Know_Gig") then
-			npc.i = 2
-		else
 			npc.i = 3
+		else
+			npc.i = 4
 		end
 	end),
 },1)
 
-World.Dialogue[English][2] = Dialogue.new({
+World.Dialogue[English][3] = Dialogue.new({
 	Text.new("Did Tracey already tell you about our next show?",Varisa),
 	Text.new("That's so cool! You guys are a real band now.",Zoey, nil, function(npc)
-		npc.i = 4
+		npc.i = 5
 	end),
 },1)
 
-World.Dialogue[English][3] = Dialogue.new({
+World.Dialogue[English][4] = Dialogue.new({
 	Text.new("Well, that's alright. You gotta have fun while you're not in college yet.",Zoey, nil, function(npc)
 		npc.i = 4
 	end),
 },1)
 
-World.Dialogue[English][4] = Dialogue.new({
+World.Dialogue[English][5] = Dialogue.new({
 	Text.new("Yeah hehe.",Varisa),
 },1)
 
 -- Brian Trash
-World.Dialogue[English][5] = Dialogue.new({
+World.Dialogue[English][6] = Dialogue.new({
 	Text.new("Yo uh...",Brian),
 	Text.new("Uhh... Yeah?",Varisa),
 	Text.new("I need your help with something.",Brian),
@@ -67,7 +67,7 @@ World.Dialogue[English][5] = Dialogue.new({
 	Text.new("Okay.",Brian),
 },1)
 
-World.Dialogue[English][6] = Dialogue.new({
+World.Dialogue[English][7] = Dialogue.new({
 	Text.new("Take this check.",Brian,nil,function()
 		Story.set("Brian_Trash_4",true)
 	end),
