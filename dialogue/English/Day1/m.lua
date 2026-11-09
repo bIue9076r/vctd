@@ -75,13 +75,15 @@ World.Dialogue[English][7] = Dialogue.new({
 },1)
 
 -- Fredrick Excersise
-World.Dialogue[English][1] = Dialogue.new({
-	Text.new("...",Varisa),
+World.Dialogue[English][6] = Dialogue.new({
+	Text.new("What are you doing outside?",Varisa),
+	Text.new("None of your buisness!",Fredrick),
 },1)
 
 -- Sean / Ella park
 World.Dialogue[English][1] = Dialogue.new({
-	Text.new("...",Varisa),
+	Text.new("Go away.",Sean),
+	Text.new("We're busy.",Ella),
 },1)
 
 -- Zach gardening

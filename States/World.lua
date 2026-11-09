@@ -131,17 +131,17 @@ end
 function World.DialogueSay()
 	local wdl = World.Dialogue[Language]
 	if wdl then
-		local wd = World.Dialogue[Language]
+		local wd = wdl[World.snpc.i]
 		if not wd then
 			World.snpc.i = 0
-			wd = World.Dialogue[Language][World.snpc.i]
+			wd = wdl[World.snpc.i]
 		end
 
 		if wd then
 			World.dtbl = wd:get(World.snpc)
-			if World.Dialogue[Language][World.snpc.i] then
+			if wdl[World.snpc.i] then
 				for i,v in pairs(World.Dialogue) do
-					v[World.snpc.i].index = World.Dialogue[Language][World.snpc.i].index
+					v[World.snpc.i].index = wdl[World.snpc.i].index
 				end
 			end
 		end
