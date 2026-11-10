@@ -83,12 +83,14 @@ Dialogue = {}
 Dialogue.text = {Text.new("......")}
 Dialogue.index = 1
 Dialogue.cycle = 0
+-- Dialogue.options = {{text = "...", next = -30}}
 
-function Dialogue.new(ttbl,c,e)
+function Dialogue.new(ttbl,c,e,o)
 	local tbl = {
 		text = ttbl or {Text.new("......")},
 		index = 1,
 		cycle = c or 0,
+		options = o or nil,
 		effect = e or function()
 			
 		end,
@@ -104,6 +106,7 @@ end
 
 function Dialogue:get(npc)
 	local rs, rc, rv, ra, rl, rn = self.text[self.index](npc)
+	local o = nil
 	self.index = self.index + 1
 	if self.index > #self.text then
 		if self.cycle == 0 then
@@ -112,6 +115,7 @@ function Dialogue:get(npc)
 			self.index = self.index - 1
 		end
 		self.effect(npc)
+		o = self.options
 	end
-	return {s=rs, n=rc, v=rv, a=ra, l=rl, t=rn}
+	return {s=rs, n=rc, v=rv, a=ra, l=rl, t=rn, ch = o, c1 = 0, c2 = 0}
 end

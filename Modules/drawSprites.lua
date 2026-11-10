@@ -265,5 +265,49 @@ function drawDialogue()
 			Voices[World.dtbl.v]:pause()
 			Voices[World.dtbl.v]:seek(0)
 		end
+		
+		if IsChoice then
+			if dt > (sl + DialogueBuffer) then
+				if World.dtbl.ch[1] then
+					if World.dtbl.c1 <= 0 then
+						love.graphics.setColor(1,1,1)
+					else
+						local t = math.min(World.dtbl.c1,1)
+						local c = (0.7 * t) + (1 * (1 - t))
+						love.graphics.setColor(c,c,c)
+					end
+					love.graphics.rectangle(
+						"fill",
+						40,
+						250,
+						250,
+						100
+					)
+
+					local s = World.dtbl.ch[1].text or ""
+					love.graphics.printf({{0,0,0},s},60,250,210,"left")
+				elseif World.dtbl.ch[2] then
+					if World.dtbl.c2 <= 0 then
+						love.graphics.setColor(1,1,1)
+					else
+						local t = math.min(World.dtbl.c2,1)
+						local c = (0.7 * t) + (1 * (1 - t))
+						love.graphics.setColor(c,c,c)
+					end
+					love.graphics.rectangle(
+						"fill",
+						60 + 250,
+						250,
+						250,
+						100
+					)
+
+					local s = World.dtbl.ch[2].text or ""
+					love.graphics.printf({{0,0,0},s},80 + 250,250,210,"left")
+				end
+
+				love.graphics.setColor(1,1,1)
+			end
+		end
 	end
 end

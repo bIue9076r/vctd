@@ -128,6 +128,14 @@ function World.sayAnimatedLeft(s,n,v,t)
 	}
 end
 
+function World.choice1(x,y)
+	return ((x >= 40) and (x <= (40 + 250))) and ((y >= 250) and (y <= (250 + 100)))
+end
+
+function World.choice2(x,y)
+	return ((x >= 60 + 250) and (x <= (60 + 250 + 250))) and ((y >= 250) and (y <= (250 + 100)))
+end
+
 function World.DialogueSay()
 	local wdl = World.Dialogue[Language]
 	if wdl then
@@ -156,6 +164,7 @@ function World.endTalk()
 	Voices[World.dtbl.v]:seek(0)
 	World.dtbl = nil
 	IsTalking = false
+	IsChoice = false
 	World.dticker:reset()
 	if World.ChangeMap then
 		Map = World.NextMap
@@ -289,6 +298,27 @@ function World.Update(dt)
 		World.setDbox(rdbox)
 		
 		Plr.inv:update(dt)
+	else
+		if IsChoice then
+			local x,y = love.mouse.getPosition()
+			x,y = NormalizeMouse(x,y)
+
+			if World.dtbl.ch[1] then
+				if World.choice1(x,y) then
+					World.dtbl.c1 = World.dtbl.c1 + 2*love.timer.getDelta()
+				else
+					World.dtbl.c1 = 0
+				end
+			elseif World.dtbl.ch[2] then
+				if World.choice2(x,y) then
+					World.dtbl.c2 = World.dtbl.c2 + 2*love.timer.getDelta()
+				else
+					World.dtbl.c2 = 0
+				end
+			else
+				World.endTalk()
+			end
+		end
 	end
 	
 	if World.showHint and World.snpc then
@@ -331,6 +361,9 @@ function World.Keypressed(key)
 			IsTalking = true
 			World.say("......", World.snpc.c)
 			World.DialogueSay()
+			if World.dtbl.ch then
+				IsChoice = true
+			end
 		end
 		Plr.inv:Keypressed(key)
 		if key == "u" then
@@ -348,29 +381,39 @@ function World.Keypressed(key)
 			GameState = Pause
 		end
 	else
-		if key == "e" then
-			World.endTalk()
-		elseif key == "return" then
-			World.dticker:set(utf8.len(World.dtbl.s)/60)
-		elseif key == "space" then
-			World.dticker:reset()
-		-- Note: may be an issue with dialogue that changes it's own state
-		-- elseif key == "backspace" then
-		-- 	if World.Dialogue[Language][World.snpc.i].cycle == 1 then
-		-- 		World.Dialogue[Language][World.snpc.i].index = math.max(1,math.min(World.Dialogue[Language][World.snpc.i].index - 2,#World.Dialogue[Language][World.snpc.i].text))
-		-- 	else
-		-- 		-- World.Dialogue[Language][World.snpc.i].index = ((World.Dialogue[Language][World.snpc.i].index - 3) % 5) + 1
-		-- 		if World.Dialogue[Language][World.snpc.i].index == 1 then
-		-- 			World.Dialogue[Language][World.snpc.i].index = #World.Dialogue[Language][World.snpc.i].text - 1
-		-- 		else
-		-- 			World.Dialogue[Language][World.snpc.i].index = math.max(1,math.min(World.Dialogue[Language][World.snpc.i].index - 2,#World.Dialogue[Language][World.snpc.i].text))
-		-- 		end
-		-- 	end
-			
-		-- 	World.dticker:reset()
-		-- 	World.DialogueSay()
-		-- 	World.AfterEffect = nil
-		-- 	World.ChangeMap = false
+		if not IsChoice then
+			if key == "e" then
+				World.endTalk()
+			elseif key == "return" then
+				World.dticker:set(utf8.len(World.dtbl.s)/60)
+			elseif key == "space" then
+				World.dticker:reset()
+			-- Note: may be an issue with dialogue that changes it's own state
+			-- elseif key == "backspace" then
+			-- 	if World.Dialogue[Language][World.snpc.i].cycle == 1 then
+			-- 		World.Dialogue[Language][World.snpc.i].index = math.max(1,math.min(World.Dialogue[Language][World.snpc.i].index - 2,#World.Dialogue[Language][World.snpc.i].text))
+			-- 	else
+			-- 		-- World.Dialogue[Language][World.snpc.i].index = ((World.Dialogue[Language][World.snpc.i].index - 3) % 5) + 1
+			-- 		if World.Dialogue[Language][World.snpc.i].index == 1 then
+			-- 			World.Dialogue[Language][World.snpc.i].index = #World.Dialogue[Language][World.snpc.i].text - 1
+			-- 		else
+			-- 			World.Dialogue[Language][World.snpc.i].index = math.max(1,math.min(World.Dialogue[Language][World.snpc.i].index - 2,#World.Dialogue[Language][World.snpc.i].text))
+			-- 		end
+			-- 	end
+				
+			-- 	World.dticker:reset()
+			-- 	World.DialogueSay()
+			-- 	World.AfterEffect = nil
+			-- 	World.ChangeMap = false
+			end
+		else
+			if key == "e" then
+				World.dticker:set(utf8.len(World.dtbl.s)/60 + DialogueBuffer + 1)
+			elseif key == "return" then
+				World.dticker:set(utf8.len(World.dtbl.s)/60 + DialogueBuffer + 1)
+			elseif key == "space" then
+				World.dticker:reset()
+			end
 		end
 	end
 end
@@ -401,10 +444,25 @@ function World.Mousepressed(x,y,button)
 			end
 		end
 	else
-		if button == 1 then
-			World.dticker:set(utf8.len(World.dtbl.s)/60)
-		elseif button == 2 then
-			World.endTalk()
+		if not IsChoice then
+			if button == 1 then
+				World.dticker:set(utf8.len(World.dtbl.s)/60)
+			elseif button == 2 then
+				World.endTalk()
+			end
+		else
+			if World.dtbl.ch[1] then
+				print(x,y,World.choice1(x,y))
+				if World.choice1(x,y) then
+					World.snpc.i = World.dtbl.ch[1].next
+					World.endTalk()
+				end
+			elseif World.dtbl.ch[2] then
+				if World.choice2(x,y) then
+					World.snpc.i = World.dtbl.ch[2].next
+					World.endTalk()
+				end
+			end
 		end
 	end
 end

@@ -111,6 +111,7 @@ Game_L_SfxVolume = 1
 DialogueBuffer = 1.25
 Ending = 0	--	good ending
 IsTalking = false
+IsChoice = false
 Language = English
 String.NewLocale(Language)
 

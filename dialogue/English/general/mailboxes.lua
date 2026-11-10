@@ -1,6 +1,7 @@
 World.Dialogue[English][6] = Dialogue.new({
 	Text.new("Tracey's House",Mailbox),
 },1)
+-- },1,nil,{{text = "...", next = -30}})
 
 World.Dialogue[English][7] = Dialogue.new({
 	Text.new("Your House",Mailbox),

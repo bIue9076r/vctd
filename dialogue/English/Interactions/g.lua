@@ -1,3 +1,7 @@
+World.Dialogue[English][-30] = Dialogue.new({
+	Text.new("...",Varisa),
+},1)
+
 World.Dialogue[English][-23] = Dialogue.new({
 	Text.new("It's the toolbox.",Varisa,nil,function(npc)
 		Story.set("Toolbox_Wilkie_3",true)
