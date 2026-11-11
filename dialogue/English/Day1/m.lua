@@ -61,13 +61,22 @@ World.Dialogue[English][6] = Dialogue.new({
 	Text.new("I want you to take out the trash in the back.",Brian),
 	Text.new("I'll pay you if you're intrested. Don't ask any questions.",Brian),
 	Text.new("Hmm..(Seems kinda sketchy. I'd like some quick buck, though.)",Varisa),
+	
+},1,nil,{{text = "I guess.", next = 7},{text = "No, thank you.", next = 8}})
+
+World.Dialogue[English][7] = Dialogue.new({
 	Text.new("I guess.",Varisa,nil,function()
 		Story.set("Brian_Trash_1",true)
 	end),
 	Text.new("Okay.",Brian),
 },1)
 
-World.Dialogue[English][7] = Dialogue.new({
+World.Dialogue[English][8] = Dialogue.new({
+	Text.new("No, thank you.",Varisa),
+	Text.new("Okay.",Brian),
+},1)
+
+World.Dialogue[English][9] = Dialogue.new({
 	Text.new("Take this check.",Brian,nil,function()
 		Story.set("Brian_Trash_4",true)
 	end),
@@ -75,7 +84,7 @@ World.Dialogue[English][7] = Dialogue.new({
 },1)
 
 -- Fredrick Excersise
-World.Dialogue[English][6] = Dialogue.new({
+World.Dialogue[English][10] = Dialogue.new({
 	Text.new("What are you doing outside?",Varisa),
 	Text.new("None of your buisness!",Fredrick),
 },1)
