@@ -87,21 +87,35 @@ World.Dialogue[English][9] = Dialogue.new({
 World.Dialogue[English][10] = Dialogue.new({
 	Text.new("What are you doing outside?",Varisa),
 	Text.new("None of your buisness!",Fredrick),
+	Text.new("Okay...",Varisa),
+	Text.new("I'm excersising.",Fredrick),
+},1,nil,{{text = "Can I join.", next = 11},{text = "Okay.", next = 12}})
+
+World.Dialogue[English][11] = Dialogue.new({
+	Text.new("Can I join.",Varisa,nil,function()
+		Story.set("Fredrick_Exercise_1",true)
+	end),
+},1)
+
+World.Dialogue[English][12] = Dialogue.new({
+	Text.new("Okay.",Varisa),
+	Text.new("You don't have to stay.",Fredrick),
 },1)
 
 -- Sean / Ella park
-World.Dialogue[English][1] = Dialogue.new({
+World.Dialogue[English][13] = Dialogue.new({
 	Text.new("Go away.",Sean),
 	Text.new("We're busy.",Ella),
+	Text.new("...",Varisa),
 },1)
 
 -- Zach gardening
-World.Dialogue[English][1] = Dialogue.new({
+World.Dialogue[English][14] = Dialogue.new({
 	Text.new("...",Varisa),
 },1)
 
 -- Jami's Package
-World.Dialogue[English][1] = Dialogue.new({
+World.Dialogue[English][15] = Dialogue.new({
 	Text.new("...",Varisa),
 },1)
 
