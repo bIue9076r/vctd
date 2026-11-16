@@ -111,7 +111,9 @@ World.Dialogue[English][13] = Dialogue.new({
 
 -- Zach gardening
 World.Dialogue[English][14] = Dialogue.new({
-	Text.new("...",Varisa),
+	Text.new("Who are the flowers for?",Varisa),
+	Text.new("My wife loves these ones.",Zach),
+	Text.new("Cool.",Varisa),
 },1)
 
 -- Jami's Package
