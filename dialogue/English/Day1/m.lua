@@ -114,10 +114,25 @@ World.Dialogue[English][14] = Dialogue.new({
 	Text.new("Who are the flowers for?",Varisa),
 	Text.new("My wife loves these ones.",Zach),
 	Text.new("Cool.",Varisa),
+	Text.new("Wait, before you go.",Zach),
+	Text.new("I need to get a flower pot.",Zach),
+	Text.new("I'm a mess right now, and I can't go inside muddy'.",Zach),
+	Text.new("I can hand you my keys?",Zach),
+},1,nil,{{text = "Sure.", next = 15},{text = "No thanks.", next = 16}})
+
+World.Dialogue[English][15] = Dialogue.new({
+	Text.new("Sure.",Varisa),
+	Text.new("Great, i'll wait here.",Zach),
+},1)
+
+World.Dialogue[English][16] = Dialogue.new({
+	Text.new("No thanks.",Varisa),
+	Text.new("No worries, I can always clean up.",Zach),
+	Text.new("...",Zach),
 },1)
 
 -- Jami's Package
-World.Dialogue[English][15] = Dialogue.new({
+World.Dialogue[English][17] = Dialogue.new({
 	Text.new("Hey.",Varisa),
 	Text.new("Hello.",Jami),
 	Text.new("Why are you just standing around?",Varisa),
@@ -128,15 +143,29 @@ World.Dialogue[English][15] = Dialogue.new({
 	Text.new("It felt like just yesterday, you were disrupting my class.",Jami),
 	Text.new("Ahh, memories.",Jami),
 	Text.new("...",Varisa),
+	Text.new("I might just go wait inside.",Jami),
+	Text.new("What did you order?",Varisa),
+	Text.new("Electronics and other things.",Jami),
+	Text.new("Why?",Varisa),
+	Text.new("Science of course.",Jami),
+	Text.new("But you're a math teacher.",Varisa),
+	Text.new("Not by choice.",Jami),
+	Text.new("There are no openings for mad scientists.",Jami),
+	Text.new("I wouldn't have thought to check.",Varisa),
+	Text.new("Besides that, I like teaching.",Jami),
+	Text.new("Cool.",Varisa),
+	Text.new("Yeah I'll wait for my package a little bit longer.",Jami),
+	Text.new("You can stay if you like.",Jami),
+	Text.new("...",Jami),
 },1)
 
 -- News Broadcast
-World.Dialogue[English][16] = Dialogue.new({
+World.Dialogue[English][18] = Dialogue.new({
 	
 },1)
 
 -- Cooking Show
-World.Dialogue[English][17] = Dialogue.new({
+World.Dialogue[English][19] = Dialogue.new({
 	Text.new("Welcome back everyone.",TV_T),
 	Text.new("Today we're going to be watching as",TV_T),
 	Text.new("These four contestants bake pumpkin pie.",TV_T),
