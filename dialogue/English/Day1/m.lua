@@ -123,6 +123,7 @@ World.Dialogue[English][14] = Dialogue.new({
 World.Dialogue[English][15] = Dialogue.new({
 	Text.new("Sure.",Varisa),
 	Text.new("Great, i'll wait here.",Zach),
+	-- Zach Quest
 },1)
 
 World.Dialogue[English][16] = Dialogue.new({
