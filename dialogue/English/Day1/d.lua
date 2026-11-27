@@ -54,6 +54,23 @@ World.Dialogue[English][24] = Dialogue.new({
 
 -- Lassie Cooking
 
--- Wilkie Park
+World.Dialogue[English][25] = Dialogue.new({
+	Text.new("Hey, Varisa.",Lassie),
+},1)
 
+-- Wilkie Park
 -- Fredrick Park
+
+World.Dialogue[English][26] = Dialogue.new({
+	Text.new("Hello Varisa.",Wilkie),
+	Text.new("Hello I guess.",Fredrick),
+	Text.new("Hello.",Varisa),
+	Text.new("What a lovely morning.",Wilkie),
+	Text.new("Shut up.",Fredrick),
+	Text.new("Knock it off.",Wilkie),
+	Text.new("Its bright and sunny today.",Wilkie),
+	Text.new("The weather's nice and no ones at the park.",Wilkie),
+	Text.new("Okay.",Fredrick),
+	Text.new("I can't enjoy this with you talking so loud.",Fredrick),
+	Text.new("I'll see you around, Varisa.",Wilkie),
+},1)
